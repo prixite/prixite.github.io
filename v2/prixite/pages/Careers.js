@@ -4,7 +4,7 @@ import Head from "next/head";
 import Header from "../components/header";
 import careersPageBg from "../public/images/careersPageBg.jpg";
 
-export default function ContactUs() {
+export default function Careers() {
   return (
     <>
       <Head>

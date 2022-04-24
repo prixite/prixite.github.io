@@ -22,6 +22,50 @@ import reactjs from "../public/images/reactjs.jpg";
 import wordpress from "../public/images/wordpress.jpg";
 import python from "../public/images/python.jpg";
 
+const services = [
+  {
+    title: "Web Development",
+    desc: "Prixite being the exquisite web development brands offers innovative solutions to your web development needs in today’s dynamics.",
+    img: webDevelopment,
+  },
+  {
+    title: "WordPress Development",
+    desc: "Prixite offers its clients superior quality WordPress solutions that helps them to create a compelling impact in the business world.",
+    img: wordpress,
+  },
+  {
+    title: "DevOps",
+    desc: "Prixite DevOps practices help clients achieve their goals without compromising on product environment and infrastructure capabilities.",
+    img: devOpsAsService,
+  },
+  {
+    title: "Scraping",
+    desc: "Prixite is one of the leading digital marketing service providers that believe in creating value-added solutions for our potential client's web data extraction needs.",
+    img: scraping,
+  },
+  {
+    title: "Python Experts",
+    desc: "Prixite is one of the top companies to provide full-stack python web development services to its clients worldwide.",
+    img: python,
+  },
+  {
+    title: "Mobile Application Development",
+    desc: "Prixite has extensive experience when it comes to creating digitally transformative and high-performing mobile apps.",
+    img: mobileDev,
+  },
+  {
+    title: "Progressive Web Application",
+    desc: "Prixite is one of the top PWA service providers to its clients with progressive tools and approaches to their business needs.",
+    img: pwa,
+  },
+  {
+    title: "React development",
+    desc: "Prixite is one of the top PWA service providers to its clients with progressive tools and approaches to their business needs.",
+    img: reactjs,
+  },
+];
+
+
 export default function Home() {
   return (
     <>
@@ -185,46 +229,3 @@ export default function Home() {
     </>
   );
 }
-
-const services = [
-  {
-    title: "Web Development",
-    desc: "Prixite being the exquisite web development brands offers innovative solutions to your web development needs in today’s dynamics.",
-    img: webDevelopment,
-  },
-  {
-    title: "WordPress Development",
-    desc: "Prixite offers its clients superior quality WordPress solutions that helps them to create a compelling impact in the business world.",
-    img: wordpress,
-  },
-  {
-    title: "DevOps",
-    desc: "Prixite DevOps practices help clients achieve their goals without compromising on product environment and infrastructure capabilities.",
-    img: devOpsAsService,
-  },
-  {
-    title: "Scraping",
-    desc: "Prixite is one of the leading digital marketing service providers that believe in creating value-added solutions for our potential client's web data extraction needs.",
-    img: scraping,
-  },
-  {
-    title: "Python Experts",
-    desc: "Prixite is one of the top companies to provide full-stack python web development services to its clients worldwide.",
-    img: python,
-  },
-  {
-    title: "Mobile Application Development",
-    desc: "Prixite has extensive experience when it comes to creating digitally transformative and high-performing mobile apps.",
-    img: mobileDev,
-  },
-  {
-    title: "Progressive Web Application",
-    desc: "Prixite is one of the top PWA service providers to its clients with progressive tools and approaches to their business needs.",
-    img: pwa,
-  },
-  {
-    title: "React development",
-    desc: "Prixite is one of the top PWA service providers to its clients with progressive tools and approaches to their business needs.",
-    img: reactjs,
-  },
-];

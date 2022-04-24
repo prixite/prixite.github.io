@@ -1,14 +1,12 @@
-import { Container, Divider, Grid, Stack, Typography } from "@mui/material";
+import { Container, Grid, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Head from "next/head";
-import Image from "next/image";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import contactUsPageBg from "../public/images/contactUsPageBg.png";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import Link from "next/link";
 
 export default function ContactUs() {
   return (

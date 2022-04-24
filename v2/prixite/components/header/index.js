@@ -123,12 +123,12 @@ export default function Header({ children, bgImg }) {
                   Home
                 </Typography>
               </Link>
-              <Link href="/careers">
+              <Link href="/Careers">
                 <Typography
                   sx={{
                     mx: 2,
                     color:
-                      router.asPath == "/careers"
+                      router.asPath == "/Careers"
                         ? "var(--primary-green)"
                         : "white",
                     display: "block",
@@ -143,7 +143,7 @@ export default function Header({ children, bgImg }) {
                   Careers
                 </Typography>
               </Link>
-              <Link href="/contact-us">
+              <Link href="/ContactUs">
                 <Button
                   sx={{
                     mx: 2,
