@@ -3,12 +3,14 @@ import Head from 'next/head'
 import Header from '../components/header/Header'
 import careersPageBg from '../public/images/careersPageBg.jpg'
 import { Box, Typography, Container, TextField, Button, FormGroup, FormControlLabel, Checkbox } from '@mui/material'
+import { careersData } from '../constants/constants'
 
 const careers = () => {
+  const { title, heading, buttonText } = careersData
   return (
     <>
       <Head>
-        <title>Prixite - Careers </title>
+        <title>{title}</title>
         <meta name="prixite" content="Prixte" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -19,7 +21,7 @@ const careers = () => {
             textAlign="center"
             className='main-heading'
           >
-            JOIN US
+            {heading}
           </Typography>
         </Box>
       </Header>
@@ -47,7 +49,7 @@ const careers = () => {
             }
           }}
           size='large'>
-          Search Jobs
+          {buttonText}
         </Button>
 
         <FormGroup row>

@@ -153,9 +153,9 @@ export const contactUs = {
             processes and delivering quality and progressive results for their
             organization. We have a quite simple and easy way for our clients
             to reach out to us. You may fill in the contact form below or
-            email us at <strong>hi@prixite.com </strong> to request for
+            email us at hi@prixite.com to request for
             consultation or if you have an inquiry. You may also call us at
-            <strong> 042 37114925</strong> and let us know how we can help you
+            042 37114925 and let us know how we can help you
             in taking your business to another level.`
         },
     ],
@@ -176,6 +176,20 @@ export const contactUs = {
             },
         ]
     }
+}
+
+
+
+
+
+
+
+
+/**********             Careers Page Data           ************* */
+export const careersData = {
+    title: 'Prixite - Careers',
+    heading: 'JOIN US',
+    buttonText: 'Search Jobs'
 }
 
 

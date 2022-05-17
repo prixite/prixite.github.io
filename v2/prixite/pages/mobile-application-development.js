@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { mobileAppDevelopment } from '../constants/constants'
 import Header from '../components/header/Header'
 import mobileAppImg from '../public/images/wordpress Development-01.png'
+import mobileAppBgImg from '../public/images/mobileDev.jpg'
 import { Container, Stack, Box, Typography, Divider } from '@mui/material'
 import Image from 'next/image'
 
@@ -15,7 +16,7 @@ const MobileApplicationDevelopment = () => {
         <meta name="prixite" content="Prixte" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header>
+      <Header bgImg={mobileAppBgImg}>
         <Container maxWidth="xl">
           <Stack
             pt={{ xs: "80px", lg: "200px" }}

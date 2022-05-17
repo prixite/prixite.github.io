@@ -1,10 +1,11 @@
-import { AppBar, Box, Container, IconButton, Link, Menu, Toolbar, Typography, MenuItem, Button } from '@mui/material'
+import { AppBar, Box, Container, IconButton, Menu, Toolbar, Typography, MenuItem, Button } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 import logoImg from '../../public/images/logo.png'
 import MenuIcon from "@mui/icons-material/Menu";
 import { pages } from '../../constants/constants';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const Header = ({ children, bgImg }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

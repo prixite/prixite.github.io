@@ -70,7 +70,7 @@ const scraping = () => {
 
             <Container
                 sx={{
-                    isplay: 'flex',
+                    display: 'flex',
                     flexDirection: 'column',
                     gap: 4,
                     py: 10,
