@@ -61,6 +61,7 @@ const Webdevelopment = () => {
                 src={WebDevelopmentImage}
                 width={800}
                 height={450}
+                alt="service-image"
               />
             </Box>
           </Stack>

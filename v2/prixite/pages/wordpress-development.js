@@ -61,6 +61,7 @@ const WordPressDevelopment = () => {
                                 src={WordPressImage}
                                 width={800}
                                 height={450}
+                                alt="service-image"
                             />
                         </Box>
                     </Stack>

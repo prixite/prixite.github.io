@@ -61,6 +61,7 @@ const ReactDevelopment = () => {
                 src={reactImg}
                 width={800}
                 height={450}
+                alt="service-image"
               />
             </Box>
           </Stack>

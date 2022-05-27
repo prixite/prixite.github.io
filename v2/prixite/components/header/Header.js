@@ -90,7 +90,7 @@ const Header = ({ children, bgImg }) => {
               {pages.map((page, index) => {
                 if (page.text == 'Contact Us') {
                   return (
-                    <Link href={page?.path} sx={{ textDecoration: 'none' }} key={index}>
+                    <Link href={page?.path} sx={{ textDecoration: 'none' }} key={index} passHref>
                       <Button
                         className='contact-us-button'
                         sx={{ mx: 2 }}
@@ -101,7 +101,7 @@ const Header = ({ children, bgImg }) => {
                   )
                 }
                 return (
-                  <Link href={page?.path} sx={{ textDecoration: 'none' }} key={index}>
+                  <Link href={page?.path} sx={{ textDecoration: 'none' }} key={index} passHref>
                     <Typography
                       className='header-menu-items'
                       sx={{
