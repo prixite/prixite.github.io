@@ -1,9 +1,12 @@
-import "../styles/globals.css";
-import {
-  createTheme,
-  ThemeProvider,
-  responsiveFontSizes,
-} from "@mui/material/styles";
+import '../styles/globals.css'
+import '../components/header/header.scss'
+import '../styles/pagesStyles/home.scss'
+import '../components/footer/footer.scss'
+import '../styles/pagesStyles/contactUs.scss'
+import '../styles/pagesStyles/careers.scss'
+import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
 
 let theme = createTheme({
   breakpoints: {
@@ -15,16 +18,23 @@ let theme = createTheme({
       xl: 1200,
     },
   },
-});
+  typography: {
+    fontFamily: 'Montserrat, Noto Sans, sans-serif',
+  },
+})
 
-theme = responsiveFontSizes(theme);
+theme = responsiveFontSizes(theme)
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
-  );
+    <>
+      <ThemeProvider theme={theme}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
+    </>
+  )
 }
 
-export default MyApp;
+export default MyApp

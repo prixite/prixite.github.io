@@ -2,21 +2,41 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
+
 :root {
   --primary-green: #64aa44;
   --primary-grey: #d3d3d3;
   --icon-grey-color: #939393;
+  font-family: 'Montserrat', sans-serif;
 }
+
 a {
   color: inherit;
   text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1,h2,h3 {
+  font-family: 'Montserrat', sans-serif;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wordpress-list {
+  margin: -10px 10px -10px 40px
+}
+
+.devops-list {
+  margin: -10px 10px -10px 40px
+}
+
+.scraping-list {
+  margin: -10px 10px -10px 40px
 }
