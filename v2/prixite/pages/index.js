@@ -48,6 +48,7 @@ export default function Home() {
                 src={headerImage}
                 width={400}
                 height={300}
+                alt="service-image"
               />
             </Box>
           </Stack>
@@ -103,6 +104,7 @@ export default function Home() {
                       height={500} 
                       className='service-image' 
                       onClick={() => router.push(item.path)} 
+                      alt="service-image"
                     />
                   </div>
 

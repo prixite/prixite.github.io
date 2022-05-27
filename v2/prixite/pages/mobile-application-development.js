@@ -61,6 +61,7 @@ const MobileApplicationDevelopment = () => {
                 src={mobileAppImg}
                 width={400}
                 height={250}
+                alt="service-image"
               />
             </Box>
           </Stack>
