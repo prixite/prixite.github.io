@@ -35,6 +35,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN_KEY }}
         with:
-          BASE_BRANCH: master
           BRANCH: master # The branch the action should deploy to.
-          DIRECTORY: out # The folder the action should deploy.
+          FOLDER: out # The folder the action should deploy.
