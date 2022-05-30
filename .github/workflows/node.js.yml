@@ -35,4 +35,4 @@ jobs:
         with:
           BASE_BRANCH: gh-pages
           BRANCH: master # The branch the action should deploy to.
-          FOLDER: ./out # The folder the action should deploy.
+          FOLDER: ./build # The folder the action should deploy.
