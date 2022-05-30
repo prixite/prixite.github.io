@@ -35,5 +35,4 @@ jobs:
         with:
           BASE_BRANCH: gh-pages
           BRANCH: master # The branch the action should deploy to.
-          working-directory: ./v2/prixite
           FOLDER: ./out # The folder the action should deploy.
