@@ -26,13 +26,15 @@ jobs:
         run: npm ci
 
       - name: Build my App
-        run: npm run build && npm run export && touch ./out/.nojekyll
+        run: |
+          npm run build
+          npm run export
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN_KEY }}
         with:
-          BASE_BRANCH: gh-pages
+          BASE_BRANCH: master
           BRANCH: master # The branch the action should deploy to.
-          FOLDER: build # The folder the action should deploy.
+          DIRECTORY: out # The folder the action should deploy.
