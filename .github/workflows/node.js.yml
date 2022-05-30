@@ -10,6 +10,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./v2/prixite
 
     steps:
       - name: Checkout 🛎️
@@ -30,4 +33,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: v2/prixite/out # The folder the action should deploy.
+          FOLDER: out # The folder the action should deploy.
