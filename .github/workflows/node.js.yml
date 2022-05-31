@@ -36,4 +36,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.TOKEN_KEY }}
         with:
           BRANCH: master # The branch the action should deploy to.
-          FOLDER: out # The folder the action should deploy.
+          FOLDER: v2/prixite/out # The folder the action should deploy.
