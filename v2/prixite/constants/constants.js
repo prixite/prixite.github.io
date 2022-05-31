@@ -35,7 +35,7 @@ export const pages = [
 /***********            Home Page Main Data             *********** */
 export const homeData = {
     title: 'Prixite',
-    header: 'Transform Your Business With Us',
+    header: 'Transformmm Your Business With Us',
     headerImage: homeHeaderImage,
     heading: 'One-stop Solution to Your Business Needs',
     descriptionHeading: 'Welcome to Prixite - Fastest Growing IT Company',
