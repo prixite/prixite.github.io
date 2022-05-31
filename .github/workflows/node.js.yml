@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./v2/prixite
+        working-directory: v2/prixite
 
     steps:
       - name: Checkout 🛎️
