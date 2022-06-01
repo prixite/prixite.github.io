@@ -7,6 +7,7 @@ import '../styles/pagesStyles/careers.scss'
 import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
+import favicon from '../public/images/logo.ico'
 
 let theme = createTheme({
   breakpoints: {
@@ -28,6 +29,9 @@ theme = responsiveFontSizes(theme)
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <link rel="shortcut icon" type="image/x-icon" href={favicon.src}/>
+      </Head>
       <ThemeProvider theme={theme}>
         <Layout>
           <Component {...pageProps} />
