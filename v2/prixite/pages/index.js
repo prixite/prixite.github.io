@@ -12,7 +12,7 @@ export default function Home() {
 
   const router = useRouter()
   return (
-    <>
+    <div className='home-page-container'>
 
       <Head>
         <title>{title}</title>
@@ -135,6 +135,6 @@ export default function Home() {
           </Grid>
         </Box>
       </Container>
-    </>
+    </div>
   )
 }

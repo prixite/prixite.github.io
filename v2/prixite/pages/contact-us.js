@@ -23,6 +23,7 @@ const ContactUs = () => {
                         pt: { xs: "100px", lg: "230px" },
                         pb: { xs: "100px", lg: "190px" },
                     }}
+                    className='contact-us-container'
                 >
                     <Typography variant="h2" textAlign="center" className='contact-us-heading'>
                         {heading}
@@ -73,6 +74,7 @@ const ContactUs = () => {
                             sx={{
                                 justifyContent: { xs: "center", md: "left" },
                             }}
+                            
                         >
                             <a target="_blank" href='https://web.facebook.com/prixite/' rel="noreferrer">
                                 <FacebookRoundedIcon
