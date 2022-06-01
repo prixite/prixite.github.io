@@ -28,10 +28,14 @@
                 display: block;
                 cursor: pointer;
                 transition: all .2s linear;
+                &:hover {
+                    color: var(--primary-green)
+                }
             }
         }
     }
 }
+
 
 // .header {
 //     background-color: "#000000";

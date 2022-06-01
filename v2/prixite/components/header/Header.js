@@ -100,12 +100,9 @@ const Header = ({ children, bgImg }) => {
                 return (
                   <Link href={page?.path} sx={{ textDecoration: 'none' }} key={index} passHref>
                     <Typography
-                     
+                      className='header-menu-items'
                       sx={{
                         mx: 2,
-                        display: "block",
-                cursor: "pointer",
-                transition: "all .2s linear",
                         color: router.asPath == page.path ? "var(--primary-green)" : "white",
                       }}
                       textAlign='center'
