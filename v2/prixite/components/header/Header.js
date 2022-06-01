@@ -30,15 +30,12 @@ const Header = ({ children, bgImg }) => {
 
   return (
     <Box
+      className='header-container'
       sx={{
         background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${bgImg?.src})`,
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover'
       }}
     >
-      <Box className='header'></Box>
-      <AppBar position='static' className='app-bar'>
+      <AppBar position='static' className='header-bar'>
         <Container maxWidth='xl'>
           <Toolbar disableGutters>
             <Box sx={{ mr: 2, display: { xs: "none", md: "flex" }, cursor: 'pointer' }} >
@@ -103,9 +100,12 @@ const Header = ({ children, bgImg }) => {
                 return (
                   <Link href={page?.path} sx={{ textDecoration: 'none' }} key={index} passHref>
                     <Typography
-                      className='header-menu-items'
+                     
                       sx={{
                         mx: 2,
+                        display: "block",
+                cursor: "pointer",
+                transition: "all .2s linear",
                         color: router.asPath == page.path ? "var(--primary-green)" : "white",
                       }}
                       textAlign='center'
