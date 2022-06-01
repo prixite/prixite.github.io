@@ -15,11 +15,11 @@ const careers = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header bgImg={careersPageBg}>
-        <Box className='main-container'>
+        <Box className='careers-container'>
           <Typography
             variant="h2"
             textAlign="center"
-            className='main-heading'
+            className='careers-heading'
           >
             {heading}
           </Typography>
