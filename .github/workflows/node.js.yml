@@ -7,6 +7,9 @@ on:
   push:
     branches: [deploy]
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
