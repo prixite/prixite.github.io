@@ -12,7 +12,7 @@ export default function Home() {
 
   const router = useRouter()
   return (
-    <>
+    <div className='home-page-container'>
 
       <Head>
         <title>{title}</title>
@@ -48,6 +48,7 @@ export default function Home() {
                 src={headerImage}
                 width={400}
                 height={300}
+                alt="service-image"
               />
             </Box>
           </Stack>
@@ -103,6 +104,7 @@ export default function Home() {
                       height={500} 
                       className='service-image' 
                       onClick={() => router.push(item.path)} 
+                      alt="service-image"
                     />
                   </div>
 
@@ -133,6 +135,6 @@ export default function Home() {
           </Grid>
         </Box>
       </Container>
-    </>
+    </div>
   )
 }

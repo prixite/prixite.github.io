@@ -23,6 +23,7 @@ const ContactUs = () => {
                         pt: { xs: "100px", lg: "230px" },
                         pb: { xs: "100px", lg: "190px" },
                     }}
+                    className='contact-us-container'
                 >
                     <Typography variant="h2" textAlign="center" className='contact-us-heading'>
                         {heading}
@@ -73,8 +74,9 @@ const ContactUs = () => {
                             sx={{
                                 justifyContent: { xs: "center", md: "left" },
                             }}
+                            
                         >
-                            <a target="_blank" href='https://web.facebook.com/prixite/'>
+                            <a target="_blank" href='https://web.facebook.com/prixite/' rel="noreferrer">
                                 <FacebookRoundedIcon
                                     htmlColor="var(--icon-grey-color)"
                                     fontSize="large"
@@ -82,7 +84,7 @@ const ContactUs = () => {
                                 />
                             </a>
 
-                            <a target="_blank" href="https://www.linkedin.com/company/prixite/about/?viewAsMember=true">
+                            <a target="_blank" href="https://www.linkedin.com/company/prixite/about/?viewAsMember=true" rel="noreferrer">
                                 <LinkedInIcon
                                     htmlColor="var(--icon-grey-color)"
                                     fontSize="large"
@@ -90,7 +92,7 @@ const ContactUs = () => {
                                 />
                             </a>
 
-                            <a target="_blank" href="https://github.com/Prixite">
+                            <a target="_blank" href="https://github.com/Prixite" rel="noreferrer">
                                 <GitHubIcon
                                     htmlColor="var(--icon-grey-color)"
                                     fontSize="large"

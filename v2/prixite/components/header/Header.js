@@ -30,15 +30,15 @@ const Header = ({ children, bgImg }) => {
 
   return (
     <Box
+      className='header-container'
       sx={{
         background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${bgImg?.src})`,
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
       }}
     >
-      <Box className='header'></Box>
-      <AppBar position='static' className='app-bar'>
+      <AppBar position='static' className='header-bar'>
         <Container maxWidth='xl'>
           <Toolbar disableGutters>
             <Box sx={{ mr: 2, display: { xs: "none", md: "flex" }, cursor: 'pointer' }} >
@@ -90,7 +90,7 @@ const Header = ({ children, bgImg }) => {
               {pages.map((page, index) => {
                 if (page.text == 'Contact Us') {
                   return (
-                    <Link href={page?.path} sx={{ textDecoration: 'none' }} key={index}>
+                    <Link href={page?.path} sx={{ textDecoration: 'none' }} key={index} passHref>
                       <Button
                         className='contact-us-button'
                         sx={{ mx: 2 }}
@@ -101,7 +101,7 @@ const Header = ({ children, bgImg }) => {
                   )
                 }
                 return (
-                  <Link href={page?.path} sx={{ textDecoration: 'none' }} key={index}>
+                  <Link href={page?.path} sx={{ textDecoration: 'none' }} key={index} passHref>
                     <Typography
                       className='header-menu-items'
                       sx={{
