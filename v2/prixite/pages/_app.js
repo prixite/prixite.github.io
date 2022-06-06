@@ -7,7 +7,7 @@ import '../styles/pagesStyles/careers.scss'
 import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
-import favicon from '../public/images/logo.ico'
+import favicon from '../public/images/favicon.ico'
 
 let theme = createTheme({
   breakpoints: {
