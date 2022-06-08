@@ -5,8 +5,8 @@ const nextConfig = {
     loader: "akamai",
     path: "",
   },
-  basePath: "",
-  assetPrefix: ""
+  basePath: "/v2/prixite",
+  assetPrefix: "/v2/prixite",
   }
 
 module.exports = nextConfig
