@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -29,10 +29,10 @@ jobs:
     - run: npm ci
     - run: npm run build
     - run: npm run export
-    - run: touch ./v2/prixite/out/.nojekyll
+    - run: touch ./out/.nojekyll
     
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4.3.3
       with:
           branch: gh-pages # The branch the action should deploy to.
-          folder: ./v2/prixite/out # The folder the action should deploy.
+          folder: out # The folder the action should deploy.
