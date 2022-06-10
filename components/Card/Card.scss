@@ -1,0 +1,26 @@
+.card {
+    .card-image {
+        box-shadow: 10px 10px 0px 1px rgb(0 0 0 / 7%); 
+            border-radius: 4px;
+            cursor: pointer;
+    }
+
+    .card-description {
+        margin: 10px 0;
+    }
+
+    .card-button {
+        text-align: center;
+        background-color: var(--primary-green);
+        color: white;
+        border-radius: 30px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-right: 40px;
+        padding-left: 40px;
+        font-weight: 600;
+        &:hover {
+            background-color: var(--primary-green);
+        }
+    }
+}

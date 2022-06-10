@@ -1,11 +1,11 @@
-import { Box, Container, Typography, Stack, Divider, Grid, Button } from '@mui/material';
+import { Box, Container, Typography, Stack, Divider, Grid } from '@mui/material';
 import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/header/Header'
 import homePageBg from "../public/images/homePageBg.png";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { homeData, services, servicesHeading } from '../constants/constants';
 import { useRouter } from 'next/router';
+import Card from '../components/Card/Card';
 
 export default function Home() {
   const { title, header, headerImage, heading, descriptionHeading, paragraphs } = homeData;
@@ -63,75 +63,44 @@ export default function Home() {
           </Typography>
 
           {paragraphs.map((item, index) => (
-            <Typography 
-              margin="1.8rem 0" 
+            <Typography
+              margin="1.8rem 0"
               key={index}>
-                {item.para}
+              {item.para}
             </Typography>
           )
           )}
 
-          <Typography 
-            variant="h4" 
+          <Typography
+            variant="h4"
             className='service-heading'>
-              {servicesHeading}
+            {servicesHeading}
           </Typography>
 
-          <Divider 
-            variant="middle" 
-            className='service-divider' 
-            sx={{ mx: 'auto', fill: 'true', width: '8%' }} 
+          <Divider
+            variant="middle"
+            className='service-divider'
+            sx={{ mx: 'auto', fill: 'true', width: '8%' }}
           />
 
-          <Grid 
-            container 
-            spacing={{ xs: 2, md: 3 }} 
+          <Grid
+            container
+            spacing={{ xs: 2, md: 3 }}
             columnSpacing={10}
           >
-            {services.map((item, index) => (
-              <Grid 
-                item 
-                sm={12} 
-                md={6} 
-                key={index}
-              >
-                <Box marginBottom="10px">
-                  <div className='service-image'>
-                    <Image 
-                      src={item.img} 
-                      objectFit='cover' 
-                      width={800} 
-                      height={500} 
-                      className='service-image' 
-                      onClick={() => router.push(item.path)} 
-                      alt="service-image"
-                    />
-                  </div>
+            {services.map((item, index) => {
+              return (
+                <Card 
+                  key={index} 
+                  name={item.title} 
+                  image={item.img} 
+                  description={item.desc} 
+                  buttonText={item.buttonText} 
+                  path={item.path} 
+                />
+              )
+            })}
 
-                  <Typography 
-                    variant="h6" 
-                    fontWeight="600" 
-                    mt='20px'>
-                      {item.title}
-                  </Typography>
-
-                  <Typography 
-                    className='service-description'>
-                      {item.desc}
-                  </Typography>
-
-                  <Box textAlign="center" mt="2rem">
-                    <Button
-                      className='service-button'
-                      endIcon={<ArrowRightAltIcon />}
-                      onClick={() => router.push(item.path)}
-                    >
-                      {item.buttonText}
-                    </Button>
-                  </Box>
-                </Box>
-              </Grid>
-            ))}
           </Grid>
         </Box>
       </Container>

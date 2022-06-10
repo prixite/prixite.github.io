@@ -23,6 +23,10 @@ export const pages = [
         text: 'Careers',
     },
     {
+        path: '/portfolio',
+        text: 'Portfolio'
+    },
+    {
         path: '/contact-us',
         text: 'Contact Us'
     },
@@ -134,6 +138,46 @@ export const services = [
 
 
 
+
+
+  /**********             Portfolio Page Data         ************** */
+export const portfolioData = {
+    title: 'Prixite - Portfolio',
+    header: 'PORTFOLIO',
+    heading: 'Projects',
+    projects: [
+        {
+            name: 'Project',
+            description: 'Project Description',
+            image: mobileAppDevImage
+        },
+        {
+            name: 'Project',
+            description: 'Project Description',
+            image: mobileAppDevImage
+        },
+        {
+            name: 'Project',
+            description: 'Project Description',
+            image: mobileAppDevImage
+        },
+        {
+            name: 'Project',
+            description: 'Project Description',
+            image: mobileAppDevImage
+        },
+        {
+            name: 'Project',
+            description: 'Project Description',
+            image: mobileAppDevImage
+        },
+        {
+            name: 'Project',
+            description: 'Project Description',
+            image: mobileAppDevImage
+        },
+    ]
+}
 
 
 /*********          Contact Us Page Data            ************* */
