@@ -70,7 +70,7 @@ export const homeData = {
 
 
 /**********            Home Page Services Data          ********* */
-export const servicesHeading = 'WHAT WE ARE DO';
+export const servicesHeading = 'WHAT WE DO';
 
 export const services = [
     {
