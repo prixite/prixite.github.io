@@ -22,3 +22,6 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Contributing
+See [CONTRIBUTING.md](https://github.com/prixite/prixite.github.io/blob/master/CONTRIBUTING.md) on how to contribute to this project.
