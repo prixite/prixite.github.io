@@ -2,6 +2,13 @@ This repository is used to hold the code for the website of [Prixite](https://pr
 
 This repository can also be used a starter template for a Next.js project. The code in this repository is free distributed. 
 
+Some interesting things you can learn from this template:
+- Deployment of Next.js static website to Github Pages.
+- Github Workflows
+- CI/CD pipeline setup
+- TypeScript with React.js and Next.js
+- Integration of linters and formatters.
+
 ## Getting Started
 
 First, run the development server:
