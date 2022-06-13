@@ -13,7 +13,9 @@ Some interesting things you can learn from this template:
 
 ## Getting Started
 
-First, run the development server:
+First, Create an environment file (.env) in the root of the project. You can get the initial file by copying env.sample to .env
+
+Second, run the development server:
 
 ```bash
 npm run dev
