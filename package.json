@@ -2,6 +2,10 @@
   "name": "nextjs-prixite",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=16",
+    "yarn": ">=1"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -20,7 +24,14 @@
     "sass": "^1.52.3"
   },
   "devDependencies": {
+    "@types/node": "^17.0.42",
+    "@types/react": "^18.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
     "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6"
+    "eslint-config-next": "12.1.6",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.6.2",
+    "typescript": "^4.7.3"
   }
+  
 }

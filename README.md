@@ -11,13 +11,22 @@ Some interesting things you can learn from this template:
 - TypeScript with React.js and Next.js
 - Integration of linters and formatters.
 
+You can also use this template to create and host a free website on [Github Pages](https://pages.github.com/) or any other static website host. Advantages of a static website:
+- Speed 🚀
+- Security 🛡️
+- Scalability 🙌
+
+## Requirements:
+
+Node: >=16
+yarn: >= 1
+
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
+yarn install
 yarn dev
 ```
 
@@ -25,3 +34,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Contributing
 See [CONTRIBUTING.md](https://github.com/prixite/prixite.github.io/blob/master/CONTRIBUTING.md) on how to contribute to this project.
+
+## license
+
+The MIT License (MIT)
+
+Copyright (c) 2022- [Prixite](https://prixite.com/)

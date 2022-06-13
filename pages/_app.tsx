@@ -2,12 +2,14 @@ import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import favicon from '../public/favicon.ico'
 import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles'
+import type { AppProps } from 'next/app'
 import '../styles/globals.css'
 import '../components/header/header.scss'
 import '../styles/pagesStyles/home.scss'
 import '../components/footer/footer.scss'
 import '../styles/pagesStyles/contactUs.scss'
 import '../styles/pagesStyles/careers.scss'
+
 
 let theme = createTheme({
   breakpoints: {
@@ -26,12 +28,12 @@ let theme = createTheme({
 
 theme = responsiveFontSizes(theme)
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" type="image/x-icon" href={favicon.src}/>
-      </Head>
+        <link rel="shortcut icon" type="image/x-icon" href={favicon} />
+      </Head>{' '}
       <ThemeProvider theme={theme}>
         <Layout>
           <Component {...pageProps} />
