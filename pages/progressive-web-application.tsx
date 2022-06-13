@@ -3,12 +3,11 @@ import Head from 'next/head'
 import { progressiveWebApp } from '../constants/constants'
 import Header from '../components/header/Header'
 import pwaBgImg from '../public/images/wordpress.jpg'
-import reactImg from '../public/images/React.png'
 import { Container, Stack, Box, Typography, Divider } from '@mui/material'
-import Image from 'next/image'
 
 const ProgressiveWebApplication = () => {
-  const { title, header, heading, details, description, paraList, para } = progressiveWebApp
+  const { title, header, heading, details, description, paraList, para } =
+    progressiveWebApp
   return (
     <>
       <Head>
@@ -19,17 +18,17 @@ const ProgressiveWebApplication = () => {
       <Header bgImg={pwaBgImg}>
         <Container maxWidth="xl">
           <Stack
-            pt={{ xs: "80px", lg: "200px" }}
-            pb={{ xs: "100px", lg: "200px" }}
-            direction={{ xs: "column", md: "row" }}
+            pt={{ xs: '80px', lg: '200px' }}
+            pb={{ xs: '100px', lg: '200px' }}
+            direction={{ xs: 'column', md: 'row' }}
             spacing={5}
           >
             <Box>
               <Typography
                 variant="h3"
                 sx={{
-                  fontWeight: "bold",
-                  color: "white",
+                  fontWeight: 'bold',
+                  color: 'white',
                 }}
               >
                 {header}
@@ -37,18 +36,18 @@ const ProgressiveWebApplication = () => {
               <Divider
                 textAlign="left"
                 sx={{
-                  width: "17%",
-                  marginTop: "2rem",
-                  borderColor: "var(--primary-green)",
-                  borderWidth: "1px",
+                  width: '17%',
+                  marginTop: '2rem',
+                  borderColor: 'var(--primary-green)',
+                  borderWidth: '1px',
                 }}
               />
               <Typography
                 variant="h6"
                 sx={{
-                  fontWeight: "600",
-                  marginTop: "1rem",
-                  color: "white",
+                  fontWeight: '600',
+                  marginTop: '1rem',
+                  color: 'white',
                 }}
               >
                 {heading}
@@ -67,22 +66,25 @@ const ProgressiveWebApplication = () => {
         </Container>
       </Header>
 
-      <Container 
+      <Container
         sx={{
-          display: 'flex', 
-          flexDirection: 'column', 
-          gap: 4, 
-          py: 10, 
-          opacity: 0.8 }} 
-        maxWidth='xl'
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 4,
+          py: 10,
+          opacity: 0.8,
+        }}
+        maxWidth="xl"
       >
-        {details.map((item, index) => <Typography key={index}>{item}</Typography>)}
+        {details.map((item, index) => (
+          <Typography key={index}>{item}</Typography>
+        ))}
 
         <Typography>{description}</Typography>
 
         {paraList.map((item, index) => (
           <Box key={index}>
-            <ul className='wordpress-list'>
+            <ul className="wordpress-list">
               <li>{item}</li>
             </ul>
           </Box>
@@ -90,7 +92,6 @@ const ProgressiveWebApplication = () => {
 
         <Typography>{para}</Typography>
       </Container>
-
     </>
   )
 }
