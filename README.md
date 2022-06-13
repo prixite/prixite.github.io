@@ -14,7 +14,7 @@ Some interesting things you can learn from this template:
 ## Requirements:
 
 Node: >=16
-npm: >= 7
+yarn: >= 1
 ## Getting Started
 
 First, run the development server:
