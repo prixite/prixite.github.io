@@ -1,11 +1,12 @@
-import { Box, Container, Typography, Stack, Divider, Grid, Button } from '@mui/material';
 import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/header/Header'
 import homePageBg from "../public/images/homePageBg.png";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import { Box, Container, Typography, Stack, Divider, Grid, Button } from '@mui/material';
 import { homeData, services, servicesHeading } from '../constants/constants';
 import { useRouter } from 'next/router';
+
 
 export default function Home() {
   const { title, header, headerImage, heading, descriptionHeading, paragraphs } = homeData;
