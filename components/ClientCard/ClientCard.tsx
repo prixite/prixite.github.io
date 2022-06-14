@@ -23,7 +23,7 @@ const ClientCard: React.FC<ClientCardProps> = ({ image, name, project }) => {
         }}
       >
         <Box>
-          <Image src={image} width={100} height={100} />
+          <Image src={image} width={150} height={150} objectFit='cover' />
         </Box>
         <Box
           sx={{
