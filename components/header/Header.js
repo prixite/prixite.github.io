@@ -17,7 +17,7 @@ const Header = ({ children, bgImg }) => {
   };
 
   const handleCloseNavMenu = (page) => {
-    if(page.path !== router.path) {
+    if (page.path !== router.path) {
       router.push(page.path)
     }
 
