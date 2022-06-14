@@ -7,6 +7,7 @@ import mobileAppDevImage from '../public/images/mobileDev.jpg'
 import pwaImage from '../public/images/pwa.jpg'
 import reactDevImage from '../public/images/reactjs.jpg'
 import homeHeaderImage from '../public/images/software-house-in-Multan.webp'
+import wall1 from '../public/images/wall1.jpg'
 
 
 
@@ -21,6 +22,10 @@ export const pages = [
     {
         path: '/careers',
         text: 'Careers',
+    },
+    {
+        path: '/clients',
+        text: 'Clients'
     },
     {
         path: '/contact-us',
@@ -131,6 +136,48 @@ export const services = [
     },
   ];
 
+
+
+
+
+/*********          Clients Data                    ************* */
+export const clientsData = {
+    title: 'Prixite - Clients',
+    header: 'Clients',
+    heading: 'All Clients',
+    clients: [
+        {
+            image: wall1,
+            clientName: 'Client',
+            projectName: 'Project'
+        },
+        {
+            image: wall1,
+            clientName: 'Client',
+            projectName: 'Project'
+        },
+        {
+            image: wall1,
+            clientName: 'Client',
+            projectName: 'Project'
+        },
+        {
+            image: wall1,
+            clientName: 'Client',
+            projectName: 'Project'
+        },
+        {
+            image: wall1,
+            clientName: 'Client',
+            projectName: 'Project'
+        },
+        {
+            image: wall1,
+            clientName: 'Client',
+            projectName: 'Project'
+        },
+    ]
+}
 
 
 
