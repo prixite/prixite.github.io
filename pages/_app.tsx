@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" type="image/x-icon" href={favicon} />
+        <link rel="shortcut icon" type="image/x-icon" href={favicon.src} />
       </Head>{' '}
       <ThemeProvider theme={theme}>
         <Layout>
