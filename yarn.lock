@@ -380,20 +380,28 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+<<<<<<< HEAD
 "@mui/base@5.0.0-alpha.84":
   "integrity" "sha512-uDx+wGVytS+ZHiWHyzUyijY83GSIXJpzSJ0PGc/8/s+8nBzeHvaPKrAyJz15ASLr52hYRA6PQGqn0eRAsB7syQ=="
   "resolved" "https://registry.npmjs.org/@mui/base/-/base-5.0.0-alpha.84.tgz"
   "version" "5.0.0-alpha.84"
+=======
+"@mui/base@5.0.0-alpha.85":
+  version "5.0.0-alpha.85"
+  resolved "https://registry.yarnpkg.com/@mui/base/-/base-5.0.0-alpha.85.tgz#e9e19678bf72dae228d0f25d33dfe20462aac833"
+  integrity sha512-ONlQJOmQrxmR+pYF9AqH69FOG4ofwzVzNltwb2xKAQIW3VbsNZahcHIpzhFd70W6EIU+QHzB9TzamSM+Fg/U7w==
+>>>>>>> 00c91b28613b25f136448ab8403e8617304aea9c
   dependencies:
     "@babel/runtime" "^7.17.2"
     "@emotion/is-prop-valid" "^1.1.2"
-    "@mui/types" "^7.1.3"
-    "@mui/utils" "^5.8.0"
+    "@mui/types" "^7.1.4"
+    "@mui/utils" "^5.8.4"
     "@popperjs/core" "^2.11.5"
     "clsx" "^1.1.1"
     "prop-types" "^15.8.1"
     "react-is" "^17.0.2"
 
+<<<<<<< HEAD
 "@mui/icons-material@^5.8.3":
   "integrity" "sha512-dAdhimSLKOV0Q8FR7AYGEaCrTUh9OV7zU4Ueo5REoUt4cC3Vy+UBKDjZk66x5ezaYb63AFgQIFwtnZj3B/QDbQ=="
   "resolved" "https://registry.npmjs.org/@mui/icons-material/-/icons-material-5.8.3.tgz"
@@ -405,13 +413,27 @@
   "integrity" "sha512-8UecY/W9SMtEZm5PMCUcMbujajVP6fobu0BgBPiIWwwWRblZVEzqprY6v1P2me7qCyrve4L4V/rqAKPKhVHOSg=="
   "resolved" "https://registry.npmjs.org/@mui/material/-/material-5.8.3.tgz"
   "version" "5.8.3"
+=======
+"@mui/icons-material@^5.8.4":
+  version "5.8.4"
+  resolved "https://registry.yarnpkg.com/@mui/icons-material/-/icons-material-5.8.4.tgz#3f2907c9f8f5ce4d754cb8fb4b68b5a1abf4d095"
+  integrity sha512-9Z/vyj2szvEhGWDvb+gG875bOGm8b8rlHBKOD1+nA3PcgC3fV6W1AU6pfOorPeBfH2X4mb9Boe97vHvaSndQvA==
   dependencies:
     "@babel/runtime" "^7.17.2"
-    "@mui/base" "5.0.0-alpha.84"
-    "@mui/system" "^5.8.3"
-    "@mui/types" "^7.1.3"
-    "@mui/utils" "^5.8.0"
+
+"@mui/material@^5.8.4":
+  version "5.8.4"
+  resolved "https://registry.yarnpkg.com/@mui/material/-/material-5.8.4.tgz#b9cdae0c79ea770bc9cc3aafb7f750ed8ebe1b5d"
+  integrity sha512-KlOJS1JGhwuhdoF4fulmz41h/YxyMdZSc+ncz+HAah0GKn8ovAs5774f1w0lIasxbtI1Ziunwvmnu9PvvUKdMw==
+>>>>>>> 00c91b28613b25f136448ab8403e8617304aea9c
+  dependencies:
+    "@babel/runtime" "^7.17.2"
+    "@mui/base" "5.0.0-alpha.85"
+    "@mui/system" "^5.8.4"
+    "@mui/types" "^7.1.4"
+    "@mui/utils" "^5.8.4"
     "@types/react-transition-group" "^4.4.4"
+<<<<<<< HEAD
     "clsx" "^1.1.1"
     "csstype" "^3.1.0"
     "hoist-non-react-statics" "^3.3.2"
@@ -427,6 +449,22 @@
     "@babel/runtime" "^7.17.2"
     "@mui/utils" "^5.8.0"
     "prop-types" "^15.8.1"
+=======
+    clsx "^1.1.1"
+    csstype "^3.1.0"
+    prop-types "^15.8.1"
+    react-is "^17.0.2"
+    react-transition-group "^4.4.2"
+
+"@mui/private-theming@^5.8.4":
+  version "5.8.4"
+  resolved "https://registry.yarnpkg.com/@mui/private-theming/-/private-theming-5.8.4.tgz#8ff896601cf84eb9f8394db7674ee4dd2a3343f7"
+  integrity sha512-3Lp0VAEjtQygJ70MWEyHkKvg327O6YoBH6ZNEy6fIsrK6gmRIj+YrlvJ7LQCbowY+qDGnbdMrTBd1hfThlI8lg==
+  dependencies:
+    "@babel/runtime" "^7.17.2"
+    "@mui/utils" "^5.8.4"
+    prop-types "^15.8.1"
+>>>>>>> 00c91b28613b25f136448ab8403e8617304aea9c
 
 "@mui/styled-engine@^5.8.0":
   "integrity" "sha512-Q3spibB8/EgeMYHc+/o3RRTnAYkSl7ROCLhXJ830W8HZ2/iDiyYp16UcxKPurkXvLhUaILyofPVrP3Su2uKsAw=="
@@ -437,14 +475,22 @@
     "@emotion/cache" "^11.7.1"
     "prop-types" "^15.8.1"
 
+<<<<<<< HEAD
 "@mui/system@^5.8.3":
   "integrity" "sha512-/tyGQcYqZT0nl98qV9XnGiedTO+V7VHc28k4POfhMJNedB1CRrwWRm767DeEdc5f/8CU2See3WD16ikP6pYiOA=="
   "resolved" "https://registry.npmjs.org/@mui/system/-/system-5.8.3.tgz"
   "version" "5.8.3"
+=======
+"@mui/system@^5.8.4":
+  version "5.8.4"
+  resolved "https://registry.yarnpkg.com/@mui/system/-/system-5.8.4.tgz#88306aefcc3a60528f69dcd2d66516831859c328"
+  integrity sha512-eeYZXlOn4p+tYwqqDlci6wW4knJ68aGx5A24YU9ubYZ5o0IwveoNP3LC9sHAMxigk/mUTqL4bpSMJ2HbTn2aQg==
+>>>>>>> 00c91b28613b25f136448ab8403e8617304aea9c
   dependencies:
     "@babel/runtime" "^7.17.2"
-    "@mui/private-theming" "^5.8.0"
+    "@mui/private-theming" "^5.8.4"
     "@mui/styled-engine" "^5.8.0"
+<<<<<<< HEAD
     "@mui/types" "^7.1.3"
     "@mui/utils" "^5.8.0"
     "clsx" "^1.1.1"
@@ -460,6 +506,23 @@
   "integrity" "sha512-7LgUtCvz78676iC0wpTH7HizMdCrTphhBmRWimIMFrp5Ph6JbDFVuKS1CwYnWWxRyYKL0QzXrDL0lptAU90EXg=="
   "resolved" "https://registry.npmjs.org/@mui/utils/-/utils-5.8.0.tgz"
   "version" "5.8.0"
+=======
+    "@mui/types" "^7.1.4"
+    "@mui/utils" "^5.8.4"
+    clsx "^1.1.1"
+    csstype "^3.1.0"
+    prop-types "^15.8.1"
+
+"@mui/types@^7.1.4":
+  version "7.1.4"
+  resolved "https://registry.yarnpkg.com/@mui/types/-/types-7.1.4.tgz#4185c05d6df63ec673cda15feab80440abadc764"
+  integrity sha512-uveM3byMbthO+6tXZ1n2zm0W3uJCQYtwt/v5zV5I77v2v18u0ITkb8xwhsDD2i3V2Kye7SaNR6FFJ6lMuY/WqQ==
+
+"@mui/utils@^5.8.4":
+  version "5.8.4"
+  resolved "https://registry.yarnpkg.com/@mui/utils/-/utils-5.8.4.tgz#5c46b5900bd2452b3ce54a7a1c94a3e2a8a75c34"
+  integrity sha512-BHYErfrjqqh76KaDAm8wZlhEip1Uj7Cmco65NcsF3BWrAl3FWngACpaPZeEbTgmaEwyWAQEE6LZhsmy43hfyqQ==
+>>>>>>> 00c91b28613b25f136448ab8403e8617304aea9c
   dependencies:
     "@babel/runtime" "^7.17.2"
     "@types/prop-types" "^15.7.5"
@@ -1626,7 +1689,42 @@
   "resolved" "https://registry.npmjs.org/is-core-module/-/is-core-module-2.9.0.tgz"
   "version" "2.9.0"
   dependencies:
+<<<<<<< HEAD
     "has" "^1.0.3"
+=======
+    has-symbols "^1.0.2"
+
+has@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/has/-/has-1.0.3.tgz"
+  dependencies:
+    function-bind "^1.1.1"
+
+hoist-non-react-statics@^3.3.1:
+  version "3.3.2"
+  resolved "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz"
+  dependencies:
+    react-is "^16.7.0"
+
+ignore@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.npmjs.org/ignore/-/ignore-5.2.0.tgz"
+
+immutable@^4.0.0:
+  version "4.1.0"
+  resolved "https://registry.npmjs.org/immutable/-/immutable-4.1.0.tgz"
+
+import-fresh@^3.0.0, import-fresh@^3.1.0, import-fresh@^3.2.1:
+  version "3.3.0"
+  resolved "https://registry.npmjs.org/import-fresh/-/import-fresh-3.3.0.tgz"
+  dependencies:
+    parent-module "^1.0.0"
+    resolve-from "^4.0.0"
+
+imurmurhash@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz"
+>>>>>>> 00c91b28613b25f136448ab8403e8617304aea9c
 
 "is-date-object@^1.0.1":
   "integrity" "sha512-9YQaSxsAiSwcvS33MBk3wTCVnWK+HhF8VZR2jRxehM16QcVOdHqPn4VPHmRK4lSr38n9JriurInLcP90xsYNfQ=="
