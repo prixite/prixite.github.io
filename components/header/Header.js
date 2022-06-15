@@ -17,8 +17,12 @@ const Header = ({ children, bgImg }) => {
   };
 
   const handleCloseNavMenu = (page) => {
-    if(page.path !== router.path) {
-      router.push(page.path)
+    if (page.text === 'Home') {
+      router.push('/')
+    } else if (page.text === 'Careers') {
+      router.push('/careers')
+    } else if (page.text === 'Contact Us') {
+      router.push('/contact-us')
     }
 
     setAnchorElNav(null)
