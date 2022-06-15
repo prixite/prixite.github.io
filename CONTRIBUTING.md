@@ -1,6 +1,6 @@
 Some guidelines for contributing to this repository:
 
-- Create a [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks), make the changes, and submit PR against upstream.
+- Create a [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks), make the changes, and submit a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) against the upstream.
 - One branch per ticket.
 - One PR per ticket.
 - Delete your old branch.
