@@ -25,7 +25,11 @@ export const pages = [
     },
     {
         path: '/clients',
-        text: 'Clients'
+        text: 'Clients',
+    },
+    {
+        path: '/portfolio',
+        text: 'Portfolio'
     },
     {
         path: '/contact-us',
@@ -181,6 +185,47 @@ export const clientsData = {
 
 
 
+
+
+
+  /**********             Portfolio Page Data         ************** */
+export const portfolioData = {
+    title: 'Prixite - Portfolio',
+    header: 'PORTFOLIO',
+    heading: 'Projects',
+    projects: [
+        {
+            name: 'Project',
+            description: 'Project Description',
+            image: mobileAppDevImage
+        },
+        {
+            name: 'Project',
+            description: 'Project Description',
+            image: mobileAppDevImage
+        },
+        {
+            name: 'Project',
+            description: 'Project Description',
+            image: mobileAppDevImage
+        },
+        {
+            name: 'Project',
+            description: 'Project Description',
+            image: mobileAppDevImage
+        },
+        {
+            name: 'Project',
+            description: 'Project Description',
+            image: mobileAppDevImage
+        },
+        {
+            name: 'Project',
+            description: 'Project Description',
+            image: mobileAppDevImage
+        },
+    ]
+}
 
 
 /*********          Contact Us Page Data            ************* */

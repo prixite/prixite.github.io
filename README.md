@@ -37,7 +37,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Contributing
 See [CONTRIBUTING.md](https://github.com/prixite/prixite.github.io/blob/master/CONTRIBUTING.md) on how to contribute to this project.
 
-## license
+## Future Plan
+We would like to reach to a place where anyone can fork this template, make few changes, and create a free website. For this to happen, following needs to happen:
+- a DB file to hold data of the website. Data should be separate from layout.
+- a system to create layout of pages.
+- a set of components which can be used in pages.
+- maybe we should also separate style from layout.
+
+## License
 
 The MIT License (MIT)
 
