@@ -9,6 +9,7 @@ import '../styles/pagesStyles/home.scss'
 import '../components/footer/footer.scss'
 import '../styles/pagesStyles/contactUs.scss'
 import '../styles/pagesStyles/careers.scss'
+import '../styles/pagesStyles/portfolio.scss'
 
 
 let theme = createTheme({
