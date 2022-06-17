@@ -5,6 +5,9 @@ repos:
       - id: check-yaml
       - id: end-of-file-fixer
       - id: trailing-whitespace
-      - 
+
   - repo: https://github.com/pre-commit/mirrors-prettier
-        types: [javascript, typescript]
+    rev: v2.6.2
+    hooks:
+      - id: prettier
+        types: [javascript,typescript]
