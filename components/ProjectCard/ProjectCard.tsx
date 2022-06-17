@@ -2,14 +2,17 @@ import React from 'react'
 import { Box, Typography, Container, Stack } from '@mui/material'
 import Image from 'next/image'
 
-
 interface ProjectCardProps {
-    name: string,
-    description: string,
-    image: string,
+  name: string
+  description: string
+  image: string
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({name, description, image}) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  name,
+  description,
+  image,
+}) => {
   return (
     <Container maxWidth="md">
       <Stack
@@ -24,7 +27,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({name, description, image}) => 
         }}
       >
         <Box>
-          <Image src={image} width={150} height={150} objectFit='cover' />
+          <Image src={image} width={150} height={150} objectFit="cover" />
         </Box>
         <Box
           sx={{

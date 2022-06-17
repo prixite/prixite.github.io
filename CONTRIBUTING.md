@@ -10,3 +10,4 @@ Some guidelines for contributing to this repository:
 - Create PR as early as possible.
 - Mark your PR draft if it's still a work in progress.
 - Do all code related discussions on PR.
+- We support [pre-commit](https://pre-commit.com/). Make sure that you enable it. You can manually run pre-commit checks using `pre-commit run --all`.
