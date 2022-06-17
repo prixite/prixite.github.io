@@ -9,24 +9,31 @@ import {
   MenuItem,
   Button,
 } from '@mui/material'
-import Image from 'next/image'
-import React from 'react'
+import Image, { StaticImageData } from 'next/image'
+import React, { ReactNode } from 'react'
 import logoImg from '../../public/images/logo.png'
 import MenuIcon from '@mui/icons-material/Menu'
 import { pages } from '../../constants/constants'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-const Header = ({ children, bgImg }) => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null)
+interface HeaderProps {
+  children: ReactNode
+  bgImg: StaticImageData
+}
+
+const Header: React.FC<HeaderProps> = ({ children, bgImg }) => {
+  const [anchorElNav, setAnchorElNav] = React.useState<
+    (EventTarget & HTMLButtonElement) | null
+  >(null)
 
   const router = useRouter()
 
-  const handleOpenNavMenu = (event) => {
+  const handleOpenNavMenu = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorElNav(event.currentTarget)
   }
 
-  const handleCloseNavMenu = (page) => {
+  const handleCloseNavMenu = (page: { path: string; text: string }) => {
     if (page.path !== router.path) {
       router.push(page.path)
     }
