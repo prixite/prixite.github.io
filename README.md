@@ -39,7 +39,7 @@ See [CONTRIBUTING.md](https://github.com/prixite/prixite.github.io/blob/master/C
 
 ## Future Plan
 We would like to reach to a place where anyone can fork this template, make few changes, and create a free website. For this to happen, following needs to happen:
-- a DB file to hold data of the website. Data should be separate from layout.
+- a DB file to hold data of the website. Data should be separate from layout. https://github.com/prixite/prixite.github.io/issues/67
 - a system to create layout of pages.
 - a set of components which can be used in pages.
 - maybe we should also separate style from layout.
