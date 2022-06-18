@@ -17,6 +17,7 @@ import { pages } from '../../constants/constants'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Head from 'next/head'
+
 const Header = ({ children, bgImg, title }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
 
