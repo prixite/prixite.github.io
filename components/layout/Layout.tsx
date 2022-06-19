@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import Footer from '../footer/Footer'
 
-const Layout = ({ children }) => {
+type Props = { children: ReactNode }
+
+const Layout = ({ children }: Props) => {
   return (
     <>
       {children}
