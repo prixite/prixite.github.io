@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import { devOps } from '../constants/constants'
+import { devOps } from '../constants/data'
 import Header from '../components/header/Header'
 import devOpsAsService from '../public/images/devOpsAsService.png'
 import { Container, Stack, Box, Typography, Divider } from '@mui/material'

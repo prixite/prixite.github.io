@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Header from '../components/header/Header'
 import homePageBg from '../public/images/homePageBg.png'
 import { Box, Typography, Container, Grid, Divider, Stack } from '@mui/material'
-import { portfolioData } from '../constants/constants'
+import { portfolioData } from '../constants/data'
 import ProjectCard from '../components/ProjectCard/ProjectCard'
 
 const portfolio = () => {

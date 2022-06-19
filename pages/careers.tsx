@@ -12,7 +12,7 @@ import {
   FormControlLabel,
   Checkbox,
 } from '@mui/material'
-import { careersData } from '../constants/constants'
+import { careersData } from '../constants/data'
 
 const careers = () => {
   const { title, heading, buttonText } = careersData

@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import { mobileAppDevelopment } from '../constants/constants'
+import { mobileAppDevelopment } from '../constants/data'
 import Header from '../components/header/Header'
 import mobileAppImg from '../public/images/wordpress Development-01.png'
 import mobileAppBgImg from '../public/images/mobileDev.jpg'
