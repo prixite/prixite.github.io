@@ -17,7 +17,7 @@ const ClientCard: React.FC<ClientCardProps> = ({ image, name, project, descripti
         className="client-card-items"
       >
         <Box>
-          <Image src={image} width={150} height={150} objectFit="cover" />
+          <Image src={image} width={150} height={150} objectFit="cover" alt='client'/>
         </Box>
         <Box className="client-card-content">
           <Box>

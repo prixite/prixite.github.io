@@ -1,8 +1,7 @@
 import React from 'react'
-import Head from 'next/head'
 import Header from '../components/header/Header'
 import homePageBg from "../public/images/homePageBg.png";
-import { Box, Typography, Container, Grid, Divider, Stack } from '@mui/material'
+import { Box, Typography, Container, Grid, Divider } from '@mui/material'
 import { clientsData } from '../constants/constants';
 import ClientCard from '../components/ClientCard/ClientCard';
 
