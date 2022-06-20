@@ -1,21 +1,15 @@
 import React from 'react'
-import Head from 'next/head'
 import Header from '../components/header/Header'
 import homePageBg from '../public/images/homePageBg.png'
-import { Box, Typography, Container, Grid, Divider, Stack } from '@mui/material'
 import { portfolioData } from '../constants/data'
+
 import ProjectCard from '../components/ProjectCard/ProjectCard'
 
 const portfolio = () => {
   const { title, header, heading, projects } = portfolioData
   return (
     <div className="portfolio-page">
-      <Head>
-        <title>{title}</title>
-        <meta name="prixite" content="Prixte" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header bgImg={homePageBg}>
+      <Header bgImg={homePageBg} title={title}>
         <Box className="careers-container">
           <Typography
             variant="h2"

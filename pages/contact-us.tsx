@@ -1,5 +1,4 @@
 import React from 'react'
-import Head from 'next/head'
 import Header from '../components/header/Header'
 import contactUsPageBg from '../public/images/contactUsPageBg.png'
 import { Box, Typography, Container, Grid, Stack } from '@mui/material'
@@ -12,12 +11,7 @@ const ContactUs = () => {
   const { title, heading, description, contactInfo } = contactUs
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="prixite" content="Prixte" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header bgImg={contactUsPageBg}>
+      <Header bgImg={contactUsPageBg} title={title}>
         <Box
           sx={{
             pt: { xs: '100px', lg: '230px' },

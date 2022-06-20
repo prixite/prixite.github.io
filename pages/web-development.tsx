@@ -1,5 +1,4 @@
 import React from 'react'
-import Head from 'next/head'
 import Header from '../components/header/Header'
 import { Container, Stack, Box, Typography, Divider } from '@mui/material'
 import { webDevelopment } from '../constants/data'
@@ -11,12 +10,7 @@ const Webdevelopment = () => {
   const { title, header, heading, description } = webDevelopment
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="prixite" content="Prixte" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header bgImg={webDevelopmentBgImg}>
+      <Header bgImg={webDevelopmentBgImg} title={title}>
         <Container maxWidth="xl">
           <Stack
             pt={{ xs: '80px', lg: '200px' }}

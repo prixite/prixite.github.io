@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import { mobileAppDevelopment } from '../constants/data'
+
 import Header from '../components/header/Header'
 import mobileAppImg from '../public/images/wordpress Development-01.png'
 import mobileAppBgImg from '../public/images/mobileDev.jpg'
@@ -12,12 +13,7 @@ const MobileApplicationDevelopment = () => {
     mobileAppDevelopment
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="prixite" content="Prixte" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header bgImg={mobileAppBgImg}>
+      <Header bgImg={mobileAppBgImg} title={title}>
         <Container maxWidth="xl">
           <Stack
             pt={{ xs: '80px', lg: '200px' }}

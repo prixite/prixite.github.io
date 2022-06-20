@@ -9,12 +9,7 @@ const devops = () => {
   const { title, header, heading, description, paraHeading, paraList } = devOps
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="prixite" content="Prixte" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header bgImg={devOpsAsService}>
+      <Header bgImg={devOpsAsService} title={title}>
         <Container maxWidth="xl">
           <Stack
             pt={{ xs: '80px', lg: '200px' }}

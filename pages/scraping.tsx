@@ -12,12 +12,7 @@ const scraping = () => {
 
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="prixite" content="Prixte" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header bgImg={scrapingImage}>
+      <Header bgImg={scrapingImage} title={title}>
         <Container maxWidth="xl">
           <Stack
             pt={{ xs: '80px', lg: '200px' }}

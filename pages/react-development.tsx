@@ -12,12 +12,7 @@ const ReactDevelopment = () => {
     reactDevelopment
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="prixite" content="Prixte" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header bgImg={reactBgImg}>
+      <Header bgImg={reactBgImg} title={title}>
         <Container maxWidth="xl">
           <Stack
             pt={{ xs: '80px', lg: '200px' }}

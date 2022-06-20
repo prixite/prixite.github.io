@@ -1,5 +1,4 @@
 import React from 'react'
-import Head from 'next/head'
 import Header from '../components/header/Header'
 import { pythonProgramming } from '../constants/data'
 import { Container, Stack, Box, Typography, Divider } from '@mui/material'
@@ -12,12 +11,7 @@ const PythonProgramming = () => {
     pythonProgramming
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="prixite" content="Prixte" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header bgImg={pythonBgImg}>
+      <Header bgImg={pythonBgImg} title={title}>
         <Container maxWidth="xl">
           <Stack
             pt={{ xs: '80px', lg: '200px' }}

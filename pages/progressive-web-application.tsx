@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import { progressiveWebApp } from '../constants/data'
+
 import Header from '../components/header/Header'
 import pwaBgImg from '../public/images/wordpress.jpg'
 import { Container, Stack, Box, Typography, Divider } from '@mui/material'
@@ -10,12 +11,7 @@ const ProgressiveWebApplication = () => {
     progressiveWebApp
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="prixite" content="Prixte" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header bgImg={pwaBgImg}>
+      <Header bgImg={pwaBgImg} title={title}>
         <Container maxWidth="xl">
           <Stack
             pt={{ xs: '80px', lg: '200px' }}
