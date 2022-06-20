@@ -1,20 +1,14 @@
 import React from 'react'
 import Header from '../components/header/Header'
 import homePageBg from '../public/images/homePageBg.png'
-import {
-  Box,
-  Container,
-  Typography,
-  Divider,
-  Grid,
-} from '@mui/material'
-import { jobsData } from '../constants/constants'
-import JobCard from '../components/JobCard/JobCard'
+import { Box, Typography, Container, Grid, Divider } from '@mui/material'
+import { portfolioData } from '../constants/constants'
+import ProjectCard from '../components/ProjectCard/ProjectCard'
 
-const jobs = () => {
-  const { title, heading, jobs } = jobsData
+const portfolio = () => {
+  const { title, header, heading, projects } = portfolioData
   return (
-    <div className="jobs-page">
+    <div className="portfolio-page">
       <Header bgImg={homePageBg} title={title}>
         <Box className="careers-container">
           <Typography
@@ -22,30 +16,30 @@ const jobs = () => {
             textAlign="center"
             className="careers-heading"
           >
-            {heading}
+            {header}
           </Typography>
         </Box>
       </Header>
       <Container maxWidth="xl">
         <Box p="5rem 1.5rem">
-          <Typography variant="h4" className="jobs-heading">
+          <Typography variant="h4" className="portfolio-heading">
             {heading}
           </Typography>
 
           <Divider
             variant="middle"
-            className="jobs-divider"
+            className="portfolio-divider"
             sx={{ mx: 'auto', fill: 'true', width: '8%' }}
           />
 
           <Grid container>
-            {jobs.map((job, index) => {
+            {projects.map((project, index) => {
               return (
-                <JobCard
+                <ProjectCard
                   key={index}
-                  image={job.image.src}
-                  name={job.name}
-                  description={job.description}
+                  image={project.image.src}
+                  name={project.name}
+                  description={project.description}
                 />
               )
             })}
@@ -56,4 +50,4 @@ const jobs = () => {
   )
 }
 
-export default jobs
+export default portfolio

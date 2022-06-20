@@ -2,7 +2,7 @@
 
 This repository is used to hold the code for the website of [Prixite](https://prixite.com). Prixite is a leading software development company of Pakistan. It has offices in Lahore, Pakistan and Wyoming, USA.
 
-This repository can also be used as a starter template for a Next.js project. The code in this repository is freely distributed. 
+This repository can also be used as a starter template for a Next.js project. The code in this repository is freely distributed.
 
 Some interesting things you can learn from this template:
 - Deployment of Next.js static website to Github Pages.
@@ -39,7 +39,7 @@ See [CONTRIBUTING.md](https://github.com/prixite/prixite.github.io/blob/master/C
 
 ## Future Plan
 We would like to reach to a place where anyone can fork this template, make few changes, and create a free website. For this to happen, following needs to happen:
-- a DB file to hold data of the website. Data should be separate from layout.
+- a DB file to hold data of the website. Data should be separate from layout. https://github.com/prixite/prixite.github.io/issues/67
 - a system to create layout of pages.
 - a set of components which can be used in pages.
 - maybe we should also separate style from layout.
