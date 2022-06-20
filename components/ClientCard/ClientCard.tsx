@@ -13,7 +13,7 @@ const ClientCard: React.FC<ClientCardProps> = ({ image, name, project, descripti
   return (
     <Container maxWidth="md" className="client-card">
       <Stack
-        direction={{ xs: 'column', md: 'row' }}
+        direction={{ xs: 'column', md: 'row'  }}
         className="client-card-items"
       >
         <Box>
