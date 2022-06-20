@@ -1,5 +1,4 @@
 import React from 'react'
-import Head from 'next/head'
 import Header from '../components/header/Header'
 import careersPageBg from '../public/images/careersPageBg.jpg'
 import {
@@ -18,12 +17,7 @@ const careers = () => {
   const { title, heading, buttonText } = careersData
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="prixite" content="Prixte" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header bgImg={careersPageBg}>
+      <Header bgImg={careersPageBg} title={title}>
         <Box className="careers-container">
           <Typography
             variant="h2"

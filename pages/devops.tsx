@@ -1,5 +1,4 @@
 import React from 'react'
-import Head from 'next/head'
 import { devOps } from '../constants/constants'
 import Header from '../components/header/Header'
 import devOpsAsService from '../public/images/devOpsAsService.png'
@@ -9,12 +8,7 @@ const devops = () => {
   const { title, header, heading, description, paraHeading, paraList } = devOps
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="prixite" content="Prixte" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header bgImg={devOpsAsService}>
+      <Header bgImg={devOpsAsService} title={title}>
         <Container maxWidth="xl">
           <Stack
             pt={{ xs: '80px', lg: '200px' }}

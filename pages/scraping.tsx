@@ -1,6 +1,5 @@
 import React from 'react'
 import { scrapingData } from '../constants/constants'
-import Head from 'next/head'
 import Header from '../components/header/Header'
 import scrapingImage from '../public/images/scraping.jpg'
 import webScrapingImage from '../public/images/wordpress Development-01.png'
@@ -12,12 +11,7 @@ const scraping = () => {
 
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="prixite" content="Prixte" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header bgImg={scrapingImage}>
+      <Header bgImg={scrapingImage} title={title}>
         <Container maxWidth="xl">
           <Stack
             pt={{ xs: '80px', lg: '200px' }}

@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/header/Header'
 import homePageBg from '../public/images/homePageBg.png'
@@ -28,13 +27,7 @@ export default function Home() {
   const router = useRouter()
   return (
     <div className="home-page-container">
-      <Head>
-        <title>{title}</title>
-        <meta name="prixite" content="Prixite" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Header bgImg={homePageBg}>
+      <Header bgImg={homePageBg} title={title}>
         <Container maxWidth="xl">
           <Stack
             pt={{ xs: '60px', lg: '110px' }}

@@ -1,5 +1,4 @@
 import React from 'react'
-import Head from 'next/head'
 import { wordPressDevelopment } from '../constants/constants'
 import Header from '../components/header/Header'
 import WordPressBgImage from '../public/images/wall1.jpg'
@@ -12,12 +11,7 @@ const WordPressDevelopment = () => {
     wordPressDevelopment
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="prixite" content="Prixte" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header bgImg={WordPressBgImage}>
+      <Header bgImg={WordPressBgImage} title={title}>
         <Container maxWidth="xl">
           <Stack
             pt={{ xs: '80px', lg: '200px' }}
