@@ -11,17 +11,14 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "lint": "next lint",
-    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+    "lint": "next lint"
   },
-  "pre-commit": ["precommit-msg", "lint"],
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.8.4",
     "next": "12.1.6",
-    "pre-commit": "^1.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.52.3"
