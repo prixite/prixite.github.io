@@ -18,7 +18,9 @@ a {
   font-family: 'Montserrat', sans-serif;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -30,13 +32,13 @@ h1,h2,h3 {
 }
 
 .wordpress-list {
-  margin: -10px 10px -10px 40px
+  margin: -10px 10px -10px 40px;
 }
 
 .devops-list {
-  margin: -10px 10px -10px 40px
+  margin: -10px 10px -10px 40px;
 }
 
 .scraping-list {
-  margin: -10px 10px -10px 40px
+  margin: -10px 10px -10px 40px;
 }

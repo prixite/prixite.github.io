@@ -1,7 +1,11 @@
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import favicon from '../public/favicon.ico'
-import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles'
+import {
+  createTheme,
+  ThemeProvider,
+  responsiveFontSizes,
+} from '@mui/material/styles'
 import type { AppProps } from 'next/app'
 import '../styles/globals.css'
 import '../components/header/header.scss'
@@ -11,7 +15,6 @@ import '../styles/pagesStyles/contactUs.scss'
 import '../styles/pagesStyles/careers.scss'
 import '../styles/pagesStyles/clients.scss'
 import '../styles/pagesStyles/portfolio.scss'
-
 
 let theme = createTheme({
   breakpoints: {
