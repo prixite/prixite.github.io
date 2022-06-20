@@ -6,41 +6,27 @@ interface ClientCardProps {
   image: string
   name: string
   project: string
+  description: string
 }
 
-const ClientCard: React.FC<ClientCardProps> = ({ image, name, project }) => {
+const ClientCard: React.FC<ClientCardProps> = ({ image, name, project, description }) => {
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="md" className="client-card">
       <Stack
         direction={{ xs: 'column', md: 'row' }}
-        spacing={5}
-        my={3}
-        p={2}
-        sx={{
-          alignItems: 'center',
-          boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
-          borderRadius: 4,
-        }}
+        className="client-card-items"
       >
         <Box>
-          <Image src={image} width={150} height={150} objectFit='cover' />
+          <Image src={image} width={150} height={150} objectFit="cover" />
         </Box>
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 1,
-          }}
-        >
-          <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-            <Typography fontSize={18} variant="h6">
-              {name}
-            </Typography>
+        <Box className="client-card-content">
+          <Box>
+            <Typography variant="h6">{name}</Typography>
           </Box>
 
-          <Typography fontSize={14}>{project}</Typography>
+          <Typography>{project}</Typography>
           <Box>
-            <Typography fontSize={15}>Description</Typography>
+            <Typography>{description}</Typography>
           </Box>
         </Box>
       </Stack>

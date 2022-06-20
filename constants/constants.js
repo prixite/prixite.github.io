@@ -184,32 +184,38 @@ export const clientsData = {
         {
             image: wall1,
             clientName: 'Client',
-            projectName: 'Project'
+            projectName: 'Project',
+            description: 'Description',
         },
         {
             image: wall1,
             clientName: 'Client',
-            projectName: 'Project'
+            projectName: 'Project',
+            description: 'Description',
         },
         {
             image: wall1,
             clientName: 'Client',
-            projectName: 'Project'
+            projectName: 'Project',
+            description: 'Description',
         },
         {
             image: wall1,
             clientName: 'Client',
-            projectName: 'Project'
+            projectName: 'Project',
+            description: 'Description',
         },
         {
             image: wall1,
             clientName: 'Client',
-            projectName: 'Project'
+            projectName: 'Project',
+            description: 'Description',
         },
         {
             image: wall1,
             clientName: 'Client',
-            projectName: 'Project'
+            projectName: 'Project',
+            description: 'Description',
         },
     ]
 }

@@ -10,12 +10,7 @@ const clients = () => {
     const { title, header, heading, clients } = clientsData
     return (
         <div className='clients-page'>
-            <Head>
-                <title>{title}</title>
-                <meta name="prixite" content="Prixte" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            <Header bgImg={homePageBg}>
+            <Header bgImg={homePageBg} title={title}>
                 <Box className='careers-container'>
                     <Typography
                         variant="h2"
@@ -50,7 +45,8 @@ const clients = () => {
                                     key={index}
                                     image={client.image.src}
                                     name={client.clientName}
-                                    project={client.projectName}    
+                                    project={client.projectName}
+                                    description={client.description}    
                                 />
                             )
                         })}
