@@ -12,7 +12,7 @@ import homeHeaderImage from '../public/images/software-house-in-Multan.webp'
 export const pages = [
   {
     path: '/',
-    text: 'Home'
+    text: 'Home',
   },
   {
     path: '/careers',
@@ -214,10 +214,6 @@ export const careersData = {
   buttonText: 'Search Jobs',
 }
 
-
-
-
-
 //*********                 Jobs Page Data              ********** */
 export const jobsData = {
   title: 'Prixite - Jobs',
@@ -226,36 +222,30 @@ export const jobsData = {
     {
       name: 'Job name',
       image: mobileAppDevImage,
-      description: 'Job Description'
+      description: 'Job Description',
     },
     {
       name: 'Job name',
       image: mobileAppDevImage,
-      description: 'Job Description'
+      description: 'Job Description',
     },
     {
       name: 'Job name',
       image: mobileAppDevImage,
-      description: 'Job Description'
+      description: 'Job Description',
     },
     {
       name: 'Job name',
       image: mobileAppDevImage,
-      description: 'Job Description'
+      description: 'Job Description',
     },
     {
       name: 'Job name',
       image: mobileAppDevImage,
-      description: 'Job Description'
+      description: 'Job Description',
     },
-  ]
+  ],
 }
-
-
-
-
-
-
 
 /*******        Web Development Data            ************* */
 export const webDevelopment = {

@@ -11,10 +11,7 @@ interface JobCardProps {
 const JobCard: React.FC<JobCardProps> = ({ name, image, description }) => {
   return (
     <Container maxWidth="md" className="job-card">
-      <Stack
-        className="job-card-items"
-        direction={{ xs: 'column', md: 'row' }}
-      >
+      <Stack className="job-card-items" direction={{ xs: 'column', md: 'row' }}>
         <Box>
           <Image
             src={image}
@@ -24,9 +21,7 @@ const JobCard: React.FC<JobCardProps> = ({ name, image, description }) => {
             alt="Job"
           />
         </Box>
-        <Box
-          className="job-card-content"
-        >
+        <Box className="job-card-content">
           <Box>
             <Typography variant="h6">{name}</Typography>
           </Box>
