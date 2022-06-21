@@ -11,26 +11,26 @@ import wall1 from '../public/images/wall1.jpg'
 
 /*********          Header Menu Data            ********** */
 export const pages = [
-    {
-        path: '/',
-        text: 'Home'
-    },
-    {
-        path: '/careers',
-        text: 'Careers',
-    },
-    {
-        path: '/clients',
-        text: 'Clients',
-    },
-    {
-        path: '/portfolio',
-        text: 'Portfolio'
-    },
-    {
-        path: '/contact-us',
-        text: 'Contact Us'
-    },
+  {
+    path: '/',
+    text: 'Home',
+  },
+  {
+    path: '/careers',
+    text: 'Careers',
+  },
+  {
+    path: '/clients',
+    text: 'Clients',
+  },
+  {
+    path: '/portfolio',
+    text: 'Portfolio',
+  },
+  {
+    path: '/contact-us',
+    text: 'Contact Us',
+  },
 ]
 
 /***********            Home Page Main Data             *********** */
@@ -127,11 +127,6 @@ export const services = [
   },
 ]
 
-
-
-
-
-
 /**********             Portfolio Page Data         ************** */
 export const portfolioData = {
   title: 'Prixite - Portfolio',
@@ -171,60 +166,50 @@ export const portfolioData = {
   ],
 }
 
-
-
-
-
 /*********          Clients Data                    ************* */
 export const clientsData = {
-    title: 'Prixite - Clients',
-    header: 'Clients',
-    heading: 'All Clients',
-    clients: [
-        {
-            image: wall1,
-            clientName: 'Client',
-            projectName: 'Project',
-            description: 'Description',
-        },
-        {
-            image: wall1,
-            clientName: 'Client',
-            projectName: 'Project',
-            description: 'Description',
-        },
-        {
-            image: wall1,
-            clientName: 'Client',
-            projectName: 'Project',
-            description: 'Description',
-        },
-        {
-            image: wall1,
-            clientName: 'Client',
-            projectName: 'Project',
-            description: 'Description',
-        },
-        {
-            image: wall1,
-            clientName: 'Client',
-            projectName: 'Project',
-            description: 'Description',
-        },
-        {
-            image: wall1,
-            clientName: 'Client',
-            projectName: 'Project',
-            description: 'Description',
-        },
-    ]
+  title: 'Prixite - Clients',
+  header: 'Clients',
+  heading: 'All Clients',
+  clients: [
+    {
+      image: wall1,
+      clientName: 'Client',
+      projectName: 'Project',
+      description: 'Description',
+    },
+    {
+      image: wall1,
+      clientName: 'Client',
+      projectName: 'Project',
+      description: 'Description',
+    },
+    {
+      image: wall1,
+      clientName: 'Client',
+      projectName: 'Project',
+      description: 'Description',
+    },
+    {
+      image: wall1,
+      clientName: 'Client',
+      projectName: 'Project',
+      description: 'Description',
+    },
+    {
+      image: wall1,
+      clientName: 'Client',
+      projectName: 'Project',
+      description: 'Description',
+    },
+    {
+      image: wall1,
+      clientName: 'Client',
+      projectName: 'Project',
+      description: 'Description',
+    },
+  ],
 }
-
-
-
-
-
-  
 
 /*********          Contact Us Page Data            ************* */
 export const contactUs = {

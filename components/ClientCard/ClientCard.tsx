@@ -9,15 +9,26 @@ interface ClientCardProps {
   description: string
 }
 
-const ClientCard: React.FC<ClientCardProps> = ({ image, name, project, description }) => {
+const ClientCard: React.FC<ClientCardProps> = ({
+  image,
+  name,
+  project,
+  description,
+}) => {
   return (
     <Container maxWidth="md" className="client-card">
       <Stack
-        direction={{ xs: 'column', md: 'row'  }}
+        direction={{ xs: 'column', md: 'row' }}
         className="client-card-items"
       >
         <Box>
-          <Image src={image} width={150} height={150} objectFit="cover" alt='client'/>
+          <Image
+            src={image}
+            width={150}
+            height={150}
+            objectFit="cover"
+            alt="client"
+          />
         </Box>
         <Box className="client-card-content">
           <Box>
