@@ -1,7 +1,5 @@
 import React from 'react'
-import Head from 'next/head'
 import { progressiveWebApp } from '../constants/data'
-
 import Header from '../components/header/Header'
 import pwaBgImg from '../public/images/wordpress.jpg'
 import { Container, Stack, Box, Typography, Divider } from '@mui/material'

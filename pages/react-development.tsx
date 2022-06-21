@@ -1,5 +1,4 @@
 import React from 'react'
-import Head from 'next/head'
 import { reactDevelopment } from '../constants/data'
 import Header from '../components/header/Header'
 import reactBgImg from '../public/images/reactjs.jpg'

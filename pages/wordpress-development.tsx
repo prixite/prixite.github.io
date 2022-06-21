@@ -1,5 +1,4 @@
 import React from 'react'
-import Head from 'next/head'
 import { wordPressDevelopment } from '../constants/data'
 import Header from '../components/header/Header'
 import WordPressBgImage from '../public/images/wall1.jpg'
