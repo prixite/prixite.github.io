@@ -27,7 +27,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         }}
       >
         <Box>
-          <Image src={image} width={150} height={150} objectFit="cover" />
+          <Image
+            src={image}
+            width={150}
+            height={150}
+            objectFit="cover"
+            alt="project"
+          />
         </Box>
         <Box
           sx={{
