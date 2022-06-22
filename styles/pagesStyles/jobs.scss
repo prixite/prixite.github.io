@@ -1,0 +1,17 @@
+.jobs-page {
+  .jobs-heading {
+    margin: 3.9rem 0 3rem 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 35px;
+    opacity: 0.8;
+  }
+
+  .jobs-divider {
+    margin-top: 0.2rem;
+    border-color: var(--primary-green);
+    border-top: 2px solid;
+    border-top-color: var(--primary-green);
+    margin-bottom: 3rem;
+  }
+}

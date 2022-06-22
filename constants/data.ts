@@ -24,6 +24,10 @@ export const pages = [
     text: 'Clients',
   },
   {
+    path: '/jobs',
+    text: 'Jobs',
+  },
+  {
     path: '/portfolio',
     text: 'Portfolio',
   },
@@ -258,6 +262,39 @@ export const careersData = {
   title: 'Prixite - Careers',
   heading: 'JOIN US',
   buttonText: 'Search Jobs',
+}
+
+//*********                 Jobs Page Data              ********** */
+export const jobsData = {
+  title: 'Prixite - Jobs',
+  heading: 'Jobs',
+  jobs: [
+    {
+      name: 'Job name',
+      image: mobileAppDevImage,
+      description: 'Job Description',
+    },
+    {
+      name: 'Job name',
+      image: mobileAppDevImage,
+      description: 'Job Description',
+    },
+    {
+      name: 'Job name',
+      image: mobileAppDevImage,
+      description: 'Job Description',
+    },
+    {
+      name: 'Job name',
+      image: mobileAppDevImage,
+      description: 'Job Description',
+    },
+    {
+      name: 'Job name',
+      image: mobileAppDevImage,
+      description: 'Job Description',
+    },
+  ],
 }
 
 /*******        Web Development Data            ************* */
