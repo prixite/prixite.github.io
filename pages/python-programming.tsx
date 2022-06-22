@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/header/Header'
-import { pythonProgramming } from '../constants/constants'
+import { pythonProgramming } from '../constants/data'
 import { Container, Stack, Box, Typography, Divider } from '@mui/material'
 import Image from 'next/image'
 import pythonBgImg from '../public/images/python.jpg'

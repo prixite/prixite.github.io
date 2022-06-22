@@ -5,7 +5,7 @@ import { Box, Typography, Container, Grid, Stack } from '@mui/material'
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
-import { contactUs } from '../constants/constants'
+import { contactUs } from '../constants/data'
 
 const ContactUs = () => {
   const { title, heading, description, contactInfo } = contactUs
