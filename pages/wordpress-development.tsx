@@ -1,5 +1,5 @@
 import React from 'react'
-import { wordPressDevelopment } from '../constants/constants'
+import { wordPressDevelopment } from '../constants/data'
 import Header from '../components/header/Header'
 import WordPressBgImage from '../public/images/wall1.jpg'
 import WordPressImage from '../public/images/wordpress Development-01.png'
