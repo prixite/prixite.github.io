@@ -1,5 +1,5 @@
 import React from 'react'
-import { scrapingData } from '../constants/constants'
+import { scrapingData } from '../constants/data'
 import Header from '../components/header/Header'
 import scrapingImage from '../public/images/scraping.jpg'
 import webScrapingImage from '../public/images/wordpress Development-01.png'
