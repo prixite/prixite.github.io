@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../components/header/Header'
 import homePageBg from '../public/images/homePageBg.png'
 import { Box, Container, Typography, Divider, Grid } from '@mui/material'
-import { jobsData } from '../constants/constants'
+import { jobsData } from '../constants/data'
 import JobCard from '../components/JobCard/JobCard'
 
 const jobs = () => {
