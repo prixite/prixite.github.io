@@ -1,14 +1,14 @@
 import React from 'react'
 import Header from '../components/header/Header'
 import homePageBg from '../public/images/homePageBg.png'
-import { Box, Typography, Container, Grid, Divider } from '@mui/material'
-import { portfolioData } from '../constants/data'
-import ProjectCard from '../components/ProjectCard/ProjectCard'
+import { Box, Container, Typography, Divider, Grid } from '@mui/material'
+import { jobsData } from '../constants/data'
+import JobCard from '../components/JobCard/JobCard'
 
-const portfolio = () => {
-  const { title, header, heading, projects } = portfolioData
+const jobs = () => {
+  const { title, heading, jobs } = jobsData
   return (
-    <div className="portfolio-page">
+    <div className="jobs-page">
       <Header bgImg={homePageBg} title={title}>
         <Box className="careers-container">
           <Typography
@@ -16,30 +16,30 @@ const portfolio = () => {
             textAlign="center"
             className="careers-heading"
           >
-            {header}
+            {heading}
           </Typography>
         </Box>
       </Header>
       <Container maxWidth="xl">
         <Box p="5rem 1.5rem">
-          <Typography variant="h4" className="portfolio-heading">
+          <Typography variant="h4" className="jobs-heading">
             {heading}
           </Typography>
 
           <Divider
             variant="middle"
-            className="portfolio-divider"
+            className="jobs-divider"
             sx={{ mx: 'auto', fill: 'true', width: '8%' }}
           />
 
           <Grid container>
-            {projects.map((project, index) => {
+            {jobs.map((job, index) => {
               return (
-                <ProjectCard
+                <JobCard
                   key={index}
-                  image={project.image.src}
-                  name={project.name}
-                  description={project.description}
+                  image={job.image.src}
+                  name={job.name}
+                  description={job.description}
                 />
               )
             })}
@@ -50,4 +50,4 @@ const portfolio = () => {
   )
 }
 
-export default portfolio
+export default jobs
