@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../components/header/Header'
 import homePageBg from '../public/images/homePageBg.png'
 import { Box, Typography, Container, Grid, Divider } from '@mui/material'
-import { clientsData } from '../constants/data'
+import { clientsData } from '../data/data'
 import ClientCard from '../components/ClientCard/ClientCard'
 
 const clients = () => {
