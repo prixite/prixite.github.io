@@ -1,5 +1,5 @@
 import React from 'react'
-import { devOps } from '../constants/data'
+import { devOps } from '../data/data'
 import Header from '../components/header/Header'
 import devOpsAsService from '../public/images/devOpsAsService.png'
 import { Container, Stack, Box, Typography, Divider } from '@mui/material'
