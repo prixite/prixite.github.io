@@ -1,5 +1,5 @@
 import React from 'react'
-import { reactDevelopment } from '../constants/data'
+import { reactDevelopment } from '../data/data'
 import Header from '../components/header/Header'
 import reactBgImg from '../public/images/reactjs.jpg'
 import reactImg from '../public/images/React.png'

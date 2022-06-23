@@ -14,7 +14,7 @@ import React from 'react'
 import logoImg from '../../public/images/logo.png'
 import MenuIcon from '@mui/icons-material/Menu'
 import { NextRouter, useRouter } from 'next/router'
-import { pages } from '../../constants/data'
+import { pages, siteName } from '../../data/data'
 import Link from 'next/link'
 import Head from 'next/head'
 
@@ -69,7 +69,7 @@ const Header: React.FC<HeaderProps> = ({ children, bgImg, title }) => {
               >
                 <Image
                   src={logoImg}
-                  alt="Prixite"
+                  alt={siteName}
                   onClick={() => router.push('/')}
                 />
               </Box>
@@ -83,7 +83,7 @@ const Header: React.FC<HeaderProps> = ({ children, bgImg, title }) => {
               >
                 <Image
                   src={logoImg}
-                  alt="Prixite"
+                  alt={siteName}
                   onClick={() => router.push('/')}
                 />
               </Box>

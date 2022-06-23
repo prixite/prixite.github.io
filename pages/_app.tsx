@@ -13,7 +13,9 @@ import '../styles/pagesStyles/home.scss'
 import '../components/footer/footer.scss'
 import '../styles/pagesStyles/contactUs.scss'
 import '../styles/pagesStyles/careers.scss'
+import '../styles/pagesStyles/jobs.scss'
 import '../styles/pagesStyles/portfolio.scss'
+import '../components/JobCard/JobCard.scss'
 
 let theme = createTheme({
   breakpoints: {

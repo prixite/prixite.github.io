@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../components/header/Header'
 import homePageBg from '../public/images/homePageBg.png'
 import { Box, Typography, Container, Grid, Divider } from '@mui/material'
-import { portfolioData } from '../constants/data'
+import { portfolioData } from '../data/data'
 import ProjectCard from '../components/ProjectCard/ProjectCard'
 
 const portfolio = () => {

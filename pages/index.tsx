@@ -11,7 +11,7 @@ import {
   Grid,
   Button,
 } from '@mui/material'
-import { homeData, services, servicesHeading } from '../constants/data'
+import { homeData, services, servicesHeading } from '../data/data'
 import { useRouter } from 'next/router'
 
 export default function Home() {
