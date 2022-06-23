@@ -36,7 +36,7 @@ export const siteName = 'Prixite'
 
 /***********            Home Page Main Data             *********** */
 export const homeData = {
-  title: 'Prixite',
+  title: `${siteName}`,
   header: 'Transform Your Business With Us',
   headerImage: homeHeaderImage,
   heading: 'One-stop Solution to Your Business Needs',
@@ -130,7 +130,7 @@ export const services = [
 
 /**********             Portfolio Page Data         ************** */
 export const portfolioData = {
-  title: 'Prixite - Portfolio',
+  title: `${siteName} - Portfolio`,
   header: 'PORTFOLIO',
   heading: 'Projects',
   projects: [
@@ -169,7 +169,7 @@ export const portfolioData = {
 
 /*********          Contact Us Page Data            ************* */
 export const contactUs = {
-  title: 'Prixite - Contact Us',
+  title: `${siteName} - Contact Us`,
   heading: 'Contact Us',
   description: [
     {
@@ -211,14 +211,14 @@ export const contactUs = {
 
 /**********             Careers Page Data           ************* */
 export const careersData = {
-  title: 'Prixite - Careers',
+  title: `${siteName} - Careers`,
   heading: 'JOIN US',
   buttonText: 'Search Jobs',
 }
 
 //*********                 Jobs Page Data              ********** */
 export const jobsData = {
-  title: 'Prixite - Jobs',
+  title: `${siteName} - Jobs`,
   heading: 'Jobs',
   jobs: [
     {
@@ -251,7 +251,7 @@ export const jobsData = {
 
 /*******        Web Development Data            ************* */
 export const webDevelopment = {
-  title: 'Web Development - Prixite',
+  title: `${siteName} - Web Development`,
   header: 'Web Development',
   heading:
     'Prixite being the exquisite web development brands offers innovative solutions to your web development needs in today’s dynamics.',
@@ -265,7 +265,7 @@ export const webDevelopment = {
 
 /*************          WordPress Development Data      ***************  */
 export const wordPressDevelopment = {
-  title: 'WordPress Development - Prixite',
+  title: `${siteName} - WordPress Development`,
   header: 'WordPress Development',
   heading:
     'Prixite offers its clients superior quality WordPress solutions helping them create a compelling impact in the business world.',
@@ -293,7 +293,7 @@ export const wordPressDevelopment = {
 
 /*************          DevOps Data      ***************  */
 export const devOps = {
-  title: 'DevOps - Prixite',
+  title: `${siteName} - DevOps`,
   header: 'DevOps',
   heading:
     'Prixite DevOps practices help clients achieve their goals without compromising on product environment and infrastructure capabilities.',
@@ -318,7 +318,7 @@ export const devOps = {
 
 /*************          Scraping Data      ***************  */
 export const scrapingData = {
-  title: 'Scraping - Prixite',
+  title: `${siteName} - Scraping`,
   header: 'Scraping',
   heading: `Prixite is one of the leading digital marketing service providers that believe in creating value-added solutions for our potential client's web data extraction needs.`,
   description: `Prixite is one of the top digital marketing service providers to its extensive clientele all around the world.  The key to our success is providing customized solutions that fit your business needs by thoroughly understanding your target market and offering you a customized plan to achieve your goals. One of the most inventive and cost-effective solutions the business needs of our client when it comes to web data extraction is data scarping. Our entire objective is to make data scraping simple and accessible for our clients. We offer various services when it comes to data scrapping that can truly innovate and bring value to their business dynamics. These services include:`,
@@ -333,7 +333,7 @@ export const scrapingData = {
 
 /*************          Python Programming Data      ***************  */
 export const pythonProgramming = {
-  title: 'Python Programming - Prixite',
+  title: `${siteName} - Python Programming`,
   header: 'Python Programming',
   heading: `Prixite is one of the top companies to provide full-stack python web development services to its clients worldwide.`,
   details: [
@@ -356,7 +356,7 @@ export const pythonProgramming = {
 
 /*************          Mobile Application Data      ***************  */
 export const mobileAppDevelopment = {
-  title: 'Mobile Application Development - Prixite',
+  title: `${siteName} - Mobile Application Development`,
   header: 'Mobile Application Development',
   heading: `To improve your digital strategy and benefit from all the advantages of the mobile digital age, the mobile application`,
   details: [
@@ -379,7 +379,7 @@ export const mobileAppDevelopment = {
 
 /*************          Progressive Web App Data      ***************  */
 export const progressiveWebApp = {
-  title: 'Progressive Web Application - Prixite',
+  title: `${siteName} - Progressive Web Application`,
   header: 'Progressive Web Application',
   heading: `Prixite is one of the top PWA service providers to its clients with progressive tools and approaches to their business needs.`,
   details: [
@@ -398,7 +398,7 @@ export const progressiveWebApp = {
 
 /*************          React Development Data      ***************  */
 export const reactDevelopment = {
-  title: 'React Development - Prixite',
+  title: `${siteName} - React Development`,
   header: 'React Development',
   heading: `Prixite is one of the top PWA service providers to its clients with progressive tools and approaches to their business needs.`,
   details: [
