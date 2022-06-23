@@ -42,6 +42,8 @@ We would like to reach to a place where anyone can fork this template, make few 
 - a DB file to hold data of the website. Data should be separate from layout. https://github.com/prixite/prixite.github.io/issues/67
 - a system to create layout of pages.
 - a set of components which can be used in pages.
+- a system to change theme easily.
+- a system to change type of site, e.g. change from corporate to a blog.
 - maybe we should also separate style from layout.
 
 ## License

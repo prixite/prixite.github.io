@@ -13,7 +13,7 @@ import Image from 'next/image'
 import React from 'react'
 import logoImg from '../../public/images/logo.png'
 import MenuIcon from '@mui/icons-material/Menu'
-import { pages } from '../../constants/data'
+import { pages, siteName } from '../../data/data'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Head from 'next/head'
@@ -63,7 +63,7 @@ const Header = ({ children, bgImg, title }) => {
               >
                 <Image
                   src={logoImg}
-                  alt="Prixite"
+                  alt={siteName}
                   onClick={() => router.push('/')}
                 />
               </Box>
@@ -77,7 +77,7 @@ const Header = ({ children, bgImg, title }) => {
               >
                 <Image
                   src={logoImg}
-                  alt="Prixite"
+                  alt={siteName}
                   onClick={() => router.push('/')}
                 />
               </Box>
