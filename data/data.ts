@@ -32,6 +32,8 @@ export const pages = [
   },
 ]
 
+export const siteName = 'Prixite'
+
 /***********            Home Page Main Data             *********** */
 export const homeData = {
   title: 'Prixite',
