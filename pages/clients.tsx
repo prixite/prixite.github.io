@@ -2,13 +2,13 @@ import React from 'react'
 import Header from '../components/header/Header'
 import homePageBg from '../public/images/homePageBg.png'
 import { Box, Typography, Container, Grid, Divider } from '@mui/material'
-import { portfolioData } from '../data/data'
-import ProjectCard from '../components/ProjectCard/ProjectCard'
+import { clientsData } from '../constants/data'
+import ClientCard from '../components/ClientCard/ClientCard'
 
-const portfolio = () => {
-  const { title, header, heading, projects } = portfolioData
+const clients = () => {
+  const { title, header, heading, clients } = clientsData
   return (
-    <div className="portfolio-page">
+    <div className="clients-page">
       <Header bgImg={homePageBg} title={title}>
         <Box className="careers-container">
           <Typography
@@ -22,24 +22,25 @@ const portfolio = () => {
       </Header>
       <Container maxWidth="xl">
         <Box p="5rem 1.5rem">
-          <Typography variant="h4" className="portfolio-heading">
+          <Typography variant="h4" className="clients-heading">
             {heading}
           </Typography>
 
           <Divider
             variant="middle"
-            className="portfolio-divider"
+            className="clients-divider"
             sx={{ mx: 'auto', fill: 'true', width: '8%' }}
           />
 
           <Grid container>
-            {projects.map((project, index) => {
+            {clients.map((client, index) => {
               return (
-                <ProjectCard
+                <ClientCard
                   key={index}
-                  image={project.image.src}
-                  name={project.name}
-                  description={project.description}
+                  image={client.image.src}
+                  name={client.clientName}
+                  project={client.projectName}
+                  description={client.description}
                 />
               )
             })}
@@ -50,4 +51,4 @@ const portfolio = () => {
   )
 }
 
-export default portfolio
+export default clients
