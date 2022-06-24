@@ -18,7 +18,9 @@ import '../styles/pagesStyles/portfolio.scss'
 import '../components/ClientCard/clientCard.scss'
 import '../styles/pagesStyles/jobs.scss'
 import '../styles/pagesStyles/portfolio.scss'
+import '../styles/pagesStyles/blog.scss'
 import '../components/JobCard/JobCard.scss'
+import '../components/BlogCard/blogCard.scss'
 
 let theme = createTheme({
   breakpoints: {
