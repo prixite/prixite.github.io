@@ -32,6 +32,10 @@ export const pages = [
     text: 'Portfolio',
   },
   {
+    path: '/blog',
+    text: 'Blog',
+  },
+  {
     path: '/contact-us',
     text: 'Contact Us',
   },
@@ -213,6 +217,35 @@ export const clientsData = {
       clientName: 'Client',
       projectName: 'Project',
       description: 'Description',
+    },
+  ],
+}
+
+/**********             Portfolio Page Data         ************** */
+export const blogData = {
+  title: `${siteName} - Blog`,
+  header: 'Blog',
+  heading: 'All Blogs',
+  blogs: [
+    {
+      name: 'Blog',
+      description: 'Blog Description',
+      image: mobileAppDevImage,
+    },
+    {
+      name: 'Blog',
+      description: 'Blog Description',
+      image: mobileAppDevImage,
+    },
+    {
+      name: 'Blog',
+      description: 'Blog Description',
+      image: mobileAppDevImage,
+    },
+    {
+      name: 'Blog',
+      description: 'Blog Description',
+      image: mobileAppDevImage,
     },
   ],
 }
