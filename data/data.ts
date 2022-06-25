@@ -16,26 +16,6 @@ export const pages = [
     text: 'Home',
   },
   {
-    path: '/careers',
-    text: 'Careers',
-  },
-  {
-    path: '/clients',
-    text: 'Clients',
-  },
-  {
-    path: '/jobs',
-    text: 'Jobs',
-  },
-  {
-    path: '/portfolio',
-    text: 'Portfolio',
-  },
-  {
-    path: '/blog',
-    text: 'Blog',
-  },
-  {
     path: '/contact-us',
     text: 'Contact Us',
   },
