@@ -9,27 +9,33 @@ import {
   MenuItem,
   Button,
 } from '@mui/material'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import React from 'react'
 import logoImg from '../../public/images/logo.png'
 import MenuIcon from '@mui/icons-material/Menu'
+import { NextRouter, useRouter } from 'next/router'
 import { pages, siteName } from '../../data/data'
-import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Head from 'next/head'
 
-const Header = ({ children, bgImg, title }) => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null)
+interface HeaderProps {
+  children: React.ReactNode
+  bgImg?: StaticImageData
+  title: string
+}
 
-  const router = useRouter()
+const Header: React.FC<HeaderProps> = ({ children, bgImg, title }) => {
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
 
-  const handleOpenNavMenu = (event) => {
+  const router: NextRouter = useRouter()
+
+  const handleOpenNavMenu = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorElNav(event.currentTarget)
   }
 
-  const handleCloseNavMenu = (page) => {
-    if (page.path !== router.path) {
-      router.push(page.path)
+  const handleCloseNavMenu = (path: string) => {
+    if (path !== router.pathname) {
+      router.push(path)
     }
 
     setAnchorElNav(null)
@@ -105,13 +111,13 @@ const Header = ({ children, bgImg, title }) => {
                     horizontal: 'left',
                   }}
                   open={Boolean(anchorElNav)}
-                  onClose={handleCloseNavMenu}
+                  onClose={() => setAnchorElNav(null)}
                   sx={{ display: { xs: 'block', md: 'none' } }}
                 >
                   {pages.map((page, index) => (
                     <MenuItem
                       key={index}
-                      onClick={() => handleCloseNavMenu(page)}
+                      onClick={() => handleCloseNavMenu(page.path)}
                     >
                       <Typography textAlign="center">{page.text}</Typography>
                     </MenuItem>
@@ -126,12 +132,7 @@ const Header = ({ children, bgImg, title }) => {
                 {pages.map((page, index) => {
                   if (page.text == 'Contact Us') {
                     return (
-                      <Link
-                        href={page?.path}
-                        sx={{ textDecoration: 'none' }}
-                        key={index}
-                        passHref
-                      >
+                      <Link href={page?.path} key={index} passHref>
                         <Button className="contact-us-button" sx={{ mx: 2 }}>
                           {page.text}
                         </Button>
@@ -139,12 +140,7 @@ const Header = ({ children, bgImg, title }) => {
                     )
                   }
                   return (
-                    <Link
-                      href={page?.path}
-                      sx={{ textDecoration: 'none' }}
-                      key={index}
-                      passHref
-                    >
+                    <Link href={page?.path} key={index} passHref>
                       <Typography
                         className="header-menu-items"
                         sx={{
