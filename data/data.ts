@@ -16,22 +16,6 @@ export const pages = [
     text: 'Home',
   },
   {
-    path: '/careers',
-    text: 'Careers',
-  },
-  {
-    path: '/clients',
-    text: 'Clients',
-  },
-  {
-    path: '/jobs',
-    text: 'Jobs',
-  },
-  {
-    path: '/portfolio',
-    text: 'Portfolio',
-  },
-  {
     path: '/contact-us',
     text: 'Contact Us',
   },
@@ -213,6 +197,35 @@ export const clientsData = {
       clientName: 'Client',
       projectName: 'Project',
       description: 'Description',
+    },
+  ],
+}
+
+/**********             Portfolio Page Data         ************** */
+export const blogData = {
+  title: `${siteName} - Blog`,
+  header: 'Blog',
+  heading: 'All Blogs',
+  blogs: [
+    {
+      name: 'Blog',
+      description: 'Blog Description',
+      image: mobileAppDevImage,
+    },
+    {
+      name: 'Blog',
+      description: 'Blog Description',
+      image: mobileAppDevImage,
+    },
+    {
+      name: 'Blog',
+      description: 'Blog Description',
+      image: mobileAppDevImage,
+    },
+    {
+      name: 'Blog',
+      description: 'Blog Description',
+      image: mobileAppDevImage,
     },
   ],
 }
