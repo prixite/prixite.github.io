@@ -480,8 +480,7 @@ export const reactDevelopment = {
 
 /**************             Footer Data         ************ */
 export const footerData = {
-  address:
-    'Office locations: Lhr, Pakistan | Wyoming, USA',
+  address: 'Office locations: Lhr, Pakistan | Wyoming, USA',
   phone: `042 37114925`,
   email: 'hi@prixite.com',
   copyright: 'Copyright © 2022 Prixite',
