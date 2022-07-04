@@ -13,7 +13,15 @@ import wall1 from '../public/images/wall1.jpg'
 export const pages = [
   {
     path: '/',
-    text: 'Home',
+    text: 'About Us',
+  },
+  {
+    path: '/',
+    text: 'Services',
+  },
+  {
+    path: '/',
+    text: 'News & Blogs',
   },
   {
     path: '/contact-us',

@@ -7,17 +7,16 @@ import {
   Toolbar,
   Typography,
   MenuItem,
-  Button,
   ListItemIcon,
+  Divider,
 } from '@mui/material'
 import Image, { StaticImageData } from 'next/image'
 import React from 'react'
 import logoImg from '../../public/images/prixite-logo.png'
-import menuIcon from '../../public/images/menu-icon.png'
-import MenuIcon from '@mui/icons-material/Menu'
+import hamburgerClose from '../../public/images/hamburgerClose.png'
+import hamburgerOpen from '../../public/images/hamburgerOpen.png'
 import { NextRouter, useRouter } from 'next/router'
 import { pages, siteName } from '../../data/data'
-import Link from 'next/link'
 import Head from 'next/head'
 import CallMadeIcon from '@mui/icons-material/CallMade'
 
@@ -27,20 +26,22 @@ interface HeaderProps {
   title: string
 }
 
-const Header: React.FC<HeaderProps> = ({ children, bgImg, title }) => {
+const Header: React.FC<HeaderProps> = ({ children, title }) => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
+  const [hamburgerIcon, setHamburgerIcon] = React.useState<boolean>()
 
   const router: NextRouter = useRouter()
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorElNav(event.currentTarget)
+    setHamburgerIcon(true)
   }
 
   const handleCloseNavMenu = (path: string) => {
     if (path !== router.pathname) {
       router.push(path)
     }
-
+    setHamburgerIcon(false)
     setAnchorElNav(null)
   }
 
@@ -86,15 +87,22 @@ const Header: React.FC<HeaderProps> = ({ children, bgImg, title }) => {
                   color="inherit"
                 >
                   <Box className="menu-icon">
-                    <Box className="menu-icon-first-line"></Box>
-                    <Box className="menu-icon-second-line"></Box>
-                    <Box className="menu-icon-third-line"></Box>
+                    {hamburgerIcon ? (
+                      <Image src={hamburgerClose} alt={siteName} />
+                    ) : (
+                      <Image src={hamburgerOpen} alt={siteName} />
+                    )}
                   </Box>
                 </IconButton>
                 <Menu
                   PaperProps={{
                     style: {
-                      width: 300,
+                      width: 1160,
+                      paddingLeft: 30,
+                      paddingRight: 30,
+                      paddingTop: 20,
+                      paddingBottom: 20,
+                      boxShadow: 'none',
                     },
                   }}
                   className="header-menu"
@@ -102,7 +110,7 @@ const Header: React.FC<HeaderProps> = ({ children, bgImg, title }) => {
                   anchorEl={anchorElNav}
                   anchorOrigin={{
                     vertical: 'bottom',
-                    horizontal: 'left',
+                    horizontal: 'right',
                   }}
                   keepMounted
                   transformOrigin={{
@@ -110,11 +118,14 @@ const Header: React.FC<HeaderProps> = ({ children, bgImg, title }) => {
                     horizontal: 'right',
                   }}
                   open={Boolean(anchorElNav)}
-                  onClose={() => setAnchorElNav(null)}
+                  onClose={() => {
+                    setAnchorElNav(null)
+                    setHamburgerIcon(false)
+                  }}
                 >
+                  <Divider />
                   {pages.map((page, index) => (
                     <MenuItem
-                      className="header-menu-items"
                       key={index}
                       onClick={() => handleCloseNavMenu(page.path)}
                       sx={{
@@ -126,7 +137,8 @@ const Header: React.FC<HeaderProps> = ({ children, bgImg, title }) => {
                       <Typography
                         textAlign="center"
                         sx={{
-                          fontWeight: 600,
+                          fontWeight: 700,
+                          fontFamily: 'lato',
                         }}
                       >
                         {page.text}
