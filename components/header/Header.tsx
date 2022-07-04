@@ -67,7 +67,10 @@ const Header: React.FC<HeaderProps> = ({ children, bgImg, title }) => {
                   onClick={() => router.push('/')}
                 />
               </Box>
-              <Typography className="title-heading" onClick={() => router.push('/')}>
+              <Typography
+                className="title-heading"
+                onClick={() => router.push('/')}
+              >
                 {siteName}
                 <span style={{ color: '#63AC45' }}>.</span>
               </Typography>

@@ -70,7 +70,7 @@ export default function Home() {
                       variant="contained"
                       endIcon={<SendOutlinedIcon />}
                       size="large"
-                      className='contact-us-button'
+                      className="contact-us-button"
                     >
                       Contact Us
                     </Button>
