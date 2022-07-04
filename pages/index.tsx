@@ -56,7 +56,7 @@ export default function Home() {
               <Typography variant="h4" className="home-main-heading-2">
                 {heading.slice(0, 8)}
                 <span className="solution-color">{heading.slice(8, 17)}</span>
-                {heading.slice(17, 40)}  🚀
+                {heading.slice(17, 40)} 🚀
               </Typography>
 
               <Typography>{aim}</Typography>
