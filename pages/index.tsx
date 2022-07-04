@@ -13,51 +13,87 @@ import {
 } from '@mui/material'
 import { homeData, services, servicesHeading } from '../data/data'
 import { useRouter } from 'next/router'
+import SendOutlinedIcon from '@mui/icons-material/SendOutlined'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+import youtubeIcon from '../public/images/youtubeIcon.png'
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#63AC45',
+    },
+  },
+})
 
 export default function Home() {
   const {
     title,
     header,
     headerImage,
-    heading,
+    heading1,
+    heading2,
+    heading3,
     descriptionHeading,
     paragraphs,
+    aim,
   } = homeData
 
   const router = useRouter()
   return (
     <div className="home-page-container">
-      <Header bgImg={homePageBg} title={title}>
+      <Header title={title}>
         <Container maxWidth="xl">
           <Stack
-            pt={{ xs: '60px', lg: '110px' }}
-            pb={{ xs: '100px', lg: '80px' }}
+            pt={{ xs: '60px', lg: '60px' }}
+            pb={{ xs: '100px', lg: '60px' }}
             direction={{ xs: 'column', md: 'row' }}
             spacing={8}
+            alignItems={'center'}
           >
-            <Box>
+            <Box mb={4}>
               <Typography variant="h6" className="home-main-heading-1">
                 {header}
               </Typography>
 
-              <Divider
-                textAlign="left"
-                className="divider"
-                sx={{ width: '17%' }}
-              />
-
               <Typography variant="h4" className="home-main-heading-2">
-                {heading}
+                {heading1}
+                <span className="solution-color">{heading2}</span>
+                {heading3}🚀
               </Typography>
+
+              <Typography>{aim}</Typography>
+
+              <Box display="flex" gap="25px" alignItems={'center'} mt={6}>
+                <ThemeProvider theme={theme}>
+                  <Box>
+                    <Button
+                      variant="contained"
+                      endIcon={<SendOutlinedIcon />}
+                      size="large"
+                      className='contact-us-button'
+                    >
+                      Contact Us
+                    </Button>
+                  </Box>
+                </ThemeProvider>
+
+                <Box className="youtube-icon">
+                  <Image
+                    unoptimized
+                    priority
+                    src={youtubeIcon}
+                    alt="service-image"
+                  />
+                </Box>
+                <Typography>Watch Video</Typography>
+              </Box>
             </Box>
 
-            <Box textAlign="center">
+            <Box>
               <Image
                 unoptimized
                 priority
                 src={headerImage}
-                width={400}
-                height={300}
                 alt="service-image"
               />
             </Box>
