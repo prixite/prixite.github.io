@@ -6,7 +6,7 @@ body {
 }
 
 :root {
-  --primary-green: #64aa44;
+  --primary-green: #63AC45;
   --primary-grey: #d3d3d3;
   --icon-grey-color: #939393;
   font-family: 'Montserrat', sans-serif;
@@ -42,3 +42,5 @@ h3 {
 .scraping-list {
   margin: -10px 10px -10px 40px;
 }
+
+

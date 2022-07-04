@@ -11,8 +11,9 @@ import {
   Grid,
   Button,
 } from '@mui/material'
-import { homeData, services, servicesHeading } from '../data/data'
+import { homeData, services, servicesHeading, aim } from '../data/data'
 import { useRouter } from 'next/router'
+import serviceBgImage from '../public/images/serviceBackground.png'
 
 export default function Home() {
   const {
@@ -76,33 +77,28 @@ export default function Home() {
             </Typography>
           ))}
 
-          <Typography variant="h4" className="service-heading">
-            {servicesHeading}
+          <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
+            {servicesHeading.slice(0, 3)}
+            <span style={{ color: 'var(--primary-green' }}>
+              {servicesHeading.slice(3, 12)}
+            </span>
           </Typography>
+          <Typography mt={2} mb={7}>{aim}</Typography>
 
-          <Divider
-            variant="middle"
-            className="service-divider"
-            sx={{ mx: 'auto', fill: 'true', width: '8%' }}
-          />
-
-          <Grid container spacing={{ xs: 2, md: 3 }} columnSpacing={10}>
+          <Grid container spacing={{ xs: 2, md: 3 }} columnSpacing={2}>
             {services.map((item, index) => (
-              <Grid item sm={12} md={6} key={index}>
+              <Grid item sm={12} md={3} key={index}>
                 <Box marginBottom="10px">
-                  <div className="service-image">
+                  <Box className="service-image-container">
                     <Image
+                      unoptimized
+                      priority
                       src={item.img}
-                      objectFit="cover"
-                      width={800}
-                      height={500}
-                      className="service-image"
-                      onClick={() => router.push(item.path)}
                       alt="service-image"
                     />
-                  </div>
+                  </Box>
 
-                  <Typography variant="h6" fontWeight="600" mt="20px">
+                  <Typography sx={{ fontSize: 15, fontWeight: 600 }} mt="20px">
                     {item.title}
                   </Typography>
 
@@ -110,15 +106,6 @@ export default function Home() {
                     {item.desc}
                   </Typography>
 
-                  <Box textAlign="center" mt="2rem">
-                    <Button
-                      className="service-button"
-                      endIcon={<ArrowRightAltIcon />}
-                      onClick={() => router.push(item.path)}
-                    >
-                      {item.buttonText}
-                    </Button>
-                  </Box>
                 </Box>
               </Grid>
             ))}

@@ -1,11 +1,11 @@
-import webDevelopmentImage from '../public/images/webDevelopment.jpg'
-import wordPressDevelopmentImage from '../public/images/wordpress Development-01.png'
-import devOpsImage from '../public/images/devOpsAsService.png'
-import scrapingImage from '../public/images/scraping.jpg'
-import pythonExpertImage from '../public/images/python.jpg'
-import mobileAppDevImage from '../public/images/mobileDev.jpg'
-import pwaImage from '../public/images/pwa.jpg'
-import reactDevImage from '../public/images/reactjs.jpg'
+import webDevelopmentImage from '../public/images/webIcon.png'
+import wordPressDevelopmentImage from '../public/images/wordpressIcon.png'
+import devOpsImage from '../public/images/devops.png'
+import scrapingImage from '../public/images/scrapingIcon.png'
+import pythonExpertImage from '../public/images/pythonIcon.png'
+import mobileAppDevImage from '../public/images/mobileIcon.png'
+import pwaImage from '../public/images/pwaIcon.png'
+import reactDevImage from '../public/images/reactIcon.png'
 import homeHeaderImage from '../public/images/software-house-in-Multan.webp'
 import wall1 from '../public/images/wall1.jpg'
 
@@ -56,18 +56,18 @@ export const homeData = {
 }
 
 /**********            Home Page Services Data          ********* */
-export const servicesHeading = 'WHAT WE DO'
-
+export const servicesHeading = 'Our Services'
+export const aim = 'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.'
 export const services = [
   {
-    title: 'Web Development',
+    title: 'Web App Development',
     desc: 'Prixite being the exquisite web development brands offers innovative solutions to your web development needs in today’s dynamics.',
     img: webDevelopmentImage,
     path: '/web-development',
     buttonText: 'Learn More',
   },
   {
-    title: 'WordPress Development',
+    title: 'Wordpress Development',
     desc: 'Prixite offers its clients superior quality WordPress solutions that helps them to create a compelling impact in the business world.',
     img: wordPressDevelopmentImage,
     path: '/wordpress-development',
@@ -95,21 +95,21 @@ export const services = [
     buttonText: 'Learn More',
   },
   {
-    title: 'Mobile Application Development',
+    title: 'Mobile App Development',
     desc: 'Prixite has extensive experience when it comes to creating digitally transformative and high-performing mobile apps.',
     img: mobileAppDevImage,
     path: '/mobile-application-development',
     buttonText: 'Learn More',
   },
   {
-    title: 'Progressive Web Application',
+    title: 'Progressive Web App',
     desc: 'Prixite is one of the top PWA service providers to its clients with progressive tools and approaches to their business needs.',
     img: pwaImage,
     path: '/progressive-web-application',
     buttonText: 'Learn More',
   },
   {
-    title: 'React development',
+    title: 'React Development',
     desc: 'Prixite is one of the top PWA service providers to its clients with progressive tools and approaches to their business needs.',
     img: reactDevImage,
     path: '/react-development',
