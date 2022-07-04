@@ -36,9 +36,7 @@ export const homeData = {
   title: `${siteName}`,
   header: 'Transform Your Business With Us',
   headerImage: homeHeaderImage,
-  heading1: 'One-stop ',
-  heading2: 'Solution ',
-  heading3: 'to Your Business Needs ',
+  heading: 'One-stop Solution to Your Business Needs',
   aim: 'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.',
   descriptionHeading: 'Welcome to Prixite - Fastest Growing IT Company',
   paragraphs: [

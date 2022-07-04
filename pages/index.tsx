@@ -30,9 +30,7 @@ export default function Home() {
     title,
     header,
     headerImage,
-    heading1,
-    heading2,
-    heading3,
+    heading,
     descriptionHeading,
     paragraphs,
     aim,
@@ -56,9 +54,9 @@ export default function Home() {
               </Typography>
 
               <Typography variant="h4" className="home-main-heading-2">
-                {heading1}
-                <span className="solution-color">{heading2}</span>
-                {heading3}🚀
+                {heading.slice(0, 8)}
+                <span className="solution-color">{heading.slice(8, 17)}</span>
+                {heading.slice(17, 40)}  🚀
               </Typography>
 
               <Typography>{aim}</Typography>
