@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Header from '../components/header/Header'
 import homePageBg from '../public/images/homePageBg.png'
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
+import aboutUsImage from '../public/images/about-us.png'
 import {
   Box,
   Container,
@@ -65,64 +65,25 @@ export default function Home() {
         </Container>
       </Header>
       <Container maxWidth="xl">
-        <Box p="5rem 1.5rem">
-          <Typography variant="h5" fontWeight="600">
-            {descriptionHeading}
+        <Box p="5rem 1.5rem" className="about-us">
+
+          <Image src={aboutUsImage} alt='about-us-image' />
+          {/* <Typography fontSize={30} fontWeight={600}>
+            About <span style={{ color: '#63AC45' }}>Us</span>
           </Typography>
 
-          {paragraphs.map((item, index) => (
-            <Typography margin="1.8rem 0" key={index}>
-              {item.para}
-            </Typography>
-          ))}
-
-          <Typography variant="h4" className="service-heading">
-            {servicesHeading}
-          </Typography>
+          <Typography fontWeight={500}>Fastest Growing IT Company</Typography>
 
           <Divider
-            variant="middle"
-            className="service-divider"
-            sx={{ mx: 'auto', fill: 'true', width: '8%' }}
-          />
-
-          <Grid container spacing={{ xs: 2, md: 3 }} columnSpacing={10}>
-            {services.map((item, index) => (
-              <Grid item sm={12} md={6} key={index}>
-                <Box marginBottom="10px">
-                  <div className="service-image">
-                    <Image
-                      src={item.img}
-                      objectFit="cover"
-                      width={800}
-                      height={500}
-                      className="service-image"
-                      onClick={() => router.push(item.path)}
-                      alt="service-image"
-                    />
-                  </div>
-
-                  <Typography variant="h6" fontWeight="600" mt="20px">
-                    {item.title}
-                  </Typography>
-
-                  <Typography className="service-description">
-                    {item.desc}
-                  </Typography>
-
-                  <Box textAlign="center" mt="2rem">
-                    <Button
-                      className="service-button"
-                      endIcon={<ArrowRightAltIcon />}
-                      onClick={() => router.push(item.path)}
-                    >
-                      {item.buttonText}
-                    </Button>
-                  </Box>
-                </Box>
-              </Grid>
-            ))}
-          </Grid>
+            sx={{
+              backgroundColor: '#63AC45',
+              height: 2,
+              width: 102,
+              mt: 3,
+              mb: 3,
+              borderRadius: 12,
+            }}
+          /> */}
         </Box>
       </Container>
     </div>
