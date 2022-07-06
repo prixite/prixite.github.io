@@ -1,5 +1,16 @@
 import React from 'react'
-import { AppBar, Box, Container, IconButton, Menu, Toolbar, Typography, MenuItem, ListItemIcon, Divider } from '@mui/material'
+import {
+  AppBar,
+  Box,
+  Container,
+  IconButton,
+  Menu,
+  Toolbar,
+  Typography,
+  MenuItem,
+  ListItemIcon,
+  Divider,
+} from '@mui/material'
 import CallMadeIcon from '@mui/icons-material/CallMade'
 import Image, { StaticImageData } from 'next/image'
 import { NextRouter, useRouter } from 'next/router'
@@ -8,7 +19,6 @@ import logoImg from '../../public/images/prixite-logo.png'
 import hamburgerClose from '../../public/images/hamburgerClose.png'
 import hamburgerOpen from '../../public/images/hamburgerOpen.png'
 import { pages, siteName } from '../../data/data'
-
 
 interface HeaderProps {
   children: React.ReactNode
