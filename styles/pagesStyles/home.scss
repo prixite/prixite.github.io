@@ -1,19 +1,40 @@
 .home-page-container {
   .home-main-heading-1 {
-    font-weight: 600;
-    color: white;
+    font-size: 16px;
+    font-family: 'lato';
   }
 
-  .divider {
-    margin-top: 0.8rem;
-    border-color: var(--primary-green);
-    border-width: 1px;
+  .solution-color {
+    color: #63ac45;
+    font-weight: 600;
+    font-family: 'lato';
+  }
+
+  .contact-us-button {
+    font-family: 'lato';
+    color: white;
+    padding: '12px 30px';
+  }
+
+  .youtube-icon {
+    background-color: #ffffff;
+    border: 2px solid #e7e7e7;
+    width: 60px;
+    height: 60px;
+    box-shadow: 13.9px 13.9px 33.36px 1.39px rgba(221, 221, 221, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .home-main-heading-2 {
-    font-weight: 600;
-    margin-top: 3rem;
-    color: white;
+    font-size: 56px;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 67px;
+    font-family: 'lato';
   }
 
   .service-heading {

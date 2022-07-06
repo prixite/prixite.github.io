@@ -6,14 +6,22 @@ import pythonExpertImage from '../public/images/python.jpg'
 import mobileAppDevImage from '../public/images/mobileDev.jpg'
 import pwaImage from '../public/images/pwa.jpg'
 import reactDevImage from '../public/images/reactjs.jpg'
-import homeHeaderImage from '../public/images/software-house-in-Multan.webp'
+import homeHeaderImage from '../public/images/headerImage.png'
 import wall1 from '../public/images/wall1.jpg'
 
 /*********          Header Menu Data            ********** */
 export const pages = [
   {
     path: '/',
-    text: 'Home',
+    text: 'About Us',
+  },
+  {
+    path: '/',
+    text: 'Services',
+  },
+  {
+    path: '/',
+    text: 'News & Blogs',
   },
   {
     path: '/contact-us',
@@ -29,6 +37,7 @@ export const homeData = {
   header: 'Transform Your Business With Us',
   headerImage: homeHeaderImage,
   heading: 'One-stop Solution to Your Business Needs',
+  aim: 'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.',
   descriptionHeading: 'Welcome to Prixite - Fastest Growing IT Company',
   paragraphs: [
     {
