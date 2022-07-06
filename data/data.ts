@@ -38,7 +38,8 @@ export const homeData = {
   header: 'Transform Your Business With Us',
   headerImage: homeHeaderImage,
   heading: 'One-stop Solution to Your Business Needs',
-  homeAim: 'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.',
+  homeAim:
+    'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.',
   contactUsButtonText: 'Contact Us',
   videoButtonText: 'Watch Video',
   youtubeIcon: youtubeIcon,
@@ -70,7 +71,8 @@ export const homeData = {
 /**********            Home Page Services Data          ********* */
 export const servicesData = {
   servicesHeading: 'Our Services',
-  servicesAim: 'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.',
+  servicesAim:
+    'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.',
   services: [
     {
       title: 'Web App Development',
@@ -128,11 +130,8 @@ export const servicesData = {
       path: '/react-development',
       buttonText: 'Learn More',
     },
-  ]
+  ],
 }
-
-
-
 
 /**********             Portfolio Page Data         ************** */
 export const portfolioData = {

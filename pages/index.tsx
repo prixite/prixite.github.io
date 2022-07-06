@@ -1,17 +1,9 @@
-import {
-  Box,
-  Container,
-  Typography,
-  Stack,
-  Grid,
-  Button,
-} from '@mui/material'
+import { Box, Container, Typography, Stack, Grid, Button } from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined'
 import Image from 'next/image'
 import Header from '../components/header/Header'
 import { homeData, servicesData } from '../data/data'
-
 
 const theme = createTheme({
   palette: {
@@ -30,14 +22,10 @@ export default function Home() {
     homeAim,
     contactUsButtonText,
     videoButtonText,
-    youtubeIcon
+    youtubeIcon,
   } = homeData
 
-  const {
-    servicesHeading,
-    servicesAim,
-    services,
-  } = servicesData
+  const { servicesHeading, servicesAim, services } = servicesData
 
   return (
     <div className="home-page-container">
@@ -101,15 +89,16 @@ export default function Home() {
         </Container>
       </Header>
       <Container maxWidth="xl">
-        <Box pb='5rem' pt='5rem'>
-
+        <Box pb="5rem" pt="5rem">
           <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
             {servicesHeading.slice(0, 3)}
             <span style={{ color: 'var(--primary-green' }}>
               {servicesHeading.slice(3, 12)}
             </span>
           </Typography>
-          <Typography mt={2} mb={6}>{servicesAim}</Typography>
+          <Typography mt={2} mb={6}>
+            {servicesAim}
+          </Typography>
 
           <Grid container spacing={{ xs: 2, md: 7 }} columnSpacing={3}>
             {services.map((item, index) => (
@@ -131,7 +120,6 @@ export default function Home() {
                   <Typography className="service-description">
                     {item.desc}
                   </Typography>
-
                 </Box>
               </Grid>
             ))}
