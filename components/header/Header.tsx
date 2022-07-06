@@ -1,24 +1,14 @@
-import {
-  AppBar,
-  Box,
-  Container,
-  IconButton,
-  Menu,
-  Toolbar,
-  Typography,
-  MenuItem,
-  ListItemIcon,
-  Divider,
-} from '@mui/material'
-import Image, { StaticImageData } from 'next/image'
 import React from 'react'
+import { AppBar, Box, Container, IconButton, Menu, Toolbar, Typography, MenuItem, ListItemIcon, Divider } from '@mui/material'
+import CallMadeIcon from '@mui/icons-material/CallMade'
+import Image, { StaticImageData } from 'next/image'
+import { NextRouter, useRouter } from 'next/router'
+import Head from 'next/head'
 import logoImg from '../../public/images/prixite-logo.png'
 import hamburgerClose from '../../public/images/hamburgerClose.png'
 import hamburgerOpen from '../../public/images/hamburgerOpen.png'
-import { NextRouter, useRouter } from 'next/router'
 import { pages, siteName } from '../../data/data'
-import Head from 'next/head'
-import CallMadeIcon from '@mui/icons-material/CallMade'
+
 
 interface HeaderProps {
   children: React.ReactNode
