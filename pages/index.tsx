@@ -11,7 +11,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined'
 import Image from 'next/image'
 import Header from '../components/header/Header'
-import aboutUsImage from '../public/images/about-us.png'
 import { aboutUsData, homeData, servicesData } from '../data/data'
 
 const theme = createTheme({
