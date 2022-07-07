@@ -21,6 +21,7 @@ import '../styles/pagesStyles/portfolio.scss'
 import '../styles/pagesStyles/blog.scss'
 import '../components/Presentational/JobCard/JobCard.scss'
 import '../components/Presentational/BlogCard/blogCard.scss'
+import '../components/Presentational/AboutUs/AboutUs.scss'
 
 let theme = createTheme({
   breakpoints: {

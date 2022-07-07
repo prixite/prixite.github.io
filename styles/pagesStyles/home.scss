@@ -26,26 +26,6 @@
     align-items: center;
     justify-content: center;
   }
-  .about-us {
-    background-color: rgba(99, 172, 69, 0.1);
-    border-radius: 12px;
-    height: 370px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    .about-us-divider {
-      background: #63ac45;
-      height: 2px;
-      width: 100px;
-      margin-top: 30px;
-      margin-bottom: 30px;
-      border-radius: 12;
-    }
-  }
 
   .home-main-heading-2 {
     font-size: 56px;

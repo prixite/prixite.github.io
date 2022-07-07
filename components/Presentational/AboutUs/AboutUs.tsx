@@ -1,4 +1,4 @@
-import { Typography, Divider, Box } from '@mui/material'
+import { Typography, Divider, Box, Container } from '@mui/material'
 import React from 'react'
 
 interface AboutUs {
@@ -9,7 +9,6 @@ interface AboutUs {
 
 const AboutUs: React.FC<AboutUs> = ({ header, heading, description }) => {
   return (
-    <>
       <Box p="5rem 5rem" className="about-us">
         <Typography fontSize={30} fontWeight={600}>
           {header.slice(0, 5)}
@@ -18,8 +17,7 @@ const AboutUs: React.FC<AboutUs> = ({ header, heading, description }) => {
         <Typography fontWeight={500}>{heading}</Typography>
         <Divider className="about-us-divider" />
         <Typography>{description}</Typography>
-      </Box>
-    </>
+     </Box>
   )
 }
 
