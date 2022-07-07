@@ -135,7 +135,7 @@ export default function Home() {
             ))}
           </Grid>
         </Box>
-        
+
         <Box p="5rem 5rem" className="about-us">
           <Typography fontSize={30} fontWeight={600}>
             {aboutUsHeader.slice(0, 5)}
@@ -147,7 +147,7 @@ export default function Home() {
           <Typography fontWeight={500}>{aboutUsHeading}</Typography>
 
           <Divider className="about-us-divider" />
-          <Typography >{aboutUsDescription}</Typography>
+          <Typography>{aboutUsDescription}</Typography>
         </Box>
       </Container>
     </div>
