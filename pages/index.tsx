@@ -1,9 +1,17 @@
-import { Box, Container, Typography, Stack, Grid, Button } from '@mui/material'
+import {
+  Box,
+  Container,
+  Typography,
+  Stack,
+  Grid,
+  Button,
+  Divider,
+} from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined'
 import Image from 'next/image'
 import Header from '../components/header/Header'
-import { homeData, servicesData } from '../data/data'
+import { aboutUsData, homeData, servicesData } from '../data/data'
 
 const theme = createTheme({
   palette: {
@@ -26,6 +34,7 @@ export default function Home() {
   } = homeData
 
   const { servicesHeading, servicesAim, services } = servicesData
+  const { aboutUsHeader, aboutUsHeading, aboutUsDescription } = aboutUsData
 
   return (
     <div className="home-page-container">
@@ -124,6 +133,20 @@ export default function Home() {
               </Grid>
             ))}
           </Grid>
+        </Box>
+
+        <Box p="5rem 5rem" className="about-us">
+          <Typography fontSize={30} fontWeight={600}>
+            {aboutUsHeader.slice(0, 5)}
+            <span style={{ color: '#63AC45' }}>
+              {aboutUsHeader.slice(5, 8)}
+            </span>
+          </Typography>
+
+          <Typography fontWeight={500}>{aboutUsHeading}</Typography>
+
+          <Divider className="about-us-divider" />
+          <Typography>{aboutUsDescription}</Typography>
         </Box>
       </Container>
     </div>
