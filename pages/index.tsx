@@ -1,21 +1,17 @@
-import Image from 'next/image'
-import Header from '../components/header/Header'
-import homePageBg from '../public/images/homePageBg.png'
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
 import {
   Box,
   Container,
   Typography,
   Stack,
-  Divider,
   Grid,
   Button,
+  Divider,
 } from '@mui/material'
-import { homeData, services, servicesHeading } from '../data/data'
-import { useRouter } from 'next/router'
-import SendOutlinedIcon from '@mui/icons-material/SendOutlined'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import youtubeIcon from '../public/images/youtubeIcon.png'
+import SendOutlinedIcon from '@mui/icons-material/SendOutlined'
+import Image from 'next/image'
+import Header from '../components/header/Header'
+import { aboutUsData, homeData, servicesData } from '../data/data'
 
 const theme = createTheme({
   palette: {
@@ -31,12 +27,15 @@ export default function Home() {
     header,
     headerImage,
     heading,
-    descriptionHeading,
-    paragraphs,
-    aim,
+    homeAim,
+    contactUsButtonText,
+    videoButtonText,
+    youtubeIcon,
   } = homeData
 
-  const router = useRouter()
+  const { servicesHeading, servicesAim, services } = servicesData
+  const { aboutUsHeader, aboutUsHeading, aboutUsDescription } = aboutUsData
+
   return (
     <div className="home-page-container">
       <Header title={title}>
@@ -48,7 +47,7 @@ export default function Home() {
             spacing={8}
             alignItems={'center'}
           >
-            <Box mb={4}>
+            <Box>
               <Typography variant="h6" className="home-main-heading-1">
                 {header}
               </Typography>
@@ -59,7 +58,7 @@ export default function Home() {
                 {heading.slice(17, 40)} 🚀
               </Typography>
 
-              <Typography>{aim}</Typography>
+              <Typography>{homeAim}</Typography>
 
               <Box display="flex" gap="25px" alignItems={'center'} mt={6}>
                 <ThemeProvider theme={theme}>
@@ -70,7 +69,7 @@ export default function Home() {
                       size="large"
                       className="contact-us-button"
                     >
-                      Contact Us
+                      {contactUsButtonText}
                     </Button>
                   </Box>
                 </ThemeProvider>
@@ -83,7 +82,7 @@ export default function Home() {
                     alt="service-image"
                   />
                 </Box>
-                <Typography>Watch Video</Typography>
+                <Typography>{videoButtonText}</Typography>
               </Box>
             </Box>
 
@@ -99,64 +98,55 @@ export default function Home() {
         </Container>
       </Header>
       <Container maxWidth="xl">
-        <Box p="5rem 1.5rem">
-          <Typography variant="h5" fontWeight="600">
-            {descriptionHeading}
+        <Box pb="5rem" pt="5rem">
+          <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
+            {servicesHeading.slice(0, 3)}
+            <span style={{ color: 'var(--primary-green' }}>
+              {servicesHeading.slice(3, 12)}
+            </span>
+          </Typography>
+          <Typography mt={2} mb={6}>
+            {servicesAim}
           </Typography>
 
-          {paragraphs.map((item, index) => (
-            <Typography margin="1.8rem 0" key={index}>
-              {item.para}
-            </Typography>
-          ))}
-
-          <Typography variant="h4" className="service-heading">
-            {servicesHeading}
-          </Typography>
-
-          <Divider
-            variant="middle"
-            className="service-divider"
-            sx={{ mx: 'auto', fill: 'true', width: '8%' }}
-          />
-
-          <Grid container spacing={{ xs: 2, md: 3 }} columnSpacing={10}>
+          <Grid container spacing={{ xs: 2, md: 7 }} columnSpacing={3}>
             {services.map((item, index) => (
-              <Grid item sm={12} md={6} key={index}>
+              <Grid item sm={12} md={3} key={index}>
                 <Box marginBottom="10px">
-                  <div className="service-image">
+                  <Box className="service-image-container">
                     <Image
+                      unoptimized
+                      priority
                       src={item.img}
-                      objectFit="cover"
-                      width={800}
-                      height={500}
-                      className="service-image"
-                      onClick={() => router.push(item.path)}
                       alt="service-image"
                     />
-                  </div>
+                  </Box>
 
-                  <Typography variant="h6" fontWeight="600" mt="20px">
+                  <Typography sx={{ fontSize: 15, fontWeight: 600 }} mt="18px">
                     {item.title}
                   </Typography>
 
                   <Typography className="service-description">
                     {item.desc}
                   </Typography>
-
-                  <Box textAlign="center" mt="2rem">
-                    <Button
-                      className="service-button"
-                      endIcon={<ArrowRightAltIcon />}
-                      onClick={() => router.push(item.path)}
-                    >
-                      {item.buttonText}
-                    </Button>
-                  </Box>
                 </Box>
               </Grid>
             ))}
           </Grid>
+        </Box>
+
+        <Box p="5rem 5rem" className="about-us">
+          <Typography fontSize={30} fontWeight={600}>
+            {aboutUsHeader.slice(0, 5)}
+            <span style={{ color: '#63AC45' }}>
+              {aboutUsHeader.slice(5, 8)}
+            </span>
+          </Typography>
+
+          <Typography fontWeight={500}>{aboutUsHeading}</Typography>
+
+          <Divider className="about-us-divider" />
+          <Typography>{aboutUsDescription}</Typography>
         </Box>
       </Container>
     </div>

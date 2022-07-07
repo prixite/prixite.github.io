@@ -1,13 +1,14 @@
-import webDevelopmentImage from '../public/images/webDevelopment.jpg'
-import wordPressDevelopmentImage from '../public/images/wordpress Development-01.png'
-import devOpsImage from '../public/images/devOpsAsService.png'
-import scrapingImage from '../public/images/scraping.jpg'
-import pythonExpertImage from '../public/images/python.jpg'
-import mobileAppDevImage from '../public/images/mobileDev.jpg'
-import pwaImage from '../public/images/pwa.jpg'
-import reactDevImage from '../public/images/reactjs.jpg'
+import webDevelopmentImage from '../public/images/webIcon.png'
+import wordPressDevelopmentImage from '../public/images/wordpressIcon.png'
+import devOpsImage from '../public/images/devops.png'
+import scrapingImage from '../public/images/scrapingIcon.png'
+import pythonExpertImage from '../public/images/pythonIcon.png'
+import mobileAppDevImage from '../public/images/mobileIcon.png'
+import pwaImage from '../public/images/pwaIcon.png'
+import reactDevImage from '../public/images/reactIcon.png'
 import homeHeaderImage from '../public/images/headerImage.png'
 import wall1 from '../public/images/wall1.jpg'
+import youtubeIcon from '../public/images/youtubeIcon.png'
 
 /*********          Header Menu Data            ********** */
 export const pages = [
@@ -37,8 +38,11 @@ export const homeData = {
   header: 'Transform Your Business With Us',
   headerImage: homeHeaderImage,
   heading: 'One-stop Solution to Your Business Needs',
-  aim: 'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.',
-  descriptionHeading: 'Welcome to Prixite - Fastest Growing IT Company',
+  homeAim:
+    'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.',
+  contactUsButtonText: 'Contact Us',
+  videoButtonText: 'Watch Video',
+  youtubeIcon: youtubeIcon,
   paragraphs: [
     {
       para: `Prixite is one online technology solutions provider company that is
@@ -65,66 +69,77 @@ export const homeData = {
 }
 
 /**********            Home Page Services Data          ********* */
-export const servicesHeading = 'WHAT WE DO'
+export const servicesData = {
+  servicesHeading: 'Our Services',
+  servicesAim:
+    'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.',
+  services: [
+    {
+      title: 'Web App Development',
+      desc: 'Prixite being the exquisite web development brands offers innovative solutions to your web development needs in today’s dynamics.',
+      img: webDevelopmentImage,
+      path: '/web-development',
+      buttonText: 'Learn More',
+    },
+    {
+      title: 'Wordpress Development',
+      desc: 'Prixite offers its clients superior quality WordPress solutions that helps them to create a compelling impact in the business world.',
+      img: wordPressDevelopmentImage,
+      path: '/wordpress-development',
+      buttonText: 'Learn More',
+    },
+    {
+      title: 'DevOps',
+      desc: 'Prixite DevOps practices help clients achieve their goals without compromising on product environment and infrastructure capabilities.',
+      img: devOpsImage,
+      path: '/devops',
+      buttonText: 'Learn More',
+    },
+    {
+      title: 'Scraping',
+      desc: "Prixite is one of the leading digital marketing service providers that believe in creating value-added solutions for our potential client's web data extraction needs.",
+      img: scrapingImage,
+      path: '/scraping',
+      buttonText: 'Learn More',
+    },
+    {
+      title: 'Python Experts',
+      desc: 'Prixite is one of the top companies to provide full-stack python web development services to its clients worldwide.',
+      img: pythonExpertImage,
+      path: '/python-programming',
+      buttonText: 'Learn More',
+    },
+    {
+      title: 'Mobile App Development',
+      desc: 'Prixite has extensive experience when it comes to creating digitally transformative and high-performing mobile apps.',
+      img: mobileAppDevImage,
+      path: '/mobile-application-development',
+      buttonText: 'Learn More',
+    },
+    {
+      title: 'Progressive Web App',
+      desc: 'Prixite is one of the top PWA service providers to its clients with progressive tools and approaches to their business needs.',
+      img: pwaImage,
+      path: '/progressive-web-application',
+      buttonText: 'Learn More',
+    },
+    {
+      title: 'React Development',
+      desc: 'Prixite is one of the top PWA service providers to its clients with progressive tools and approaches to their business needs.',
+      img: reactDevImage,
+      path: '/react-development',
+      buttonText: 'Learn More',
+    },
+  ],
+}
 
-export const services = [
-  {
-    title: 'Web Development',
-    desc: 'Prixite being the exquisite web development brands offers innovative solutions to your web development needs in today’s dynamics.',
-    img: webDevelopmentImage,
-    path: '/web-development',
-    buttonText: 'Learn More',
-  },
-  {
-    title: 'WordPress Development',
-    desc: 'Prixite offers its clients superior quality WordPress solutions that helps them to create a compelling impact in the business world.',
-    img: wordPressDevelopmentImage,
-    path: '/wordpress-development',
-    buttonText: 'Learn More',
-  },
-  {
-    title: 'DevOps',
-    desc: 'Prixite DevOps practices help clients achieve their goals without compromising on product environment and infrastructure capabilities.',
-    img: devOpsImage,
-    path: '/devops',
-    buttonText: 'Learn More',
-  },
-  {
-    title: 'Scraping',
-    desc: "Prixite is one of the leading digital marketing service providers that believe in creating value-added solutions for our potential client's web data extraction needs.",
-    img: scrapingImage,
-    path: '/scraping',
-    buttonText: 'Learn More',
-  },
-  {
-    title: 'Python Experts',
-    desc: 'Prixite is one of the top companies to provide full-stack python web development services to its clients worldwide.',
-    img: pythonExpertImage,
-    path: '/python-programming',
-    buttonText: 'Learn More',
-  },
-  {
-    title: 'Mobile Application Development',
-    desc: 'Prixite has extensive experience when it comes to creating digitally transformative and high-performing mobile apps.',
-    img: mobileAppDevImage,
-    path: '/mobile-application-development',
-    buttonText: 'Learn More',
-  },
-  {
-    title: 'Progressive Web Application',
-    desc: 'Prixite is one of the top PWA service providers to its clients with progressive tools and approaches to their business needs.',
-    img: pwaImage,
-    path: '/progressive-web-application',
-    buttonText: 'Learn More',
-  },
-  {
-    title: 'React development',
-    desc: 'Prixite is one of the top PWA service providers to its clients with progressive tools and approaches to their business needs.',
-    img: reactDevImage,
-    path: '/react-development',
-    buttonText: 'Learn More',
-  },
-]
+/**********             About US Section Data               *********** */
+export const aboutUsData = {
+  aboutUsHeader: 'About Us',
+  aboutUsHeading: 'Fastest Growing IT Company',
+  aboutUsDescription:
+    'Prixite is one online technology solutions provider company that is considered as a new breed of thinkers who is driven to create effective business solutions for its clients. We aspire to become our client’s first choice when it comes to being a world leader in the progress and advancement of businesses through digital platforms.',
+}
 
 /**********             Portfolio Page Data         ************** */
 export const portfolioData = {
