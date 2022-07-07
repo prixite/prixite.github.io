@@ -101,36 +101,10 @@ export default function Home() {
               </Stack>
             </Stack>
 
-{newsAndBlogs.blogs.map((blog, index) => {
-  return (
-    <Stack direction={{ xs: 'column', md: 'column', lg: 'row'}}>
-    <Stack direction={{ xs: 'column', md: 'row', lg: 'row'}} spacing={2} >
-                <Image
-                  src={blog.image}
-                  width={380}
-                  height={320}
-                  alt="service-image"
-                />
-                <Stack spacing={1} justifyContent="center">
-                  <Typography fontSize={17} fontWeight={600}>
-                    In-house versus agency UX design
-                  </Typography>
-                  <Typography fontSize={12}>
-                    Lorem ipsum is a placeholder text commonly used to
-                    demonstrate the visual. Text commonly used to demonstrate
-                    the visual
-                  </Typography>
-                  <Stack direction={'row'} spacing={4} alignItems="center">
-                    <Chip label="UX Design" size='small' />
-                    <Typography fontSize={14}>5 Mins Read</Typography>
-                  </Stack>
-                </Stack>
-              </Stack>
-              </Stack>
-  )
-})}
-            {/* <Stack spacing={2}> */}
-              {/* <Stack direction={{ xs: 'column', md: 'row', lg: 'row'}} spacing={2} >
+
+
+            <Stack spacing={2}>
+              <Stack direction={{ xs: 'column', md: 'row', lg: 'row'}} spacing={2} >
                 <Image
                   src={news2}
                   width={380}
@@ -151,8 +125,8 @@ export default function Home() {
                     <Typography fontSize={14}>5 Mins Read</Typography>
                   </Stack>
                 </Stack>
-              </Stack> */}
-              {/* <Stack direction={{ xs: 'column', md: 'row', lg: 'row'}} spacing={2}>
+              </Stack>
+              <Stack direction={{ xs: 'column', md: 'row', lg: 'row'}} spacing={2}>
                 <Image
                   src={news3}
                   width={380}
@@ -173,8 +147,8 @@ export default function Home() {
                     <Typography fontSize={14}>5 Mins Read</Typography>
                   </Stack>
                 </Stack>
-              </Stack> */}
-              {/* <Stack direction={{ xs: 'column', md: 'row', lg: 'row'}} spacing={2}>
+              </Stack>
+              <Stack direction={{ xs: 'column', md: 'row', lg: 'row'}} spacing={2}>
                 <Image
                   src={news4}
                   width={380}
@@ -195,8 +169,8 @@ export default function Home() {
                     <Typography fontSize={14}>5 Mins Read</Typography>
                   </Stack>
                 </Stack>
-              </Stack> */}
-            {/* </Stack> */}
+              </Stack>
+            </Stack>
           </Stack>
         </Box>
       </Container>
