@@ -1,10 +1,18 @@
-import { Box, Container, Typography, Stack, Grid, Button } from '@mui/material'
+import {
+  Box,
+  Container,
+  Typography,
+  Stack,
+  Grid,
+  Button,
+  Divider,
+} from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined'
 import Image from 'next/image'
 import Header from '../components/header/Header'
 import aboutUsImage from '../public/images/about-us.png'
-import { homeData, servicesData } from '../data/data'
+import { aboutUsData, homeData, servicesData } from '../data/data'
 
 const theme = createTheme({
   palette: {
@@ -27,6 +35,7 @@ export default function Home() {
   } = homeData
 
   const { servicesHeading, servicesAim, services } = servicesData
+  const { aboutUsHeader, aboutUsHeading, aboutUsDescription } = aboutUsData
 
   return (
     <div className="home-page-container">
@@ -90,26 +99,6 @@ export default function Home() {
         </Container>
       </Header>
       <Container maxWidth="xl">
-        <Box p="5rem 1.5rem" className="about-us">
-
-          <Image src={aboutUsImage} alt='about-us-image' />
-          {/* <Typography fontSize={30} fontWeight={600}>
-            About <span style={{ color: '#63AC45' }}>Us</span>
-          </Typography>
-
-          <Typography fontWeight={500}>Fastest Growing IT Company</Typography>
-
-          <Divider
-            sx={{
-              backgroundColor: '#63AC45',
-              height: 2,
-              width: 102,
-              mt: 3,
-              mb: 3,
-              borderRadius: 12,
-            }}
-          /> */}
-          </Box>
         <Box pb="5rem" pt="5rem">
           <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
             {servicesHeading.slice(0, 3)}
@@ -145,6 +134,20 @@ export default function Home() {
               </Grid>
             ))}
           </Grid>
+        </Box>
+        
+        <Box p="5rem 5rem" className="about-us">
+          <Typography fontSize={30} fontWeight={600}>
+            {aboutUsHeader.slice(0, 5)}
+            <span style={{ color: '#63AC45' }}>
+              {aboutUsHeader.slice(5, 8)}
+            </span>
+          </Typography>
+
+          <Typography fontWeight={500}>{aboutUsHeading}</Typography>
+
+          <Divider className="about-us-divider" />
+          <Typography >{aboutUsDescription}</Typography>
         </Box>
       </Container>
     </div>

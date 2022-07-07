@@ -133,6 +133,21 @@ export const servicesData = {
   ],
 }
 
+
+
+
+
+/**********             About US Section Data               *********** */
+export const aboutUsData = {
+  aboutUsHeader: 'About Us',
+  aboutUsHeading: 'Fastest Growing IT Company',
+  aboutUsDescription: 'Prixite is one online technology solutions provider company that is considered as a new breed of thinkers who is driven to create effective business solutions for its clients. We aspire to become our client’s first choice when it comes to being a world leader in the progress and advancement of businesses through digital platforms.' 
+}
+
+
+
+
+
 /**********             Portfolio Page Data         ************** */
 export const portfolioData = {
   title: `${siteName} - Portfolio`,
