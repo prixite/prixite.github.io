@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout from '../components/layout/Layout'
+import Layout from '../components/Shared/layout/Layout'
 import favicon from '../public/favicon.ico'
 import {
   createTheme,
@@ -8,19 +8,19 @@ import {
 } from '@mui/material/styles'
 import type { AppProps } from 'next/app'
 import '../styles/globals.css'
-import '../components/header/header.scss'
+import '../components/Shared/header/header.scss'
 import '../styles/pagesStyles/home.scss'
-import '../components/footer/footer.scss'
+import '../components/Shared/footer/footer.scss'
 import '../styles/pagesStyles/contactUs.scss'
 import '../styles/pagesStyles/careers.scss'
 import '../styles/pagesStyles/clients.scss'
 import '../styles/pagesStyles/portfolio.scss'
-import '../components/ClientCard/clientCard.scss'
+import '../components/Presentational/ClientCard/clientCard.scss'
 import '../styles/pagesStyles/jobs.scss'
 import '../styles/pagesStyles/portfolio.scss'
 import '../styles/pagesStyles/blog.scss'
-import '../components/JobCard/JobCard.scss'
-import '../components/BlogCard/blogCard.scss'
+import '../components/Presentational/JobCard/JobCard.scss'
+import '../components/Presentational/BlogCard/blogCard.scss'
 
 let theme = createTheme({
   breakpoints: {
@@ -34,6 +34,11 @@ let theme = createTheme({
   },
   typography: {
     fontFamily: 'Montserrat, Noto Sans, sans-serif',
+  },
+  palette: {
+    primary: {
+      main: '#63AC45',
+    },
   },
 })
 

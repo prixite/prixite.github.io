@@ -1,25 +1,11 @@
-import {
-  Box,
-  Container,
-  Typography,
-  Stack,
-  Grid,
-  Button,
-  Divider,
-} from '@mui/material'
-import { createTheme, ThemeProvider } from '@mui/material/styles'
-import SendOutlinedIcon from '@mui/icons-material/SendOutlined'
+import { Box, Container, Typography, Stack, Grid, Divider } from '@mui/material'
 import Image from 'next/image'
-import Header from '../components/header/Header'
 import { aboutUsData, homeData, servicesData } from '../data/data'
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#63AC45',
-    },
-  },
-})
+import Head from 'next/head'
+import Service from '../components/Presentational/Service/Service'
+import ContactButton from '../components/Smart/ContactButton/ContactButton'
+import AboutUs from '../components/Presentational/AboutUs/AboutUs'
+import SectionHeader from '../components/Presentational/SectionHeader/SectionHeader'
 
 export default function Home() {
   const {
@@ -37,8 +23,13 @@ export default function Home() {
   const { aboutUsHeader, aboutUsHeading, aboutUsDescription } = aboutUsData
 
   return (
-    <div className="home-page-container">
-      <Header title={title}>
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="prixite" content="Prixte" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="home-page-container">
         <Container maxWidth="xl">
           <Stack
             pt={{ xs: '60px', lg: '60px' }}
@@ -61,18 +52,7 @@ export default function Home() {
               <Typography>{homeAim}</Typography>
 
               <Box display="flex" gap="25px" alignItems={'center'} mt={6}>
-                <ThemeProvider theme={theme}>
-                  <Box>
-                    <Button
-                      variant="contained"
-                      endIcon={<SendOutlinedIcon />}
-                      size="large"
-                      className="contact-us-button"
-                    >
-                      {contactUsButtonText}
-                    </Button>
-                  </Box>
-                </ThemeProvider>
+                <ContactButton text={contactUsButtonText} />
 
                 <Box className="youtube-icon">
                   <Image
@@ -96,59 +76,32 @@ export default function Home() {
             </Box>
           </Stack>
         </Container>
-      </Header>
-      <Container maxWidth="xl">
-        <Box pb="5rem" pt="5rem">
-          <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
-            {servicesHeading.slice(0, 3)}
-            <span style={{ color: 'var(--primary-green' }}>
-              {servicesHeading.slice(3, 12)}
-            </span>
-          </Typography>
-          <Typography mt={2} mb={6}>
-            {servicesAim}
-          </Typography>
+        <Container maxWidth="xl">
+          <Box pb="5rem" pt="5rem">
+            <SectionHeader heading={servicesHeading} />
+            <Typography mt={2} mb={6}>
+              {servicesAim}
+            </Typography>
 
-          <Grid container spacing={{ xs: 2, md: 7 }} columnSpacing={3}>
-            {services.map((item, index) => (
-              <Grid item sm={12} md={3} key={index}>
-                <Box marginBottom="10px">
-                  <Box className="service-image-container">
-                    <Image
-                      unoptimized
-                      priority
-                      src={item.img}
-                      alt="service-image"
-                    />
-                  </Box>
+            <Grid container spacing={{ xs: 2, md: 7 }} columnSpacing={3}>
+              {services.map((item, index) => (
+                <Service
+                  key={index}
+                  img={item.img}
+                  title={item.title}
+                  description={item.desc}
+                />
+              ))}
+            </Grid>
+          </Box>
 
-                  <Typography sx={{ fontSize: 15, fontWeight: 600 }} mt="18px">
-                    {item.title}
-                  </Typography>
-
-                  <Typography className="service-description">
-                    {item.desc}
-                  </Typography>
-                </Box>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-
-        <Box p="5rem 5rem" className="about-us">
-          <Typography fontSize={30} fontWeight={600}>
-            {aboutUsHeader.slice(0, 5)}
-            <span style={{ color: '#63AC45' }}>
-              {aboutUsHeader.slice(5, 8)}
-            </span>
-          </Typography>
-
-          <Typography fontWeight={500}>{aboutUsHeading}</Typography>
-
-          <Divider className="about-us-divider" />
-          <Typography>{aboutUsDescription}</Typography>
-        </Box>
-      </Container>
-    </div>
+          <AboutUs
+            header={aboutUsHeader}
+            heading={aboutUsHeading}
+            description={aboutUsDescription}
+          />
+        </Container>
+      </div>
+    </>
   )
 }
