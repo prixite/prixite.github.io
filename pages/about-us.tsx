@@ -1,17 +1,27 @@
+import React from 'react'
 import { Container, Typography, Box } from '@mui/material'
 import Image from 'next/image'
-import React from 'react'
 import Subscribe from '../components/Shared/Subscribe/Subscribe'
 import ContactButton from '../components/Smart/ContactButton/ContactButton'
+import Vision from '../components/Presentational/Vision/Vision'
 import AboutUsHeader from '../public/images/about-us-header.svg'
 import { aboutUsPageData } from '../data/data'
 
 const AboutUs = () => {
-  const { header, heading, aim, description } = aboutUsPageData
+  const {
+    header,
+    heading,
+    aim,
+    description,
+    visionData,
+    visionImage,
+    visionAim,
+    visionTitle,
+  } = aboutUsPageData
   return (
     <Container maxWidth="xl" className="about-us-page">
       <Box className="header">
-        <Box>
+        <Box className="heading">
           <Typography fontSize={30} fontWeight={600}>
             {header.slice(0, 6)}
             <span style={{ color: 'var(--primary-green)' }}>
@@ -41,6 +51,12 @@ const AboutUs = () => {
         </Box>
       </Box>
 
+      <Vision
+        aboutUsVisionImg={visionImage}
+        visionAim={visionAim}
+        visionData={visionData}
+        visionTitle={visionTitle}
+      />
       <Subscribe />
     </Container>
   )

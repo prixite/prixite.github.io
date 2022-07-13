@@ -1,0 +1,25 @@
+.vision-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 100px;
+  .vision-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .vision-value {
+      font-size: 35px;
+      font-weight: 600;
+      color: var(--primary-green);
+    }
+    .vision-value-divider {
+      width: 50px;
+      height: 2px;
+      background-color: var(--primary-green);
+    }
+    .vision-value-text {
+      color: grey;
+      margin-top: 10px;
+    }
+  }
+}
