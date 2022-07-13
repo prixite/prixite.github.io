@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Typography } from '@mui/material'
 import { useRouter } from 'next/router'
-import { footerData } from '../../data/data'
+import { footerData } from '../../../data/data'
 
 const Footer = () => {
   const router = useRouter()

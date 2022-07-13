@@ -1,15 +1,21 @@
 import React from 'react'
-import Header from '../components/header/Header'
+import Header from '../components/Shared/header/Header'
 import homePageBg from '../public/images/homePageBg.png'
 import { Box, Typography, Container, Grid, Divider } from '@mui/material'
 import { blogData } from '../data/data'
-import BlogCard from '../components/BlogCard/BlogCard'
+import BlogCard from '../components/Presentational/BlogCard/BlogCard'
+import Head from 'next/head'
 
 const blog = () => {
   const { title, header, heading, blogs } = blogData
   return (
-    <div className="blog-page">
-      <Header bgImg={homePageBg} title={title}>
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="prixite" content="Prixte" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="blog-page">
         <Box className="careers-container">
           <Typography
             variant="h2"
@@ -19,34 +25,34 @@ const blog = () => {
             {header}
           </Typography>
         </Box>
-      </Header>
-      <Container maxWidth="xl">
-        <Box p="5rem 1.5rem">
-          <Typography variant="h4" className="blog-heading">
-            {heading}
-          </Typography>
+        <Container maxWidth="xl">
+          <Box p="5rem 1.5rem">
+            <Typography variant="h4" className="blog-heading">
+              {heading}
+            </Typography>
 
-          <Divider
-            variant="middle"
-            className="blog-divider"
-            sx={{ mx: 'auto', fill: 'true', width: '8%' }}
-          />
+            <Divider
+              variant="middle"
+              className="blog-divider"
+              sx={{ mx: 'auto', fill: 'true', width: '8%' }}
+            />
 
-          <Grid container>
-            {blogs.map((blog, index) => {
-              return (
-                <BlogCard
-                  key={index}
-                  image={blog.image.src}
-                  name={blog.name}
-                  description={blog.description}
-                />
-              )
-            })}
-          </Grid>
-        </Box>
-      </Container>
-    </div>
+            <Grid container>
+              {blogs.map((blog, index) => {
+                return (
+                  <BlogCard
+                    key={index}
+                    image={blog.image.src}
+                    name={blog.name}
+                    description={blog.description}
+                  />
+                )
+              })}
+            </Grid>
+          </Box>
+        </Container>
+      </div>
+    </>
   )
 }
 
