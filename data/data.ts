@@ -9,6 +9,12 @@ import reactDevImage from '../public/images/reactIcon.png'
 import homeHeaderImage from '../public/images/headerImage.png'
 import wall1 from '../public/images/wall1.jpg'
 import youtubeIcon from '../public/images/youtubeIcon.png'
+import InstagramIcon from '../public/images/instagram-icon.png'
+import FacebookIcon from '../public/images/facebook-icon.png'
+import TwitterIcon from '../public/images/twitter-icon.png'
+import LocationIcon from '../public/images/location-icon.png'
+import PhoneIcon from '../public/images/phone-icon.png'
+import MailIcon from '../public/images/mail-icon.png'
 
 /*********          Header Menu Data            ********** */
 export const pages = [
@@ -504,8 +510,40 @@ export const reactDevelopment = {
 
 /**************             Footer Data         ************ */
 export const footerData = {
-  address: 'Office locations: Lhr, Pakistan | Wyoming, USA',
-  phone: `042 37114925`,
-  email: 'hi@prixite.com',
-  copyright: 'Copyright © 2022 Prixite',
+  copyright: 'Prixite © 2022. All Rights Reserved',
+  details: [
+    {
+      icon: LocationIcon,
+      desc: '4 Mozang Road, Near Family Hospital, Lahore, Pakistan',
+    },
+    {
+      icon: PhoneIcon,
+      desc: '042 37114925',
+    },
+    {
+      icon: MailIcon,
+      desc: 'hi@prixite.com',
+    },
+  ],
+  info: {
+    title: 'More Information',
+    contactUs: ['About Us', 'Contact us'],
+  },
+  joinUs: {
+    title: 'Join Us On',
+    links: [
+      {
+        icon: FacebookIcon,
+        path: 'https://web.facebook.com/prixite/',
+      },
+      {
+        icon: TwitterIcon,
+        path: 'https://web.facebook.com/prixite/',
+      },
+      {
+        icon: InstagramIcon,
+        path: 'https://web.facebook.com/prixite/',
+      },
+    ],
+  },
 }

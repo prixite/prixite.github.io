@@ -1,0 +1,14 @@
+.title-container {
+  display: flex;
+  align-items: center;
+  .title-image {
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  .title-heading {
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
