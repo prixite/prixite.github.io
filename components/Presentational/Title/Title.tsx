@@ -7,10 +7,10 @@ import logoImg from '../../../public/images/prixite-logo.png'
 
 const Title = () => {
   return (
-    <Box className='title-container'>
-        <Box className='title-image'>
+    <Box className="title-container">
+      <Box className="title-image">
         <Image src={logoImg} alt={siteName} onClick={() => router.push('/')} />
-        </Box>
+      </Box>
       <Typography className="title-heading" onClick={() => router.push('/')}>
         {siteName}
         <span style={{ color: '#63AC45' }}>.</span>
