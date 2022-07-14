@@ -1,0 +1,20 @@
+.blog-container {
+  .blog-image {
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  .blog-content {
+    .blog-title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .blog-description {
+      font-size: 12px;
+    }
+
+    .read-time {
+      font-size: 11px;
+    }
+  }
+}

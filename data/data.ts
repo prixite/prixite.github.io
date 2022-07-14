@@ -8,10 +8,10 @@ import pwaImage from '../public/images/pwaIcon.png'
 import reactDevImage from '../public/images/reactIcon.png'
 import homeHeaderImage from '../public/images/headerImage.png'
 import wall1 from '../public/images/wall1.jpg'
-import news1 from '../public/images/news1.png'
-import news2 from '../public/images/news2.png'
-import news3 from '../public/images/news3.png'
-import news4 from '../public/images/news4.png'
+import news1 from '../public/images/news1.svg'
+import news2 from '../public/images/news2.svg'
+import news3 from '../public/images/news3.svg'
+import news4 from '../public/images/news4.svg'
 import youtubeIcon from '../public/images/youtubeIcon.png'
 import InstagramIcon from '../public/images/instagram-icon.png'
 import FacebookIcon from '../public/images/facebook-icon.png'
@@ -78,43 +78,47 @@ export const homeData = {
   ],
 }
 
-
-
 /**********           News and Blogs Data             ********* */
 export const newsAndBlogs = {
   header: 'News & Blogs',
-  heading: 'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.',
+  heading:
+    'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.',
+  viewButtonText: 'View All',
+  mainBlog: {
+    image: news1,
+    title: 'In-house versus agency UX design',
+    description:
+      'Lorem ipsum is a placeholder text commonly used to demonstrate the visual. Text commonly used to demonstrate the visual',
+    chipLabel: 'UX Design',
+    readTime: '5 Mins Read',
+  },
   blogs: [
     {
       image: news2,
-      title: 'In-house versus agency UX design',
-      description: 'Lorem ipsum is a placeholder text commonly used to demonstrate the visual. Text commonly used to demonstrate the visual',
-      chipLabel: 'UX Design',
-      readTime: '5 Mins Read'
+      title: 'Fastest Growing IT Company',
+      description:
+        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual. Text commonly used to demonstrate the visual',
+      chipLabel: 'Startup',
+      readTime: '5 Mins Read',
     },
     {
       image: news3,
-      title: 'In-house versus agency UX design',
-      description: 'Lorem ipsum is a placeholder text commonly used to demonstrate the visual. Text commonly used to demonstrate the visual',
-      chipLabel: 'UX Design',
-      readTime: '5 Mins Read'
+      title: 'Welcome to Prixite - Fastest Growing IT Company',
+      description:
+        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual. Text commonly used to demonstrate the visual',
+      chipLabel: 'Mobile App Development',
+      readTime: '5 Mins Read',
     },
     {
       image: news4,
-      title: 'In-house versus agency UX design',
-      description: 'Lorem ipsum is a placeholder text commonly used to demonstrate the visual. Text commonly used to demonstrate the visual',
-      chipLabel: 'UX Design',
-      readTime: '5 Mins Read'
-    }
-  ]
+      title: 'Welcome to Prixite - Fastest Growing IT Company',
+      description:
+        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual. Text commonly used to demonstrate the visual',
+      chipLabel: 'React Development',
+      readTime: '5 Mins Read',
+    },
+  ],
 }
-
-
-
-
-
-
-
 
 /**********            Home Page Services Data          ********* */
 export const servicesData = {
