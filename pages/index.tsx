@@ -6,6 +6,7 @@ import Service from '../components/Presentational/Service/Service'
 import ContactButton from '../components/Smart/ContactButton/ContactButton'
 import AboutUs from '../components/Presentational/AboutUs/AboutUs'
 import SectionHeader from '../components/Presentational/SectionHeader/SectionHeader'
+import Subscribe from '../components/Shared/Subscribe/Subscribe'
 
 export default function Home() {
   const {
@@ -52,7 +53,7 @@ export default function Home() {
               <Typography>{homeAim}</Typography>
 
               <Box display="flex" gap="25px" alignItems={'center'} mt={6}>
-                <ContactButton text={contactUsButtonText} />
+                <ContactButton text={contactUsButtonText} buttonSize="large"/>
 
                 <Box className="youtube-icon">
                   <Image
@@ -100,6 +101,8 @@ export default function Home() {
             heading={aboutUsHeading}
             description={aboutUsDescription}
           />
+
+          <Subscribe />
         </Container>
       </div>
     </>

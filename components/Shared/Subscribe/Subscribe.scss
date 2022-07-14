@@ -1,0 +1,36 @@
+// .subscribe-container {
+//     background: linear-gradient(180deg, rgba(237, 237, 237, 0.2) 0%, rgba(255, 255, 255, 0.8) 100%);
+//     box-sizing: border-box;
+//     backdrop-filter: blur(10px);
+//     border-radius: 10px;
+//     border: 1px solid #EDEDED;
+//     margin-top: 50px;
+//     margin-bottom: 50px;
+//     display: flex;
+//     align-items: center;
+//     padding: 40px;
+//     gap: 40px;
+//     .input-container {
+//         position: relative;
+//         width: 100rem;
+//     }
+// }
+
+
+
+.subscribe-container {
+    background: linear-gradient(180deg, rgba(237, 237, 237, 0.2) 0%, rgba(255, 255, 255, 0.8) 100%);
+    box-sizing: border-box;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid #EDEDED;
+    display: flex;
+    align-items: center;
+    padding: 35px;
+    gap: 40px;
+    position: absolute;
+    width: 85%;
+    justify-content: space-between;
+}
+
+
