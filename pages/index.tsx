@@ -1,16 +1,5 @@
+import { Box, Container, Typography, Stack, Grid, Divider } from '@mui/material'
 import Image from 'next/image'
-import Header from '../components/header/Header'
-import homePageBg from '../public/images/homePageBg.png'
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
-import {
-  Box,
-  Container,
-  Typography,
-  Stack,
-  Divider,
-  Grid,
-  Button,
-} from '@mui/material'
 import { homeData, newsAndBlogs } from '../data/data'
 import { useRouter } from 'next/router'
 import Chip from '@mui/material/Chip'
@@ -18,6 +7,12 @@ import news1 from '../public/images/news1.png'
 import news2 from '../public/images/news2.png'
 import news3 from '../public/images/news3.png'
 import news4 from '../public/images/news4.png'
+import { aboutUsData, servicesData } from '../data/data'
+import Head from 'next/head'
+import Service from '../components/Presentational/Service/Service'
+import ContactButton from '../components/Smart/ContactButton/ContactButton'
+import AboutUs from '../components/Presentational/AboutUs/AboutUs'
+import SectionHeader from '../components/Presentational/SectionHeader/SectionHeader'
 
 export default function Home() {
   const {
@@ -25,50 +20,70 @@ export default function Home() {
     header,
     headerImage,
     heading,
-    descriptionHeading,
-    paragraphs,
+    homeAim,
+    contactUsButtonText,
+    videoButtonText,
+    youtubeIcon,
   } = homeData
 
-  const router = useRouter()
+  const { servicesHeading, servicesAim, services } = servicesData
+  const { aboutUsHeader, aboutUsHeading, aboutUsDescription } = aboutUsData
+
   return (
-    <div className="home-page-container">
-      <Header bgImg={homePageBg} title={title}>
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="prixite" content="Prixte" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="home-page-container">
         <Container maxWidth="xl">
           <Stack
-            pt={{ xs: '60px', lg: '110px' }}
-            pb={{ xs: '100px', lg: '80px' }}
+            pt={{ xs: '60px', lg: '60px' }}
+            pb={{ xs: '100px', lg: '60px' }}
             direction={{ xs: 'column', md: 'row' }}
             spacing={8}
+            alignItems={'center'}
           >
             <Box>
               <Typography variant="h6" className="home-main-heading-1">
                 {header}
               </Typography>
 
-              <Divider
-                textAlign="left"
-                className="divider"
-                sx={{ width: '17%' }}
-              />
-
               <Typography variant="h4" className="home-main-heading-2">
-                {heading}
+                {heading.slice(0, 8)}
+                <span className="solution-color">{heading.slice(8, 17)}</span>
+                {heading.slice(17, 40)} 🚀
               </Typography>
+
+              <Typography>{homeAim}</Typography>
+
+              <Box display="flex" gap="25px" alignItems={'center'} mt={6}>
+                <ContactButton text={contactUsButtonText} />
+
+                <Box className="youtube-icon">
+                  <Image
+                    unoptimized
+                    priority
+                    src={youtubeIcon}
+                    alt="service-image"
+                  />
+                </Box>
+                <Typography>{videoButtonText}</Typography>
+              </Box>
             </Box>
 
-            <Box textAlign="center">
+            <Box>
               <Image
                 unoptimized
                 priority
                 src={headerImage}
-                width={400}
-                height={300}
                 alt="service-image"
               />
             </Box>
           </Stack>
         </Container>
-      </Header>
+     
       <Container maxWidth="xl">
         <Box p="5rem 1.5rem">
           <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
@@ -174,6 +189,33 @@ export default function Home() {
           </Stack>
         </Box>
       </Container>
-    </div>
+    
+        <Container maxWidth="xl">
+          <Box pb="5rem" pt="5rem">
+            <SectionHeader heading={servicesHeading} />
+            <Typography mt={2} mb={6}>
+              {servicesAim}
+            </Typography>
+
+            <Grid container spacing={{ xs: 2, md: 7 }} columnSpacing={3}>
+              {services.map((item, index) => (
+                <Service
+                  key={index}
+                  img={item.img}
+                  title={item.title}
+                  description={item.desc}
+                />
+              ))}
+            </Grid>
+          </Box>
+
+          <AboutUs
+            header={aboutUsHeader}
+            heading={aboutUsHeading}
+            description={aboutUsDescription}
+          />
+        </Container>
+        </div>
+    </>
   )
 }

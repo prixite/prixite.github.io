@@ -1,0 +1,21 @@
+.header-container {
+  .header-bar {
+    color: black;
+    padding-top: 10px;
+    background: transparent;
+    box-shadow: none;
+    .menu-icon {
+      width: 48px;
+      height: 48px;
+      background-color: '#FFFFFF';
+      border: 1px solid #e7e7e7;
+      box-shadow: 10px 10px 24px 1px rgba(221, 221, 221, 0.15);
+      border-radius: 12px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

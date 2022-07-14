@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../components/header/Header'
+import Header from '../components/Shared/header/Header'
 import careersPageBg from '../public/images/careersPageBg.jpg'
 import {
   Box,
@@ -12,22 +12,22 @@ import {
   Checkbox,
 } from '@mui/material'
 import { careersData } from '../data/data'
+import Head from 'next/head'
 
 const careers = () => {
   const { title, heading, buttonText } = careersData
   return (
     <>
-      <Header bgImg={careersPageBg} title={title}>
-        <Box className="careers-container">
-          <Typography
-            variant="h2"
-            textAlign="center"
-            className="careers-heading"
-          >
-            {heading}
-          </Typography>
-        </Box>
-      </Header>
+      <Head>
+        <title>{title}</title>
+        <meta name="prixite" content="Prixte" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Box className="careers-container">
+        <Typography variant="h2" textAlign="center" className="careers-heading">
+          {heading}
+        </Typography>
+      </Box>
 
       <Container
         maxWidth="xl"

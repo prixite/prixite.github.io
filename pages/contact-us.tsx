@@ -1,33 +1,37 @@
 import React from 'react'
-import Header from '../components/header/Header'
+import Header from '../components/Shared/header/Header'
 import contactUsPageBg from '../public/images/contactUsPageBg.png'
 import { Box, Typography, Container, Grid, Stack } from '@mui/material'
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import { contactUs } from '../data/data'
+import Head from 'next/head'
 
 const ContactUs = () => {
   const { title, heading, description, contactInfo } = contactUs
   return (
     <>
-      <Header bgImg={contactUsPageBg} title={title}>
-        <Box
-          sx={{
-            pt: { xs: '100px', lg: '230px' },
-            pb: { xs: '100px', lg: '190px' },
-          }}
-          className="contact-us-container"
+      <Head>
+        <title>{title}</title>
+        <meta name="prixite" content="Prixte" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Box
+        sx={{
+          pt: { xs: '100px', lg: '230px' },
+          pb: { xs: '100px', lg: '190px' },
+        }}
+        className="contact-us-container"
+      >
+        <Typography
+          variant="h2"
+          textAlign="center"
+          className="contact-us-heading"
         >
-          <Typography
-            variant="h2"
-            textAlign="center"
-            className="contact-us-heading"
-          >
-            {heading}
-          </Typography>
-        </Box>
-      </Header>
+          {heading}
+        </Typography>
+      </Box>
       <Container maxWidth="xl">
         <Grid container spacing={'7rem'} sx={{ py: '120px' }}>
           <Grid item xs={12} md={6}>
