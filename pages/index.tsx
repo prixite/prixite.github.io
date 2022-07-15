@@ -53,7 +53,7 @@ export default function Home() {
               <Typography>{homeAim}</Typography>
 
               <Box display="flex" gap="25px" alignItems={'center'} mt={6}>
-                <ContactButton text={contactUsButtonText} buttonSize="large"/>
+                <ContactButton text={contactUsButtonText}/>
 
                 <Box className="youtube-icon">
                   <Image

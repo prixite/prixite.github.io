@@ -4,17 +4,16 @@ import SendOutlinedIcon from '@mui/icons-material/SendOutlined'
 
 interface ContactButtonInterface {
   text: string,
-  buttonSize?: string,
 }
 
-const ContactButton: React.FC<ContactButtonInterface> = ({ text, buttonSize }) => {
+const ContactButton: React.FC<ContactButtonInterface> = ({ text }) => {
   return (
     <Box>
       <Button
         variant="contained"
         endIcon={<SendOutlinedIcon />}
-        size={buttonSize}
         className="contact-us-button"
+        size='large'
       >
         {text}
       </Button>

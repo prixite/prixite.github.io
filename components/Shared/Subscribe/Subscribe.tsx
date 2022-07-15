@@ -1,8 +1,6 @@
 import {
   Box,
-  Button,
   Container,
-  Stack,
   TextField,
   Typography,
 } from '@mui/material'
@@ -13,62 +11,25 @@ import ContactButton from '../../Smart/ContactButton/ContactButton'
 
 const Subscribe = () => {
   return (
-    <Container sx={{position: 'relative', display: 'flex', justifyContent: 'center'}} maxWidth='xl'>
-      <Box sx={{
-        position: 'relative',
-        right: '43%',
-        bottom: 25
-      }}>
-        <Image src={PrixiteLogo} width={186} height={186} />
+    <Container className="subscribe-container" maxWidth='xl'>
+      <Box className="subscribe-image">
+        <Image src={PrixiteLogo} />
       </Box>
-      <Box className='subscribe-container'>
+      <Box className='subscribe-card'>
         <Box>
-          <Typography fontWeight={600} fontSize={22}>
-            Subscribers Get More
+          <Typography className='subscribe-heading'>
+            Subscribers <span style={{color: '#63AC45'}}>Get More</span>
           </Typography>
           <Typography>Join the community</Typography>
         </Box>
-        <Box width={'65%'} sx={{position: 'relative'}}>
-          <TextField
-            id="outlined-basic"
-            label="Enter your Email Address"
-            variant="outlined"
-            fullWidth
-          />
-          <div
-            style={{ position: 'absolute', top: 9, right: 7 }}
-          >
-            <ContactButton text="Subscribe" buttonSize='medium'/>
+        <Box className='subscribe-input'>
+         <input className="input" type='text' placeholder='Enter you Email' multiple></input>
+          <div className='subscribe-button'>
+            <ContactButton text="Subscribe" />
           </div>
         </Box>
       </Box>
     </Container>
-
-
-    // <Container className="subscribe-container" maxWidth="lg">
-
-    //   <Box width={'100%'}>
-    //     <Typography fontWeight={600} fontSize={22}>
-    //       Subscribers Get More
-    //     </Typography>
-    //     <Typography>Join the community</Typography>
-    //   </Box>
-    //   <Box className="input-container">
-    //     <TextField
-    //       id="outlined-basic"
-    //       label="Enter your Email Address"
-    //       variant="outlined"
-    //       className="input"
-    //       fullWidth
-    //     />
-    //     <div
-    //       className="subscribe-button"
-    //       style={{ position: 'absolute', top: 6, right: 6 }}
-    //     >
-    //       <ContactButton text="Subscribe" />
-    //     </div>
-    //   </Box>
-    // </Container>
   )
 }
 

@@ -24,6 +24,7 @@ import '../components/Presentational/BlogCard/blogCard.scss'
 import '../components/Presentational/AboutUs/AboutUs.scss'
 import '../components/Presentational/Title/Title.scss'
 import '../components/Shared/Subscribe/Subscribe.scss'
+import '../components/Smart/ContactButton/ContactButton.scss'
 
 let theme = createTheme({
   breakpoints: {
