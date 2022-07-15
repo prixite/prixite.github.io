@@ -1,27 +1,28 @@
-import { Box, Container, Typography, Stack, Grid, Divider } from '@mui/material'
+import { Box, Container, Typography, Stack, Grid, Button } from '@mui/material'
 import Image from 'next/image'
-import { aboutUsData, homeData, servicesData } from '../data/data'
+import { homeData, newsAndBlogs } from '../data/data'
+import Chip from '@mui/material/Chip'
+import { aboutUsData, servicesData } from '../data/data'
 import Head from 'next/head'
 import Service from '../components/Presentational/Service/Service'
-import ContactButton from '../components/Smart/ContactButton/ContactButton'
 import AboutUs from '../components/Presentational/AboutUs/AboutUs'
 import SectionHeader from '../components/Presentational/SectionHeader/SectionHeader'
 import Subscribe from '../components/Shared/Subscribe/Subscribe'
+import Blog from '../components/Presentational/Blog/Blog'
+import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined'
+import HomeContainer from '../components/Presentational/HomeContainer/HomeContainer'
 
 export default function Home() {
-  const {
-    title,
-    header,
-    headerImage,
-    heading,
-    homeAim,
-    contactUsButtonText,
-    videoButtonText,
-    youtubeIcon,
-  } = homeData
-
+  const { title } = homeData
   const { servicesHeading, servicesAim, services } = servicesData
   const { aboutUsHeader, aboutUsHeading, aboutUsDescription } = aboutUsData
+  const {
+    header: newsHeader,
+    heading: newsHeading,
+    mainBlog,
+    blogs,
+    viewButtonText,
+  } = newsAndBlogs
 
   return (
     <>
@@ -32,51 +33,9 @@ export default function Home() {
       </Head>
       <div className="home-page-container">
         <Container maxWidth="xl">
-          <Stack
-            pt={{ xs: '60px', lg: '60px' }}
-            pb={{ xs: '100px', lg: '60px' }}
-            direction={{ xs: 'column', md: 'row' }}
-            spacing={8}
-            alignItems={'center'}
-          >
-            <Box>
-              <Typography variant="h6" className="home-main-heading-1">
-                {header}
-              </Typography>
-
-              <Typography variant="h4" className="home-main-heading-2">
-                {heading.slice(0, 8)}
-                <span className="solution-color">{heading.slice(8, 17)}</span>
-                {heading.slice(17, 40)} 🚀
-              </Typography>
-
-              <Typography>{homeAim}</Typography>
-
-              <Box display="flex" gap="25px" alignItems={'center'} mt={6}>
-                <ContactButton text={contactUsButtonText} />
-
-                <Box className="youtube-icon">
-                  <Image
-                    unoptimized
-                    priority
-                    src={youtubeIcon}
-                    alt="service-image"
-                  />
-                </Box>
-                <Typography>{videoButtonText}</Typography>
-              </Box>
-            </Box>
-
-            <Box>
-              <Image
-                unoptimized
-                priority
-                src={headerImage}
-                alt="service-image"
-              />
-            </Box>
-          </Stack>
+          <HomeContainer />
         </Container>
+
         <Container maxWidth="xl">
           <Box pb="5rem" pt="5rem">
             <SectionHeader heading={servicesHeading} />
@@ -101,7 +60,61 @@ export default function Home() {
             heading={aboutUsHeading}
             description={aboutUsDescription}
           />
+        </Container>
 
+        <Container maxWidth="xl">
+          <Box pb="5rem" pt="5rem">
+            <Stack direction={'row'} justifyContent="space-between">
+              <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
+                {newsHeader.slice(0, 6)}
+                <span style={{ color: '#63AC45' }}>
+                  {newsHeader.slice(6, 11)}
+                </span>
+              </Typography>
+              <Button variant="outlined" endIcon={<ArrowForwardOutlinedIcon />}>
+                {viewButtonText}
+              </Button>
+            </Stack>
+
+            <Typography my={3}>{newsHeading}</Typography>
+
+            <Stack
+              spacing={2}
+              direction={{ xs: 'column', md: 'row', lg: 'row' }}
+            >
+              <Stack spacing={2}>
+                <Image
+                  src={mainBlog.image}
+                  objectFit="cover"
+                  alt="service-image"
+                  style={{ borderRadius: 10 }}
+                />
+                <Typography fontSize={20} fontWeight={600}>
+                  {mainBlog.title}
+                </Typography>
+                <Typography fontSize={15}>{mainBlog.description}</Typography>
+                <Stack direction={'row'} spacing={4} alignItems="center">
+                  <Chip label={mainBlog.chipLabel} size="small" />
+                  <Typography fontSize={14}>{mainBlog.readTime}</Typography>
+                </Stack>
+              </Stack>
+
+              <Stack spacing={2}>
+                {blogs.map((blog, index) => {
+                  return (
+                    <Blog
+                      key={index}
+                      image={blog.image}
+                      title={blog.title}
+                      description={blog.description}
+                      chipLabel={blog.chipLabel}
+                      readTime={blog.readTime}
+                    />
+                  )
+                })}
+              </Stack>
+            </Stack>
+          </Box>
           <Subscribe />
         </Container>
       </div>
