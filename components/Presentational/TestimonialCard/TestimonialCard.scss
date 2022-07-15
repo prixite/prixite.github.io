@@ -1,0 +1,19 @@
+.testimonial-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: gray;
+    .testimonial-image {
+        width: 100px;
+        height: 100px;
+        padding: 7px;
+        margin-bottom: 30px;
+    }
+    .testimonial-name {
+        margin-top: 20px;
+        font-weight: 600;
+        color: black
+    }
+    .testimonial-text {}
+}

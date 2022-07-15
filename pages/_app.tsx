@@ -27,7 +27,7 @@ import '../components/Smart/Testimonials/Testimonials.scss'
 import '../components/Shared/Subscribe/Subscribe.scss'
 import '../components/Smart/ContactButton/ContactButton.scss'
 import '../components/Presentational/Blog/Blog.scss'
-
+import '../components/Presentational/TestimonialCard/TestimonialCard.scss'
 let theme = createTheme({
   breakpoints: {
     values: {

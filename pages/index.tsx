@@ -66,7 +66,6 @@ export default function Home() {
           />
         </Container>
 
-
         <Container maxWidth="xl">
           <Box pb="5rem" pt="5rem">
             <Stack direction={'row'} justifyContent="space-between">
@@ -120,31 +119,12 @@ export default function Home() {
               </Stack>
             </Stack>
           </Box>
-         
-        </Container>
-        
-
-        <Container
-          maxWidth="xl"
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
-            Our
-            <span style={{ color: 'var(--primary-green' }}>
-              &nbsp; Testimonials
-            </span>
-          </Typography>
-
-          <Testimonials />
         </Container>
 
-<Container maxWidth='xl' sx={{marginTop: 30}}>
-        <Subscribe />
+        <Testimonials />
+
+        <Container maxWidth="xl" sx={{ marginTop: 10 }}>
+          <Subscribe />
         </Container>
       </div>
     </>
