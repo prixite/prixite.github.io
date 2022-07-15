@@ -12,8 +12,8 @@ const ContactButton: React.FC<ContactButtonInterface> = ({ text }) => {
       <Button
         variant="contained"
         endIcon={<SendOutlinedIcon />}
-        size="large"
         className="contact-us-button"
+        size="large"
       >
         {text}
       </Button>
