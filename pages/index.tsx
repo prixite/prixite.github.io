@@ -7,6 +7,8 @@ import Head from 'next/head'
 import Service from '../components/Presentational/Service/Service'
 import AboutUs from '../components/Presentational/AboutUs/AboutUs'
 import SectionHeader from '../components/Presentational/SectionHeader/SectionHeader'
+import Testimonials from '../components/Smart/Testimonials/Testimonials'
+
 import Subscribe from '../components/Shared/Subscribe/Subscribe'
 import Blog from '../components/Presentational/Blog/Blog'
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined'
@@ -54,7 +56,9 @@ export default function Home() {
               ))}
             </Grid>
           </Box>
+        </Container>
 
+        <Container maxWidth="xl">
           <AboutUs
             header={aboutUsHeader}
             heading={aboutUsHeading}
@@ -115,6 +119,11 @@ export default function Home() {
               </Stack>
             </Stack>
           </Box>
+        </Container>
+
+        <Testimonials />
+
+        <Container maxWidth="xl" sx={{ marginTop: 10 }}>
           <Subscribe />
         </Container>
       </div>

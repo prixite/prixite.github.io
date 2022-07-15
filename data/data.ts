@@ -19,6 +19,8 @@ import TwitterIcon from '../public/images/twitter-icon.png'
 import LocationIcon from '../public/images/location-icon.png'
 import PhoneIcon from '../public/images/phone-icon.png'
 import MailIcon from '../public/images/mail-icon.png'
+import TestimonialLeft from '../public/images/testimonial-left.svg'
+import TestimonialRight from '../public/images/testimonial-right.svg'
 
 /*********          Header Menu Data            ********** */
 export const pages = [
@@ -116,6 +118,33 @@ export const newsAndBlogs = {
         'Lorem ipsum is a placeholder text commonly used to demonstrate the visual. Text commonly used to demonstrate the visual',
       chipLabel: 'React Development',
       readTime: '5 Mins Read',
+    },
+  ],
+}
+
+/**********           Testimonials Data             ********** */
+export const testimonialsData = {
+  heading: 'Our Testimonials',
+  leftImg: TestimonialLeft,
+  rightImg: TestimonialRight,
+  testimonials: [
+    {
+      image: 'https://www.tutorialrepublic.com/examples/images/clients/1.jpg',
+      text: 'Prixite is one online technology solutions provider company that is considered as a new breed of thinkers who is driven to create effective business solutions for its clients. We aspire to become our client’s first choice when it comes to being a world leader in the progress and advancement of businesses through digital platforms.',
+      name: 'Brandon Dorwart',
+      designation: 'CEO Dupe Tech',
+    },
+    {
+      image: 'https://www.tutorialrepublic.com/examples/images/clients/2.jpg',
+      text: 'Prixite is one online technology solutions provider company that is considered as a new breed of thinkers who is driven to create effective business solutions for its clients. We aspire to become our client’s first choice when it comes to being a world leader in the progress and advancement of businesses through digital platforms.',
+      name: 'Brandon Dorwart',
+      designation: 'CEO Dupe Tech',
+    },
+    {
+      image: 'https://www.tutorialrepublic.com/examples/images/clients/3.jpg',
+      text: 'Prixite is one online technology solutions provider company that is considered as a new breed of thinkers who is driven to create effective business solutions for its clients. We aspire to become our client’s first choice when it comes to being a world leader in the progress and advancement of businesses through digital platforms.',
+      name: 'Brandon Dorwart',
+      designation: 'CEO Dupe Tech',
     },
   ],
 }
