@@ -10,15 +10,15 @@ interface CardProps {
 
 const TestimonialCard = ({ img, text, name, designation }: CardProps) => {
   return (
-    <Container maxWidth='xl' className="testimonial-card">
+    <Container maxWidth="xl" className="testimonial-card">
       <Avatar
         imgProps={{ style: { borderRadius: '50%' } }}
         src={img}
         className="testimonial-image"
       />
-      <Typography className='testimonial-text'>{text}</Typography>
-      <Typography className='testimonial-name'>{name}</Typography>
-      <Typography className='testimonial-designation'>{designation}</Typography>
+      <Typography className="testimonial-text">{text}</Typography>
+      <Typography className="testimonial-name">{name}</Typography>
+      <Typography className="testimonial-designation">{designation}</Typography>
     </Container>
   )
 }

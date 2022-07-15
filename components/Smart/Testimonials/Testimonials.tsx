@@ -28,7 +28,7 @@ const NextBtn = (props: any) => {
 const Testimonials = () => {
   const { testimonials, heading } = testimonialsData
   return (
-    <Container maxWidth="xl" className='testimonials-container'>
+    <Container maxWidth="xl" className="testimonials-container">
       <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
         {heading.slice(0, 3)}
         <span style={{ color: 'var(--primary-green)' }}>
@@ -39,7 +39,7 @@ const Testimonials = () => {
         <Slider prevArrow={<PreviousBtn />} nextArrow={<NextBtn />}>
           {testimonials.map((testimonial, index) => (
             <TestimonialCard
-            key={index}
+              key={index}
               img={testimonial.image}
               text={testimonial.text}
               name={testimonial.name}
