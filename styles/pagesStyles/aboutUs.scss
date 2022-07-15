@@ -1,0 +1,44 @@
+.about-us-page {
+  margin-top: 30px;
+  position: relative;
+  .header {
+    background-color: rgba(99, 172, 69, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30%;
+  }
+
+  .image-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    .image-header {
+      position: absolute;
+      top: 20%;
+      width: 80%;
+      background-image: linear-gradient(
+        0deg,
+        #63ac45 0%,
+        rgba(99, 172, 69, 0) 100%
+      );
+      .image {
+        mix-blend-mode: multiply;
+      }
+    }
+    .image-content-container {
+      background-color: rgba(99, 172, 69, 0.1);
+      padding: 60px;
+      padding-top: 28%;
+      position: relative;
+      border-radius: 10px;
+      margin-bottom: 50px;
+      .description {
+        margin-top: 30px;
+      }
+    }
+  }
+}

@@ -25,7 +25,7 @@ import TestimonialRight from '../public/images/testimonial-right.svg'
 /*********          Header Menu Data            ********** */
 export const pages = [
   {
-    path: '/',
+    path: '/about-us',
     text: 'About Us',
   },
   {
@@ -214,8 +214,21 @@ export const servicesData = {
   ],
 }
 
-/**********             About US Section Data               *********** */
-export const aboutUsData = {
+/**********             About Us Page Data            *************/
+export const aboutUsPageData = {
+  header: 'We are Chaning the Whole Game 🚀',
+  heading: 'Fastest Growing IT Company',
+  aim: 'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.',
+  description: `Prixite is one online technology solutions provider company that is
+  considered as a new breed of thinkers who is driven to create
+  effective business solutions for its clients. We aspire to become
+  our client’s first choice when it comes to being a world leader in
+  the progress and advancement of businesses through digital
+  platforms.`,
+}
+
+/**********             About US Card Data               *********** */
+export const aboutUsCardData = {
   aboutUsHeader: 'About Us',
   aboutUsHeading: 'Fastest Growing IT Company',
   aboutUsDescription:
