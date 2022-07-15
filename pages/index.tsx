@@ -7,6 +7,7 @@ import Head from 'next/head'
 import Service from '../components/Presentational/Service/Service'
 import AboutUs from '../components/Presentational/AboutUs/AboutUs'
 import SectionHeader from '../components/Presentational/SectionHeader/SectionHeader'
+import Subscribe from '../components/Shared/Subscribe/Subscribe'
 import Blog from '../components/Presentational/Blog/Blog'
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined'
 import HomeContainer from '../components/Presentational/HomeContainer/HomeContainer'
@@ -86,6 +87,7 @@ export default function Home() {
                   src={mainBlog.image}
                   objectFit="cover"
                   alt="service-image"
+                  style={{ borderRadius: 10 }}
                 />
                 <Typography fontSize={20} fontWeight={600}>
                   {mainBlog.title}
@@ -113,6 +115,7 @@ export default function Home() {
               </Stack>
             </Stack>
           </Box>
+          <Subscribe />
         </Container>
       </div>
     </>
