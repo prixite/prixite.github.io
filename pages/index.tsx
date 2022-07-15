@@ -6,6 +6,9 @@ import Service from '../components/Presentational/Service/Service'
 import ContactButton from '../components/Smart/ContactButton/ContactButton'
 import AboutUs from '../components/Presentational/AboutUs/AboutUs'
 import SectionHeader from '../components/Presentational/SectionHeader/SectionHeader'
+import Testimonials from '../components/Smart/Testimonials/Testimonials'
+
+
 
 export default function Home() {
   const {
@@ -94,13 +97,32 @@ export default function Home() {
               ))}
             </Grid>
           </Box>
+        </Container>
 
+        <Container maxWidth="xl">
           <AboutUs
             header={aboutUsHeader}
             heading={aboutUsHeading}
             description={aboutUsDescription}
           />
         </Container>
+
+        <Container maxWidth="xl" sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+          <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
+            Our
+            <span style={{ color: 'var(--primary-green' }}>
+              &nbsp; Testimonials
+            </span>
+          </Typography>
+
+
+
+          
+
+<Testimonials />
+            
+        </Container>
+
       </div>
     </>
   )

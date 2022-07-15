@@ -1,0 +1,37 @@
+.testimonial {
+  .slick-arrow.slick-prev {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    border-radius: 5px;
+  }
+
+  .slick-arrow.slick-next {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    border-radius: 5px;
+  }
+
+  .slick-prev::before {
+    display: none;
+  }
+
+  .slick-next::before {
+    display: none;
+  }
+
+  .slick-arrow.slick-next {
+    right: -100px;
+  }
+
+  .slick-arrow.slick-prev {
+    left: -100px;
+  }
+}

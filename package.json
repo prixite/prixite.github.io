@@ -22,11 +22,18 @@
     "pre-commit": "^1.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.52.3"
+    "react-elastic-carousel": "^0.11.5",
+    "react-multi-carousel": "^2.8.2",
+    "react-responsive-carousel": "^3.2.23",
+    "react-slick": "^0.29.0",
+    "sass": "^1.52.3",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.14",
+    "@types/react-slick": "^0.23.10",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "eslint": "8.18.0",
     "eslint-config-next": "12.1.6",
