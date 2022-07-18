@@ -30,7 +30,7 @@ export const pages = [
     text: 'About Us',
   },
   {
-    path: '/',
+    path: '/services',
     text: 'Services',
   },
   {
@@ -152,6 +152,8 @@ export const testimonialsData = {
 
 /**********            Home Page Services Data          ********* */
 export const servicesData = {
+  servicesPageTitle: 'Services',
+  servicesPageHeader: 'We are Offering the Amazing Services 🚀',
   servicesHeading: 'Our Services',
   servicesAim:
     'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.',
@@ -639,7 +641,16 @@ export const footerData = {
   ],
   info: {
     title: 'More Information',
-    contactUs: ['About Us', 'Contact us'],
+    contactUs: [
+      {
+        text: 'About Us',
+        path: '/about-us',
+      },
+      {
+        text: 'Contact us',
+        path: '/contact-us',
+      },
+    ],
   },
   joinUs: {
     title: 'Join Us On',
