@@ -9,7 +9,7 @@ interface ServiceProps {
 }
 const Service: React.FC<ServiceProps> = ({ img, title, description }) => {
   return (
-    <Grid item sm={12} md={3}>
+    <Grid item sm={12} md={3} className="service">
       <Box marginBottom="10px">
         <Box className="service-image-container">
           <Image unoptimized priority src={img} alt="service-image" />

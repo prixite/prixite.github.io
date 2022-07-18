@@ -1,0 +1,14 @@
+.service {
+  .service-image-container {
+    background: url('../../../public/images/serviceBackground.png');
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .service-description {
+    margin: 10px 0;
+    font-size: 13px;
+  }
+}

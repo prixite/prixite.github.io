@@ -1,0 +1,16 @@
+.services-page {
+  margin-top: 30px;
+  position: relative;
+  .header {
+    background-color: rgba(99, 172, 69, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    .heading {
+      width: 70%;
+    }
+  }
+}

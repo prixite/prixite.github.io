@@ -29,25 +29,10 @@
     line-height: 67px;
     font-family: 'lato';
   }
-
-  .service-image-container {
-    background: url('../../public/images/serviceBackground.png');
-    width: 48px;
-    height: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   .service-image {
     box-shadow: 10px 10px 0px 1px rgb(0 0 0 / 7%);
     border-radius: 4px;
     cursor: pointer;
     opacity: 1.9;
-  }
-
-  .service-description {
-    margin: 10px 0;
-    font-size: 12px;
   }
 }
