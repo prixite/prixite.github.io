@@ -217,6 +217,7 @@ export const servicesData = {
 
 /**********             About Us Page Data            *************/
 export const aboutUsPageData = {
+  title: 'About Us',
   header: 'We are Chaning the Whole Game 🚀',
   heading: 'Fastest Growing IT Company',
   aim: 'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.',
