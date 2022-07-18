@@ -2,13 +2,12 @@ import { Box, Container, Typography, Stack, Grid, Button } from '@mui/material'
 import Image from 'next/image'
 import { homeData, newsAndBlogs } from '../data/data'
 import Chip from '@mui/material/Chip'
-import { aboutUsData, servicesData } from '../data/data'
+import { aboutUsCardData, servicesData } from '../data/data'
 import Head from 'next/head'
 import Service from '../components/Presentational/Service/Service'
 import AboutUs from '../components/Presentational/AboutUs/AboutUs'
 import SectionHeader from '../components/Presentational/SectionHeader/SectionHeader'
 import Testimonials from '../components/Smart/Testimonials/Testimonials'
-
 import Subscribe from '../components/Shared/Subscribe/Subscribe'
 import Blog from '../components/Presentational/Blog/Blog'
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined'
@@ -17,7 +16,7 @@ import HomeContainer from '../components/Presentational/HomeContainer/HomeContai
 export default function Home() {
   const { title } = homeData
   const { servicesHeading, servicesAim, services } = servicesData
-  const { aboutUsHeader, aboutUsHeading, aboutUsDescription } = aboutUsData
+  const { aboutUsHeader, aboutUsHeading, aboutUsDescription } = aboutUsCardData
   const {
     header: newsHeader,
     heading: newsHeading,
