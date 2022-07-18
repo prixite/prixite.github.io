@@ -21,6 +21,7 @@ import PhoneIcon from '../public/images/phone-icon.png'
 import MailIcon from '../public/images/mail-icon.png'
 import TestimonialLeft from '../public/images/testimonial-left.svg'
 import TestimonialRight from '../public/images/testimonial-right.svg'
+import AboutUsVision from '../public/images/about-us-vision.png'
 
 /*********          Header Menu Data            ********** */
 export const pages = [
@@ -216,6 +217,7 @@ export const servicesData = {
 
 /**********             About Us Page Data            *************/
 export const aboutUsPageData = {
+  title: 'About Us',
   header: 'We are Chaning the Whole Game 🚀',
   heading: 'Fastest Growing IT Company',
   aim: 'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.',
@@ -225,6 +227,28 @@ export const aboutUsPageData = {
   our client’s first choice when it comes to being a world leader in
   the progress and advancement of businesses through digital
   platforms.`,
+  visionTitle: 'Our Vision',
+  visionAim:
+    'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.',
+  visionImage: AboutUsVision,
+  visionData: [
+    {
+      value: '30+',
+      text: 'Years of Experience',
+    },
+    {
+      value: '27',
+      text: 'Offices Worldwide',
+    },
+    {
+      value: '150',
+      text: 'National Markets',
+    },
+    {
+      value: '2M+',
+      text: 'Clients a Year',
+    },
+  ],
 }
 
 /**********             About US Card Data               *********** */
