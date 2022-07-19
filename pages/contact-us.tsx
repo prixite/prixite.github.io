@@ -1,31 +1,10 @@
 import React from 'react'
-import Header from '../components/Shared/header/Header'
-import contactUsPageBg from '../public/images/contactUsPageBg.png'
-import {
-  Box,
-  Typography,
-  Container,
-  Grid,
-  Stack,
-  FormControl,
-  IconButton,
-  InputAdornment,
-  InputLabel,
-  OutlinedInput,
-} from '@mui/material'
-import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import GitHubIcon from '@mui/icons-material/GitHub'
+import { Box, Typography, Container } from '@mui/material'
 import { contactUs } from '../data/data'
 import Head from 'next/head'
 import Subscribe from '../components/Shared/Subscribe/Subscribe'
-import ContactButton from '../components/Smart/ContactButton/ContactButton'
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined'
-import { VisibilityOff, Visibility } from '@mui/icons-material'
-import { styled } from '@mui/material/styles'
-import Paper from '@mui/material/Paper'
 import ContactForm from '../components/Smart/ContactForm/ContactForm'
-
 
 const ContactUs = () => {
   const { title, heading } = contactUs
@@ -37,7 +16,7 @@ const ContactUs = () => {
         <meta name="prixite" content="Prixte" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container maxWidth="xl" className="services-page">
+      <Container maxWidth="xl" className="page-header contact-us-page">
         <Box className="header">
           <Box className="heading">
             <Typography fontSize={30} fontWeight={600}>
@@ -47,15 +26,7 @@ const ContactUs = () => {
               </span>
             </Typography>
           </Box>
-          <Box
-            sx={{
-              backgroundColor: 'var(--primary-green)',
-              color: 'white',
-              padding: 2,
-              borderRadius: 10,
-            }}
-            display="flex"
-          >
+          <Box className="contact-icon">
             <LocalPhoneOutlinedIcon fontSize="medium" />
           </Box>
         </Box>

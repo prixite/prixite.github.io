@@ -32,7 +32,11 @@ const Webdevelopment = () => {
 
         <Container className="page-content" maxWidth="lg">
           {description.map((desc, index) => {
-            return <Typography fontSize={18}>{desc}</Typography>
+            return (
+              <Typography key={index} fontSize={18}>
+                {desc}
+              </Typography>
+            )
           })}
         </Container>
         <Subscribe />
