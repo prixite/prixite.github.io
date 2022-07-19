@@ -423,7 +423,7 @@ export const jobsData = {
 /*******        Web Development Data            ************* */
 export const webDevelopment = {
   title: `${siteName} - Web Development`,
-  header: 'Web Development',
+  header: 'Web App Development',
   heading:
     'Prixite being the exquisite web development brands offers innovative solutions to your web development needs in today’s dynamics.',
   description: [
