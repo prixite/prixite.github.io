@@ -1,15 +1,14 @@
 import React from 'react'
-import Header from '../components/Shared/header/Header'
-import contactUsPageBg from '../public/images/contactUsPageBg.png'
-import { Box, Typography, Container, Grid, Stack } from '@mui/material'
-import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import GitHubIcon from '@mui/icons-material/GitHub'
+import { Box, Typography, Container, Button } from '@mui/material'
 import { contactUs } from '../data/data'
 import Head from 'next/head'
+import Subscribe from '../components/Shared/Subscribe/Subscribe'
+import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined'
+import ContactForm from '../components/Smart/ContactForm/ContactForm'
 
 const ContactUs = () => {
-  const { title, heading, description, contactInfo } = contactUs
+  const { title, heading } = contactUs
+
   return (
     <>
       <Head>
@@ -17,104 +16,26 @@ const ContactUs = () => {
         <meta name="prixite" content="Prixte" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box
-        sx={{
-          pt: { xs: '100px', lg: '230px' },
-          pb: { xs: '100px', lg: '190px' },
-        }}
-        className="contact-us-container"
-      >
-        <Typography
-          variant="h2"
-          textAlign="center"
-          className="contact-us-heading"
-        >
-          {heading}
-        </Typography>
-      </Box>
-      <Container maxWidth="xl">
-        <Grid container spacing={'7rem'} sx={{ py: '120px' }}>
-          <Grid item xs={12} md={6}>
-            {description.map((item, index) => (
-              <Box key={index}>
-                <Typography variant="h5" fontWeight="bold" mb="1rem">
-                  {item.title}
-                </Typography>
-
-                <Typography sx={{ letterSpacing: '1px' }}>
-                  {item.para}
-                </Typography>
-              </Box>
-            ))}
-          </Grid>
-
-          <Grid
-            item
-            xs={12}
-            md={6}
-            sx={{
-              textAlign: { xs: 'center', md: 'left' },
-            }}
-          >
-            <Typography variant="h3" fontWeight="bold">
-              {contactInfo.title}
+      <Container maxWidth="xl" className="page-header contact-us-page">
+        <Box className="header">
+          <Box className="heading">
+            <Typography fontSize={30} fontWeight={600}>
+              {heading.slice(0, 24)}
+              <span style={{ color: 'var(--primary-green)' }}>
+                {heading.slice(24, 41)}
+              </span>
             </Typography>
+          </Box>
+          <Button className="contact-icon" variant="contained">
+            <LocalPhoneOutlinedIcon fontSize="medium" />
+          </Button>
+        </Box>
 
-            {contactInfo.details.map((item, index) => (
-              <Box key={index}>
-                <Typography fontWeight="bold" mt="2rem">
-                  {item.heading}
-                </Typography>
-                <Typography>{item.contact}</Typography>
-              </Box>
-            ))}
+        <Container maxWidth="lg">
+          <ContactForm />
+        </Container>
 
-            <Stack
-              direction="row"
-              mt="2rem"
-              spacing={3}
-              sx={{
-                justifyContent: { xs: 'center', md: 'left' },
-              }}
-            >
-              <a
-                target="_blank"
-                href="https://web.facebook.com/prixite/"
-                rel="noreferrer"
-              >
-                <FacebookRoundedIcon
-                  htmlColor="var(--icon-grey-color)"
-                  fontSize="large"
-                  className="contact-icon"
-                />
-              </a>
-
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/company/prixite/about/?viewAsMember=true"
-                rel="noreferrer"
-              >
-                <LinkedInIcon
-                  htmlColor="var(--icon-grey-color)"
-                  fontSize="large"
-                  className="contact-icon"
-                />
-              </a>
-
-              <a
-                target="_blank"
-                href="https://github.com/Prixite"
-                rel="noreferrer"
-              >
-                <GitHubIcon
-                  htmlColor="var(--icon-grey-color)"
-                  fontSize="large"
-                  className="contact-icon"
-                />
-              </a>
-            </Stack>
-          </Grid>
-        </Grid>
+        <Subscribe />
       </Container>
     </>
   )

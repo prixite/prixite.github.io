@@ -33,9 +33,9 @@ const AboutUs = () => {
             <Typography fontSize={30} fontWeight={600}>
               {header.slice(0, 6)}
               <span style={{ color: 'var(--primary-green)' }}>
-                {header.slice(6, 14)}
+                {header.slice(6, 15)}
               </span>
-              {header.slice(14, 32)}
+              {header.slice(15, 32)} 🚀
             </Typography>
           </Box>
           <Box>

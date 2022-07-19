@@ -1,13 +1,9 @@
-.contact-us-container {
-  .contact-us-heading {
-    font-weight: bold;
-    text-transform: uppercase;
+.contact-us-page {
+  .contact-icon {
+    background-color: var(--primary-green);
     color: white;
-    margin-bottom: 100px;
+    padding: 20px;
+    border-radius: 50px;
+    display: flex;
   }
-}
-
-.contact-icon:hover {
-  cursor: pointer;
-  color: var(--primary-green);
 }

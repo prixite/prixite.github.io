@@ -15,7 +15,7 @@ const services = () => {
         <meta name="prixite" content="Prixte" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container maxWidth="xl" className="services-page">
+      <Container maxWidth="xl" className="page-header">
         <Box className="header">
           <Box className="heading">
             <Typography fontSize={30} fontWeight={600}>

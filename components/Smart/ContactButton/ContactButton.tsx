@@ -3,7 +3,7 @@ import { Box, Button } from '@mui/material'
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined'
 
 interface ContactButtonInterface {
-  text: string
+  text?: string
 }
 
 const ContactButton: React.FC<ContactButtonInterface> = ({ text }) => {
