@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography, Container } from '@mui/material'
+import { Box, Typography, Container, Button } from '@mui/material'
 import { contactUs } from '../data/data'
 import Head from 'next/head'
 import Subscribe from '../components/Shared/Subscribe/Subscribe'
@@ -26,9 +26,9 @@ const ContactUs = () => {
               </span>
             </Typography>
           </Box>
-          <Box className="contact-icon">
+          <Button className="contact-icon" variant="contained">
             <LocalPhoneOutlinedIcon fontSize="medium" />
-          </Box>
+          </Button>
         </Box>
 
         <Container maxWidth="lg">
