@@ -38,6 +38,7 @@ const services = () => {
               img={item.img}
               title={item.title}
               description={item.desc}
+              path={item.path}
             />
           ))}
         </Grid>

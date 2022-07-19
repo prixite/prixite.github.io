@@ -51,6 +51,7 @@ export default function Home() {
                   img={item.img}
                   title={item.title}
                   description={item.desc}
+                  path={item.path}
                 />
               ))}
             </Grid>
