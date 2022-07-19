@@ -36,9 +36,11 @@ const WordPressDevelopment = () => {
           <Typography fontSize={18}>{serviceHeading}</Typography>
           {services.map((service, index) => {
             return (
-              <Typography key={index} lineHeight={0} fontSize={18}>
-                <li>{service}</li>
-              </Typography>
+              <Box key={index}>
+                <ul className="content-list">
+                  <li>{service}</li>
+                </ul>
+              </Box>
             )
           })}
           <Typography fontSize={18}>{para2}</Typography>

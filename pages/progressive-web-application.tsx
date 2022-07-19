@@ -1,9 +1,9 @@
 import React from 'react'
 import { progressiveWebApp } from '../data/data'
-import Header from '../components/Shared/header/Header'
-import pwaBgImg from '../public/images/wordpress.jpg'
-import { Container, Stack, Box, Typography, Divider } from '@mui/material'
+import { Container, Box, Typography } from '@mui/material'
 import Head from 'next/head'
+import Subscribe from '../components/Shared/Subscribe/Subscribe'
+import ContactButton from '../components/Smart/ContactButton/ContactButton'
 
 const ProgressiveWebApplication = () => {
   const { title, header, heading, details, description, paraList, para } =
@@ -15,80 +15,37 @@ const ProgressiveWebApplication = () => {
         <meta name="prixite" content="Prixte" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container maxWidth="xl">
-        <Stack
-          pt={{ xs: '80px', lg: '200px' }}
-          pb={{ xs: '100px', lg: '200px' }}
-          direction={{ xs: 'column', md: 'row' }}
-          spacing={5}
-        >
-          <Box>
-            <Typography
-              variant="h3"
-              sx={{
-                fontWeight: 'bold',
-                color: 'white',
-              }}
-            >
+      <Container maxWidth="xl" className="page-header">
+        <Box className="header">
+          <Box className="heading">
+            <Typography fontSize={30} fontWeight={600}>
               {header}
             </Typography>
-            <Divider
-              textAlign="left"
-              sx={{
-                width: '17%',
-                marginTop: '2rem',
-                borderColor: 'var(--primary-green)',
-                borderWidth: '1px',
-              }}
-            />
-            <Typography
-              variant="h6"
-              sx={{
-                fontWeight: '600',
-                marginTop: '1rem',
-                color: 'white',
-              }}
-            >
-              {heading}
-            </Typography>
+            <Typography>{heading}</Typography>
           </Box>
-          <Box textAlign="left">
-            {/* <Image
-                unoptimized
-                priority
-                src={reactImg}
-                width={800}
-                height={450}
-              /> */}
+          <Box>
+            <ContactButton text="Contact Us" />
           </Box>
-        </Stack>
-      </Container>
+        </Box>
 
-      <Container
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: 4,
-          py: 10,
-          opacity: 0.8,
-        }}
-        maxWidth="xl"
-      >
-        {details.map((item, index) => (
-          <Typography key={index}>{item}</Typography>
-        ))}
+        <Container className="page-content" maxWidth="lg">
+          {details.map((detail, index) => {
+            return <Typography key={index}>{detail}</Typography>
+          })}
+          <Typography fontSize={18}>{description}</Typography>
 
-        <Typography>{description}</Typography>
-
-        {paraList.map((item, index) => (
-          <Box key={index}>
-            <ul className="wordpress-list">
-              <li>{item}</li>
-            </ul>
-          </Box>
-        ))}
-
-        <Typography>{para}</Typography>
+          {paraList.map((service, index) => {
+            return (
+              <Box key={index}>
+                <ul className="content-list">
+                  <li>{service}</li>
+                </ul>
+              </Box>
+            )
+          })}
+          <Typography>{para}</Typography>
+        </Container>
+        <Subscribe />
       </Container>
     </>
   )
