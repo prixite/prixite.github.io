@@ -32,6 +32,7 @@ import '../components/Presentational/Blog/Blog.scss'
 import '../components/Presentational/TestimonialCard/TestimonialCard.scss'
 import '../components/Presentational/Vision/Vision.scss'
 import '../components/Presentational/Service/Service.scss'
+import '../components/Smart/ContactForm/ContactForm.scss'
 
 let theme = createTheme({
   breakpoints: {

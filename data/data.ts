@@ -220,7 +220,7 @@ export const servicesData = {
 /**********             About Us Page Data            *************/
 export const aboutUsPageData = {
   title: 'About Us',
-  header: 'We are Chaning the Whole Game 🚀',
+  header: 'We are Changing the Whole Game',
   heading: 'Fastest Growing IT Company',
   aim: 'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.',
   description: `Prixite is one online technology solutions provider company that is
@@ -377,43 +377,7 @@ export const blogData = {
 /*********          Contact Us Page Data            ************* */
 export const contactUs = {
   title: `${siteName} - Contact Us`,
-  heading: 'Contact Us',
-  description: [
-    {
-      title: 'Get in Touch, Feel Free to Contact',
-    },
-    {
-      para: `We are an innovative digital consultancy firm with enough
-            experience to meet the requirements and concerns of each of our
-            clients across the globe. Our wide range of services enables us to
-            offer our clients the best working experience and great
-            advancement techniques and tools to improve their business
-            processes and delivering quality and progressive results for their
-            organization. We have a quite simple and easy way for our clients
-            to reach out to us. You may fill in the contact form below or
-            email us at hi@prixite.com to request for
-            consultation or if you have an inquiry. You may also call us at
-            042 37114925 and let us know how we can help you
-            in taking your business to another level.`,
-    },
-  ],
-  contactInfo: {
-    title: 'CONTACT INFO',
-    details: [
-      {
-        heading: 'Address',
-        contact: '4 Mozang Road, Near Family Hospital, Lahore',
-      },
-      {
-        heading: 'Email Us',
-        contact: 'hi@prixite.com',
-      },
-      {
-        heading: 'Call Us',
-        contact: '042 37114925',
-      },
-    ],
-  },
+  heading: 'Contact Us & Start Build Amazing Products',
 }
 
 /**********             Careers Page Data           ************* */
