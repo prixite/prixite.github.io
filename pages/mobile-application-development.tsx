@@ -44,7 +44,7 @@ const MobileApplicationDevelopment = () => {
             )
           })}
         </Container>
-        <Subscribe />
+        {/* <Subscribe /> */}
       </Container>
     </>
   )

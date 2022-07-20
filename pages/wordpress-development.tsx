@@ -45,7 +45,7 @@ const WordPressDevelopment = () => {
           })}
           <Typography fontSize={18}>{para2}</Typography>
         </Container>
-        <Subscribe />
+        {/* <Subscribe /> */}
       </Container>
     </>
   )

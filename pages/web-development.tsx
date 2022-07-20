@@ -39,7 +39,7 @@ const Webdevelopment = () => {
             )
           })}
         </Container>
-        <Subscribe />
+        {/* <Subscribe /> */}
       </Container>
     </>
   )

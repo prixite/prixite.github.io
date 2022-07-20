@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 26%;
+    margin-bottom: 30%;
     .heading {
       width: 70%;
     }
@@ -21,7 +21,7 @@
     margin-top: 50px;
     .image-header {
       position: absolute;
-      top: 13%;
+      top: 25%;
       width: 80%;
       background-image: linear-gradient(
         0deg,
@@ -35,7 +35,7 @@
     .image-content-container {
       background-color: rgba(99, 172, 69, 0.1);
       padding: 60px;
-      padding-top: 28%;
+      padding-top: 30%;
       border-radius: 10px;
       margin-bottom: 50px;
       .description {

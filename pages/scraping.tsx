@@ -41,7 +41,7 @@ const scraping = () => {
             )
           })}
         </Container>
-        <Subscribe />
+        {/* <Subscribe /> */}
       </Container>
     </>
   )

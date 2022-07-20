@@ -26,16 +26,16 @@ const ContactUs = () => {
               </span>
             </Typography>
           </Box>
-          <Button className="contact-icon" variant="contained">
+          {/* <Button className="contact-icon" variant="contained">
             <LocalPhoneOutlinedIcon fontSize="medium" />
-          </Button>
+          </Button> */}
         </Box>
 
         <Container maxWidth="lg">
           <ContactForm />
         </Container>
 
-        <Subscribe />
+        {/* <Subscribe /> */}
       </Container>
     </>
   )

@@ -44,7 +44,7 @@ const PythonProgramming = () => {
             )
           })}
         </Container>
-        <Subscribe />
+        {/* <Subscribe /> */}
       </Container>
     </>
   )
