@@ -26,7 +26,7 @@ const HeaderMenu = () => {
     setAnchorElNav(null)
   }
   return (
-    <Box>
+    <Box className="header-menu-container">
       <IconButton
         size="large"
         aria-label="account of current user"
@@ -47,10 +47,6 @@ const HeaderMenu = () => {
         PaperProps={{
           style: {
             width: 1160,
-            paddingLeft: 30,
-            paddingRight: 30,
-            paddingTop: 20,
-            paddingBottom: 20,
             boxShadow: 'none',
           },
         }}
