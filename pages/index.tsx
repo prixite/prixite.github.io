@@ -66,7 +66,7 @@ export default function Home() {
           />
         </Container>
 
-        <Container maxWidth="xl">
+        {/* <Container maxWidth="xl">
           <Box pb="5rem" pt="5rem">
             <Stack direction={'row'} justifyContent="space-between">
               <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
@@ -119,13 +119,13 @@ export default function Home() {
               </Stack>
             </Stack>
           </Box>
-        </Container>
+        </Container> */}
 
-        <Testimonials />
+        {/* <Testimonials /> */}
 
-        <Container maxWidth="xl" sx={{ marginTop: 10 }}>
+        {/* <Container maxWidth="xl" sx={{ marginTop: 10 }}>
           <Subscribe />
-        </Container>
+        </Container> */}
       </div>
     </>
   )
