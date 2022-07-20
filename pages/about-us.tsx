@@ -65,7 +65,7 @@ const AboutUs = () => {
           visionData={visionData}
           visionTitle={visionTitle}
         />
-        <Subscribe />
+        {/* <Subscribe /> */}
       </Container>
     </>
   )

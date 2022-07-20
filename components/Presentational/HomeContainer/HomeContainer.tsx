@@ -38,10 +38,10 @@ const HomeContainer = () => {
         <Box display="flex" gap="25px" alignItems={'center'} mt={6}>
           <ContactButton text={contactUsButtonText} />
 
-          <Box className="youtube-icon">
+          {/* <Box className="youtube-icon">
             <Image unoptimized priority src={youtubeIcon} alt="service-image" />
           </Box>
-          <Typography>{videoButtonText}</Typography>
+          <Typography>{videoButtonText}</Typography> */}
         </Box>
       </Box>
 

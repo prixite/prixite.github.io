@@ -42,7 +42,7 @@ const services = () => {
             />
           ))}
         </Grid>
-        <Subscribe />
+        {/* <Subscribe /> */}
       </Container>
     </>
   )
