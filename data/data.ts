@@ -33,10 +33,10 @@ export const pages = [
     path: '/services',
     text: 'Services',
   },
-  {
-    path: '/',
-    text: 'News & Blogs',
-  },
+  // {
+  //   path: '/',
+  //   text: 'News & Blogs',
+  // },
   {
     path: '/contact-us',
     text: 'Contact Us',

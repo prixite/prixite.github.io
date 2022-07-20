@@ -45,7 +45,7 @@ const devops = () => {
             </Box>
           ))}
         </Container>
-        <Subscribe />
+        {/* <Subscribe /> */}
       </Container>
     </>
   )

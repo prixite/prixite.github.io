@@ -44,7 +44,7 @@ const ReactDevelopment = () => {
             )
           })}
         </Container>
-        <Subscribe />
+        {/* <Subscribe /> */}
       </Container>
     </>
   )

@@ -37,7 +37,7 @@ const Footer = () => {
             </Typography>
           ))}
         </Box>
-        <Box className="footer-items-container">
+        {/* <Box className="footer-items-container">
           <Typography fontSize={18} fontWeight={'600'}>
             {joinUs.title}
           </Typography>
@@ -54,7 +54,7 @@ const Footer = () => {
               </React.Fragment>
             ))}
           </Box>
-        </Box>
+        </Box> */}
       </Container>
       <Container maxWidth="xl">
         <Divider sx={{ marginTop: 4 }} />

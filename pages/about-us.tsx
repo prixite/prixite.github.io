@@ -58,15 +58,16 @@ const AboutUs = () => {
             <Typography className="description">{description}</Typography>
           </Box>
         </Box>
-
+      </Container>
+      {/* <Container maxWidth="xl">
         <Vision
           aboutUsVisionImg={visionImage}
           visionAim={visionAim}
           visionData={visionData}
           visionTitle={visionTitle}
         />
-        {/* <Subscribe /> */}
-      </Container>
+      </Container> */}
+      {/* <Subscribe /> */}
     </>
   )
 }

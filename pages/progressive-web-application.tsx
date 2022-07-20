@@ -45,7 +45,7 @@ const ProgressiveWebApplication = () => {
           })}
           <Typography>{para}</Typography>
         </Container>
-        <Subscribe />
+        {/* <Subscribe /> */}
       </Container>
     </>
   )
