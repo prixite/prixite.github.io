@@ -38,7 +38,7 @@ export default function Home() {
         </Container>
 
         <Container maxWidth="xl">
-          <Box pb="5rem" pt="5rem">
+          <Box pb="5rem" pt={{ xs: '0rem', md: '5rem' }}>
             <SectionHeader heading={servicesHeading} />
             <Typography mt={2} mb={6}>
               {servicesAim}

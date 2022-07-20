@@ -16,13 +16,13 @@ const HomeContainer = () => {
   } = homeData
   return (
     <Stack
-      pt={{ xs: '60px', lg: '60px' }}
+      pt={{ xs: '20px', md: '60px', lg: '60px' }}
       pb={{ xs: '100px', lg: '60px' }}
-      direction={{ xs: 'column', md: 'row' }}
-      spacing={8}
+      direction={{ xs: 'column-reverse', md: 'row' }}
+      spacing={5}
       alignItems={'center'}
     >
-      <Box>
+      <Box className="home-container">
         <Typography variant="h6" className="home-main-heading-1">
           {header}
         </Typography>
