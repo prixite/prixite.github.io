@@ -1,4 +1,4 @@
-import { Grid, Box } from '@mui/material'
+import { Grid, Box, Container } from '@mui/material'
 import React from 'react'
 import ContactButton from '../ContactButton/ContactButton'
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined'
@@ -10,7 +10,12 @@ import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined'
 const ContactForm = () => {
   return (
     <form className="contact-form">
-      <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+      <Grid
+        container
+        rowSpacing={3}
+        columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+        direction={{ xs: 'column', md: 'row' }}
+      >
         <Grid item xs={6} className="input-field-container">
           <PersonOutlineOutlinedIcon className="input-field-icon" />
           <input
@@ -49,7 +54,7 @@ const ContactForm = () => {
         </Grid>
       </Grid>
       <Box className="submit-button">
-        <ContactButton text="Submit" />
+        <ContactButton text="Submit" width={true} />
       </Box>
     </form>
   )

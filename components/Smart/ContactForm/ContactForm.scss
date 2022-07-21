@@ -39,3 +39,26 @@
     margin-top: 10px;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    .input-field-container {
+      .input-field-icon {
+        font-size: 25px;
+        left: 22px;
+      }
+      .input-field {
+        height: 60px;
+        padding-left: 45px;
+        font-size: 14px;
+      }
+      .text-area {
+        height: 200px;
+        font-size: 14px;
+        padding-left: 45px;
+      }
+    }
+  }
+}
