@@ -3,14 +3,17 @@
   position: relative;
   .header {
     background-color: rgba(99, 172, 69, 0.1);
-    padding: 40px;
+    padding: 30px;
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin-bottom: 30%;
     .heading {
       width: 70%;
+      .heading-text {
+        font-size: 30px;
+        font-weight: 600;
+      }
     }
   }
 
@@ -18,10 +21,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 10px;
     .image-header {
       position: absolute;
-      top: 25%;
+      top: 20%;
       width: 80%;
       background-image: linear-gradient(
         0deg,
@@ -30,16 +33,58 @@
       );
       .image {
         mix-blend-mode: multiply;
+        border-radius: 8px;
       }
     }
     .image-content-container {
       background-color: rgba(99, 172, 69, 0.1);
-      padding: 60px;
-      padding-top: 30%;
+      padding: 8%;
+      padding-top: 25%;
       border-radius: 10px;
       margin-bottom: 50px;
+      .image-text {
+        font-size: 30px;
+        font-weight: 600;
+      }
       .description {
         margin-top: 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .about-us-page {
+    .header {
+      flex-direction: column;
+      padding: 20px;
+      .heading {
+        width: 100%;
+        font-size: 10px;
+        .heading-text {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .image-header-container {
+      .image-header {
+        top: 24%;
+      }
+      .image-content-container {
+        padding: 25px;
+        padding-top: 28%;
+        .image-text {
+          font-size: 24px;
+        }
+        .aim {
+          font-size: 14px;
+          margin-top: 5px;
+        }
+        .description {
+          font-size: 14px;
+        }
       }
     }
   }

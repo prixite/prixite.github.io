@@ -30,7 +30,7 @@ const AboutUs = () => {
       <Container maxWidth="xl" className="about-us-page">
         <Box className="header">
           <Box className="heading">
-            <Typography fontSize={30} fontWeight={600}>
+            <Typography className="heading-text">
               {header.slice(0, 6)}
               <span style={{ color: 'var(--primary-green)' }}>
                 {header.slice(6, 15)}
@@ -48,13 +48,13 @@ const AboutUs = () => {
             <Image src={AboutUsHeader} className="image" />
           </Box>
           <Box className="image-content-container">
-            <Typography fontSize={30} fontWeight={600}>
+            <Typography className="image-text">
               <span style={{ color: 'var(--primary-green)' }}>
                 {heading.slice(0, 15)}
               </span>{' '}
               {heading.slice(15, 26)}
             </Typography>
-            <Typography>{aim}</Typography>
+            <Typography className="aim">{aim}</Typography>
             <Typography className="description">{description}</Typography>
           </Box>
         </Box>

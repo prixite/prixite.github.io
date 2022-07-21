@@ -15,7 +15,6 @@ const ContactButton: React.FC<ContactButtonInterface> = ({ text }) => {
         variant="contained"
         endIcon={<SendOutlinedIcon />}
         className="contact-us-button"
-        size="large"
         onClick={() => router.push('/contact-us')}
       >
         {text}
