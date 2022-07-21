@@ -18,7 +18,7 @@ const services = () => {
       <Container maxWidth="xl" className="page-header">
         <Box className="header">
           <Box className="heading">
-            <Typography fontSize={30} fontWeight={600}>
+            <Typography className="heading-text">
               {servicesPageHeader.slice(0, 6)}
               <span style={{ color: 'var(--primary-green)' }}>
                 {servicesPageHeader.slice(6, 15)}

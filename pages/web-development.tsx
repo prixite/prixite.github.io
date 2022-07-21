@@ -17,7 +17,7 @@ const Webdevelopment = () => {
       <Container maxWidth="xl" className="page-header">
         <Box className="header">
           <Box className="heading">
-            <Typography fontSize={30} fontWeight={600}>
+            <Typography className="heading-text">
               {header.slice(0, 7)}
               <span style={{ color: 'var(--primary-green)' }}>
                 {header.slice(7, 19)}
@@ -32,11 +32,7 @@ const Webdevelopment = () => {
 
         <Container className="page-content" maxWidth="lg">
           {description.map((desc, index) => {
-            return (
-              <Typography key={index} fontSize={18}>
-                {desc}
-              </Typography>
-            )
+            return <Typography key={index}>{desc}</Typography>
           })}
         </Container>
         {/* <Subscribe /> */}
