@@ -3,19 +3,43 @@
   position: relative;
   .header {
     background-color: rgba(99, 172, 69, 0.1);
-    padding: 40px;
+    padding: 30px;
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 70px;
+    gap: 10px;
+
+    margin-bottom: 5%;
     .heading {
       width: 70%;
+      .heading-text {
+        font-size: 30px;
+        font-weight: 600;
+      }
     }
   }
   .page-content {
     display: flex;
     flex-direction: column;
     gap: 40px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .page-header {
+    .header {
+      flex-direction: column;
+      padding: 20px;
+      align-items: flex-start;
+      .heading {
+        width: 100%;
+        font-size: 10px;
+        .heading-text {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+      }
+    }
   }
 }

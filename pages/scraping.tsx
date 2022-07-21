@@ -18,9 +18,7 @@ const scraping = () => {
       <Container maxWidth="xl" className="page-header">
         <Box className="header">
           <Box className="heading">
-            <Typography fontSize={30} fontWeight={600}>
-              {header}
-            </Typography>
+            <Typography className="heading-text">{header}</Typography>
             <Typography>{heading}</Typography>
           </Box>
           <Box>
@@ -29,13 +27,15 @@ const scraping = () => {
         </Box>
 
         <Container className="page-content" maxWidth="lg">
-          <Typography fontSize={18}>{description}</Typography>
+          <Typography>{description}</Typography>
 
           {paraList.map((service, index) => {
             return (
               <Box key={index}>
                 <ul className="content-list">
-                  <li>{service}</li>
+                  <li>
+                    <Typography>{service}</Typography>
+                  </li>
                 </ul>
               </Box>
             )

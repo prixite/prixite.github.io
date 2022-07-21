@@ -17,9 +17,7 @@ const devops = () => {
       <Container maxWidth="xl" className="page-header">
         <Box className="header">
           <Box className="heading">
-            <Typography fontSize={30} fontWeight={600}>
-              {header}
-            </Typography>
+            <Typography className="heading-text">{header}</Typography>
             <Typography>{heading}</Typography>
           </Box>
           <Box>
@@ -29,18 +27,16 @@ const devops = () => {
 
         <Container className="page-content" maxWidth="lg">
           {description.map((item, index) => {
-            return (
-              <Typography key={index} fontSize={18}>
-                {item}
-              </Typography>
-            )
+            return <Typography key={index}>{item}</Typography>
           })}
-          <Typography fontSize={18}>{paraHeading}</Typography>
+          <Typography>{paraHeading}</Typography>
 
           {paraList.map((item, index) => (
             <Box key={index}>
               <ul className="content-list">
-                <li>{item}</li>
+                <li>
+                  <Typography>{item}</Typography>
+                </li>
               </ul>
             </Box>
           ))}

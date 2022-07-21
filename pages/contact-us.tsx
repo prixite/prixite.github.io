@@ -19,7 +19,7 @@ const ContactUs = () => {
       <Container maxWidth="xl" className="page-header contact-us-page">
         <Box className="header">
           <Box className="heading">
-            <Typography fontSize={30} fontWeight={600}>
+            <Typography className="heading-text">
               {heading.slice(0, 24)}
               <span style={{ color: 'var(--primary-green)' }}>
                 {heading.slice(24, 41)}

@@ -18,9 +18,7 @@ const ReactDevelopment = () => {
       <Container maxWidth="xl" className="page-header">
         <Box className="header">
           <Box className="heading">
-            <Typography fontSize={30} fontWeight={600}>
-              {header}
-            </Typography>
+            <Typography className="heading-text">{header}</Typography>
             <Typography>{heading}</Typography>
           </Box>
           <Box>
@@ -38,7 +36,9 @@ const ReactDevelopment = () => {
             return (
               <Box key={index}>
                 <ul className="content-list">
-                  <li>{service}</li>
+                  <li>
+                    <Typography>{service}</Typography>
+                  </li>
                 </ul>
               </Box>
             )

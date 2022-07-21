@@ -18,7 +18,7 @@ const WordPressDevelopment = () => {
       <Container maxWidth="xl" className="page-header">
         <Box className="header">
           <Box className="heading">
-            <Typography fontSize={30} fontWeight={600}>
+            <Typography className="heading-text">
               {header.slice(0, 10)}
               <span style={{ color: 'var(--primary-green)' }}>
                 {header.slice(10, 21)}
@@ -32,18 +32,20 @@ const WordPressDevelopment = () => {
         </Box>
 
         <Container className="page-content" maxWidth="lg">
-          <Typography fontSize={18}>{para1}</Typography>
-          <Typography fontSize={18}>{serviceHeading}</Typography>
+          <Typography>{para1}</Typography>
+          <Typography>{serviceHeading}</Typography>
           {services.map((service, index) => {
             return (
               <Box key={index}>
                 <ul className="content-list">
-                  <li>{service}</li>
+                  <li>
+                    <Typography>{service}</Typography>
+                  </li>
                 </ul>
               </Box>
             )
           })}
-          <Typography fontSize={18}>{para2}</Typography>
+          <Typography>{para2}</Typography>
         </Container>
         {/* <Subscribe /> */}
       </Container>
