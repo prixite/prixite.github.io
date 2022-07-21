@@ -12,6 +12,9 @@ import Subscribe from '../components/Shared/Subscribe/Subscribe'
 import Blog from '../components/Presentational/Blog/Blog'
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined'
 import HomeContainer from '../components/Presentational/HomeContainer/HomeContainer'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 export default function Home() {
   const { title } = homeData
@@ -38,13 +41,18 @@ export default function Home() {
         </Container>
 
         <Container maxWidth="xl">
-          <Box pb="5rem" pt="5rem">
+          <Box pb="5rem" pt={{ xs: '0rem', md: '5rem' }}>
             <SectionHeader heading={servicesHeading} />
             <Typography mt={2} mb={6}>
               {servicesAim}
             </Typography>
 
-            <Grid container spacing={{ xs: 2, md: 7 }} columnSpacing={3}>
+            <Grid
+              container
+              spacing={{ xs: 2, md: 7 }}
+              columnSpacing={3}
+              className="services-grid"
+            >
               {services.map((item, index) => (
                 <Service
                   key={index}
@@ -55,6 +63,18 @@ export default function Home() {
                 />
               ))}
             </Grid>
+
+            <Slider className="services-carousel">
+              {services.map((item, index) => (
+                <Service
+                  key={index}
+                  img={item.img}
+                  title={item.title}
+                  description={item.desc}
+                  path={item.path}
+                />
+              ))}
+            </Slider>
           </Box>
         </Container>
 

@@ -1,7 +1,6 @@
 .about-us {
   background-color: rgba(99, 172, 69, 0.1);
   border-radius: 12px;
-  margin-top: 50px;
   margin-bottom: 50px;
   display: flex;
   flex-direction: column;
@@ -15,5 +14,11 @@
     margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 12;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .about-us {
+    padding: 30px;
   }
 }

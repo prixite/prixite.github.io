@@ -31,9 +31,10 @@
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 768px) {
   .footer-container {
     .footer-items {
+      gap: 40px;
       .footer-items-container {
         .description {
           width: 250px;

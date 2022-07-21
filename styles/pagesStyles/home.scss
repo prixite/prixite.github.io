@@ -1,8 +1,4 @@
 .home-page-container {
-  .home-main-heading-1 {
-    font-size: 16px;
-    font-family: 'lato';
-  }
   .solution-color {
     color: #63ac45;
     font-weight: 600;
@@ -21,18 +17,26 @@
     justify-content: center;
   }
 
-  .home-main-heading-2 {
-    font-size: 56px;
-    font-weight: 700;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    line-height: 67px;
-    font-family: 'lato';
-  }
   .service-image {
     box-shadow: 10px 10px 0px 1px rgb(0 0 0 / 7%);
     border-radius: 4px;
     cursor: pointer;
     opacity: 1.9;
+  }
+
+  .services-carousel {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .home-page-container {
+    .services-grid {
+      display: none;
+    }
+
+    .services-carousel {
+      display: block;
+    }
   }
 }
