@@ -5,13 +5,15 @@ import { useRouter } from 'next/router'
 
 interface ContactButtonInterface {
   text?: string
+  width?: boolean
 }
 
-const ContactButton: React.FC<ContactButtonInterface> = ({ text }) => {
+const ContactButton: React.FC<ContactButtonInterface> = ({ text, width }) => {
   const router = useRouter()
   return (
     <Box>
       <Button
+        fullWidth={width}
         variant="contained"
         endIcon={<SendOutlinedIcon />}
         className="contact-us-button"
