@@ -26,7 +26,7 @@ const scraping = () => {
           </Box>
         </Box>
 
-        <Container className="page-content" maxWidth="xl">
+        <Box className="page-content">
           <Typography>{description}</Typography>
 
           {paraList.map((service, index) => {
@@ -40,7 +40,7 @@ const scraping = () => {
               </Box>
             )
           })}
-        </Container>
+        </Box>
         {/* <Subscribe /> */}
       </Container>
     </>

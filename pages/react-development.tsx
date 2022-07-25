@@ -26,7 +26,7 @@ const ReactDevelopment = () => {
           </Box>
         </Box>
 
-        <Container className="page-content" maxWidth="xl">
+        <Box className="page-content">
           {details.map((detail, index) => {
             return <Typography key={index}>{detail}</Typography>
           })}
@@ -43,7 +43,7 @@ const ReactDevelopment = () => {
               </Box>
             )
           })}
-        </Container>
+        </Box>
         {/* <Subscribe /> */}
       </Container>
     </>

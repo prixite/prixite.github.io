@@ -31,7 +31,7 @@ const WordPressDevelopment = () => {
           </Box>
         </Box>
 
-        <Container className="page-content" maxWidth="xl">
+        <Box className="page-content">
           <Typography>{para1}</Typography>
           <Typography>{serviceHeading}</Typography>
           {services.map((service, index) => {
@@ -46,7 +46,7 @@ const WordPressDevelopment = () => {
             )
           })}
           <Typography>{para2}</Typography>
-        </Container>
+        </Box>
         {/* <Subscribe /> */}
       </Container>
     </>

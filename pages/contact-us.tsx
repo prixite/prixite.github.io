@@ -31,9 +31,9 @@ const ContactUs = () => {
           </Button> */}
         </Box>
 
-        <Container maxWidth="xl">
+        <Box>
           <ContactForm />
-        </Container>
+        </Box>
 
         {/* <Subscribe /> */}
       </Container>
