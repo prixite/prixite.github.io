@@ -26,7 +26,7 @@ const scraping = () => {
           </Box>
         </Box>
 
-        <Container className="page-content" maxWidth="lg">
+        <Container className="page-content" maxWidth="xl">
           <Typography>{description}</Typography>
 
           {paraList.map((service, index) => {

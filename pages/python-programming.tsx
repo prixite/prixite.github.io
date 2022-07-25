@@ -26,7 +26,7 @@ const PythonProgramming = () => {
           </Box>
         </Box>
 
-        <Container className="page-content" maxWidth="lg">
+        <Container className="page-content" maxWidth="xl">
           {details.map((detail, index) => {
             return <Typography key={index}>{detail}</Typography>
           })}
