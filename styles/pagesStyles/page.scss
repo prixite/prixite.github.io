@@ -23,6 +23,9 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+    .content-list {
+      margin: -10px 10px -10px 40px;
+    }
   }
 }
 

@@ -26,7 +26,7 @@ const ProgressiveWebApplication = () => {
           </Box>
         </Box>
 
-        <Container className="page-content" maxWidth="xl">
+        <Box className="page-content">
           {details.map((detail, index) => {
             return <Typography key={index}>{detail}</Typography>
           })}
@@ -44,7 +44,7 @@ const ProgressiveWebApplication = () => {
             )
           })}
           <Typography>{para}</Typography>
-        </Container>
+        </Box>
         {/* <Subscribe /> */}
       </Container>
     </>

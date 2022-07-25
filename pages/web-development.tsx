@@ -30,11 +30,11 @@ const Webdevelopment = () => {
           </Box>
         </Box>
 
-        <Container className="page-content" maxWidth="xl">
+        <Box className="page-content">
           {description.map((desc, index) => {
             return <Typography key={index}>{desc}</Typography>
           })}
-        </Container>
+        </Box>
         {/* <Subscribe /> */}
       </Container>
     </>
