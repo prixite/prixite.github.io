@@ -25,7 +25,7 @@ const devops = () => {
           </Box>
         </Box>
 
-        <Container className="page-content" maxWidth="lg">
+        <Container className="page-content" maxWidth="xl">
           {description.map((item, index) => {
             return <Typography key={index}>{item}</Typography>
           })}

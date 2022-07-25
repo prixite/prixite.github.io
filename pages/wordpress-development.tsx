@@ -31,7 +31,7 @@ const WordPressDevelopment = () => {
           </Box>
         </Box>
 
-        <Container className="page-content" maxWidth="lg">
+        <Container className="page-content" maxWidth="xl">
           <Typography>{para1}</Typography>
           <Typography>{serviceHeading}</Typography>
           {services.map((service, index) => {
