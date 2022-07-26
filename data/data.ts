@@ -22,6 +22,7 @@ import MailIcon from '../public/images/mail-icon.png'
 import TestimonialLeft from '../public/images/testimonial-left.svg'
 import TestimonialRight from '../public/images/testimonial-right.svg'
 import AboutUsVision from '../public/images/about-us-vision.png'
+import LinkdeinIcon from '../public/images/linkdein-icon.png'
 
 /*********          Header Menu Data            ********** */
 export const pages = [
@@ -624,12 +625,8 @@ export const footerData = {
         path: 'https://web.facebook.com/prixite/',
       },
       {
-        icon: TwitterIcon,
-        path: 'https://web.facebook.com/prixite/',
-      },
-      {
-        icon: InstagramIcon,
-        path: 'https://web.facebook.com/prixite/',
+        icon: LinkdeinIcon,
+        path: 'https://www.linkedin.com/company/prixite/mycompany/',
       },
     ],
   },

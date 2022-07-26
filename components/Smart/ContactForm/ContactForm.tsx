@@ -1,15 +1,29 @@
-import { Grid, Box, Container } from '@mui/material'
-import React from 'react'
-import ContactButton from '../ContactButton/ContactButton'
+import { Grid, Box, Button } from '@mui/material'
+import React, { useEffect, useState } from 'react'
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined'
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined'
 import PhoneInTalkOutlinedIcon from '@mui/icons-material/PhoneInTalkOutlined'
 import BusinessCenterOutlinedIcon from '@mui/icons-material/BusinessCenterOutlined'
 import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined'
+import SendOutlinedIcon from '@mui/icons-material/SendOutlined'
 
 const ContactForm = () => {
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    number: '',
+    company: '',
+    message: '',
+  })
+
+  const handleForm = (e: any) => {
+    e.preventDefault()
+    console.log(form)
+    alert('Submitted')
+  }
+
   return (
-    <form className="contact-form">
+    <form className="contact-form" onSubmit={handleForm}>
       <Grid
         container
         rowSpacing={3}
@@ -19,42 +33,74 @@ const ContactForm = () => {
         <Grid item xs={6} className="input-field-container">
           <PersonOutlineOutlinedIcon className="input-field-icon" />
           <input
+            name="name"
+            required
             className="input-field"
             type="text"
             placeholder="Full Name"
+            value={form.name}
+            onChange={(e) => setForm({ ...form, name: e.target.value })}
           ></input>
         </Grid>
         <Grid item xs={6} className="input-field-container">
           <EmailOutlinedIcon className="input-field-icon" />
           <input
+            name="email"
+            required
             className="input-field"
             type="email"
             placeholder="Email Address"
+            value={form.email}
+            onChange={(e) => setForm({ ...form, email: e.target.value })}
+            pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}"
           ></input>
         </Grid>
         <Grid item xs={6} className="input-field-container">
           <PhoneInTalkOutlinedIcon className="input-field-icon" />
           <input
+            name="number"
             className="input-field"
             type="number"
             placeholder="Phone Number"
+            value={form.number}
+            onChange={(e) => setForm({ ...form, number: e.target.value })}
           ></input>
         </Grid>
         <Grid item xs={6} className="input-field-container">
           <BusinessCenterOutlinedIcon className="input-field-icon" />
           <input
+            name="company"
             className="input-field"
             type="text"
             placeholder="Company Name"
+            value={form.company}
+            onChange={(e) => setForm({ ...form, company: e.target.value })}
           ></input>
         </Grid>
         <Grid item xs={100} md={100} className="input-field-container">
           <MessageOutlinedIcon className="input-field-icon" />
-          <textarea className="text-area" placeholder="Your Message"></textarea>
+          <textarea
+            name="message"
+            required
+            className="text-area"
+            placeholder="Your Message"
+            value={form.message}
+            onChange={(e) => setForm({ ...form, message: e.target.value })}
+          ></textarea>
         </Grid>
       </Grid>
       <Box className="submit-button">
-        <ContactButton text="Submit" width={true} />
+        <Box>
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            endIcon={<SendOutlinedIcon />}
+            className="contact-us-button"
+          >
+            Submit
+          </Button>
+        </Box>
       </Box>
     </form>
   )

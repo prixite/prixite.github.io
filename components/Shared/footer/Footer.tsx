@@ -37,24 +37,24 @@ const Footer = () => {
             </Typography>
           ))}
         </Box>
-        {/* <Box className="footer-items-container">
+        <Box className="footer-items-container">
           <Typography fontSize={18} fontWeight={'600'}>
             {joinUs.title}
           </Typography>
           <Box className="join-us-icons">
             {joinUs.links.map(({ icon, path }, index) => (
               <React.Fragment key={index}>
+                <Divider className="join-us-divider" />
                 <Image
                   src={icon}
                   alt="icon"
                   onClick={() => router.push(path)}
                   style={{ cursor: 'pointer' }}
                 />
-                <Divider className="join-us-divider" />
               </React.Fragment>
             ))}
           </Box>
-        </Box> */}
+        </Box>
       </Container>
       <Container maxWidth="xl">
         <Divider sx={{ marginTop: 4 }} />
