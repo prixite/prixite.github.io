@@ -42,15 +42,16 @@ const Footer = () => {
             {joinUs.title}
           </Typography>
           <Box className="join-us-icons">
-            {joinUs.links.map(({ icon, path }, index) => (
+            {joinUs.links.map(({ icon, path }, index, array) => (
               <React.Fragment key={index}>
-                <Divider className="join-us-divider" />
-                <Image
-                  src={icon}
-                  alt="icon"
-                  onClick={() => router.push(path)}
-                  style={{ cursor: 'pointer' }}
-                />
+                <a href={path} target="_blank" rel="noopener noreferrer">
+                  <Image src={icon} alt="icon" style={{ cursor: 'pointer' }} />
+                </a>
+                {index === array.length - 1 ? (
+                  ''
+                ) : (
+                  <Divider className="join-us-divider" />
+                )}
               </React.Fragment>
             ))}
           </Box>
