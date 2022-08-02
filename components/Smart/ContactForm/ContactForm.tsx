@@ -16,8 +16,29 @@ const ContactForm = () => {
     message: '',
   })
 
-  const handleForm = (e: any) => {
+  const handleForm = async (e: any) => {
     e.preventDefault()
+
+    const res = await fetch('/api/sendgrid', {
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        number: form.number,
+        company: form.company,
+        message: form.message,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+    })
+
+    const { error } = await res.json()
+    console.log(res)
+    if (error) {
+      console.log(error)
+      return
+    }
     console.log(form)
     alert('Submitted')
   }
