@@ -1,8 +1,10 @@
 import React from 'react'
 import { Container, Typography, Box } from '@mui/material'
 import Image from 'next/image'
+// eslint-disable-next-line
 import Subscribe from '../components/Shared/Subscribe/Subscribe'
 import ContactButton from '../components/Smart/ContactButton/ContactButton'
+// eslint-disable-next-line
 import Vision from '../components/Presentational/Vision/Vision'
 import AboutUsHeader from '../public/images/about-us-header.svg'
 import { aboutUsPageData } from '../data/data'
@@ -15,9 +17,13 @@ const AboutUs = () => {
     heading,
     aim,
     description,
+    // eslint-disable-next-line
     visionData,
+    // eslint-disable-next-line
     visionImage,
+    // eslint-disable-next-line
     visionAim,
+    // eslint-disable-next-line
     visionTitle,
   } = aboutUsPageData
   return (

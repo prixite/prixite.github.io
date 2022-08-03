@@ -1,15 +1,21 @@
-import { Box, Container, Typography, Stack, Grid, Button } from '@mui/material'
+import { Box, Container, Typography, Grid } from '@mui/material'
+// eslint-disable-next-line
 import Image from 'next/image'
 import { homeData, newsAndBlogs } from '../data/data'
+// eslint-disable-next-line
 import Chip from '@mui/material/Chip'
 import { aboutUsCardData, servicesData } from '../data/data'
 import Head from 'next/head'
 import Service from '../components/Presentational/Service/Service'
 import AboutUs from '../components/Presentational/AboutUs/AboutUs'
 import SectionHeader from '../components/Presentational/SectionHeader/SectionHeader'
+// eslint-disable-next-line
 import Testimonials from '../components/Smart/Testimonials/Testimonials'
+// eslint-disable-next-line
 import Subscribe from '../components/Shared/Subscribe/Subscribe'
+// eslint-disable-next-line
 import Blog from '../components/Presentational/Blog/Blog'
+// eslint-disable-next-line
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined'
 import HomeContainer from '../components/Presentational/HomeContainer/HomeContainer'
 import Slider from 'react-slick'
@@ -21,10 +27,15 @@ export default function Home() {
   const { servicesHeading, servicesAim, services } = servicesData
   const { aboutUsHeader, aboutUsHeading, aboutUsDescription } = aboutUsCardData
   const {
+    // eslint-disable-next-line
     header: newsHeader,
+    // eslint-disable-next-line
     heading: newsHeading,
+    // eslint-disable-next-line
     mainBlog,
+    // eslint-disable-next-line
     blogs,
+    // eslint-disable-next-line
     viewButtonText,
   } = newsAndBlogs
 

@@ -13,8 +13,10 @@ import news2 from '../public/images/news2.svg'
 import news3 from '../public/images/news3.svg'
 import news4 from '../public/images/news4.svg'
 import youtubeIcon from '../public/images/youtubeIcon.png'
+// eslint-disable-next-line
 import InstagramIcon from '../public/images/instagram-icon.png'
 import FacebookIcon from '../public/images/facebook-icon.png'
+// eslint-disable-next-line
 import TwitterIcon from '../public/images/twitter-icon.png'
 import LocationIcon from '../public/images/location-icon.png'
 import PhoneIcon from '../public/images/phone-icon.png'

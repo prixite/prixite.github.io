@@ -1,5 +1,7 @@
 import React from 'react'
+// eslint-disable-next-line
 import Header from '../components/Shared/header/Header'
+// eslint-disable-next-line
 import homePageBg from '../public/images/homePageBg.png'
 import { Box, Typography, Container, Grid, Divider } from '@mui/material'
 import { clientsData } from '../data/data'

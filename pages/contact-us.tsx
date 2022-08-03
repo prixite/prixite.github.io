@@ -1,8 +1,10 @@
 import React from 'react'
-import { Box, Typography, Container, Button } from '@mui/material'
+import { Box, Typography, Container } from '@mui/material'
 import { contactUs } from '../data/data'
 import Head from 'next/head'
+// eslint-disable-next-line
 import Subscribe from '../components/Shared/Subscribe/Subscribe'
+// eslint-disable-next-line
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined'
 import ContactForm from '../components/Smart/ContactForm/ContactForm'
 

@@ -2,6 +2,7 @@ import { Container, Box, Typography, Grid } from '@mui/material'
 import Head from 'next/head'
 import React from 'react'
 import Service from '../components/Presentational/Service/Service'
+// eslint-disable-next-line
 import Subscribe from '../components/Shared/Subscribe/Subscribe'
 import ContactButton from '../components/Smart/ContactButton/ContactButton'
 import { servicesData } from '../data/data'
