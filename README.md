@@ -19,7 +19,6 @@ You can also use this template to create and host a free website on [Github Page
 ## Requirements:
 
 Node: >=16
-yarn: >= 1
 
 ## Getting Started
 
@@ -28,8 +27,8 @@ First, Create an environment file (.env) in the root of the project. You can get
 Second, run the development server:
 
 ```bash
-yarn install
-yarn dev
+npm install
+npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
