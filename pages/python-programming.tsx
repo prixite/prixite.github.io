@@ -2,6 +2,7 @@ import React from 'react'
 import { pythonProgramming } from '../data/data'
 import { Container, Box, Typography } from '@mui/material'
 import Head from 'next/head'
+// eslint-disable-next-line
 import Subscribe from '../components/Shared/Subscribe/Subscribe'
 import ContactButton from '../components/Smart/ContactButton/ContactButton'
 

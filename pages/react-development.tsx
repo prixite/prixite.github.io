@@ -2,11 +2,12 @@ import React from 'react'
 import { reactDevelopment } from '../data/data'
 import { Container, Box, Typography } from '@mui/material'
 import Head from 'next/head'
+// eslint-disable-next-line
 import Subscribe from '../components/Shared/Subscribe/Subscribe'
 import ContactButton from '../components/Smart/ContactButton/ContactButton'
 
 const ReactDevelopment = () => {
-  const { title, header, heading, details, description, paraList, para } =
+  const { title, header, heading, details, description, paraList } =
     reactDevelopment
   return (
     <>

@@ -11,7 +11,9 @@ const HomeContainer = () => {
     heading,
     homeAim,
     contactUsButtonText,
+    // eslint-disable-next-line
     videoButtonText,
+    // eslint-disable-next-line
     youtubeIcon,
   } = homeData
   return (

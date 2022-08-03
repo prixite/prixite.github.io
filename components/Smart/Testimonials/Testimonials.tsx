@@ -7,20 +7,25 @@ import TestimonialCard from '../../Presentational/TestimonialCard/TestimonialCar
 import { testimonialsData } from '../../../data/data'
 import { Typography, Container } from '@mui/material'
 
-const PreviousBtn = (props: any) => {
+interface Props {
+  className?: string
+  onClick?: React.MouseEventHandler<HTMLDivElement>
+}
+
+const PreviousBtn = (props: Props) => {
   const { className, onClick } = props
   return (
     <div className={className} onClick={onClick}>
-      <Image src={testimonialsData.leftImg} />
+      <Image src={testimonialsData.leftImg} alt="left" />
     </div>
   )
 }
 
-const NextBtn = (props: any) => {
+const NextBtn = (props: Props) => {
   const { className, onClick } = props
   return (
     <div className={className} onClick={onClick}>
-      <Image src={testimonialsData.rightImg} />
+      <Image src={testimonialsData.rightImg} alt="right" />
     </div>
   )
 }

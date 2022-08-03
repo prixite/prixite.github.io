@@ -1,4 +1,4 @@
-import { Box, Container, TextField, Typography } from '@mui/material'
+import { Box, Container, Typography } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 import PrixiteLogo from '../../../public/images/subscribe-image.png'
@@ -8,7 +8,7 @@ const Subscribe = () => {
   return (
     <Container className="subscribe-container" maxWidth="xl">
       <Box className="subscribe-image">
-        <Image src={PrixiteLogo} />
+        <Image src={PrixiteLogo} alt="prixite" />
       </Box>
       <Box className="subscribe-card">
         <Box>

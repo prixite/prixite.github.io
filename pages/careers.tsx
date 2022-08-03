@@ -1,5 +1,7 @@
 import React from 'react'
+// eslint-disable-next-line
 import Header from '../components/Shared/header/Header'
+// eslint-disable-next-line
 import careersPageBg from '../public/images/careersPageBg.jpg'
 import {
   Box,
