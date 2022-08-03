@@ -11,3 +11,21 @@ repos:
     hooks:
       - id: prettier
         types_or: [scss, css, javascript, tsx, ts]
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: "v8.3.0"
+    hooks:
+      - id: eslint
+        files: \.[jt]sx?$  # *.js, *.jsx, *.ts and *.tsx
+        exclude: frontend/src/store/reducers/generated.ts
+        types: [file]
+        verbose: true
+        args:
+          - --color
+          - --fix
+        additional_dependencies:
+          - eslint
+          - eslint-plugin-react
+          - eslint-plugin-import
+          - eslint-import-resolver-webpack
+          - "@typescript-eslint/eslint-plugin"
+          - "@typescript-eslint/parser"
