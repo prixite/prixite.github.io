@@ -16,7 +16,7 @@ const ContactForm = () => {
     message: '',
   })
 
-  const handleForm = (e: any) => {
+  const handleForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     console.log(form)
     alert('Submitted')

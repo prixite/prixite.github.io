@@ -26,6 +26,7 @@ const Vision = ({
           width={586}
           height={525}
           objectFit="cover"
+          alt="vision"
         />
       </Box>
       <Box className="vision-content">

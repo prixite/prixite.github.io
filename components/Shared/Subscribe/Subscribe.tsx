@@ -8,7 +8,7 @@ const Subscribe = () => {
   return (
     <Container className="subscribe-container" maxWidth="xl">
       <Box className="subscribe-image">
-        <Image src={PrixiteLogo} />
+        <Image src={PrixiteLogo} alt="prixite" />
       </Box>
       <Box className="subscribe-card">
         <Box>
