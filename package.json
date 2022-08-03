@@ -17,7 +17,7 @@
     "@emotion/styled": "^11.10.0",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.3",
-    "next": "12.1.6",
+    "next": "12.2.3",
     "pre-commit": "^1.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
