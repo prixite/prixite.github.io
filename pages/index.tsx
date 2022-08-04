@@ -25,7 +25,8 @@ import 'slick-carousel/slick/slick-theme.css'
 export default function Home() {
   const { title } = homeData
   const { servicesHeading, servicesAim, services } = servicesData
-  const { aboutUsHeader, aboutUsHeading, aboutUsDescription } = aboutUsCardData
+  const { aboutUsHeader, aboutUsHeading, aboutUsDescription, images } =
+    aboutUsCardData
   const {
     // eslint-disable-next-line
     header: newsHeader,
@@ -75,7 +76,7 @@ export default function Home() {
               ))}
             </Grid>
 
-            <Slider className="services-carousel">
+            <Slider className="services-carousel" arrows={false}>
               {services.map((item, index) => (
                 <Service
                   key={index}
@@ -94,6 +95,7 @@ export default function Home() {
             header={aboutUsHeader}
             heading={aboutUsHeading}
             description={aboutUsDescription}
+            images={images}
           />
         </Container>
 
