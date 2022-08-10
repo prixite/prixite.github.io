@@ -16,10 +16,23 @@ const ContactForm = () => {
     message: '',
   })
 
-  const handleForm = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleForm = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log(form)
+
+    const res = await fetch('/api/sendgrid', {
+      body: JSON.stringify(form),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+    })
     alert('Submitted')
+    setForm({ name: '', email: '', number: '', company: '', message: '' })
+
+    const { error } = await res.json()
+    if (error) {
+      alert('Not Submitted. Please try again!')
+    }
   }
 
   return (
