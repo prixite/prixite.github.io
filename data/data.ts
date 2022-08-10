@@ -633,3 +633,8 @@ export const footerData = {
     ],
   },
 }
+
+export const contactForm = {
+  success: 'Submitted',
+  error: 'Not submitted. Please try again!',
+}
