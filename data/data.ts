@@ -25,6 +25,11 @@ import TestimonialLeft from '../public/images/testimonial-left.svg'
 import TestimonialRight from '../public/images/testimonial-right.svg'
 import AboutUsVision from '../public/images/about-us-vision.png'
 import LinkdeinIcon from '../public/images/linkdein-icon.png'
+import aboutUsp1 from '../public/images/aboutUs-p1.png'
+import aboutUsp2 from '../public/images/aboutUs-p2.png'
+import aboutUsp3 from '../public/images/aboutUs-p3.png'
+import aboutUsp4 from '../public/images/aboutUs-p4.png'
+import aboutUsp5 from '../public/images/aboutUs-p5.png'
 
 /*********          Header Menu Data            ********** */
 export const pages = [
@@ -262,6 +267,28 @@ export const aboutUsCardData = {
   aboutUsHeading: 'Fastest Growing IT Company',
   aboutUsDescription:
     'Prixite is one online technology solutions provider company that is considered as a new breed of thinkers who is driven to create effective business solutions for its clients. We aspire to become our client’s first choice when it comes to being a world leader in the progress and advancement of businesses through digital platforms.',
+  images: [
+    {
+      img: aboutUsp1,
+      className: 'img-p1',
+    },
+    {
+      img: aboutUsp2,
+      className: 'img-p2',
+    },
+    {
+      img: aboutUsp3,
+      className: 'img-p3',
+    },
+    {
+      img: aboutUsp4,
+      className: 'img-p4',
+    },
+    {
+      img: aboutUsp5,
+      className: 'img-p5',
+    },
+  ],
 }
 
 /**********             Portfolio Page Data         ************** */

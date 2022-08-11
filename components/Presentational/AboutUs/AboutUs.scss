@@ -7,6 +7,30 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
+  .img {
+    width: 60px;
+    position: absolute;
+  }
+  .img-p1 {
+    left: 2%;
+  }
+  .img-p2 {
+    left: 25%;
+    top: -6%;
+  }
+  .img-p3 {
+    left: 16%;
+    bottom: -8%;
+  }
+  .img-p4 {
+    right: 10%;
+    top: -6%;
+  }
+  .img-p5 {
+    right: -2%;
+    bottom: 1%;
+  }
   .about-us-divider {
     background: #63ac45;
     height: 2px;
@@ -15,10 +39,28 @@
     margin-bottom: 30px;
     border-radius: 12;
   }
+  .description {
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 767px) {
   .about-us {
-    padding: 30px;
+    padding: 40px;
+    .description {
+      width: 100%;
+    }
+    .img-p1 {
+      left: -2%;
+      top: 20%;
+    }
+    .img-p4 {
+      top: 20%;
+      right: -2%;
+    }
+    .img-p5 {
+      bottom: -5%;
+      right: -2%;
+    }
   }
 }
