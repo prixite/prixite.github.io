@@ -108,7 +108,11 @@ export default function Home() {
                   {newsHeader.slice(6, 11)}
                 </span>
               </Typography>
-              <Button variant="outlined" endIcon={<ArrowForwardOutlinedIcon />}>
+              <Button
+                className="view-all-btn"
+                variant="outlined"
+                endIcon={<ArrowForwardOutlinedIcon />}
+              >
                 {viewButtonText}
               </Button>
             </Stack>
@@ -118,39 +122,60 @@ export default function Home() {
             <Stack
               spacing={2}
               direction={{ xs: 'column', md: 'row', lg: 'row' }}
+              className="blogs-grid"
             >
               <Stack spacing={2}>
-                <Image
-                  src={mainBlog.image}
-                  objectFit="cover"
-                  alt="service-image"
-                  style={{ borderRadius: 10 }}
-                />
-                <Typography fontSize={20} fontWeight={600}>
-                  {mainBlog.title}
-                </Typography>
-                <Typography fontSize={15}>{mainBlog.description}</Typography>
-                <Stack direction={'row'} spacing={4} alignItems="center">
-                  <Chip label={mainBlog.chipLabel} size="small" />
-                  <Typography fontSize={14}>{mainBlog.readTime}</Typography>
-                </Stack>
+                {blogs.map((blog, index) => {
+                  if (index === 0) {
+                    return (
+                      <Blog
+                        key={index}
+                        image={blog.image}
+                        title={blog.title}
+                        description={blog.description}
+                        chipLabel={blog.chipLabel}
+                        readTime={blog.readTime}
+                        mainBlog={index}
+                      />
+                    )
+                  }
+                })}
               </Stack>
 
               <Stack spacing={2}>
                 {blogs.map((blog, index) => {
-                  return (
-                    <Blog
-                      key={index}
-                      image={blog.image}
-                      title={blog.title}
-                      description={blog.description}
-                      chipLabel={blog.chipLabel}
-                      readTime={blog.readTime}
-                    />
-                  )
+                  if (index !== 0) {
+                    return (
+                      <Blog
+                        key={index}
+                        image={blog.image}
+                        title={blog.title}
+                        description={blog.description}
+                        chipLabel={blog.chipLabel}
+                        readTime={blog.readTime}
+                        mainBlog={index}
+                      />
+                    )
+                  }
                 })}
               </Stack>
             </Stack>
+
+            <Slider className="blogs-carousel" arrows={false}>
+              {blogs.map((blog, index) => {
+                return (
+                  <Blog
+                    key={index}
+                    image={blog.image}
+                    title={blog.title}
+                    description={blog.description}
+                    chipLabel={blog.chipLabel}
+                    readTime={blog.readTime}
+                    mainBlog={index}
+                  />
+                )
+              })}
+            </Slider>
           </Box>
         </Container> */}
 

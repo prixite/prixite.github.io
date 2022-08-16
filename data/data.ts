@@ -105,6 +105,14 @@ export const newsAndBlogs = {
   },
   blogs: [
     {
+      image: news1,
+      title: 'In-house versus agency UX design',
+      description:
+        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual. Text commonly used to demonstrate the visual',
+      chipLabel: 'UX Design',
+      readTime: '5 Mins Read',
+    },
+    {
       image: news2,
       title: 'Fastest Growing IT Company',
       description:
