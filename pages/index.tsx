@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Grid, Stack, Button } from '@mui/material'
+import { Box, Container, Typography, Grid } from '@mui/material'
 // eslint-disable-next-line
 import Image from 'next/image'
 import { homeData, newsAndBlogs } from '../data/data'
@@ -99,7 +99,7 @@ export default function Home() {
           />
         </Container>
 
-        <Container maxWidth="xl">
+        {/* <Container maxWidth="xl">
           <Box pb="5rem" pt="5rem">
             <Stack direction={'row'} justifyContent="space-between">
               <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
@@ -177,7 +177,7 @@ export default function Home() {
               })}
             </Slider>
           </Box>
-        </Container>
+        </Container> */}
 
         {/* <Testimonials /> */}
 
