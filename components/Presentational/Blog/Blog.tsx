@@ -41,6 +41,11 @@ const Blog: React.FC<BlogProps> = ({
       }
     }
   }, [windowSize])
+
+  useEffect(() => {
+    setWindowSize(window.innerWidth)
+  }, [])
+
   return (
     <Box className="blog">
       {carousel ? (
