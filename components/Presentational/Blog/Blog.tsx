@@ -9,7 +9,7 @@ interface BlogProps {
   description: string
   chipLabel: string
   readTime: string
-  mainBlog: number
+  mainBlog?: number
 }
 
 const Blog: React.FC<BlogProps> = ({
@@ -89,7 +89,8 @@ const Blog: React.FC<BlogProps> = ({
                 alt="service-image"
                 className="blog-image"
                 objectFit="cover"
-                height={carousel ? 250 : ''}
+                width={900}
+                height={carousel ? 250 : 600}
               />
 
               <Stack
@@ -118,20 +119,20 @@ const Blog: React.FC<BlogProps> = ({
                 alt="service-image"
                 width={300}
                 height={250}
-                objectFit="cover"
                 className="blog-image"
+                objectFit="cover"
               />
-              <Stack
-                spacing={1}
-                justifyContent="center"
-                className="blog-content"
-              >
+              <Stack spacing={1} className="blog-content">
                 <Typography className="blog-title">{title}</Typography>
                 <Typography className="blog-description">
                   {description}
                 </Typography>
                 <Stack direction={'row'} spacing={2} alignItems="center">
-                  <Chip label={chipLabel} size="small" />
+                  <Chip
+                    label={chipLabel}
+                    size="small"
+                    sx={{ fontSize: 10, width: '50%' }}
+                  />
                   <Typography className="read-time">{readTime}</Typography>
                 </Stack>
               </Stack>

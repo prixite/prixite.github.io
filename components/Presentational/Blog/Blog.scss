@@ -11,11 +11,26 @@
       }
 
       .blog-description {
-        font-size: 12px;
+        font-size: 13px;
       }
 
       .read-time {
         font-size: 11px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .blog {
+    .blog-container {
+      .blog-content {
+        .blog-title {
+          font-size: 14px;
+        }
+        .read-time {
+          font-size: 10px;
+        }
       }
     }
   }

@@ -6,6 +6,7 @@ import { homeData, newsAndBlogs } from '../data/data'
 import Chip from '@mui/material/Chip'
 import { aboutUsCardData, servicesData } from '../data/data'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import Service from '../components/Presentational/Service/Service'
 import AboutUs from '../components/Presentational/AboutUs/AboutUs'
 import SectionHeader from '../components/Presentational/SectionHeader/SectionHeader'
@@ -39,6 +40,8 @@ export default function Home() {
     // eslint-disable-next-line
     viewButtonText,
   } = newsAndBlogs
+  // eslint-disable-next-line
+  const router = useRouter()
 
   return (
     <>
@@ -112,6 +115,7 @@ export default function Home() {
                 className="view-all-btn"
                 variant="outlined"
                 endIcon={<ArrowForwardOutlinedIcon />}
+                onClick={() => router.push('/blogs')}
               >
                 {viewButtonText}
               </Button>
@@ -135,7 +139,7 @@ export default function Home() {
                         description={blog.description}
                         chipLabel={blog.chipLabel}
                         readTime={blog.readTime}
-                        mainBlog={index}
+                        mainBlog={0}
                       />
                     )
                   }
@@ -143,21 +147,22 @@ export default function Home() {
               </Stack>
 
               <Stack spacing={2}>
-                {blogs.map((blog, index) => {
-                  if (index !== 0) {
-                    return (
-                      <Blog
-                        key={index}
-                        image={blog.image}
-                        title={blog.title}
-                        description={blog.description}
-                        chipLabel={blog.chipLabel}
-                        readTime={blog.readTime}
-                        mainBlog={index}
-                      />
-                    )
-                  }
-                })}
+                {blogs
+                  .map((blog, index) => {
+                    if (index !== 0) {
+                      return (
+                        <Blog
+                          key={index}
+                          image={blog.image}
+                          title={blog.title}
+                          description={blog.description}
+                          chipLabel={blog.chipLabel}
+                          readTime={blog.readTime}
+                        />
+                      )
+                    }
+                  })
+                  .slice(0, 4)}
               </Stack>
             </Stack>
 

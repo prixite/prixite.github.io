@@ -42,7 +42,7 @@ export const pages = [
     text: 'Services',
   },
   // {
-  //   path: '/',
+  //   path: '/blogs',
   //   text: 'News & Blogs',
   // },
   {
@@ -91,6 +91,7 @@ export const homeData = {
 
 /**********           News and Blogs Data             ********* */
 export const newsAndBlogs = {
+  title: `${siteName} - Blogs`,
   header: 'News & Blogs',
   heading:
     'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.',
@@ -105,10 +106,10 @@ export const newsAndBlogs = {
   },
   blogs: [
     {
-      image: news1,
+      image: news4,
       title: 'In-house versus agency UX design',
       description:
-        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual. Text commonly used to demonstrate the visual',
+        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
       chipLabel: 'UX Design',
       readTime: '5 Mins Read',
     },
@@ -116,7 +117,39 @@ export const newsAndBlogs = {
       image: news2,
       title: 'Fastest Growing IT Company',
       description:
-        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual. Text commonly used to demonstrate the visual',
+        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
+      chipLabel: 'Startup',
+      readTime: '5 Mins Read',
+    },
+    {
+      image: news2,
+      title: 'Fastest Growing IT Company',
+      description:
+        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
+      chipLabel: 'Startup',
+      readTime: '5 Mins Read',
+    },
+    {
+      image: news4,
+      title: 'Welcome to Prixite - Fastest Growing IT Company',
+      description:
+        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
+      chipLabel: 'React Development',
+      readTime: '5 Mins Read',
+    },
+    {
+      image: news4,
+      title: 'In-house versus agency UX design',
+      description:
+        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
+      chipLabel: 'UX Design',
+      readTime: '5 Mins Read',
+    },
+    {
+      image: news2,
+      title: 'Fastest Growing IT Company',
+      description:
+        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
       chipLabel: 'Startup',
       readTime: '5 Mins Read',
     },
@@ -124,7 +157,7 @@ export const newsAndBlogs = {
       image: news3,
       title: 'Welcome to Prixite - Fastest Growing IT Company',
       description:
-        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual. Text commonly used to demonstrate the visual',
+        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
       chipLabel: 'Mobile App Development',
       readTime: '5 Mins Read',
     },
@@ -132,7 +165,7 @@ export const newsAndBlogs = {
       image: news4,
       title: 'Welcome to Prixite - Fastest Growing IT Company',
       description:
-        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual. Text commonly used to demonstrate the visual',
+        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
       chipLabel: 'React Development',
       readTime: '5 Mins Read',
     },
