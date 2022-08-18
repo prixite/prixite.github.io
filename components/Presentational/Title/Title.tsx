@@ -9,7 +9,13 @@ const Title = () => {
   return (
     <Box className="title-container">
       <Box className="title-image">
-        <Image src={logoImg} alt={siteName} onClick={() => router.push('/')} />
+        <Image
+          src={'/' + logoImg.src}
+          alt={siteName}
+          onClick={() => router.push('/')}
+          width={30}
+          height={30}
+        />
       </Box>
       <Typography className="title-heading" onClick={() => router.push('/')}>
         {siteName}

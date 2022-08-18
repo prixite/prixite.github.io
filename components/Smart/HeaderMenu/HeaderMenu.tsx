@@ -37,9 +37,19 @@ const HeaderMenu = () => {
       >
         <Box className="menu-icon">
           {hamburgerIcon ? (
-            <Image src={hamburgerClose} alt={siteName} />
+            <Image
+              src={'/' + hamburgerClose.src}
+              alt={siteName}
+              width={40}
+              height={40}
+            />
           ) : (
-            <Image src={hamburgerOpen} alt={siteName} />
+            <Image
+              src={'/' + hamburgerOpen.src}
+              alt={siteName}
+              width={40}
+              height={40}
+            />
           )}
         </Box>
       </IconButton>

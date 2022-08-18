@@ -17,7 +17,7 @@ const Footer = () => {
           {details?.map(({ icon, desc }, index) => (
             <Stack direction={'row'} spacing={1} key={index}>
               <Box>
-                <Image src={icon} alt="icon" />
+                <Image src={'/' + icon.src} alt="icon" width={20} height={20} />
               </Box>
               <Typography className="description">{desc}</Typography>
             </Stack>
@@ -42,10 +42,16 @@ const Footer = () => {
             {joinUs.title}
           </Typography>
           <Box className="join-us-icons">
-            {joinUs.links.map(({ icon, path }, index, array) => (
+            {joinUs.links.map(({ icon, path, width, height }, index, array) => (
               <React.Fragment key={index}>
                 <a href={path} target="_blank" rel="noopener noreferrer">
-                  <Image src={icon} alt="icon" style={{ cursor: 'pointer' }} />
+                  <Image
+                    src={'/' + icon.src}
+                    alt="icon"
+                    style={{ cursor: 'pointer' }}
+                    width={width}
+                    height={height}
+                  />
                 </a>
                 {index === array.length - 1 ? (
                   ''

@@ -10,12 +10,11 @@ import homeHeaderImage from '../public/images/headerImage.png'
 import wall1 from '../public/images/wall1.jpg'
 import news1 from '../public/images/news1.svg'
 import news2 from '../public/images/news2.svg'
-import news3 from '../public/images/news3.svg'
 import news4 from '../public/images/news4.svg'
 import youtubeIcon from '../public/images/youtubeIcon.png'
 // eslint-disable-next-line
 import InstagramIcon from '../public/images/instagram-icon.png'
-import FacebookIcon from '../public/images/facebook-icon.png'
+import FacebookIcon from '../public/images/blog-detail-fb.png'
 // eslint-disable-next-line
 import TwitterIcon from '../public/images/twitter-icon.png'
 import LocationIcon from '../public/images/location-icon.png'
@@ -30,6 +29,9 @@ import aboutUsp2 from '../public/images/aboutUs-p2.png'
 import aboutUsp3 from '../public/images/aboutUs-p3.png'
 import aboutUsp4 from '../public/images/aboutUs-p4.png'
 import aboutUsp5 from '../public/images/aboutUs-p5.png'
+import likes from '../public/images/handsClapping.png'
+import comments from '../public/images/chatTeardropDots.png'
+import scrollToTop from '../public/images/scrollToTop.png'
 
 /*********          Header Menu Data            ********** */
 export const pages = [
@@ -104,70 +106,133 @@ export const newsAndBlogs = {
     chipLabel: 'UX Design',
     readTime: '5 Mins Read',
   },
+  likesImg: likes,
+  commentsImg: comments,
+  scrollToTopImg: scrollToTop,
   blogs: [
     {
+      id: 1,
       image: news4,
       title: 'In-house versus agency UX design',
       description:
         'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
       chipLabel: 'UX Design',
       readTime: '5 Mins Read',
+      details: [
+        'To be a distinctive and top-notch brand in the competitive business world, every business requires a sound website that can leave an impact on the customer’s mind. A sound website is the need of the hour for the rapid progress and sustainability of the business. Prixite aims to utilize its expertise in understanding our potential customer’s vision and turning it into a believable output in the form of a compelling website that generates revenues and traffic for each of our worthy clients.',
+      ],
+      likes: 100,
+      comments: 100,
     },
     {
+      id: 2,
       image: news2,
       title: 'Fastest Growing IT Company',
       description:
         'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
       chipLabel: 'Startup',
       readTime: '5 Mins Read',
+      details: [
+        'Prixite truly understands the importance of a well-constructed website that may exceed your expectations when it comes to usability and performance. Having a team of experienced and professional full-stack web developers and designers, we offer our clients a variety of web development services such as UX expertise, inventive UI designs, updated programming language, incomparable DevOps, and the best full-stack developers to ensure the provision of cost-effective solutions to our clients. Our website development process is thoroughly systematic and streamlines according to the need and expectations of our clients.',
+      ],
+      likes: 2.4,
+      comments: 2.4,
     },
     {
+      id: 3,
       image: news2,
       title: 'Fastest Growing IT Company',
       description:
         'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
       chipLabel: 'Startup',
       readTime: '5 Mins Read',
+      details: [
+        'It starts with understanding the requirements and queries related to the business of our clients based on which we create the suitable timeline and plan of the project. Then comes the entire focus on creating a unique user experience and sophisticated web interface that truly resonates with the brand image of the clients. The third step involves developing and designing a custom-coded website with an innovative interface that conveniently covers your business need into a reliable brand image. And final steps involve the quality check, deploying, and maintenance of your website.',
+      ],
+      likes: 2.4,
+      comments: 2.4,
     },
     {
+      id: 4,
       image: news4,
       title: 'Welcome to Prixite - Fastest Growing IT Company',
       description:
         'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
       chipLabel: 'React Development',
       readTime: '5 Mins Read',
+      details: [
+        'We offer our clients progressive web development solutions that truly contribute to expanding their business by removing marketing obstacles and focusing on the leading key performance indicators of our client’s business that sets them apart from their competitors.',
+      ],
+      likes: 2.4,
+      comments: 2.4,
     },
     {
+      id: 5,
       image: news4,
       title: 'In-house versus agency UX design',
       description:
         'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
       chipLabel: 'UX Design',
       readTime: '5 Mins Read',
+      details: [
+        'To be a distinctive and top-notch brand in the competitive business world, every business requires a sound website that can leave an impact on the customer’s mind. A sound website is the need of the hour for the rapid progress and sustainability of the business. Prixite aims to utilize its expertise in understanding our potential customer’s vision and turning it into a believable output in the form of a compelling website that generates revenues and traffic for each of our worthy clients.',
+        'Prixite truly understands the importance of a well-constructed website that may exceed your expectations when it comes to usability and performance. Having a team of experienced and professional full-stack web developers and designers, we offer our clients a variety of web development services such as UX expertise, inventive UI designs, updated programming language, incomparable DevOps, and the best full-stack developers to ensure the provision of cost-effective solutions to our clients. Our website development process is thoroughly systematic and streamlines according to the need and expectations of our clients.',
+        'It starts with understanding the requirements and queries related to the business of our clients based on which we create the suitable timeline and plan of the project. Then comes the entire focus on creating a unique user experience and sophisticated web interface that truly resonates with the brand image of the clients. The third step involves developing and designing a custom-coded website with an innovative interface that conveniently covers your business need into a reliable brand image. And final steps involve the quality check, deploying, and maintenance of your website.',
+        'We offer our clients progressive web development solutions that truly contribute to expanding their business by removing marketing obstacles and focusing on the leading key performance indicators of our client’s business that sets them apart from their competitors.',
+      ],
+      likes: 2.4,
+      comments: 2.4,
     },
     {
+      id: 6,
       image: news2,
       title: 'Fastest Growing IT Company',
       description:
         'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
       chipLabel: 'Startup',
       readTime: '5 Mins Read',
+      details: [
+        'To be a distinctive and top-notch brand in the competitive business world, every business requires a sound website that can leave an impact on the customer’s mind. A sound website is the need of the hour for the rapid progress and sustainability of the business. Prixite aims to utilize its expertise in understanding our potential customer’s vision and turning it into a believable output in the form of a compelling website that generates revenues and traffic for each of our worthy clients.',
+        'Prixite truly understands the importance of a well-constructed website that may exceed your expectations when it comes to usability and performance. Having a team of experienced and professional full-stack web developers and designers, we offer our clients a variety of web development services such as UX expertise, inventive UI designs, updated programming language, incomparable DevOps, and the best full-stack developers to ensure the provision of cost-effective solutions to our clients. Our website development process is thoroughly systematic and streamlines according to the need and expectations of our clients.',
+        'It starts with understanding the requirements and queries related to the business of our clients based on which we create the suitable timeline and plan of the project. Then comes the entire focus on creating a unique user experience and sophisticated web interface that truly resonates with the brand image of the clients. The third step involves developing and designing a custom-coded website with an innovative interface that conveniently covers your business need into a reliable brand image. And final steps involve the quality check, deploying, and maintenance of your website.',
+        'We offer our clients progressive web development solutions that truly contribute to expanding their business by removing marketing obstacles and focusing on the leading key performance indicators of our client’s business that sets them apart from their competitors.',
+      ],
+      likes: 2.4,
+      comments: 2.4,
     },
     {
-      image: news3,
+      id: 7,
+      image: news2,
       title: 'Welcome to Prixite - Fastest Growing IT Company',
       description:
         'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
       chipLabel: 'Mobile App Development',
       readTime: '5 Mins Read',
+      details: [
+        'To be a distinctive and top-notch brand in the competitive business world, every business requires a sound website that can leave an impact on the customer’s mind. A sound website is the need of the hour for the rapid progress and sustainability of the business. Prixite aims to utilize its expertise in understanding our potential customer’s vision and turning it into a believable output in the form of a compelling website that generates revenues and traffic for each of our worthy clients.',
+        'Prixite truly understands the importance of a well-constructed website that may exceed your expectations when it comes to usability and performance. Having a team of experienced and professional full-stack web developers and designers, we offer our clients a variety of web development services such as UX expertise, inventive UI designs, updated programming language, incomparable DevOps, and the best full-stack developers to ensure the provision of cost-effective solutions to our clients. Our website development process is thoroughly systematic and streamlines according to the need and expectations of our clients.',
+        'It starts with understanding the requirements and queries related to the business of our clients based on which we create the suitable timeline and plan of the project. Then comes the entire focus on creating a unique user experience and sophisticated web interface that truly resonates with the brand image of the clients. The third step involves developing and designing a custom-coded website with an innovative interface that conveniently covers your business need into a reliable brand image. And final steps involve the quality check, deploying, and maintenance of your website.',
+        'We offer our clients progressive web development solutions that truly contribute to expanding their business by removing marketing obstacles and focusing on the leading key performance indicators of our client’s business that sets them apart from their competitors.',
+      ],
+      likes: 2.4,
+      comments: 2.4,
     },
     {
+      id: 8,
       image: news4,
       title: 'Welcome to Prixite - Fastest Growing IT Company',
       description:
         'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
       chipLabel: 'React Development',
       readTime: '5 Mins Read',
+      details: [
+        'To be a distinctive and top-notch brand in the competitive business world, every business requires a sound website that can leave an impact on the customer’s mind. A sound website is the need of the hour for the rapid progress and sustainability of the business. Prixite aims to utilize its expertise in understanding our potential customer’s vision and turning it into a believable output in the form of a compelling website that generates revenues and traffic for each of our worthy clients.',
+        'Prixite truly understands the importance of a well-constructed website that may exceed your expectations when it comes to usability and performance. Having a team of experienced and professional full-stack web developers and designers, we offer our clients a variety of web development services such as UX expertise, inventive UI designs, updated programming language, incomparable DevOps, and the best full-stack developers to ensure the provision of cost-effective solutions to our clients. Our website development process is thoroughly systematic and streamlines according to the need and expectations of our clients.',
+        'It starts with understanding the requirements and queries related to the business of our clients based on which we create the suitable timeline and plan of the project. Then comes the entire focus on creating a unique user experience and sophisticated web interface that truly resonates with the brand image of the clients. The third step involves developing and designing a custom-coded website with an innovative interface that conveniently covers your business need into a reliable brand image. And final steps involve the quality check, deploying, and maintenance of your website.',
+        'We offer our clients progressive web development solutions that truly contribute to expanding their business by removing marketing obstacles and focusing on the leading key performance indicators of our client’s business that sets them apart from their competitors.',
+      ],
+      likes: 2.4,
+      comments: 2.4,
     },
   ],
 }
@@ -657,6 +722,21 @@ export const reactDevelopment = {
   para: 'The technology, tools, and frameworks we use to ensure the quality service delivery of progressive web application to our clients includes Laravel, Angular, Vue, Lighthouse, and Workbox which makes us an ideal choice for our customer’s business needs.',
 }
 
+export const joinUsLinkIcons = [
+  {
+    icon: FacebookIcon,
+    width: 13,
+    height: 20,
+    path: 'https://web.facebook.com/prixite/',
+  },
+  {
+    icon: LinkdeinIcon,
+    width: 24,
+    height: 25,
+    path: 'https://www.linkedin.com/company/prixite/mycompany/',
+  },
+]
+
 /**************             Footer Data         ************ */
 export const footerData = {
   copyright: 'Prixite © 2022. All Rights Reserved',
@@ -692,10 +772,14 @@ export const footerData = {
     links: [
       {
         icon: FacebookIcon,
+        width: 13,
+        height: 20,
         path: 'https://web.facebook.com/prixite/',
       },
       {
         icon: LinkdeinIcon,
+        width: 24,
+        height: 25,
         path: 'https://www.linkedin.com/company/prixite/mycompany/',
       },
     ],

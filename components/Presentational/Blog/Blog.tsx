@@ -2,7 +2,19 @@ import { Stack, Typography, Chip, Box } from '@mui/material'
 import { StaticImageData } from 'next/image'
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
+interface BlogInterface {
+  id: number
+  image: StaticImageData
+  title: string
+  description: string
+  chipLabel: string
+  readTime: string
+  details: string[]
+  likes: number
+  comments: number
+}
 interface BlogProps {
   image: StaticImageData
   title: string
@@ -10,6 +22,9 @@ interface BlogProps {
   chipLabel: string
   readTime: string
   mainBlog?: number
+  details?: string[]
+  index?: number | undefined
+  blog?: BlogInterface
 }
 
 const Blog: React.FC<BlogProps> = ({
@@ -19,6 +34,8 @@ const Blog: React.FC<BlogProps> = ({
   chipLabel,
   readTime,
   mainBlog,
+  index,
+  blog,
 }) => {
   const [windowSize, setWindowSize] = useState<number>()
   const [carousel, setCarousel] = useState(false)
@@ -46,8 +63,33 @@ const Blog: React.FC<BlogProps> = ({
     setWindowSize(window.innerWidth)
   }, [])
 
+  const router = useRouter()
+
+  const navigateToRoute = (
+    i: number | undefined,
+    blogData: BlogInterface | undefined
+  ) => {
+    return (
+      i !== undefined &&
+      router.push(
+        {
+          pathname: `/blogs/${blogData?.id}`,
+          query: {
+            title: blogData?.title,
+            description: blogData?.description,
+            readTime: blogData?.readTime,
+            details: blogData?.details,
+            likes: blogData?.likes,
+            comments: blogData?.comments,
+          },
+        },
+        `/blogs/${blogData?.id}`
+      )
+    )
+  }
+
   return (
-    <Box className="blog">
+    <Box className="blog" onClick={() => navigateToRoute(index, blog)}>
       {carousel ? (
         <Stack
           direction={{ xs: 'column', md: 'row', lg: 'row' }}
@@ -61,6 +103,7 @@ const Blog: React.FC<BlogProps> = ({
             width={400}
             height={300}
             objectFit="cover"
+            priority
           />
           <Stack spacing={1} justifyContent="center" className="blog-content">
             <Typography className="blog-title">{title}</Typography>
