@@ -140,6 +140,9 @@ export default function Home() {
                         chipLabel={blog.chipLabel}
                         readTime={blog.readTime}
                         mainBlog={0}
+                        details={blog.details}
+                        index={index}
+                        blog={blog}
                       />
                     )
                   }
@@ -158,6 +161,9 @@ export default function Home() {
                           description={blog.description}
                           chipLabel={blog.chipLabel}
                           readTime={blog.readTime}
+                          details={blog.details}
+                          index={index}
+                          blog={blog}
                         />
                       )
                     }
@@ -177,6 +183,8 @@ export default function Home() {
                     chipLabel={blog.chipLabel}
                     readTime={blog.readTime}
                     mainBlog={index}
+                    index={index}
+                    blog={blog}
                   />
                 )
               })}

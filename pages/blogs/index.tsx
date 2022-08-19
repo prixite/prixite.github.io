@@ -1,15 +1,16 @@
 import React from 'react'
 // eslint-disable-next-line
-import Header from '../components/Shared/header/Header'
+import Header from '../../components/Shared/header/Header'
 // eslint-disable-next-line
 import homePageBg from '../public/images/homePageBg.png'
 import { Box, Typography, Container, Grid } from '@mui/material'
-import { newsAndBlogs } from '../data/data'
+import { newsAndBlogs } from '../../data/data'
 import Head from 'next/head'
-import Blog from '../components/Presentational/Blog/Blog'
+import Blog from '../../components/Presentational/Blog/Blog'
 
 const blog = () => {
   const { title, header, blogs } = newsAndBlogs
+
   return (
     <>
       <Head>
@@ -42,6 +43,9 @@ const blog = () => {
                   description={blog.description}
                   chipLabel={blog.chipLabel}
                   readTime={blog.readTime}
+                  details={blog.details}
+                  index={index}
+                  blog={blog}
                 />
               </Grid>
             )
