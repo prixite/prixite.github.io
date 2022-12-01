@@ -48,7 +48,7 @@ const HomeContainer = () => {
       </Box>
 
       <Box>
-        <Image src={headerImage} alt="service-image" layout="responsive"/>
+        <Image src={headerImage} alt="service-image" layout="responsive" />
       </Box>
     </Stack>
   )
