@@ -17,7 +17,7 @@ const Footer = () => {
           {details?.map(({ icon, desc }, index) => (
             <Stack direction={'row'} spacing={1} key={index}>
               <Box>
-                <Image src={'/' + icon.src} alt="icon" width={20} height={20} />
+                <Image src={icon.src} alt="icon" width={20} height={20} />
               </Box>
               <Typography className="description">{desc}</Typography>
             </Stack>
@@ -46,7 +46,7 @@ const Footer = () => {
               <React.Fragment key={index}>
                 <a href={path} target="_blank" rel="noopener noreferrer">
                   <Image
-                    src={'/' + icon.src}
+                    src={icon.src}
                     alt="icon"
                     style={{ cursor: 'pointer' }}
                     width={width}

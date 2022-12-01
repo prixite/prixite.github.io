@@ -10,7 +10,7 @@ const Title = () => {
     <Box className="title-container">
       <Box className="title-image">
         <Image
-          src={'/' + logoImg.src}
+          src={logoImg.src}
           alt={siteName}
           onClick={() => router.push('/')}
           width={30}
