@@ -48,7 +48,7 @@ const HomeContainer = () => {
       </Box>
 
       <Box>
-        <Image unoptimized priority src={headerImage} alt="service-image" />
+        <Image src={headerImage} alt="service-image" layout="responsive" />
       </Box>
     </Stack>
   )

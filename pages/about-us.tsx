@@ -51,7 +51,12 @@ const AboutUs = () => {
 
         <Box className="image-header-container">
           <Box className="image-header">
-            <Image src={AboutUsHeader} className="image" alt="aboutus" />
+            <Image
+              src={AboutUsHeader}
+              className="image"
+              alt="aboutus"
+              layout="responsive"
+            />
           </Box>
           <Box className="image-content-container">
             <Typography className="image-text">

@@ -47,7 +47,7 @@ const BlogDetails = () => {
               <Box key={index}>
                 <a href={path} target="_blank" rel="noopener noreferrer">
                   <Image
-                    src={'/' + icon.src}
+                    src={icon.src}
                     alt="icon"
                     width={width}
                     height={height}
@@ -70,7 +70,7 @@ const BlogDetails = () => {
         <Stack direction={'row'} gap={10}>
           <Stack direction={'row'} gap={1} alignItems="center">
             <Image
-              src={'/' + newsAndBlogs.likesImg.src}
+              src={newsAndBlogs.likesImg.src}
               width={25}
               height={25}
               alt="icon"
@@ -79,7 +79,7 @@ const BlogDetails = () => {
           </Stack>
           <Stack direction={'row'} gap={1} alignItems="center">
             <Image
-              src={'/' + newsAndBlogs.commentsImg.src}
+              src={newsAndBlogs.commentsImg.src}
               width={25}
               height={25}
               alt="icon"
@@ -94,7 +94,7 @@ const BlogDetails = () => {
           className="scroll-top"
         >
           <Image
-            src={'/' + newsAndBlogs.scrollToTopImg.src}
+            src={newsAndBlogs.scrollToTopImg.src}
             width={25}
             height={25}
             alt="icon"

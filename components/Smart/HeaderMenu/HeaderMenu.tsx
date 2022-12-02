@@ -38,14 +38,14 @@ const HeaderMenu = () => {
         <Box className="menu-icon">
           {hamburgerIcon ? (
             <Image
-              src={'/' + hamburgerClose.src}
+              src={hamburgerClose.src}
               alt={siteName}
               width={40}
               height={40}
             />
           ) : (
             <Image
-              src={'/' + hamburgerOpen.src}
+              src={hamburgerOpen.src}
               alt={siteName}
               width={40}
               height={40}
