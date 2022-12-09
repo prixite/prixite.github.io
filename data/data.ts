@@ -43,10 +43,10 @@ export const pages = [
     path: '/services',
     text: 'Services',
   },
-  // {
-  //   path: '/blogs',
-  //   text: 'News & Blogs',
-  // },
+  {
+    path: '/blogs',
+    text: 'News & Blogs',
+  },
   {
     path: '/contact-us',
     text: 'Contact Us',
