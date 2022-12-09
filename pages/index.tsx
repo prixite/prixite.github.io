@@ -27,7 +27,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
 
-export default function Home({posts}: any) {
+export default function Home({ posts }: any) {
   const { title } = homeData
   const { servicesHeading, servicesAim, services } = servicesData
   const { aboutUsHeader, aboutUsHeading, aboutUsDescription, images } =
@@ -127,36 +127,36 @@ export default function Home({posts}: any) {
 
             <Typography my={3}>{newsHeading}</Typography>
 
-            <Container maxWidth='xl' className='posts' disableGutters>
-        {posts.slice(0, 2).map((post: any, index: number) => (
-           <div className='card' key={index}>
-           <img src={post.frontmatter.cover_image} alt='' className='post-img'/>
-     
-           <div className='post-date'>Posted on {post.frontmatter.date}</div>
-     
-           <h3>{post.frontmatter.title}</h3>
-     
-           <p>{post.frontmatter.excerpt}</p>
-     
-           <Link href={`/blog/${post.slug}`}>
-           <Button
-       
-        variant="contained"
+            <Container maxWidth="xl" className="posts" disableGutters>
+              {posts.slice(0, 2).map((post: any, index: number) => (
+                <div className="card" key={index}>
+                  <Image
+                    className="post-img"
+                    src={post?.frontmatter?.cover_image}
+                    alt="image"
+                    width={500}
+                    height={500}
+                    layout="responsive"
+                  />
 
-        className="read-button"
-      
-      >
-        Read More
-      </Button>
-           </Link>
-         </div>
-        ))}
-      </Container>
-        
+                  <div className="post-date">
+                    Posted on {post.frontmatter.date}
+                  </div>
+
+                  <h3>{post.frontmatter.title}</h3>
+
+                  <p>{post.frontmatter.excerpt}</p>
+
+                  <Link href={`/blog/${post.slug}`}>
+                    <Button variant="contained" className="read-button">
+                      Read More
+                    </Button>
+                  </Link>
+                </div>
+              ))}
+            </Container>
           </Box>
         </Container>
-
-
 
         {/* <Testimonials /> */}
 
@@ -193,7 +193,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      posts: posts
+      posts: posts,
     },
   }
 }

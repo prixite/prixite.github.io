@@ -27,7 +27,7 @@ procul fugitque corpora iugales!
 
 
 
-    var ethics_font_drive = cycleSystemProgram
+    var ethics_font_drive
     rgb + nybbleBaseband;
     permalinkCertificateMacintosh
     boot = bridgeDaemonActive;

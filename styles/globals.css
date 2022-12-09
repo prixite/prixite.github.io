@@ -37,7 +37,6 @@ p {
   line-height: 1.8;
 }
 
-
 .post-img {
   width: 100%;
   border-radius: 10px;
@@ -145,4 +144,3 @@ ol {
     grid-template-columns: 1fr;
   }
 }
-

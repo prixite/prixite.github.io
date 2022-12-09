@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 // eslint-disable-next-line
 import Header from '../../components/Shared/header/Header'
 // eslint-disable-next-line
@@ -6,14 +6,13 @@ import homePageBg from '../public/images/homePageBg.png'
 import { Box, Typography, Container, Button } from '@mui/material'
 import { newsAndBlogs } from '../../data/data'
 import Head from 'next/head'
-import Blog from '../../components/Presentational/Blog/Blog'
 import Link from 'next/link'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import Image from 'next/image'
 
-
-const blog = ({posts}: any) => {
+const blog = ({ posts }: any) => {
   const { title, header } = newsAndBlogs
 
   return (
@@ -34,41 +33,36 @@ const blog = ({posts}: any) => {
             </Typography>
           </Box>
           <Link href={'/'}>
-          <Typography color={'primary'}> {'< '}Back </Typography>
+            <Typography color={'primary'}> {'< '}Back </Typography>
           </Link>
-          
         </Box>
       </Container>
 
-      <Container maxWidth="xl" className='posts'>
-
-        
+      <Container maxWidth="xl" className="posts">
         {posts?.map((post: any, index: number) => (
-           <div className='card' key={index}>
-           <img src={post.frontmatter.cover_image} alt='' className='post-img'/>
-     
-           <div className='post-date'>Posted on {post.frontmatter.date}</div>
-     
-           <h3>{post.frontmatter.title}</h3>
-     
-           <p>{post.frontmatter.excerpt}</p>
-     
-           <Link href={`/blog/${post.slug}`}>
-           <Button
-    
-        variant="contained"
+          <div className="card" key={index}>
+            <Image
+              src={post.frontmatter.cover_image}
+              alt=""
+              className="post-img"
+              width={500}
+              height={500}
+              layout="responsive"
+            />
 
-        className="read-button"
-      
-      >
-        Read More
-      </Button>
-           </Link>
-         </div>
+            <div className="post-date">Posted on {post.frontmatter.date}</div>
+
+            <h3>{post.frontmatter.title}</h3>
+
+            <p>{post.frontmatter.excerpt}</p>
+
+            <Link href={`/blog/${post.slug}`}>
+              <Button variant="contained" className="read-button">
+                Read More
+              </Button>
+            </Link>
+          </div>
         ))}
-      
-       
-     
       </Container>
     </>
   )
@@ -101,7 +95,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      posts: posts
+      posts: posts,
     },
   }
 }
