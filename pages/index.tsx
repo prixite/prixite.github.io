@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Grid } from '@mui/material'
+import { Box, Container, Typography, Grid, Button, Stack } from '@mui/material'
 // eslint-disable-next-line
 import Image from 'next/image'
 import { homeData, newsAndBlogs } from '../data/data'
@@ -22,8 +22,12 @@ import HomeContainer from '../components/Presentational/HomeContainer/HomeContai
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+import Link from 'next/link'
 
-export default function Home() {
+export default function Home({posts}: any) {
   const { title } = homeData
   const { servicesHeading, servicesAim, services } = servicesData
   const { aboutUsHeader, aboutUsHeading, aboutUsDescription, images } =
@@ -102,7 +106,7 @@ export default function Home() {
           />
         </Container>
 
-        {/* <Container maxWidth="xl">
+        <Container maxWidth="xl">
           <Box pb="5rem" pt="5rem">
             <Stack direction={'row'} justifyContent="space-between">
               <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
@@ -123,74 +127,36 @@ export default function Home() {
 
             <Typography my={3}>{newsHeading}</Typography>
 
-            <Stack
-              spacing={2}
-              direction={{ xs: 'column', md: 'row', lg: 'row' }}
-              className="blogs-grid"
-            >
-              <Stack spacing={2}>
-                {blogs.map((blog, index) => {
-                  if (index === 0) {
-                    return (
-                      <Blog
-                        key={index}
-                        image={blog.image}
-                        title={blog.title}
-                        description={blog.description}
-                        chipLabel={blog.chipLabel}
-                        readTime={blog.readTime}
-                        mainBlog={0}
-                        details={blog.details}
-                        index={index}
-                        blog={blog}
-                      />
-                    )
-                  }
-                })}
-              </Stack>
+            <Container maxWidth='xl' className='posts' disableGutters>
+        {posts.slice(0, 2).map((post: any, index: number) => (
+           <div className='card' key={index}>
+           <img src={post.frontmatter.cover_image} alt='' className='post-img'/>
+     
+           <div className='post-date'>Posted on {post.frontmatter.date}</div>
+     
+           <h3>{post.frontmatter.title}</h3>
+     
+           <p>{post.frontmatter.excerpt}</p>
+     
+           <Link href={`/blog/${post.slug}`}>
+           <Button
+       
+        variant="contained"
 
-              <Stack spacing={2}>
-                {blogs
-                  .map((blog, index) => {
-                    if (index !== 0) {
-                      return (
-                        <Blog
-                          key={index}
-                          image={blog.image}
-                          title={blog.title}
-                          description={blog.description}
-                          chipLabel={blog.chipLabel}
-                          readTime={blog.readTime}
-                          details={blog.details}
-                          index={index}
-                          blog={blog}
-                        />
-                      )
-                    }
-                  })
-                  .slice(0, 4)}
-              </Stack>
-            </Stack>
-
-            <Slider className="blogs-carousel" arrows={false}>
-              {blogs.map((blog, index) => {
-                return (
-                  <Blog
-                    key={index}
-                    image={blog.image}
-                    title={blog.title}
-                    description={blog.description}
-                    chipLabel={blog.chipLabel}
-                    readTime={blog.readTime}
-                    mainBlog={index}
-                    index={index}
-                    blog={blog}
-                  />
-                )
-              })}
-            </Slider>
+        className="read-button"
+      
+      >
+        Read More
+      </Button>
+           </Link>
+         </div>
+        ))}
+      </Container>
+        
           </Box>
-        </Container> */}
+        </Container>
+
+
 
         {/* <Testimonials /> */}
 
@@ -200,4 +166,34 @@ export default function Home() {
       </div>
     </>
   )
+}
+
+export async function getStaticProps() {
+  // Get files from the posts dir
+  const files = fs.readdirSync(path.join('posts'))
+
+  // Get slug and frontmatter from posts
+  const posts = files.map((filename) => {
+    // Create slug
+    const slug = filename.replace('.md', '')
+
+    // Get frontmatter
+    const markdownWithMeta = fs.readFileSync(
+      path.join('posts', filename),
+      'utf-8'
+    )
+
+    const { data: frontmatter } = matter(markdownWithMeta)
+
+    return {
+      slug,
+      frontmatter,
+    }
+  })
+
+  return {
+    props: {
+      posts: posts
+    },
+  }
 }

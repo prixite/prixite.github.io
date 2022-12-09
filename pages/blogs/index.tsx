@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 // eslint-disable-next-line
 import Header from '../../components/Shared/header/Header'
 // eslint-disable-next-line
 import homePageBg from '../public/images/homePageBg.png'
-import { Box, Typography, Container, Grid } from '@mui/material'
+import { Box, Typography, Container, Button } from '@mui/material'
 import { newsAndBlogs } from '../../data/data'
 import Head from 'next/head'
 import Blog from '../../components/Presentational/Blog/Blog'
+import Link from 'next/link'
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
 
-const blog = () => {
-  const { title, header, blogs } = newsAndBlogs
+
+const blog = ({posts}: any) => {
+  const { title, header } = newsAndBlogs
 
   return (
     <>
@@ -28,32 +33,75 @@ const blog = () => {
               </span>
             </Typography>
           </Box>
+          <Link href={'/'}>
+          <Typography color={'primary'}> {'< '}Back </Typography>
+          </Link>
+          
         </Box>
       </Container>
 
-      <Container maxWidth="xl">
-        <Grid container spacing={2}>
-          {blogs.map((blog, index) => {
-            return (
-              <Grid item md={6} lg={6} key={index}>
-                <Blog
-                  key={index}
-                  image={blog.image}
-                  title={blog.title}
-                  description={blog.description}
-                  chipLabel={blog.chipLabel}
-                  readTime={blog.readTime}
-                  details={blog.details}
-                  index={index}
-                  blog={blog}
-                />
-              </Grid>
-            )
-          })}
-        </Grid>
+      <Container maxWidth="xl" className='posts'>
+
+        
+        {posts?.map((post: any, index: number) => (
+           <div className='card' key={index}>
+           <img src={post.frontmatter.cover_image} alt='' className='post-img'/>
+     
+           <div className='post-date'>Posted on {post.frontmatter.date}</div>
+     
+           <h3>{post.frontmatter.title}</h3>
+     
+           <p>{post.frontmatter.excerpt}</p>
+     
+           <Link href={`/blog/${post.slug}`}>
+           <Button
+    
+        variant="contained"
+
+        className="read-button"
+      
+      >
+        Read More
+      </Button>
+           </Link>
+         </div>
+        ))}
+      
+       
+     
       </Container>
     </>
   )
 }
 
 export default blog
+
+export async function getStaticProps() {
+  // Get files from the posts dir
+  const files = fs.readdirSync(path.join('posts'))
+
+  // Get slug and frontmatter from posts
+  const posts = files.map((filename) => {
+    // Create slug
+    const slug = filename.replace('.md', '')
+
+    // Get frontmatter
+    const markdownWithMeta = fs.readFileSync(
+      path.join('posts', filename),
+      'utf-8'
+    )
+
+    const { data: frontmatter } = matter(markdownWithMeta)
+
+    return {
+      slug,
+      frontmatter,
+    }
+  })
+
+  return {
+    props: {
+      posts: posts
+    },
+  }
+}
