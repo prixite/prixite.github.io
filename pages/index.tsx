@@ -26,8 +26,9 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
+import { BlogPost, Posts } from '../types/blog'
 
-export default function Home({ posts }: any) {
+export default function Home({ posts }: Posts) {
   const { title } = homeData
   const { servicesHeading, servicesAim, services } = servicesData
   const { aboutUsHeader, aboutUsHeading, aboutUsDescription, images } =
@@ -128,7 +129,7 @@ export default function Home({ posts }: any) {
             <Typography my={3}>{newsHeading}</Typography>
 
             <Container maxWidth="xl" className="posts" disableGutters>
-              {posts.slice(0, 2).map((post: any, index: number) => (
+              {posts?.slice(0, 2).map((post: BlogPost, index: number) => (
                 <div className="card" key={index}>
                   <Image
                     className="post-img"

@@ -11,8 +11,9 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Image from 'next/image'
+import { BlogPost, Posts } from '../../types/blog'
 
-const blog = ({ posts }: any) => {
+const Blog = ({ posts }: Posts) => {
   const { title, header } = newsAndBlogs
 
   return (
@@ -39,7 +40,7 @@ const blog = ({ posts }: any) => {
       </Container>
 
       <Container maxWidth="xl" className="posts">
-        {posts?.map((post: any, index: number) => (
+        {posts?.map((post: BlogPost, index: number) => (
           <div className="card" key={index}>
             <Image
               src={post.frontmatter.cover_image}
@@ -68,7 +69,7 @@ const blog = ({ posts }: any) => {
   )
 }
 
-export default blog
+export default Blog
 
 export async function getStaticProps() {
   // Get files from the posts dir

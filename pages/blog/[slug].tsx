@@ -5,11 +5,12 @@ import md from 'markdown-it'
 import Image from 'next/image'
 import { Box, Container, Stack, Typography } from '@mui/material'
 import { joinUsLinkIcons, newsAndBlogs } from '../../data/data'
+import { BlogPostWithContent, Post } from '../../types/blog'
 
 export default function PostPage({
   frontmatter: { title, date },
   content,
-}: any) {
+}: BlogPostWithContent) {
   return (
     <Container maxWidth="xl" className="page-header">
       <Box className="header">
@@ -109,7 +110,7 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({ params: { slug } }: any) {
+export async function getStaticProps({ params: { slug } }: Post) {
   const markdownWithMeta = fs.readFileSync(
     path.join('posts', slug + '.md'),
     'utf-8'
