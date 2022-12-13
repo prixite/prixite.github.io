@@ -1,23 +1,23 @@
 export interface BlogPost {
-    frontmatter: {
-      cover_image: string
-      date: string
-      excerpt: string
-      title: string
-    }
-    slug: string
+  frontmatter: {
+    cover_image: string
+    date: string
+    excerpt: string
+    title: string
+  }
+  slug: string
 }
 
 export interface Posts {
-    posts: Array<BlogPost>
+  posts: Array<BlogPost>
 }
 
 export interface BlogPostWithContent extends BlogPost {
-    content: string
+  content: string
 }
 
 export interface Post {
-    params: {
-        slug: string
-    }
+  params: {
+    slug: string
+  }
 }
