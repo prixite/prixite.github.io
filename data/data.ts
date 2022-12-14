@@ -255,7 +255,6 @@ export const aboutUsCardData = {
   ],
 }
 
-
 /*********          Contact Us Page Data            ************* */
 export const contactUs = {
   title: `${siteName} - Contact Us`,
