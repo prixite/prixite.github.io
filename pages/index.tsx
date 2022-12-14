@@ -1,6 +1,6 @@
 import { Box, Container, Typography, Grid, Button, Stack } from '@mui/material'
 // eslint-disable-next-line
-import Image,  { StaticImageData }  from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { homeData, newsAndBlogs } from '../data/data'
 // eslint-disable-next-line
 import Chip from '@mui/material/Chip'
@@ -84,16 +84,14 @@ export default function Home({ blogs, services }: MDContent) {
             <Slider className="services-carousel" arrows={false}>
               {services?.map((item) => (
                 <Service
-                key={item.frontmatter.index}
-                img={item.frontmatter.logo_image}
-                title={item.frontmatter.header}
-                description={item.frontmatter.description}
-                path={`/services/${item.slug}`}
-              />
+                  key={item.frontmatter.index}
+                  img={item.frontmatter.logo_image}
+                  title={item.frontmatter.header}
+                  description={item.frontmatter.description}
+                  path={`/services/${item.slug}`}
+                />
               ))}
             </Slider>
-
-
           </Box>
         </Container>
 
@@ -201,7 +199,7 @@ export async function getStaticProps() {
   return {
     props: {
       blogs: blogs.sort(sortByDate),
-      services: services.sort(sortByIndex)
+      services: services.sort(sortByIndex),
     },
   }
 }

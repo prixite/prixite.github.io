@@ -45,11 +45,11 @@ export interface Service {
 
 export interface SortByDateParam {
   frontmatter: {
-    [key: string]: any
+    [key: string]: string | number
   }
 }
 
 export interface SortbyIndexParam {
   slug: string
-  frontmatter: { [key: string]: any }
+  frontmatter: { [key: string]: string | number }
 }

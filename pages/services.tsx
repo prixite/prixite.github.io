@@ -12,7 +12,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { sortByIndex } from '../utils/sort'
 
-const Services = ({services}: MDContent) => {
+const Services = ({ services }: MDContent) => {
   const { servicesPageTitle, servicesPageHeader } = servicesData
   return (
     <>
@@ -40,11 +40,11 @@ const Services = ({services}: MDContent) => {
         <Grid container spacing={{ xs: 2, md: 7 }} columnSpacing={3}>
           {services?.map((item) => (
             <Service
-            key={item.frontmatter.index}
-            img={item.frontmatter.logo_image}
-            title={item.frontmatter.header}
-            description={item.frontmatter.description}
-            path={`/services/${item.slug}`}
+              key={item.frontmatter.index}
+              img={item.frontmatter.logo_image}
+              title={item.frontmatter.header}
+              description={item.frontmatter.description}
+              path={`/services/${item.slug}`}
             />
           ))}
         </Grid>
@@ -74,7 +74,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      services: services.sort(sortByIndex)
+      services: services.sort(sortByIndex),
     },
   }
 }

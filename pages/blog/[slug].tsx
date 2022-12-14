@@ -45,13 +45,13 @@ export default function BlogDetailPage({
         </Stack>
       </Box>
 
-      <Container disableGutters maxWidth='xl'>
+      <Container disableGutters maxWidth="xl">
         <div className="post-body">
           <div dangerouslySetInnerHTML={{ __html: md().render(content) }}></div>
         </div>
       </Container>
 
-      <Container className="likes" maxWidth='xl'>
+      <Container className="likes" maxWidth="xl">
         <Stack direction={'row'} gap={10}>
           <Stack direction={'row'} gap={1} alignItems="center">
             <Image

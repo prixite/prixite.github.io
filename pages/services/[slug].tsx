@@ -22,9 +22,7 @@ const ServiceDetail = ({
       <Container maxWidth="xl" className="page-header">
         <Box className="header">
           <Box className="heading">
-            <Typography className="heading-text">
-             {header}
-            </Typography>
+            <Typography className="heading-text">{header}</Typography>
             <Typography>{description}</Typography>
           </Box>
           <Box>
@@ -36,7 +34,7 @@ const ServiceDetail = ({
           <Container disableGutters maxWidth="xl">
             <div className="post-body">
               <div
-                className='service-content'
+                className="service-content"
                 dangerouslySetInnerHTML={{ __html: md().render(content) }}
               ></div>
             </div>

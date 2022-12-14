@@ -202,7 +202,6 @@ export const careersData = {
   buttonText: 'Search Jobs',
 }
 
-
 export const joinUsLinkIcons = [
   {
     icon: FacebookIcon,

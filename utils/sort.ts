@@ -7,5 +7,5 @@ export const sortByDate = (a: SortByDateParam, b: SortByDateParam) => {
 }
 
 export const sortByIndex = (a: SortbyIndexParam, b: SortbyIndexParam) => {
-  return a.frontmatter.index - b.frontmatter.index
+  return Number(a.frontmatter.index) - Number(b.frontmatter.index)
 }

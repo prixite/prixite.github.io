@@ -19,7 +19,12 @@ const Service: React.FC<ServiceProps> = ({ img, title, description, path }) => {
         sx={{ cursor: 'pointer' }}
       >
         <Box className="service-image-container">
-          <Image width={22} height={img === '/images/services/devops.png' ? 14 : 20} src={img} alt="service-image" />
+          <Image
+            width={22}
+            height={img === '/images/services/devops.png' ? 14 : 20}
+            src={img}
+            alt="service-image"
+          />
         </Box>
 
         <Typography sx={{ fontSize: 15, fontWeight: 600 }} mt="18px">
