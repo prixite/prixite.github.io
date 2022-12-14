@@ -116,11 +116,17 @@ header a {
   border-radius: 10px;
 }
 
+.service-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .post-body ul,
 ol {
   font-size: 100%;
   line-height: 2.3;
-  font-weight: bold;
+  font-weight: 600;
   margin: 10px 0;
   padding-left: 20px;
 }

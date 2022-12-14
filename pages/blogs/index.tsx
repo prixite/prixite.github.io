@@ -11,9 +11,11 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Image from 'next/image'
-import { BlogPost, Posts } from '../../types/blog'
+import { BlogPost } from '../../types/interfaces'
+import { sortByDate } from '../../utils/sort'
+import { MDContent } from '../../types/interfaces'
 
-const Blog = ({ posts }: Posts) => {
+const Blog = ({ blogs }: MDContent) => {
   const { title, header } = newsAndBlogs
 
   return (
@@ -40,7 +42,7 @@ const Blog = ({ posts }: Posts) => {
       </Container>
 
       <Container maxWidth="xl" className="posts">
-        {posts?.map((post: BlogPost, index: number) => (
+        {blogs?.map((post: BlogPost, index: number) => (
           <div className="card" key={index}>
             <Image
               src={post.frontmatter.cover_image}
@@ -73,10 +75,10 @@ export default Blog
 
 export async function getStaticProps() {
   // Get files from the posts dir
-  const files = fs.readdirSync(path.join('data/blogs'))
+  const blogFiles = fs.readdirSync(path.join('data/blogs'))
 
   // Get slug and frontmatter from posts
-  const posts = files.map((filename) => {
+  const blogs = blogFiles.map((filename) => {
     // Create slug
     const slug = filename.replace('.md', '')
 
@@ -96,7 +98,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      posts: posts,
+      blogs: blogs.sort(sortByDate),
     },
   }
 }
