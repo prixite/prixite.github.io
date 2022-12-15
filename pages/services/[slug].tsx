@@ -5,7 +5,10 @@ import ContactButton from '../../components/Smart/ContactButton/ContactButton'
 import fs from 'fs'
 import md from 'markdown-it'
 import { Service, ServiceWithContent } from '../../types/interfaces'
-import { getMarkDownSingleData, getMarkdownSinglePath } from '../../utils/markdown'
+import {
+  getMarkDownSingleData,
+  getMarkdownSinglePath,
+} from '../../utils/markdown'
 import { SERVICES_PATH } from '../../utils/constants'
 
 const ServiceDetail = ({

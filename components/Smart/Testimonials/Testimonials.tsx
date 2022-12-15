@@ -35,7 +35,7 @@ const NextBtn = (props: Props) => {
   )
 }
 
-const Testimonials = ({testimonials}: TestimonialProps) => {
+const Testimonials = ({ testimonials }: TestimonialProps) => {
   const { heading } = testimonialsData
   return (
     <Container maxWidth="xl" className="testimonials-container">

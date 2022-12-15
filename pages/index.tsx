@@ -28,7 +28,11 @@ import Link from 'next/link'
 import { BlogPost, MDContent } from '../types/interfaces'
 import { sortByDate, sortByIndex } from '../utils/sort'
 import { getMarkdownAllData } from '../utils/markdown'
-import { BLOGS_PATH, SERVICES_PATH, TESTIMONIALS_PATH } from '../utils/constants'
+import {
+  BLOGS_PATH,
+  SERVICES_PATH,
+  TESTIMONIALS_PATH,
+} from '../utils/constants'
 
 export default function Home({ blogs, services, testimonials }: MDContent) {
   const { title } = homeData
@@ -45,7 +49,7 @@ export default function Home({ blogs, services, testimonials }: MDContent) {
   } = newsAndBlogs
   // eslint-disable-next-line
   const router = useRouter()
- 
+
   return (
     <>
       <Head>
@@ -167,8 +171,6 @@ export default function Home({ blogs, services, testimonials }: MDContent) {
   )
 }
 
-
-
 export async function getStaticProps() {
   const blogFiles = fs.readdirSync(path.join(BLOGS_PATH))
   const serviceFiles = fs.readdirSync(path.join(SERVICES_PATH))
@@ -176,7 +178,11 @@ export async function getStaticProps() {
 
   const blogs = getMarkdownAllData(blogFiles, BLOGS_PATH, fs)
   const services = getMarkdownAllData(serviceFiles, SERVICES_PATH, fs)
-  const testimonials = getMarkdownAllData(testimonialFiles, TESTIMONIALS_PATH, fs)
+  const testimonials = getMarkdownAllData(
+    testimonialFiles,
+    TESTIMONIALS_PATH,
+    fs
+  )
 
   return {
     props: {
