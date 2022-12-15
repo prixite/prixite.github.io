@@ -5,9 +5,9 @@ import md from 'markdown-it'
 import Image from 'next/image'
 import { Box, Container, Stack, Typography } from '@mui/material'
 import { joinUsLinkIcons, newsAndBlogs } from '../../data/data'
-import { BlogPostWithContent, Post } from '../../types/blog'
+import { BlogPostWithContent, Blog } from '../../types/interfaces'
 
-export default function PostPage({
+export default function BlogDetailPage({
   frontmatter: { title, date },
   content,
 }: BlogPostWithContent) {
@@ -45,13 +45,13 @@ export default function PostPage({
         </Stack>
       </Box>
 
-      <Container disableGutters>
+      <Container disableGutters maxWidth="xl">
         <div className="post-body">
           <div dangerouslySetInnerHTML={{ __html: md().render(content) }}></div>
         </div>
       </Container>
 
-      <Container className="likes">
+      <Container className="likes" maxWidth="xl">
         <Stack direction={'row'} gap={10}>
           <Stack direction={'row'} gap={1} alignItems="center">
             <Image
@@ -110,7 +110,7 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({ params: { slug } }: Post) {
+export async function getStaticProps({ params: { slug } }: Blog) {
   const markdownWithMeta = fs.readFileSync(
     path.join('data/blogs', slug + '.md'),
     'utf-8'
