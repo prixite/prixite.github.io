@@ -38,15 +38,11 @@ See [CONTRIBUTING.md](https://github.com/prixite/prixite.github.io/blob/master/C
 
 ## Future Plan
 We would like to reach to a place where anyone can fork this template, make few changes, and create a free website. For this to happen, following needs to happen:
-- a DB file to hold data of the website. Data should be separate from layout. https://github.com/prixite/prixite.github.io/issues/67
-- a system to create layout of pages.
-- a set of components which can be used in pages.
-- a system to change theme easily.
-- a system to change type of site, e.g. change from corporate to a blog.
-- maybe we should also separate style from layout.
+- All text should be read from markdown files.
+- User interface can be changed easily.
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2022- [Prixite](https://prixite.com/)
+The data folder and logo of Prixite are the property of [Prixite](https://prixite.com/). The rest of the stuff in this repo can be used freely.
