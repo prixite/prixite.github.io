@@ -18,9 +18,22 @@ export interface ServicePost {
   }
   slug: string
 }
+
+export interface Testimonial {
+  frontmatter: {
+    index: number
+    image: string
+    description: string
+    name: string
+    designation: string
+    date: string
+  }
+  slug: string
+}
 export interface MDContent {
   blogs?: Array<BlogPost>
   services?: Array<ServicePost>
+  testimonials?: Array<Testimonial>
 }
 
 export interface BlogPostWithContent extends BlogPost {

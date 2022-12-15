@@ -92,26 +92,6 @@ export const testimonialsData = {
   heading: 'Our Testimonials',
   leftImg: TestimonialLeft,
   rightImg: TestimonialRight,
-  testimonials: [
-    {
-      image: 'https://www.tutorialrepublic.com/examples/images/clients/1.jpg',
-      text: 'Prixite is one online technology solutions provider company that is considered as a new breed of thinkers who is driven to create effective business solutions for its clients. We aspire to become our client’s first choice when it comes to being a world leader in the progress and advancement of businesses through digital platforms.',
-      name: 'Brandon Dorwart',
-      designation: 'CEO Dupe Tech',
-    },
-    {
-      image: 'https://www.tutorialrepublic.com/examples/images/clients/2.jpg',
-      text: 'Prixite is one online technology solutions provider company that is considered as a new breed of thinkers who is driven to create effective business solutions for its clients. We aspire to become our client’s first choice when it comes to being a world leader in the progress and advancement of businesses through digital platforms.',
-      name: 'Brandon Dorwart',
-      designation: 'CEO Dupe Tech',
-    },
-    {
-      image: 'https://www.tutorialrepublic.com/examples/images/clients/3.jpg',
-      text: 'Prixite is one online technology solutions provider company that is considered as a new breed of thinkers who is driven to create effective business solutions for its clients. We aspire to become our client’s first choice when it comes to being a world leader in the progress and advancement of businesses through digital platforms.',
-      name: 'Brandon Dorwart',
-      designation: 'CEO Dupe Tech',
-    },
-  ],
 }
 
 /**********            Home Page Services Data          ********* */

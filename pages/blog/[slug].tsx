@@ -1,11 +1,11 @@
 import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
 import md from 'markdown-it'
 import Image from 'next/image'
 import { Box, Container, Stack, Typography } from '@mui/material'
 import { joinUsLinkIcons, newsAndBlogs } from '../../data/data'
 import { BlogPostWithContent, Blog } from '../../types/interfaces'
+import { BLOGS_PATH } from '../../utils/constants'
+import { getMarkDownSingleData, getMarkdownSinglePath } from '../../utils/markdown'
 
 export default function BlogDetailPage({
   frontmatter: { title, date },
@@ -96,33 +96,9 @@ export default function BlogDetailPage({
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join('data/blogs'))
-
-  const paths = files.map((filename) => ({
-    params: {
-      slug: filename.replace('.md', ''),
-    },
-  }))
-
-  return {
-    paths,
-    fallback: false,
-  }
+  return getMarkdownSinglePath(fs, BLOGS_PATH)
 }
 
 export async function getStaticProps({ params: { slug } }: Blog) {
-  const markdownWithMeta = fs.readFileSync(
-    path.join('data/blogs', slug + '.md'),
-    'utf-8'
-  )
-
-  const { data: frontmatter, content } = matter(markdownWithMeta)
-
-  return {
-    props: {
-      frontmatter,
-      slug,
-      content,
-    },
-  }
+  return getMarkDownSingleData(fs, BLOGS_PATH, slug)
 }

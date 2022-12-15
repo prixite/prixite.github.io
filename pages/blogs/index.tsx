@@ -9,11 +9,12 @@ import Head from 'next/head'
 import Link from 'next/link'
 import fs from 'fs'
 import path from 'path'
-import matter from 'gray-matter'
 import Image from 'next/image'
 import { BlogPost } from '../../types/interfaces'
 import { sortByDate } from '../../utils/sort'
 import { MDContent } from '../../types/interfaces'
+import { BLOGS_PATH } from '../../utils/constants'
+import { getMarkdownAllData } from '../../utils/markdown'
 
 const Blog = ({ blogs }: MDContent) => {
   const { title, header } = newsAndBlogs
@@ -74,27 +75,8 @@ const Blog = ({ blogs }: MDContent) => {
 export default Blog
 
 export async function getStaticProps() {
-  // Get files from the posts dir
-  const blogFiles = fs.readdirSync(path.join('data/blogs'))
-
-  // Get slug and frontmatter from posts
-  const blogs = blogFiles.map((filename) => {
-    // Create slug
-    const slug = filename.replace('.md', '')
-
-    // Get frontmatter
-    const markdownWithMeta = fs.readFileSync(
-      path.join('data/blogs', filename),
-      'utf-8'
-    )
-
-    const { data: frontmatter } = matter(markdownWithMeta)
-
-    return {
-      slug,
-      frontmatter,
-    }
-  })
+  const blogFiles = fs.readdirSync(path.join(BLOGS_PATH))
+  const blogs = getMarkdownAllData(blogFiles, BLOGS_PATH, fs)
 
   return {
     props: {

@@ -35,3 +35,14 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .testimonials-container {
+    .testimonial {
+      width: 100%;
+      .slick-arrow.slick-prev, .slick-arrow.slick-next{
+        display: none;
+      }
+    }
+  }
+}

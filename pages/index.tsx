@@ -1,6 +1,6 @@
 import { Box, Container, Typography, Grid, Button, Stack } from '@mui/material'
 // eslint-disable-next-line
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import { homeData, newsAndBlogs } from '../data/data'
 // eslint-disable-next-line
 import Chip from '@mui/material/Chip'
@@ -24,12 +24,13 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import fs from 'fs'
 import path from 'path'
-import matter from 'gray-matter'
 import Link from 'next/link'
 import { BlogPost, MDContent } from '../types/interfaces'
 import { sortByDate, sortByIndex } from '../utils/sort'
+import { getMarkdownAllData } from '../utils/markdown'
+import { BLOGS_PATH, SERVICES_PATH, TESTIMONIALS_PATH } from '../utils/constants'
 
-export default function Home({ blogs, services }: MDContent) {
+export default function Home({ blogs, services, testimonials }: MDContent) {
   const { title } = homeData
   const { servicesHeading, servicesAim } = servicesData
   const { aboutUsHeader, aboutUsHeading, aboutUsDescription, images } =
@@ -44,7 +45,7 @@ export default function Home({ blogs, services }: MDContent) {
   } = newsAndBlogs
   // eslint-disable-next-line
   const router = useRouter()
-
+ 
   return (
     <>
       <Head>
@@ -156,7 +157,7 @@ export default function Home({ blogs, services }: MDContent) {
           </Box>
         </Container>
 
-        {/* <Testimonials /> */}
+        <Testimonials testimonials={testimonials} />
 
         {/* <Container maxWidth="xl" sx={{ marginTop: 10 }}>
           <Subscribe />
@@ -166,40 +167,22 @@ export default function Home({ blogs, services }: MDContent) {
   )
 }
 
+
+
 export async function getStaticProps() {
-  const blogFiles = fs.readdirSync(path.join('data/blogs'))
-  const serviceFiles = fs.readdirSync(path.join('data/services'))
+  const blogFiles = fs.readdirSync(path.join(BLOGS_PATH))
+  const serviceFiles = fs.readdirSync(path.join(SERVICES_PATH))
+  const testimonialFiles = fs.readdirSync(path.join(TESTIMONIALS_PATH))
 
-  const blogs = blogFiles.map((filename) => {
-    const slug = filename.replace('.md', '')
-    const markdownWithMeta = fs.readFileSync(
-      path.join('data/blogs', filename),
-      'utf-8'
-    )
-    const { data: frontmatter } = matter(markdownWithMeta)
-    return {
-      slug,
-      frontmatter,
-    }
-  })
-
-  const services = serviceFiles.map((filename) => {
-    const slug = filename.replace('.md', '')
-    const markdownWithMeta = fs.readFileSync(
-      path.join('data/services', filename),
-      'utf-8'
-    )
-    const { data: frontmatter } = matter(markdownWithMeta)
-    return {
-      slug,
-      frontmatter,
-    }
-  })
+  const blogs = getMarkdownAllData(blogFiles, BLOGS_PATH, fs)
+  const services = getMarkdownAllData(serviceFiles, SERVICES_PATH, fs)
+  const testimonials = getMarkdownAllData(testimonialFiles, TESTIMONIALS_PATH, fs)
 
   return {
     props: {
       blogs: blogs.sort(sortByDate),
       services: services.sort(sortByIndex),
+      testimonials: testimonials.sort(sortByDate),
     },
   }
 }
