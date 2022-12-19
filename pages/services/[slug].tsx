@@ -3,10 +3,13 @@ import { Container, Box, Typography } from '@mui/material'
 import Head from 'next/head'
 import ContactButton from '../../components/Smart/ContactButton/ContactButton'
 import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
 import md from 'markdown-it'
 import { Service, ServiceWithContent } from '../../types/interfaces'
+import {
+  getMarkDownSingleData,
+  getMarkdownSinglePath,
+} from '../../utils/markdown'
+import { SERVICES_PATH } from '../../utils/constants'
 
 const ServiceDetail = ({
   frontmatter: { title, header, description },
@@ -49,33 +52,9 @@ const ServiceDetail = ({
 export default ServiceDetail
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join('data/services'))
-
-  const paths = files.map((filename) => ({
-    params: {
-      slug: filename.replace('.md', ''),
-    },
-  }))
-
-  return {
-    paths,
-    fallback: false,
-  }
+  return getMarkdownSinglePath(fs, SERVICES_PATH)
 }
 
 export async function getStaticProps({ params: { slug } }: Service) {
-  const markdownWithMeta = fs.readFileSync(
-    path.join('data/services', slug + '.md'),
-    'utf-8'
-  )
-
-  const { data: frontmatter, content } = matter(markdownWithMeta)
-
-  return {
-    props: {
-      frontmatter,
-      slug,
-      content,
-    },
-  }
+  return getMarkDownSingleData(fs, SERVICES_PATH, slug)
 }

@@ -9,8 +9,9 @@ import { servicesData } from '../data/data'
 import { MDContent } from '../types/interfaces'
 import fs from 'fs'
 import path from 'path'
-import matter from 'gray-matter'
 import { sortByIndex } from '../utils/sort'
+import { SERVICES_PATH } from '../utils/constants'
+import { getMarkdownAllData } from '../utils/markdown'
 
 const Services = ({ services }: MDContent) => {
   const { servicesPageTitle, servicesPageHeader } = servicesData
@@ -57,20 +58,8 @@ const Services = ({ services }: MDContent) => {
 export default Services
 
 export async function getStaticProps() {
-  const serviceFiles = fs.readdirSync(path.join('data/services'))
-
-  const services = serviceFiles.map((filename) => {
-    const slug = filename.replace('.md', '')
-    const markdownWithMeta = fs.readFileSync(
-      path.join('data/services', filename),
-      'utf-8'
-    )
-    const { data: frontmatter } = matter(markdownWithMeta)
-    return {
-      slug,
-      frontmatter,
-    }
-  })
+  const serviceFiles = fs.readdirSync(path.join(SERVICES_PATH))
+  const services = getMarkdownAllData(serviceFiles, SERVICES_PATH, fs)
 
   return {
     props: {

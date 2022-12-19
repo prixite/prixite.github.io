@@ -6,10 +6,15 @@ import Image from 'next/image'
 import TestimonialCard from '../../Presentational/TestimonialCard/TestimonialCard'
 import { testimonialsData } from '../../../data/data'
 import { Typography, Container } from '@mui/material'
+import { Testimonial } from '../../../types/interfaces'
 
 interface Props {
   className?: string
   onClick?: React.MouseEventHandler<HTMLDivElement>
+}
+
+interface TestimonialProps {
+  testimonials?: Array<Testimonial>
 }
 
 const PreviousBtn = (props: Props) => {
@@ -30,8 +35,8 @@ const NextBtn = (props: Props) => {
   )
 }
 
-const Testimonials = () => {
-  const { testimonials, heading } = testimonialsData
+const Testimonials = ({ testimonials }: TestimonialProps) => {
+  const { heading } = testimonialsData
   return (
     <Container maxWidth="xl" className="testimonials-container">
       <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
@@ -42,13 +47,13 @@ const Testimonials = () => {
       </Typography>
       <div className="testimonial">
         <Slider prevArrow={<PreviousBtn />} nextArrow={<NextBtn />}>
-          {testimonials.map((testimonial, index) => (
+          {testimonials?.map((testimonial, index) => (
             <TestimonialCard
               key={index}
-              img={testimonial.image}
-              text={testimonial.text}
-              name={testimonial.name}
-              designation={testimonial.designation}
+              img={testimonial.frontmatter.image}
+              text={testimonial.frontmatter.description}
+              name={testimonial.frontmatter.name}
+              designation={testimonial.frontmatter.designation}
             />
           ))}
         </Slider>
