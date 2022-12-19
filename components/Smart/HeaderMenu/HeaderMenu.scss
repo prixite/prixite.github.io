@@ -11,5 +11,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    right: -2px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .header-menu-container {
+    .menu-icon {
+      right: -6px;
+    }
   }
 }
