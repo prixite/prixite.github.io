@@ -50,9 +50,19 @@
     .blogs-carousel {
       display: block;
     }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .home-page-container {
+    .blogs-header-section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
 
     .view-all-btn {
-      display: none;
+      height: 50px;
     }
   }
 }

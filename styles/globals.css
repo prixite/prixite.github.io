@@ -88,10 +88,10 @@ header a {
 }
 
 .posts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  margin-top: 30px;
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 30px !important;
+  margin-top: 30px !important;
 }
 
 .card {
@@ -140,13 +140,13 @@ ol {
 
 .read-button {
   font-family: 'lato';
-  color: white;
+  color: white !important;
   font-size: 13px;
   height: 48px;
 }
 
 @media (max-width: 500px) {
   .posts {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 }
