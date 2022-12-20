@@ -15,8 +15,6 @@ import Testimonials from '../components/Smart/Testimonials/Testimonials'
 // eslint-disable-next-line
 import Subscribe from '../components/Shared/Subscribe/Subscribe'
 // eslint-disable-next-line
-import Blog from '../components/Presentational/Blog/Blog'
-// eslint-disable-next-line
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined'
 import HomeContainer from '../components/Presentational/HomeContainer/HomeContainer'
 import Slider from 'react-slick'
