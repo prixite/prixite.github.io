@@ -109,7 +109,7 @@ export default function Home({ blogs, services, testimonials }: MDContent) {
 
         <Container maxWidth="xl">
           <Box pb="5rem" pt="5rem">
-            <Stack direction={'row'} justifyContent="space-between">
+            <Stack direction={'row'} justifyContent="space-between" className='blogs-header-section'>
               <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
                 {newsHeader.slice(0, 6)}
                 <span style={{ color: '#63AC45' }}>
