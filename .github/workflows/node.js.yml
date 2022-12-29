@@ -5,11 +5,10 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "prod" ]
+    branches: ['prod']
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -18,19 +17,19 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build
-    - run: npm run export
-    - run: touch ./out/.nojekyll
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build
+      - run: npm run export
+      - run: touch ./out/.nojekyll
 
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@v4.3.3
-      with:
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
           branch: deploy # The branch the action should deploy to.
           folder: out # The folder the action should deploy.

@@ -10,9 +10,12 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "lint": "next lint && eslint"
+    "lint": "next lint && eslint && prettier --check .",
+    "fix": "prettier --write ."
   },
-  "pre-commit": [ "lint" ],
+  "pre-commit": [
+    "lint"
+  ],
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.0",

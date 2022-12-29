@@ -1,8 +1,4 @@
 import React from 'react'
-// eslint-disable-next-line
-import Header from '../../components/Shared/header/Header'
-// eslint-disable-next-line
-import homePageBg from '../public/images/homePageBg.png'
 import { Box, Typography, Container, Button } from '@mui/material'
 import { newsAndBlogs } from '../../data/data'
 import Head from 'next/head'

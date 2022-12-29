@@ -30,6 +30,7 @@ import {
   BLOGS_PATH,
   SERVICES_PATH,
   TESTIMONIALS_PATH,
+  FEATURES,
 } from '../utils/constants'
 
 export default function Home({ blogs, services, testimonials }: MDContent) {
@@ -107,63 +108,71 @@ export default function Home({ blogs, services, testimonials }: MDContent) {
           />
         </Container>
 
-        <Container maxWidth="xl">
-          <Box pb="5rem" pt="5rem">
-            <Stack direction={'row'} justifyContent="space-between" className='blogs-header-section'>
-              <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
-                {newsHeader.slice(0, 6)}
-                <span style={{ color: '#63AC45' }}>
-                  {newsHeader.slice(6, 11)}
-                </span>
-              </Typography>
-              <Button
-                className="view-all-btn"
-                variant="outlined"
-                endIcon={<ArrowForwardOutlinedIcon />}
-                onClick={() => router.push('/blogs')}
+        {FEATURES.blogs && (
+          <Container maxWidth="xl">
+            <Box pb="5rem" pt="5rem">
+              <Stack
+                direction={'row'}
+                justifyContent="space-between"
+                className="blogs-header-section"
               >
-                {viewButtonText}
-              </Button>
-            </Stack>
+                <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
+                  {newsHeader.slice(0, 6)}
+                  <span style={{ color: '#63AC45' }}>
+                    {newsHeader.slice(6, 11)}
+                  </span>
+                </Typography>
+                <Button
+                  className="view-all-btn"
+                  variant="outlined"
+                  endIcon={<ArrowForwardOutlinedIcon />}
+                  onClick={() => router.push('/blogs')}
+                >
+                  {viewButtonText}
+                </Button>
+              </Stack>
 
-            <Typography my={3}>{newsHeading}</Typography>
+              <Typography my={3}>{newsHeading}</Typography>
 
-            <Container maxWidth="xl" className="posts" disableGutters>
-              {blogs?.slice(0, 2).map((blog: BlogPost, index: number) => (
-                <div className="card" key={index}>
-                  <Image
-                    className="post-img"
-                    src={blog?.frontmatter?.cover_image}
-                    alt="image"
-                    width={500}
-                    height={500}
-                    layout="responsive"
-                  />
+              <Container maxWidth="xl" className="posts" disableGutters>
+                {blogs?.slice(0, 2).map((blog: BlogPost, index: number) => (
+                  <div className="card" key={index}>
+                    <Image
+                      className="post-img"
+                      src={blog?.frontmatter?.cover_image}
+                      alt="image"
+                      width={500}
+                      height={500}
+                      layout="responsive"
+                    />
 
-                  <div className="post-date">
-                    Posted on {blog.frontmatter.date}
+                    <div className="post-date">
+                      Posted on {blog.frontmatter.date}
+                    </div>
+
+                    <h3>{blog.frontmatter.title}</h3>
+
+                    <p>{blog.frontmatter.excerpt}</p>
+
+                    <Link href={`/blog/${blog.slug}`}>
+                      <Button variant="contained" className="read-button">
+                        Read More
+                      </Button>
+                    </Link>
                   </div>
+                ))}
+              </Container>
+            </Box>
+          </Container>
+        )}
 
-                  <h3>{blog.frontmatter.title}</h3>
+        {FEATURES.testimonials && <Testimonials testimonials={testimonials} />}
 
-                  <p>{blog.frontmatter.excerpt}</p>
-
-                  <Link href={`/blog/${blog.slug}`}>
-                    <Button variant="contained" className="read-button">
-                      Read More
-                    </Button>
-                  </Link>
-                </div>
-              ))}
-            </Container>
-          </Box>
-        </Container>
-
-        <Testimonials testimonials={testimonials} />
-
-        {/* <Container maxWidth="xl" sx={{ marginTop: 10 }}>
-          <Subscribe />
-        </Container> */}
+        {FEATURES.subscribe && (
+          <Container maxWidth="xl" sx={{ marginTop: 10 }}>
+            <Subscribe />
+          </Container>
+        )}
       </div>
     </>
   )
