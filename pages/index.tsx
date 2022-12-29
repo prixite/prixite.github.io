@@ -166,11 +166,13 @@ export default function Home({ blogs, services, testimonials }: MDContent) {
           </Container>
         )}
 
-        <Testimonials testimonials={testimonials} />
+        {FEATURES.testimonials && <Testimonials testimonials={testimonials} />}
 
-        {/* <Container maxWidth="xl" sx={{ marginTop: 10 }}>
-          <Subscribe />
-        </Container> */}
+        {FEATURES.subscribe && (
+          <Container maxWidth="xl" sx={{ marginTop: 10 }}>
+            <Subscribe />
+          </Container>
+        )}
       </div>
     </>
   )
