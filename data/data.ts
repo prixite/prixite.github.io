@@ -16,6 +16,7 @@ import aboutUsp5 from '../public/images/aboutUs-p5.png'
 import likes from '../public/images/handsClapping.png'
 import comments from '../public/images/chatTeardropDots.png'
 import scrollToTop from '../public/images/scrollToTop.png'
+import { FEATURES } from '../utils/constants'
 
 /*********          Header Menu Data            ********** */
 export const pages = [
@@ -28,14 +29,17 @@ export const pages = [
     text: 'Services',
   },
   {
-    path: '/blogs',
-    text: 'News & Blogs',
-  },
-  {
     path: '/contact-us',
     text: 'Contact Us',
   },
 ]
+
+if (FEATURES.blogs) {
+  pages.push({
+    path: '/blogs',
+    text: 'News & Blogs',
+  })
+}
 
 export const siteName = 'Prixite'
 
