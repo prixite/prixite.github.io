@@ -30,6 +30,7 @@ import {
   BLOGS_PATH,
   SERVICES_PATH,
   TESTIMONIALS_PATH,
+  FEATURES,
 } from '../utils/constants'
 
 export default function Home({ blogs, services, testimonials }: MDContent) {
@@ -107,6 +108,7 @@ export default function Home({ blogs, services, testimonials }: MDContent) {
           />
         </Container>
 
+        {FEATURES.blogs && 
         <Container maxWidth="xl">
           <Box pb="5rem" pt="5rem">
             <Stack direction={'row'} justifyContent="space-between" className='blogs-header-section'>
@@ -158,6 +160,7 @@ export default function Home({ blogs, services, testimonials }: MDContent) {
             </Container>
           </Box>
         </Container>
+        }
 
         <Testimonials testimonials={testimonials} />
 
