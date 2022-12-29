@@ -16,7 +16,7 @@ bis.
 4. Geminum viscere deum et utque
 
 ```js
-var a = 10;
+var a = 10
 ```
 
 - list
