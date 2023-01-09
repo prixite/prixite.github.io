@@ -148,7 +148,7 @@ export const aboutUsCardData = {
   aboutUsHeader: 'About Us',
   aboutUsHeading: 'Fastest Growing IT Company',
   aboutUsDescription:
-    'Prixite is one online technology solutions provider company that is considered as a new breed of thinkers who is driven to create effective business solutions for its clients. We aspire to become our client’s first choice when it comes to being a world leader in the progress and advancement of businesses through digital platforms.',
+    "Prixite is a software development company specializing in Python, Machine Learning, and JavaScript. We have a team of skilled developers with a wealth of experience in these areas, and we pride ourselves on delivering top-quality software solutions to our clients. Whether you need a simple website or a complex machine learning application, we have the expertise to get the job done. At Prixite, we are committed to providing excellent customer service and delivering results that exceed our clients' expectations.",
   images: [
     {
       img: aboutUsp1,
