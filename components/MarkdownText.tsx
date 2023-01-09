@@ -45,6 +45,6 @@ const options = {
   },
 }
 
-export default function MarkdownText(props: { name: string }) {
+export default function MarkdownText(props: { children: string }) {
   return <Markdown options={options} {...props} />
 }
