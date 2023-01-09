@@ -70,15 +70,6 @@ const AboutUs = () => {
           </Box>
         </Box>
       </Container>
-      {/* <Container maxWidth="xl">
-        <Vision
-          aboutUsVisionImg={visionImage}
-          visionAim={visionAim}
-          visionData={visionData}
-          visionTitle={visionTitle}
-        />
-      </Container> */}
-      {/* <Subscribe /> */}
     </>
   )
 }
