@@ -4,6 +4,6 @@ export const TESTIMONIALS_PATH = 'data/testimonials'
 
 export const FEATURES = {
   blogs: false,
-  testimonials: false,
+  testimonials: true,
   subscribe: false,
 }
