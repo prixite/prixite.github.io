@@ -1,5 +1,4 @@
 import fs from 'fs'
-import md from 'markdown-it'
 import Image from 'next/image'
 import { Box, Container, Stack, Typography } from '@mui/material'
 import { joinUsLinkIcons, newsAndBlogs } from '../../data/data'
@@ -9,6 +8,7 @@ import {
   getMarkDownSingleData,
   getMarkdownSinglePath,
 } from '../../utils/markdown'
+import MarkdownText from '../../components/MarkdownText'
 
 export default function BlogDetailPage({
   frontmatter: { title, date },
@@ -50,7 +50,7 @@ export default function BlogDetailPage({
 
       <Container disableGutters maxWidth="xl">
         <div className="post-body">
-          <div dangerouslySetInnerHTML={{ __html: md().render(content) }}></div>
+          <MarkdownText>{content}</MarkdownText>
         </div>
       </Container>
 
