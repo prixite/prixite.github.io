@@ -1,8 +1,8 @@
 ---
 index: 2
-image: 'https://www.tutorialrepublic.com/examples/images/clients/2.jpg'
-description: 'Prixite is one online technology solutions provider company that is considered as a new breed of thinkers who is driven to create effective business solutions for its clients. We aspire to become our client’s first choice when it comes to being a world leader in the progress and advancement of businesses through digital platforms.'
-name: Brandon Dorwart
-designation: CEO Dupe Tech
-date: 'March 6, 2022'
+image: '/images/clients/canelsa.png'
+description: 'The experience till date with Prixite and Hammad in particular was a really great one in a complex project that evolved constantly. We are happy with the work done and looking forward to work with them again, keeping in mind the lessons learned till now. Kudos to them and surely an asset to work with them.'
+name: Valentin Albu
+designation: Canel SA
+date: 'July 31, 2022'
 ---
