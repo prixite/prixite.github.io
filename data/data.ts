@@ -207,11 +207,11 @@ export const footerData = {
   details: [
     {
       icon: LocationIcon,
-      desc: '4 Mozang Road, Near Family Hospital, Lahore, Pakistan',
+      desc: 'Sheridan, WY, USA | Lahore, Pakistan',
     },
     {
       icon: PhoneIcon,
-      desc: '042 37114925',
+      desc: '+16282773693',
     },
     {
       icon: MailIcon,
