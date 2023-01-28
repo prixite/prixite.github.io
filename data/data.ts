@@ -211,7 +211,7 @@ export const footerData = {
     },
     {
       icon: PhoneIcon,
-      desc: '+16282773693',
+      desc: '+1 (628) 277-3693',
     },
     {
       icon: MailIcon,
