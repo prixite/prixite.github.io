@@ -3,7 +3,7 @@ export const SERVICES_PATH = 'data/services'
 export const TESTIMONIALS_PATH = 'data/testimonials'
 
 export const FEATURES = {
-  blogs: false,
+  blogs: true,
   testimonials: true,
   subscribe: false,
 }
