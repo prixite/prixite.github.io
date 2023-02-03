@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import fs from 'fs'
 import Image from 'next/image'
 import { Box, Container, Stack, Typography } from '@mui/material'
@@ -9,11 +10,27 @@ import {
   getMarkdownSinglePath,
 } from '../../utils/markdown'
 import MarkdownText from '../../components/MarkdownText'
+import Prism from 'prismjs';
+import "prismjs/themes/prism-tomorrow.css";
+import 'prismjs/components/prism-python';
+import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
+import "prismjs/plugins/toolbar/prism-toolbar.min.css";
+import "prismjs/plugins/toolbar/prism-toolbar.min";
+import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min";
+import "prismjs/components/prism-jsx";
+import "prismjs/components/prism-typescript"
+import "prismjs/plugins/normalize-whitespace/prism-normalize-whitespace";
+import "prismjs/components/prism-markup-templating";
 
 export default function BlogDetailPage({
   frontmatter: { title, date },
   content,
 }: BlogPostWithContent) {
+
+  useEffect(() => {
+      Prism.highlightAll()
+  }, [])
+
   return (
     <Container maxWidth="xl" className="page-header">
       <Box className="header">

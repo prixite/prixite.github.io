@@ -28,7 +28,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
-
+.pre-commit-config.yaml
 # local env files
 .env*.local
 
