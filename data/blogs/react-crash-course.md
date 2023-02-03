@@ -13,21 +13,20 @@ pavida ne omnes etiam, atque. Sonuit omina sed sine haerebat illic fit a mora
 in.
 
 ```js
-    function react(a,b,c){
-        console.log("React JS");
-    }
+function react(a, b, c) {
+  console.log('React JS')
+}
 ```
 
 ```jsx
-    <>
-        <Component>
-        </Component>
-        {array.map((item) => console.log('react'))}
-    </>
+<>
+  <Component></Component>
+  {array.map((item) => console.log('react'))}
+</>
 ```
 
 ```ts
-    const a: string = 'react';
+const a: string = 'react'
 ```
 
 1. Serrae enim Etruscam aquis
@@ -42,7 +41,6 @@ Ille fida formosus, et addunt viscera perdidit ad pondere quia tellus
 consequitur et quoque scinditque in. Ratis laborum instabat quaedam partem
 Phoebus, manus _partibus poenas_. Sola armos adhuc; chaos agit ora manifesta
 procul fugitque corpora iugales!
-
 
 ## O contra diu
 
