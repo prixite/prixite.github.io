@@ -6,30 +6,18 @@ import Subscribe from '../components/Shared/Subscribe/Subscribe'
 import ContactButton from '../components/Smart/ContactButton/ContactButton'
 // eslint-disable-next-line
 import Vision from '../components/Presentational/Vision/Vision'
-import AboutUsHeader from '../public/images/about-us-header.svg'
-import { aboutUsPageData } from '../data/data'
 import Head from 'next/head'
+import fs from 'fs'
+import { ABOUT_US_PATH } from '../utils/constants'
+import { getMarkDownSingleData } from '../utils/markdown'
+import { AboutUs } from '../types/interfaces'
 
-const AboutUs = () => {
-  const {
-    title,
-    header,
-    heading,
-    aim,
-    description,
-    // eslint-disable-next-line
-    visionData,
-    // eslint-disable-next-line
-    visionImage,
-    // eslint-disable-next-line
-    visionAim,
-    // eslint-disable-next-line
-    visionTitle,
-  } = aboutUsPageData
+// eslint-disable-next-line
+const AboutUs = ({ frontmatter, content }: AboutUs) => {
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{frontmatter.title}</title>
         <meta name="prixite" content="Prixte" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -37,11 +25,11 @@ const AboutUs = () => {
         <Box className="header">
           <Box className="heading">
             <Typography className="heading-text">
-              {header.slice(0, 6)}
+              {frontmatter.heading.slice(0, 6)}
               <span style={{ color: 'var(--primary-green)' }}>
-                {header.slice(6, 15)}
+                {frontmatter.heading.slice(6, 15)}
               </span>
-              {header.slice(15, 32)} 🚀
+              {frontmatter.heading.slice(15, 32)} 🚀
             </Typography>
           </Box>
           <Box>
@@ -52,21 +40,24 @@ const AboutUs = () => {
         <Box className="image-header-container">
           <Box className="image-header">
             <Image
-              src={AboutUsHeader}
+              src={frontmatter.image}
               className="image"
               alt="aboutus"
               layout="responsive"
+              width={100}
+              height={100}
             />
           </Box>
           <Box className="image-content-container">
             <Typography className="image-text">
               <span style={{ color: 'var(--primary-green)' }}>
-                {heading.slice(0, 15)}
+                {frontmatter.header.slice(0, 15)}
               </span>{' '}
-              {heading.slice(15, 26)}
+              {frontmatter.header.slice(15, 26)}
             </Typography>
-            <Typography className="aim">{aim}</Typography>
-            <Typography className="description">{description}</Typography>
+            <Typography className="description">
+              {frontmatter.description}
+            </Typography>
           </Box>
         </Box>
       </Container>
@@ -75,3 +66,7 @@ const AboutUs = () => {
 }
 
 export default AboutUs
+
+export async function getStaticProps() {
+  return getMarkDownSingleData(fs, ABOUT_US_PATH)
+}
