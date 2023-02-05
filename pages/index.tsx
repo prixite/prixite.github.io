@@ -30,8 +30,8 @@ import {
   BLOGS_PATH,
   SERVICES_PATH,
   TESTIMONIALS_PATH,
-  FEATURES,
 } from '../utils/constants'
+import { FEATURES } from '../data/features'
 
 export default function Home({ blogs, services, testimonials }: MDContent) {
   const { title } = homeData
