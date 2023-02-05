@@ -25,19 +25,24 @@ import path from 'path'
 import Link from 'next/link'
 import { BlogPost, MDContent } from '../types/interfaces'
 import { sortByDate, sortByIndex } from '../utils/sort'
-import { getMarkdownAllData } from '../utils/markdown'
+import { getMarkdownAllData, getMarkDownSingleData } from '../utils/markdown'
 import {
   BLOGS_PATH,
   SERVICES_PATH,
   TESTIMONIALS_PATH,
   FEATURES,
+  ABOUT_US_PATH,
 } from '../utils/constants'
 
-export default function Home({ blogs, services, testimonials }: MDContent) {
+export default function Home({
+  blogs,
+  services,
+  testimonials,
+  aboutUs,
+}: MDContent) {
   const { title } = homeData
   const { servicesHeading, servicesAim } = servicesData
-  const { aboutUsHeader, aboutUsHeading, aboutUsDescription, images } =
-    aboutUsCardData
+  const { images } = aboutUsCardData
   const {
     // eslint-disable-next-line
     header: newsHeader,
@@ -101,9 +106,9 @@ export default function Home({ blogs, services, testimonials }: MDContent) {
 
         <Container maxWidth="xl">
           <AboutUs
-            header={aboutUsHeader}
-            heading={aboutUsHeading}
-            description={aboutUsDescription}
+            header={aboutUs.frontmatter.title}
+            heading={aboutUs.frontmatter.header}
+            description={aboutUs.frontmatter.description}
             images={images}
           />
         </Container>
@@ -190,12 +195,14 @@ export async function getStaticProps() {
     TESTIMONIALS_PATH,
     fs
   )
+  const aboutUs = getMarkDownSingleData(fs, ABOUT_US_PATH)
 
   return {
     props: {
       blogs: blogs.sort(sortByDate),
       services: services.sort(sortByIndex),
       testimonials: testimonials.sort(sortByDate),
+      aboutUs: aboutUs.props,
     },
   }
 }
