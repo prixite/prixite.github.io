@@ -54,8 +54,8 @@ const Testimonials = ({ testimonials }: TestimonialProps) => {
               text={testimonial.frontmatter.description}
               name={testimonial.frontmatter.name}
               designation={testimonial.frontmatter.designation}
-              product={testimonial.frontmatter.product}
-              product_link={testimonial.frontmatter.product_link}
+              company={testimonial.frontmatter.company}
+              website={testimonial.frontmatter.website}
             />
           ))}
         </Slider>
