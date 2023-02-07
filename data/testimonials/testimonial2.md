@@ -1,8 +1,8 @@
 ---
 index: 2
-image: '/images/clients/canelsa.png'
-description: 'The experience till date with Prixite and Hammad in particular was a really great one in a complex project that evolved constantly. We are happy with the work done and looking forward to work with them again, keeping in mind the lessons learned till now. Kudos to them and surely an asset to work with them.'
-name: Valentin Albu
-designation: Canel SA
-date: 'July 31, 2022'
+image: '/images/clients/superballx.jpeg'
+description: "The best team I've worked with, from the start to finish communication was perfect and the work was outstanding any problems these guys always had a solution and quick turn around. I would highly recommend this team 100%."
+name: Gavin McNally
+designation: CEO SuperBallx
+date: 'March 5, 2022'
 ---
