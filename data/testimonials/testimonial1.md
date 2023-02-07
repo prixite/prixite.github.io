@@ -1,8 +1,8 @@
 ---
 index: 1
-image: '/images/clients/superballx.jpeg'
-description: "The best team I've worked with, from the start to finish communication was perfect and the work was outstanding any problems these guys always had a solution and quick turn around. I would highly recommend this team 100%."
-name: Gavin McNally
-designation: CEO SuperBallx
+image: 'https://media.pixiebrix.com/_next/image?url=https%3A%2F%2Fsuper-static-assets.s3.amazonaws.com%2Fccc60628-59bb-42eb-a933-1cbafd281e1b%2Fimages%2F1ea4a6f8-f32e-41b5-846d-bd8d36db27d3.png&w=640&q=80'
+description: 'Prixite was a fantastic resource for augmenting our in-house development team. As a startup, moving fast is critical. Their web application developers seamlessly integrated with our team and brought expertise to our project.'
+name: Todd Schiller
+designation: CEO PixieBrix
 date: 'March 5, 2022'
 ---
