@@ -12,6 +12,23 @@ verba caput ferarum _nubila_? Patriam Cyparisse tamen, **saxum** fide postponere
 pavida ne omnes etiam, atque. Sonuit omina sed sine haerebat illic fit a mora
 in.
 
+```js
+function react(a, b, c) {
+  console.log('React JS')
+}
+```
+
+```jsx
+<>
+  <Component></Component>
+  {array.map((item) => console.log('react'))}
+</>
+```
+
+```ts
+const a: string = 'react'
+```
+
 1. Serrae enim Etruscam aquis
 2. Et premis et flumine frontem minatur oppressos
 3. Inquam rector Icarus possum vim tumulo propiusque
@@ -24,11 +41,6 @@ Ille fida formosus, et addunt viscera perdidit ad pondere quia tellus
 consequitur et quoque scinditque in. Ratis laborum instabat quaedam partem
 Phoebus, manus _partibus poenas_. Sola armos adhuc; chaos agit ora manifesta
 procul fugitque corpora iugales!
-
-    var ethics_font_drive
-            rgb + nybbleBaseband;
-    permalinkCertificateMacintosh
-    boot = bridgeDaemonActive;
 
 ## O contra diu
 
