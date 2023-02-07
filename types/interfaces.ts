@@ -27,6 +27,8 @@ export interface Testimonial {
     name: string
     designation: string
     date: string
+    product: string
+    product_link: string
   }
   slug: string
 }
