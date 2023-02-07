@@ -6,9 +6,18 @@ interface CardProps {
   text: string
   name: string
   designation: string
+  product: string
+  product_link: string
 }
 
-const TestimonialCard = ({ img, text, name, designation }: CardProps) => {
+const TestimonialCard = ({
+  img,
+  text,
+  name,
+  designation,
+  product,
+  product_link,
+}: CardProps) => {
   return (
     <Container maxWidth="xl" className="testimonial-card">
       <Avatar
@@ -18,7 +27,17 @@ const TestimonialCard = ({ img, text, name, designation }: CardProps) => {
       />
       <Typography className="testimonial-text">{text}</Typography>
       <Typography className="testimonial-name">{name}</Typography>
-      <Typography className="testimonial-designation">{designation}</Typography>
+      <Typography className="testimonial-designation">
+        {designation + ' '}
+        <a
+          href={product_link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="product-link"
+        >
+          {product}
+        </a>
+      </Typography>
     </Container>
   )
 }
