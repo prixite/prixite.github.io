@@ -4,5 +4,5 @@ image: 'https://media.pixiebrix.com/_next/image?url=https%3A%2F%2Fsuper-static-a
 description: 'Prixite was a fantastic resource for augmenting our in-house development team. As a startup, moving fast is critical. Their web application developers seamlessly integrated with our team and brought expertise to our project.'
 name: Todd Schiller
 designation: CEO PixieBrix
-date: 'March 5, 2022'
+date: 'February 7, 2023'
 ---
