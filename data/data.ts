@@ -16,7 +16,7 @@ import aboutUsp5 from '../public/images/aboutUs-p5.png'
 import likes from '../public/images/handsClapping.png'
 import comments from '../public/images/chatTeardropDots.png'
 import scrollToTop from '../public/images/scrollToTop.png'
-import { FEATURES } from '../utils/constants'
+import { FEATURES } from '../data/features'
 
 /*********          Header Menu Data            ********** */
 export const pages = [
