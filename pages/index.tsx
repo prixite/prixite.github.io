@@ -55,6 +55,10 @@ export default function Home({ blogs, services, testimonials }: MDContent) {
         <title>{title}</title>
         <meta name="prixite" content="Prixte" />
         <link rel="icon" href="/favicon.ico" />
+        <script
+          defer
+          src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+        ></script>
       </Head>
       <div className="home-page-container">
         <Container maxWidth="xl">
