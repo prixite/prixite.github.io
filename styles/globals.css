@@ -40,6 +40,7 @@ p {
 .post-img {
   width: 100%;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 header {
@@ -144,8 +145,25 @@ ol {
   height: 48px;
 }
 
+/* This property syntax used to style Markdown Content Images */
+img[src*='#md-body-image'] {
+  width: 80%;
+  display: block;
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
 @media (max-width: 500px) {
   .posts {
     grid-template-columns: 1fr !important;
+  }
+
+  .post-body {
+    margin-top: 40px;
+  }
+
+  img[src*='#md-body-image'] {
+    width: 100%;
   }
 }

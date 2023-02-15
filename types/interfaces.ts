@@ -32,10 +32,22 @@ export interface Testimonial {
   }
   slug: string
 }
+
+export interface Product {
+  frontmatter: {
+    index: number
+    title: string
+    header: string
+    description: string
+    logo_image: string
+  }
+  slug: string
+}
 export interface MDContent {
   blogs?: Array<BlogPost>
   services?: Array<ServicePost>
   testimonials?: Array<Testimonial>
+  products?: Array<Product>
 }
 
 export interface BlogPostWithContent extends BlogPost {
@@ -46,6 +58,10 @@ export interface ServiceWithContent extends ServicePost {
   content: string
 }
 
+export interface ProductDetailWithContent extends Product {
+  content: string
+}
+
 export interface Blog {
   params: {
     slug: string
@@ -53,6 +69,12 @@ export interface Blog {
 }
 
 export interface Service {
+  params: {
+    slug: string
+  }
+}
+
+export interface ProductDetail {
   params: {
     slug: string
   }

@@ -1,7 +1,7 @@
 import { Box, Container, Typography, Grid, Button, Stack } from '@mui/material'
 // eslint-disable-next-line
 import Image from 'next/image'
-import { homeData, newsAndBlogs } from '../data/data'
+import { homeData, newsAndBlogs, productList } from '../data/data'
 // eslint-disable-next-line
 import Chip from '@mui/material/Chip'
 import { aboutUsCardData, servicesData } from '../data/data'
@@ -23,17 +23,23 @@ import 'slick-carousel/slick/slick-theme.css'
 import fs from 'fs'
 import path from 'path'
 import Link from 'next/link'
-import { BlogPost, MDContent } from '../types/interfaces'
+import { BlogPost, MDContent, Product } from '../types/interfaces'
 import { sortByDate, sortByIndex } from '../utils/sort'
 import { getMarkdownAllData } from '../utils/markdown'
 import {
   BLOGS_PATH,
+  PRODUCTS_PATH,
   SERVICES_PATH,
   TESTIMONIALS_PATH,
 } from '../utils/constants'
 import { FEATURES } from '../data/features'
 
-export default function Home({ blogs, services, testimonials }: MDContent) {
+export default function Home({
+  blogs,
+  services,
+  testimonials,
+  products,
+}: MDContent) {
   const { title } = homeData
   const { servicesHeading, servicesAim } = servicesData
   const { aboutUsHeader, aboutUsHeading, aboutUsDescription, images } =
@@ -107,6 +113,59 @@ export default function Home({ blogs, services, testimonials }: MDContent) {
             images={images}
           />
         </Container>
+
+        {FEATURES.products && (
+          <Container maxWidth="xl">
+            <Box pb="5rem" pt="5rem">
+              <Stack
+                direction={'row'}
+                justifyContent="space-between"
+                className="blogs-header-section"
+              >
+                <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
+                  {productList.header}
+                </Typography>
+                <Button
+                  className="view-all-btn"
+                  variant="outlined"
+                  endIcon={<ArrowForwardOutlinedIcon />}
+                  onClick={() => router.push('/products')}
+                >
+                  {viewButtonText}
+                </Button>
+              </Stack>
+
+              <Typography my={3}>{productList.heading}</Typography>
+
+              <Container maxWidth="xl" className="posts" disableGutters>
+                {products
+                  ?.slice(0, 2)
+                  .map((product: Product, index: number) => (
+                    <div className="card" key={index}>
+                      <Image
+                        className="post-img"
+                        src={product?.frontmatter?.logo_image}
+                        alt="image"
+                        width={500}
+                        height={500}
+                        layout="responsive"
+                      />
+
+                      <h3>{product.frontmatter.header}</h3>
+
+                      <p>{product.frontmatter.description}</p>
+
+                      <Link href={`/products/${product.slug}`}>
+                        <Button variant="contained" className="read-button">
+                          Read More
+                        </Button>
+                      </Link>
+                    </div>
+                  ))}
+              </Container>
+            </Box>
+          </Container>
+        )}
 
         {FEATURES.blogs && (
           <Container maxWidth="xl">
@@ -182,6 +241,7 @@ export async function getStaticProps() {
   const blogFiles = fs.readdirSync(path.join(BLOGS_PATH))
   const serviceFiles = fs.readdirSync(path.join(SERVICES_PATH))
   const testimonialFiles = fs.readdirSync(path.join(TESTIMONIALS_PATH))
+  const productFiles = fs.readdirSync(path.join(PRODUCTS_PATH))
 
   const blogs = getMarkdownAllData(blogFiles, BLOGS_PATH, fs)
   const services = getMarkdownAllData(serviceFiles, SERVICES_PATH, fs)
@@ -190,12 +250,14 @@ export async function getStaticProps() {
     TESTIMONIALS_PATH,
     fs
   )
+  const products = getMarkdownAllData(productFiles, PRODUCTS_PATH, fs)
 
   return {
     props: {
       blogs: blogs.sort(sortByDate),
       services: services.sort(sortByIndex),
       testimonials: testimonials.sort(sortByDate),
+      products: products.sort(sortByIndex),
     },
   }
 }
