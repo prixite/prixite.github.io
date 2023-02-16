@@ -32,10 +32,22 @@ export interface Testimonial {
   }
   slug: string
 }
+
+export interface TeamPerson {
+  frontmatter: {
+    index: number
+    title: string
+    name: string
+    designation: string
+    person_image: string
+  }
+  slug: string
+}
 export interface MDContent {
   blogs?: Array<BlogPost>
   services?: Array<ServicePost>
   testimonials?: Array<Testimonial>
+  team?: Array<TeamPerson>
 }
 
 export interface BlogPostWithContent extends BlogPost {
@@ -53,6 +65,16 @@ export interface Blog {
 }
 
 export interface Service {
+  params: {
+    slug: string
+  }
+}
+
+export interface PersonDetailWithContent extends TeamPerson {
+  content: string
+}
+
+export interface PersonDetail {
   params: {
     slug: string
   }

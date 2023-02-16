@@ -1,7 +1,7 @@
 import { Box, Container, Typography, Grid, Button, Stack } from '@mui/material'
 // eslint-disable-next-line
 import Image from 'next/image'
-import { homeData, newsAndBlogs } from '../data/data'
+import { homeData, newsAndBlogs, teamData } from '../data/data'
 // eslint-disable-next-line
 import Chip from '@mui/material/Chip'
 import { aboutUsCardData, servicesData } from '../data/data'
@@ -23,17 +23,23 @@ import 'slick-carousel/slick/slick-theme.css'
 import fs from 'fs'
 import path from 'path'
 import Link from 'next/link'
-import { BlogPost, MDContent } from '../types/interfaces'
+import { BlogPost, MDContent, TeamPerson } from '../types/interfaces'
 import { sortByDate, sortByIndex } from '../utils/sort'
 import { getMarkdownAllData } from '../utils/markdown'
 import {
   BLOGS_PATH,
   SERVICES_PATH,
+  TEAM_PATH,
   TESTIMONIALS_PATH,
 } from '../utils/constants'
 import { FEATURES } from '../data/features'
 
-export default function Home({ blogs, services, testimonials }: MDContent) {
+export default function Home({
+  blogs,
+  services,
+  testimonials,
+  team,
+}: MDContent) {
   const { title } = homeData
   const { servicesHeading, servicesAim } = servicesData
   const { aboutUsHeader, aboutUsHeading, aboutUsDescription, images } =
@@ -166,6 +172,58 @@ export default function Home({ blogs, services, testimonials }: MDContent) {
           </Container>
         )}
 
+        {FEATURES.team && (
+          <Container maxWidth="xl">
+            <Box pb="5rem" pt="5rem">
+              <Stack
+                direction={'row'}
+                justifyContent="space-between"
+                className="blogs-header-section"
+              >
+                <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
+                  {teamData.header}
+                </Typography>
+                <Button
+                  className="view-all-btn"
+                  variant="outlined"
+                  endIcon={<ArrowForwardOutlinedIcon />}
+                  onClick={() => router.push('/team')}
+                >
+                  {viewButtonText}
+                </Button>
+              </Stack>
+
+              <Typography my={3}>{teamData.heading}</Typography>
+
+              <Container maxWidth="xl" className="team" disableGutters>
+                {team?.slice(0, 2).map((person: TeamPerson, index: number) => (
+                  <div className="person-card" key={index}>
+                    <Image
+                      className="person-img"
+                      src={person?.frontmatter?.person_image}
+                      alt="image"
+                      width={500}
+                      height={500}
+                    />
+
+                    <h3 className="person-name">{person.frontmatter.name}</h3>
+
+                    <p className="person-designation">
+                      {person.frontmatter.designation}
+                    </p>
+
+                    <Link href={`/team/${person.slug}`}>
+                      <Button variant="contained" className="details-button">
+                        Details
+                      </Button>
+                    </Link>
+                  </div>
+                ))}
+              </Container>
+            </Box>
+          </Container>
+        )}
+
         {FEATURES.testimonials && <Testimonials testimonials={testimonials} />}
 
         {FEATURES.subscribe && (
@@ -182,6 +240,7 @@ export async function getStaticProps() {
   const blogFiles = fs.readdirSync(path.join(BLOGS_PATH))
   const serviceFiles = fs.readdirSync(path.join(SERVICES_PATH))
   const testimonialFiles = fs.readdirSync(path.join(TESTIMONIALS_PATH))
+  const teamPersons = fs.readdirSync(path.join(TEAM_PATH))
 
   const blogs = getMarkdownAllData(blogFiles, BLOGS_PATH, fs)
   const services = getMarkdownAllData(serviceFiles, SERVICES_PATH, fs)
@@ -190,12 +249,14 @@ export async function getStaticProps() {
     TESTIMONIALS_PATH,
     fs
   )
+  const team = getMarkdownAllData(teamPersons, TEAM_PATH, fs)
 
   return {
     props: {
       blogs: blogs.sort(sortByDate),
       services: services.sort(sortByIndex),
       testimonials: testimonials.sort(sortByDate),
+      team: team.sort(sortByIndex),
     },
   }
 }

@@ -144,8 +144,57 @@ ol {
   height: 48px;
 }
 
+.team {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.person-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.person-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.details-button {
+  font-family: 'lato';
+  color: white !important;
+  font-size: 13px;
+  width: 150px;
+  height: 45px;
+}
+
+.person-name {
+  width: 200px;
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+.person-designation {
+  width: 300px;
+  padding-left: 30px;
+  padding-right: 10px;
+  font-size: 18px;
+}
 @media (max-width: 500px) {
   .posts {
     grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .person-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
   }
 }

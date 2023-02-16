@@ -41,6 +41,13 @@ if (FEATURES.blogs) {
   })
 }
 
+if (FEATURES.team) {
+  pages.push({
+    path: '/team',
+    text: 'Team',
+  })
+}
+
 export const siteName = 'Prixite'
 
 /***********            Home Page Main Data             *********** */
@@ -253,4 +260,11 @@ export const footerData = {
 export const contactForm = {
   success: 'Submitted',
   error: 'Not submitted. Please try again!',
+}
+
+export const teamData = {
+  title: `${siteName} - Team`,
+  header: 'Team',
+  heading:
+    'We aim to constantly bring innovative solutions to cater to our client’s requirements and expectations.',
 }
