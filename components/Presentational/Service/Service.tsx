@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid, Box, Typography } from '@mui/material'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import { useRouter } from 'next/router'
 
 interface ServiceProps {

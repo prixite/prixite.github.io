@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography, Divider, Box } from '@mui/material'
-import Image, { StaticImageData } from 'next/image'
+import Image, { StaticImageData } from 'next/legacy/image'
 
 interface AboutUs {
   header: string

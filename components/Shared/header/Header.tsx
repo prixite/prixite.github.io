@@ -1,7 +1,7 @@
 import React from 'react'
 import { AppBar, Box, Container, Toolbar } from '@mui/material'
 // eslint-disable-next-line
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 // eslint-disable-next-line
 import { NextRouter, useRouter } from 'next/router'
 // eslint-disable-next-line

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Typography, Box } from '@mui/material'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 // eslint-disable-next-line
 import Subscribe from '../components/Shared/Subscribe/Subscribe'
 import ContactButton from '../components/Smart/ContactButton/ContactButton'

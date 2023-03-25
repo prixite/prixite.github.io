@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Container, Divider, Stack, Typography } from '@mui/material'
 import { footerData } from '../../../data/data'
 import Title from '../../Presentational/Title/Title'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import { useRouter } from 'next/router'
 
 const Footer = () => {

@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import fs from 'fs'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import { Box, Container, Stack, Typography } from '@mui/material'
 import { joinUsLinkIcons, newsAndBlogs } from '../../data/data'
 import { BlogPostWithContent, Blog } from '../../types/interfaces'

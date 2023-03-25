@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, IconButton, Menu, Divider } from '@mui/material'
 import { NextRouter, useRouter } from 'next/router'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import { siteName, pages } from '../../../data/data'
 import hamburgerClose from '../../../public/images/hamburgerClose.png'
 import hamburgerOpen from '../../../public/images/hamburgerOpen.png'

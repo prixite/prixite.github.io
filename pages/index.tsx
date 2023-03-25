@@ -1,6 +1,6 @@
 import { Box, Container, Typography, Grid, Button, Stack } from '@mui/material'
 // eslint-disable-next-line
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import { homeData, newsAndBlogs } from '../data/data'
 // eslint-disable-next-line
 import Chip from '@mui/material/Chip'
