@@ -1,5 +1,5 @@
 import { Box, Container, Typography } from '@mui/material'
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import React from 'react'
 import PrixiteLogo from '../../../public/images/subscribe-image.png'
 import ContactButton from '../../Smart/ContactButton/ContactButton'

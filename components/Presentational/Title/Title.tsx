@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material'
 import router from 'next/router'
 import React from 'react'
 import { siteName } from '../../../data/data'
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import logoImg from '../../../public/images/prixite-logo.png'
 
 const Title = () => {

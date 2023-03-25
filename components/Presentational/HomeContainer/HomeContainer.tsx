@@ -1,7 +1,7 @@
 import { Stack, Box, Typography } from '@mui/material'
 import React from 'react'
 import ContactButton from '../../Smart/ContactButton/ContactButton'
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import { homeData } from '../../../data/data'
 
 const HomeContainer = () => {

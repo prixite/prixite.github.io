@@ -1,6 +1,6 @@
 import { Box, Typography, Grid, Divider } from '@mui/material'
 import React from 'react'
-import Image, { StaticImageData } from 'next/legacy/image'
+import Image, { StaticImageData } from 'next/image'
 
 interface VisionProps {
   aboutUsVisionImg: StaticImageData
