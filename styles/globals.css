@@ -137,6 +137,32 @@ ol {
   line-height: 2.3;
 }
 
+.post-body .image {
+  width: 100%;
+}
+
+.post-body .image-20 {
+  width: 20%;
+}
+
+.post-body .image-30 {
+  width: 30%;
+}
+
+.post-body .image-40 {
+  width: 40%;
+}
+
+.post-body .image-50 {
+  width: 50%;
+}
+
+.post-body .center-align {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
 .read-button {
   font-family: 'lato';
   color: white !important;

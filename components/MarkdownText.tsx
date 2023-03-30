@@ -30,6 +30,20 @@ const options = {
       component: Typography,
       props: { gutterBottom: true, variant: 'h6' },
     },
+    img: {
+      component: (props: { src: string; alt: string; className: string }) => {
+        const tokens = props.src.split('#')
+        let className = 'image'
+        if (tokens.length > 1) {
+          className = tokens[1]
+        }
+        return (
+          <span className="center-align">
+            <img {...props} className={className} />
+          </span>
+        )
+      },
+    },
     p: {
       component: Typography,
       props: { paragraph: true },
