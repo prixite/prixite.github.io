@@ -73,22 +73,7 @@ export default function BlogDetailPage({
       <Container className="likes" maxWidth="xl">
         <Stack direction={'row'} gap={10}>
           <Stack direction={'row'} gap={1} alignItems="center">
-            <Image
-              src={newsAndBlogs.likesImg.src}
-              width={25}
-              height={25}
-              alt="icon"
-            />
-            <Typography fontSize={13}>10 Likes</Typography>
-          </Stack>
-          <Stack direction={'row'} gap={1} alignItems="center">
-            <Image
-              src={newsAndBlogs.commentsImg.src}
-              width={25}
-              height={25}
-              alt="icon"
-            />
-            <Typography fontSize={13}>10 Comments </Typography>
+            <Typography fontSize={13}>Written by Waleed Raza</Typography>
           </Stack>
         </Stack>
         <Stack
