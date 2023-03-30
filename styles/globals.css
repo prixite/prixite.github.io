@@ -157,6 +157,14 @@ ol {
   width: 50%;
 }
 
+.post-body .image-60 {
+  width: 60%;
+}
+
+.post-body .image-70 {
+  width: 70%;
+}
+
 .post-body .center-align {
   display: inline-block;
   text-align: center;

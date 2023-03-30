@@ -1,15 +1,17 @@
 ---
 title: 'ScoopRank Intro Blog'
 date: 'March 30, 2023'
-excerpt: 'ScoopRank is a ranking engine for entities'
-cover_image: '/images/posts/img3.jpg'
+excerpt: 'ScoopRank is a deep tech product that ranks entities and tracks trends of entities in real time across internet.'
+cover_image: '/images/posts/scooprank/main.png'
 ---
 
-I have always had conversations and debates where one tries to convince the other about the popularity of ‘his’ leader and vice versa! And the result? Always a zero multiplied by zero! No one has any stats and evidence to gauge “popularity” or look at how something is trending against the other. And this is where ScoopRank silently kicks in!
+I have always had conversations and debates where one tries to convince the other about the popularity of ‘his’ leader and vice versa! And the result? Always a zero multiplied by zero! No one has any stats and evidence to gauge “popularity” or look at how something is trending against the other. And this is where [ScoopRank](https://www.scooprank.com) silently kicks in!
 
 ScoopRank searches for all the internet news and scans it to build its database. With its AI-built mechanism, it easily drives insights and generates real-time scoops! Moreover, it can show trending news items, and users can quickly gauge what’s trending and being followed the most, sorting it over categories or dates!
 
 The days had passed when you had to visit multiple sources for news. ScoopRank shows authentic news from all sources. News is sorted and ranked and most importantly, real-time; showing a glimpse of what is trending the most! The popularity is gauged in the same way.
+
+![Popularity](/images/posts/scooprank/5_leaders.png#image-70)
 
 ##### Key Features of ScoopRank
 
@@ -17,22 +19,28 @@ This was a very brief Introduction to ScoopRank! Let’s dive deeper into the ca
 
 1. Scoops
    Every second, news is generated and posted online through different sources. A scoop is formed of the news in the same context but can have numerous different sources. ScoopRank then assigns them categories and writes a summary for each one. e.g. news about Fawad Chaudhary’s bail was published through several sources. But only one scoop will form on the same because all of them have the same context.
+   ![Scoop Ranking](/images/posts/scooprank/1_Scoops.png#image-70)
 
 2. Sentiment Analysis
    One of the most powerful features of ScoopRank is the sentiment analysis of the entities. It is pertinent to note that this is not the sentiment of the public but is based on the news article; its tone, references, and where the article leads to. For example, the entity “Imran Khan” was searched and the trends appeared over the timeline. Hovering over one particular date shows the sentiment analysis of the entity for that day.
+   ![Sentiment Analysis](/images/posts/scooprank/sentiment.png#image-70)
 
 3. Popularity
    ScoopRank also tracks the popularity of Political Parties and Political Leaders in the media. So, you can determine at a glance if one leader is popular or the other. Similar cases follow for Political Parties.
+   ![Political Parties](/images/posts/scooprank/2_Popularity.png#image-70)
 
 4. Trend Search
    Allows users to search for trends of any entity and display the sentiment of that trend. Hence, whatever is in your mind - just look up and ScoopRank will tell you if it's trending in the news or not!
+   ![Entity Trend](/images/posts/scooprank/trend.png#image-70)
 
 5. Real-time Ranking
    You can easily rank Scoops based on different periods such as day, week, and month. So, let's say you can see which news was trending on the 1st for the entire month! Well, that sure can help solve some political arguments based on real-time data!
    Not only that, as the scoops keep pouring in, they are ranked on real-time data. So whenever you visit, the ranking of any particular scoop may have changed! It shows the importance of news in public.
+   ![Real time ranking](/images/posts/scooprank/rank.png#image-70)
 
 6. Category
    Scoops can also be easily filtered by category. e.g. You can dive into the entertainment category to have an insight into what’s trending there without bothering about the overall picture.
+   ![Category Ranking](/images/posts/scooprank/4_Category.png#image-70)
 
 ##### Problems ScoopRank will solve?
 

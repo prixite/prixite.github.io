@@ -24,7 +24,7 @@ const options = {
     },
     h5: {
       component: Typography,
-      props: { gutterBottom: true, variant: 'h5' },
+      props: { marginTop: '10px', gutterBottom: true, variant: 'h5' },
     },
     h6: {
       component: Typography,
