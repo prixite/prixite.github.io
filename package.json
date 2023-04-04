@@ -31,7 +31,7 @@
     "react-dom": "18.2.0",
     "react-slick": "^0.29.0",
     "react-toastify": "^9.1.2",
-    "sass": "^1.54.1",
+    "sass": "^1.60.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.9"
   },
