@@ -39,7 +39,7 @@
     "@types/markdown-it": "^12.2.3",
     "@types/node": "^18.15.11",
     "@types/prismjs": "^1.26.0",
-    "@types/react": "^18.0.28",
+    "@types/react": "^18.0.33",
     "@types/react-slick": "^0.23.10",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "eslint": "8.36.0",
