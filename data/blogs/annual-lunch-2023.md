@@ -2,7 +2,7 @@
 title: 'Annual Lunch 2023'
 date: 'March 30, 2023'
 excerpt: "Smiles, get-togethers, hot lava cakes, favorite dishes, bright winter sun - here's a glimpse of Prixite's Annual Lunch 2023!"
-cover_image: '/images/posts/lunch/group_photo.jpg'
+cover_image: '/images/posts/lunch/group_photo.png'
 ---
 
 The Sun sparkled as I hustled through the busy roads of Lahore to reach the venue. As usual, I was late! But what was making me more nervous was that I was going to see several completely new faces. In fact all of them! As I entered the courtyard of the restaurant, several people were sitting around a long table. “Are these the ones”? I questioned myself, staring at them trying to match the faces with those on the laptop screens. Smiling oddly, I kept searching for one reaction showing that this was my organization!
