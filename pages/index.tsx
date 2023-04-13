@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Grid, Button, Stack } from '@mui/material'
+import { Box, Container, Typography, Grid, Stack } from '@mui/material'
 // eslint-disable-next-line
 import Image from 'next/image'
 import { homeData, newsAndBlogs } from '../data/data'
@@ -127,14 +127,15 @@ export default function Home({
                     {newsHeader.slice(6, 11)}
                   </span>
                 </Typography>
-                <Button
+                <Link
                   className="view-all-btn"
-                  variant="outlined"
-                  endIcon={<ArrowForwardOutlinedIcon />}
-                  onClick={() => router.push('/blogs')}
+                  href='/blogs'
                 >
                   {viewButtonText}
-                </Button>
+                  <ArrowForwardOutlinedIcon 
+                    className="view-link-icon"
+                  />
+                </Link>
               </Stack>
 
               <Typography my={3}>{newsHeading}</Typography>
@@ -142,27 +143,29 @@ export default function Home({
               <Container maxWidth="xl" className="posts" disableGutters>
                 {blogs?.slice(0, 2).map((blog: BlogPost, index: number) => (
                   <div className="card" key={index}>
-                    <Image
-                      className="post-img"
-                      src={blog?.frontmatter?.cover_image}
-                      alt="image"
-                      width={500}
-                      height={500}
-                      layout="responsive"
-                    />
+                    <Link href={`/blog/${blog.slug}`}>
+                      <Image
+                        className="post-img"
+                        src={blog?.frontmatter?.cover_image}
+                        alt="image"
+                        width={500}
+                        height={500}
+                        layout="responsive"
+                      />
+                    </Link>
 
                     <div className="post-date">
                       Posted on {blog.frontmatter.date}
                     </div>
 
-                    <h3>{blog.frontmatter.title}</h3>
+                    <Link href={`/blog/${blog.slug}`}>
+                      <h3 className="blog-title">{blog.frontmatter.title}</h3>
+                    </Link>
 
                     <p>{blog.frontmatter.excerpt}</p>
 
-                    <Link href={`/blog/${blog.slug}`}>
-                      <Button variant="contained" className="read-button">
+                    <Link href={`/blog/${blog.slug}`} className="read-button">
                         Read More
-                      </Button>
                     </Link>
                   </div>
                 ))}

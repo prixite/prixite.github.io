@@ -116,6 +116,10 @@ header a {
   border-radius: 10px;
 }
 
+.blog-title{
+  display:inline-block;
+}
+
 .service-content {
   display: flex;
   flex-direction: column;
@@ -172,10 +176,24 @@ ol {
 }
 
 .read-button {
+  display:flex;
+  justify-content: center;
+  align-items: center;
   font-family: 'lato';
-  color: white !important;
-  font-size: 13px;
   height: 48px;
+  width:108px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 4px;
+  color: white !important;
+  background-color: #63AC45;
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
+}
+
+.read-button:hover{
+  background-color: rgb(69, 120, 48);
+  transition:background-color ease-in 0.2s;
 }
 
 @media (max-width: 500px) {
