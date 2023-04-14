@@ -127,14 +127,9 @@ export default function Home({
                     {newsHeader.slice(6, 11)}
                   </span>
                 </Typography>
-                <Link
-                  className="view-all-btn"
-                  href='/blogs'
-                >
+                <Link className="view-all-btn" href="/blogs">
                   {viewButtonText}
-                  <ArrowForwardOutlinedIcon 
-                    className="view-link-icon"
-                  />
+                  <ArrowForwardOutlinedIcon className="view-link-icon" />
                 </Link>
               </Stack>
 
@@ -165,7 +160,7 @@ export default function Home({
                     <p>{blog.frontmatter.excerpt}</p>
 
                     <Link href={`/blog/${blog.slug}`} className="read-button">
-                        Read More
+                      Read More
                     </Link>
                   </div>
                 ))}

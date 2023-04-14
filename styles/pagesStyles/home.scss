@@ -32,7 +32,7 @@
     display: none;
   }
 
-  .view-all-btn{
+  .view-all-btn {
     font-weight: 500;
     font-size: 0.875rem;
     text-transform: uppercase;
@@ -41,20 +41,20 @@
     border-radius: 4px;
     border: 1px solid rgba(99, 172, 69, 0.5);
     color: #63AC45;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    
-    .view-all-btn-icon{
-      margin-left:8px;
-      margin-right:-4px;
-      font-size:20px;
+
+    .view-all-btn-icon {
+      margin-left: 8px;
+      margin-right: -4px;
+      font-size: 20px;
     }
   }
-  
-  .view-all-btn:hover{
+
+  .view-all-btn:hover {
     border: 1px solid #63AC45;
-    transition:border-color ease-in 0.18s;
+    transition: border-color ease-in 0.18s;
   }
 }
 
