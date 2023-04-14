@@ -39,7 +39,6 @@ const Footer = () => {
               key={index}
               onClick={() => router.push(contact.path)}
               sx={{ cursor: 'pointer' }}
-              className="link-item"
             >
               {contact.text}
             </Typography>
@@ -75,9 +74,7 @@ const Footer = () => {
         <Divider sx={{ marginTop: 4 }} />
         <Box className="copyright">
           <Typography>
-            <Link href="/" className="link-item">
-              {copyright.split(' ')[0]}&nbsp;
-            </Link>
+            <Link href="/">{copyright.split(' ')[0]}&nbsp;</Link>
             {copyright.split(' ').splice(1).toString().replaceAll(',', ' ')}
           </Typography>
         </Box>
