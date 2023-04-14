@@ -204,7 +204,7 @@ export const joinUsLinkIcons = [
 
 /**************             Footer Data         ************ */
 export const footerData = {
-  copyright: `Prixite © ${new Date().getFullYear()}. All Rights Reserved`,
+  copyright: `Prixite © ${new Date().getFullYear()} All Rights Reserved`,
   details: [
     {
       icon: LocationIcon,

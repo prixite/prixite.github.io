@@ -20,7 +20,13 @@ const Footer = () => {
               <Box>
                 <Image src={icon.src} alt="icon" width={20} height={20} />
               </Box>
-              <Typography className="description">{desc}</Typography>
+              <Typography className="description">
+                {new RegExp(/^\S+@\S+\.\S+$/).test(desc) ? (
+                  <Link href={`mailto:${desc}`}>{desc}</Link>
+                ) : (
+                  desc
+                )}
+              </Typography>
             </Stack>
           ))}
         </Box>
@@ -70,8 +76,9 @@ const Footer = () => {
         <Box className="copyright">
           <Typography>
             <Link href="/" className="link-item">
-              {copyright}
+              {copyright.split(' ')[0]}&nbsp;
             </Link>
+            {copyright.split(' ').splice(1).toString().replaceAll(',', ' ')}
           </Typography>
         </Box>
       </Container>
