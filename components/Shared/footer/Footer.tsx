@@ -4,6 +4,7 @@ import { footerData } from '../../../data/data'
 import Title from '../../Presentational/Title/Title'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 const Footer = () => {
   const router = useRouter()
@@ -32,6 +33,7 @@ const Footer = () => {
               key={index}
               onClick={() => router.push(contact.path)}
               sx={{ cursor: 'pointer' }}
+              className="link-item"
             >
               {contact.text}
             </Typography>
@@ -66,7 +68,11 @@ const Footer = () => {
       <Container maxWidth="xl">
         <Divider sx={{ marginTop: 4 }} />
         <Box className="copyright">
-          <Typography>{copyright}</Typography>
+          <Typography>
+            <Link href="/" className="link-item">
+              {copyright}
+            </Link>
+          </Typography>
         </Box>
       </Container>
     </Box>

@@ -177,6 +177,10 @@ ol {
   font-size: 13px;
   height: 48px;
 }
+.link-item:hover {
+  color: #63ac45;
+  transition: ease-in color 0.1s;
+}
 
 @media (max-width: 500px) {
   .posts {
