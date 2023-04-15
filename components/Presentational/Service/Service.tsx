@@ -12,7 +12,7 @@ interface ServiceProps {
 const Service: React.FC<ServiceProps> = ({ img, title, description, path }) => {
   return (
     <Grid item sm={12} md={3} className="service">
-      <Link href={`/${path}`}>
+      <Link href={path}>
         <Box marginBottom="10px">
           <Box className="service-image-container">
             <Image
