@@ -24,7 +24,7 @@
     "@sendgrid/mail": "^7.7.0",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
-    "markdown-to-jsx": "^7.1.8",
+    "markdown-to-jsx": "^7.2.0",
     "next": "13.2.4",
     "next-share": "^0.20.0",
     "prismjs": "^1.29.0",
