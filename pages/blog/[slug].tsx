@@ -68,9 +68,7 @@ export default function BlogDetailPage({
                 />
               </FacebookShareButton>
               <LinkedinShareButton
-                url={
-                  'https://e963-39-40-250-233.ngrok-free.app/blog/annual-lunch-2023'
-                }
+                url={`${process.env.NEXT_PUBLIC_BASEPATH}/${router.asPath}`}
               >
                 <Image
                   src={joinUsLinkIcons[1].icon.src}
