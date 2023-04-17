@@ -3,11 +3,9 @@ import { Box, Container, Divider, Stack, Typography } from '@mui/material'
 import { footerData } from '../../../data/data'
 import Title from '../../Presentational/Title/Title'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
 import Link from 'next/link'
 
 const Footer = () => {
-  const router = useRouter()
   const { copyright, info, joinUs, details } = footerData
 
   return (
