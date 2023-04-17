@@ -35,7 +35,9 @@ const Footer = () => {
             {info.title}
           </Typography>
           {info.contactUs.map((contact, index) => (
-            <Link href={contact.path}>{contact.text}</Link>
+            <Link key={index} href={contact.path}>
+              {contact.text}
+            </Link>
           ))}
         </Box>
         <Box className="footer-items-container">
