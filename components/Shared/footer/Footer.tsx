@@ -35,13 +35,7 @@ const Footer = () => {
             {info.title}
           </Typography>
           {info.contactUs.map((contact, index) => (
-            <Typography
-              key={index}
-              onClick={() => router.push(contact.path)}
-              sx={{ cursor: 'pointer' }}
-            >
-              {contact.text}
-            </Typography>
+            <Link href={contact.path}>{contact.text}</Link>
           ))}
         </Box>
         <Box className="footer-items-container">
