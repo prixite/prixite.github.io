@@ -26,6 +26,7 @@
     "markdown-it": "^13.0.1",
     "markdown-to-jsx": "^7.1.8",
     "next": "13.2.4",
+    "next-share": "^0.20.0",
     "prismjs": "^1.29.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
