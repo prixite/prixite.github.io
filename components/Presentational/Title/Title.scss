@@ -1,6 +1,9 @@
 .title-container {
   display: flex;
   align-items: center;
+  .title-link {
+    display: flex;
+  }
   .title-image {
     margin-right: 5px;
     cursor: pointer;
