@@ -20,7 +20,7 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.0",
-    "@mui/material": "^5.11.15",
+    "@mui/material": "^5.13.0",
     "@sendgrid/mail": "^7.7.0",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
