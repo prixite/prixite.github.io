@@ -43,7 +43,7 @@
     "@types/react": "^18.0.33",
     "@types/react-slick": "^0.23.10",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
-    "eslint": "8.38.0",
+    "eslint": "8.41.0",
     "eslint-config-next": "13.3.0",
     "eslint-config-prettier": "^8.8.0",
     "pre-commit": "^1.2.2",
