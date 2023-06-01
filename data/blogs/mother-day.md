@@ -1,5 +1,5 @@
 ---
-title: 'Mothers Day'
+title: "Mother's Day"
 date: 'May 14, 2023'
 excerpt: 'Words are bound to fall short when it comes to Mothers and what they go through their entire life for their children.'
 cover_image: '/images/posts/motherday/mDayCover.png'
