@@ -6,9 +6,15 @@ import Service from '../components/Presentational/Service/Service'
 import Subscribe from '../components/Shared/Subscribe/Subscribe'
 import ContactButton from '../components/Smart/ContactButton/ContactButton'
 import { servicesData } from '../data/data'
+import { MDContent } from '../types/interfaces'
+import fs from 'fs'
+import path from 'path'
+import { sortByIndex } from '../utils/sort'
+import { SERVICES_PATH } from '../utils/constants'
+import { getMarkdownAllData } from '../utils/markdown'
 
-const services = () => {
-  const { servicesPageTitle, servicesPageHeader, services } = servicesData
+const Services = ({ services }: MDContent) => {
+  const { servicesPageTitle, servicesPageHeader } = servicesData
   return (
     <>
       <Head>
@@ -33,13 +39,13 @@ const services = () => {
         </Box>
 
         <Grid container spacing={{ xs: 2, md: 7 }} columnSpacing={3}>
-          {services.map((item, index) => (
+          {services?.map((item) => (
             <Service
-              key={index}
-              img={item.img}
-              title={item.title}
-              description={item.desc}
-              path={item.path}
+              key={item.frontmatter.index}
+              img={item.frontmatter.logo_image}
+              title={item.frontmatter.header}
+              description={item.frontmatter.description}
+              path={`/services/${item.slug}`}
             />
           ))}
         </Grid>
@@ -49,4 +55,15 @@ const services = () => {
   )
 }
 
-export default services
+export default Services
+
+export async function getStaticProps() {
+  const serviceFiles = fs.readdirSync(path.join(SERVICES_PATH))
+  const services = getMarkdownAllData(serviceFiles, SERVICES_PATH, fs)
+
+  return {
+    props: {
+      services: services.sort(sortByIndex),
+    },
+  }
+}

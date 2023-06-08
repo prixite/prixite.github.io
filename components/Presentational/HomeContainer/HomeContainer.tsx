@@ -18,7 +18,7 @@ const HomeContainer = () => {
   } = homeData
   return (
     <Stack
-      pt={{ xs: '20px', md: '60px', lg: '60px' }}
+      pt={{ xs: '20px', md: '60px', lg: '30px' }}
       pb={{ xs: '100px', lg: '60px' }}
       direction={{ xs: 'column-reverse', md: 'row' }}
       spacing={5}
@@ -48,7 +48,7 @@ const HomeContainer = () => {
       </Box>
 
       <Box>
-        <Image unoptimized priority src={headerImage} alt="service-image" />
+        <Image src={headerImage} alt="service-image" layout="responsive" />
       </Box>
     </Stack>
   )

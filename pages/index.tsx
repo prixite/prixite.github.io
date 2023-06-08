@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Grid } from '@mui/material'
+import { Box, Container, Typography, Grid, Stack } from '@mui/material'
 // eslint-disable-next-line
 import Image from 'next/image'
 import { homeData, newsAndBlogs } from '../data/data'
@@ -15,28 +15,39 @@ import Testimonials from '../components/Smart/Testimonials/Testimonials'
 // eslint-disable-next-line
 import Subscribe from '../components/Shared/Subscribe/Subscribe'
 // eslint-disable-next-line
-import Blog from '../components/Presentational/Blog/Blog'
-// eslint-disable-next-line
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined'
 import HomeContainer from '../components/Presentational/HomeContainer/HomeContainer'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import fs from 'fs'
+import path from 'path'
+import Link from 'next/link'
+import { BlogPost, MDContent } from '../types/interfaces'
+import { sortByDate, sortByIndex } from '../utils/sort'
+import { getMarkdownAllData, getMarkDownSingleData } from '../utils/markdown'
+import {
+  BLOGS_PATH,
+  SERVICES_PATH,
+  TESTIMONIALS_PATH,
+  ABOUT_US_PATH,
+} from '../utils/constants'
+import { FEATURES } from '../data/features'
 
-export default function Home() {
+export default function Home({
+  blogs,
+  services,
+  testimonials,
+  aboutUs,
+}: MDContent) {
   const { title } = homeData
-  const { servicesHeading, servicesAim, services } = servicesData
-  const { aboutUsHeader, aboutUsHeading, aboutUsDescription, images } =
-    aboutUsCardData
+  const { servicesHeading, servicesAim } = servicesData
+  const { images } = aboutUsCardData
   const {
     // eslint-disable-next-line
     header: newsHeader,
     // eslint-disable-next-line
     heading: newsHeading,
-    // eslint-disable-next-line
-    mainBlog,
-    // eslint-disable-next-line
-    blogs,
     // eslint-disable-next-line
     viewButtonText,
   } = newsAndBlogs
@@ -68,25 +79,25 @@ export default function Home() {
               columnSpacing={3}
               className="services-grid"
             >
-              {services.map((item, index) => (
+              {services?.map((item) => (
                 <Service
-                  key={index}
-                  img={item.img}
-                  title={item.title}
-                  description={item.desc}
-                  path={item.path}
+                  key={item.frontmatter.index}
+                  img={item.frontmatter.logo_image}
+                  title={item.frontmatter.header}
+                  description={item.frontmatter.description}
+                  path={`/services/${item.slug}`}
                 />
               ))}
             </Grid>
 
             <Slider className="services-carousel" arrows={false}>
-              {services.map((item, index) => (
+              {services?.map((item) => (
                 <Service
-                  key={index}
-                  img={item.img}
-                  title={item.title}
-                  description={item.desc}
-                  path={item.path}
+                  key={item.frontmatter.index}
+                  img={item.frontmatter.logo_image}
+                  title={item.frontmatter.header}
+                  description={item.frontmatter.description}
+                  path={`/services/${item.slug}`}
                 />
               ))}
             </Slider>
@@ -95,109 +106,101 @@ export default function Home() {
 
         <Container maxWidth="xl">
           <AboutUs
-            header={aboutUsHeader}
-            heading={aboutUsHeading}
-            description={aboutUsDescription}
+            header={aboutUs.frontmatter.title}
+            heading={aboutUs.frontmatter.header}
+            description={aboutUs.frontmatter.description}
             images={images}
           />
         </Container>
 
-        {/* <Container maxWidth="xl">
-          <Box pb="5rem" pt="5rem">
-            <Stack direction={'row'} justifyContent="space-between">
-              <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
-                {newsHeader.slice(0, 6)}
-                <span style={{ color: '#63AC45' }}>
-                  {newsHeader.slice(6, 11)}
-                </span>
-              </Typography>
-              <Button
-                className="view-all-btn"
-                variant="outlined"
-                endIcon={<ArrowForwardOutlinedIcon />}
-                onClick={() => router.push('/blogs')}
+        {FEATURES.blogs && (
+          <Container maxWidth="xl">
+            <Box pb="5rem" pt="5rem">
+              <Stack
+                direction={'row'}
+                justifyContent="space-between"
+                className="blogs-header-section"
               >
-                {viewButtonText}
-              </Button>
-            </Stack>
+                <Typography sx={{ fontSize: 30, fontWeight: 600 }}>
+                  {newsHeader.slice(0, 6)}
+                  <span style={{ color: '#63AC45' }}>
+                    {newsHeader.slice(6, 11)}
+                  </span>
+                </Typography>
+                <Link className="view-all-btn" href="/blogs">
+                  {viewButtonText}
+                  <ArrowForwardOutlinedIcon className="view-link-icon" />
+                </Link>
+              </Stack>
 
-            <Typography my={3}>{newsHeading}</Typography>
+              <Typography my={3}>{newsHeading}</Typography>
 
-            <Stack
-              spacing={2}
-              direction={{ xs: 'column', md: 'row', lg: 'row' }}
-              className="blogs-grid"
-            >
-              <Stack spacing={2}>
-                {blogs.map((blog, index) => {
-                  if (index === 0) {
-                    return (
-                      <Blog
-                        key={index}
-                        image={blog.image}
-                        title={blog.title}
-                        description={blog.description}
-                        chipLabel={blog.chipLabel}
-                        readTime={blog.readTime}
-                        mainBlog={0}
-                        details={blog.details}
-                        index={index}
-                        blog={blog}
+              <Container maxWidth="xl" className="posts" disableGutters>
+                {blogs?.slice(0, 2).map((blog: BlogPost, index: number) => (
+                  <div className="card" key={index}>
+                    <Link href={`/blog/${blog.slug}`}>
+                      <Image
+                        className="post-img"
+                        src={blog?.frontmatter?.cover_image}
+                        alt="image"
+                        width={500}
+                        height={500}
+                        layout="responsive"
                       />
-                    )
-                  }
-                })}
-              </Stack>
+                    </Link>
 
-              <Stack spacing={2}>
-                {blogs
-                  .map((blog, index) => {
-                    if (index !== 0) {
-                      return (
-                        <Blog
-                          key={index}
-                          image={blog.image}
-                          title={blog.title}
-                          description={blog.description}
-                          chipLabel={blog.chipLabel}
-                          readTime={blog.readTime}
-                          details={blog.details}
-                          index={index}
-                          blog={blog}
-                        />
-                      )
-                    }
-                  })
-                  .slice(0, 4)}
-              </Stack>
-            </Stack>
+                    <div className="post-date">
+                      Posted on {blog.frontmatter.date}
+                    </div>
 
-            <Slider className="blogs-carousel" arrows={false}>
-              {blogs.map((blog, index) => {
-                return (
-                  <Blog
-                    key={index}
-                    image={blog.image}
-                    title={blog.title}
-                    description={blog.description}
-                    chipLabel={blog.chipLabel}
-                    readTime={blog.readTime}
-                    mainBlog={index}
-                    index={index}
-                    blog={blog}
-                  />
-                )
-              })}
-            </Slider>
-          </Box>
-        </Container> */}
+                    <Link href={`/blog/${blog.slug}`}>
+                      <h3 className="blog-title">{blog.frontmatter.title}</h3>
+                    </Link>
 
-        {/* <Testimonials /> */}
+                    <p>{blog.frontmatter.excerpt}</p>
 
-        {/* <Container maxWidth="xl" sx={{ marginTop: 10 }}>
-          <Subscribe />
-        </Container> */}
+                    <Link href={`/blog/${blog.slug}`} className="read-button">
+                      Read More
+                    </Link>
+                  </div>
+                ))}
+              </Container>
+            </Box>
+          </Container>
+        )}
+
+        {FEATURES.testimonials && <Testimonials testimonials={testimonials} />}
+
+        {FEATURES.subscribe && (
+          <Container maxWidth="xl" sx={{ marginTop: 10 }}>
+            <Subscribe />
+          </Container>
+        )}
       </div>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const blogFiles = fs.readdirSync(path.join(BLOGS_PATH))
+  const serviceFiles = fs.readdirSync(path.join(SERVICES_PATH))
+  const testimonialFiles = fs.readdirSync(path.join(TESTIMONIALS_PATH))
+
+  const blogs = getMarkdownAllData(blogFiles, BLOGS_PATH, fs)
+  const services = getMarkdownAllData(serviceFiles, SERVICES_PATH, fs)
+  const testimonials = getMarkdownAllData(
+    testimonialFiles,
+    TESTIMONIALS_PATH,
+    fs
+  )
+  const aboutUs = getMarkDownSingleData(fs, ABOUT_US_PATH)
+
+  return {
+    props: {
+      blogs: blogs.sort(sortByDate),
+      services: services.sort(sortByIndex),
+      testimonials: testimonials.sort(sortByDate),
+      aboutUs: aboutUs.props,
+    },
+  }
 }

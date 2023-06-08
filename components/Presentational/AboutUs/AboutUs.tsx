@@ -22,7 +22,7 @@ const AboutUs: React.FC<AboutUs> = ({
     <Box p="4rem 3rem" className="about-us">
       {images.map((image, index) => (
         <Box className={`${image.className} img`} key={index}>
-          <Image src={image.img} alt="aboutus" />
+          <Image src={image.img} alt="aboutus" layout="responsive" />
         </Box>
       ))}
       <Typography fontSize={30} fontWeight={600}>

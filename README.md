@@ -5,6 +5,7 @@ This repository is used to hold the code for the website of [Prixite](https://pr
 This repository can also be used as a starter template for a Next.js project. The code in this repository is freely distributed.
 
 Some interesting things you can learn from this template:
+
 - Deployment of Next.js static website to Github Pages.
 - Github Workflows
 - CI/CD pipeline setup
@@ -12,6 +13,7 @@ Some interesting things you can learn from this template:
 - Integration of linters and formatters.
 
 You can also use this template to create and host a free website on [Github Pages](https://pages.github.com/) or any other static website host. Advantages of a static website:
+
 - Speed 🚀
 - Security 🛡️
 - Scalability 🙌
@@ -34,19 +36,18 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Contributing
+
 See [CONTRIBUTING.md](https://github.com/prixite/prixite.github.io/blob/master/CONTRIBUTING.md) on how to contribute to this project.
 
 ## Future Plan
+
 We would like to reach to a place where anyone can fork this template, make few changes, and create a free website. For this to happen, following needs to happen:
-- a DB file to hold data of the website. Data should be separate from layout. https://github.com/prixite/prixite.github.io/issues/67
-- a system to create layout of pages.
-- a set of components which can be used in pages.
-- a system to change theme easily.
-- a system to change type of site, e.g. change from corporate to a blog.
-- maybe we should also separate style from layout.
+
+- All text should be read from markdown files.
+- User interface can be changed easily.
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2022- [Prixite](https://prixite.com/)
+The data folder and logo of Prixite are the property of [Prixite](https://prixite.com/). The rest of the stuff in this repo can be used freely.

@@ -9,14 +9,11 @@ jobs:
   pre-commit:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: "16"
-        cache: npm
-    - uses: actions/setup-python@v4
-      with:
-        python-version: 3.9.7
-        cache: pip
-    - run: npm ci
-    - uses: pre-commit/action@v3.0.0
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: npm
+        name: install app and lint
+      - run: |
+          npm ci && npm run lint

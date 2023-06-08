@@ -1,8 +1,8 @@
 .testimonials-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  display: flex !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+  align-items: center !important;
   .testimonial {
     margin-top: 20px;
     width: 70%;
@@ -32,6 +32,18 @@
 
     .slick-arrow.slick-prev {
       left: -100px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .testimonials-container {
+    .testimonial {
+      width: 100%;
+      .slick-arrow.slick-prev,
+      .slick-arrow.slick-next {
+        display: none;
+      }
     }
   }
 }
