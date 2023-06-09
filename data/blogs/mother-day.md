@@ -3,6 +3,7 @@ title: "Mother's Day"
 date: 'May 14, 2023'
 excerpt: 'Words are bound to fall short when it comes to Mothers and what they go through their entire life for their children.'
 cover_image: '/images/posts/motherday/mDayCover.png'
+author: 'Waleed Raza'
 ---
 
 Words are bound to fall short when it comes to Mothers and what they go through their entire life for their children. To sum it up in one day is impossible so Mother’s Day is just a day to highlight how Important Mothers are to us! In our daily lives, we get so busy that often we tend to neglect the little gestures mothers give us and how she cares for us, asking about our health and always trying to serve us food! So Prixite came up with an amazing Idea and asked all its employees to take their Mothers out for dinner to spend some quality time while relieving her of kitchen work!
