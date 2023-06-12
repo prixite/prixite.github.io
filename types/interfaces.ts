@@ -32,10 +32,24 @@ export interface Testimonial {
   }
   slug: string
 }
+
+export interface AboutUs {
+  frontmatter: {
+    index: number
+    title: string
+    header: string
+    heading: string
+    description: string
+    shortDescription: string
+    image: string
+  }
+  content: string
+}
 export interface MDContent {
   blogs?: Array<BlogPost>
   services?: Array<ServicePost>
   testimonials?: Array<Testimonial>
+  aboutUs: AboutUs
 }
 
 export interface BlogPostWithContent extends BlogPost {

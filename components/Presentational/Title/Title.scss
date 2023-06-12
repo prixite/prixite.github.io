@@ -1,11 +1,15 @@
 .title-container {
   display: flex;
   align-items: center;
+  .title-link {
+    display: flex;
+  }
   .title-image {
     margin-right: 5px;
     cursor: pointer;
   }
   .title-heading {
+    color: black;
     font-size: 22px;
     font-weight: 800;
     text-transform: uppercase;

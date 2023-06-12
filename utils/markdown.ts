@@ -25,20 +25,31 @@ export const getMarkDownSingleData = (
   // eslint-disable-next-line
   module: any,
   mdPath: string,
-  slug: string
+  slug?: string
 ) => {
-  const markdownWithMeta = module.readFileSync(
-    path.join(mdPath, slug + '.md'),
-    'utf-8'
-  )
+  if (slug) {
+    const markdownWithMeta = module.readFileSync(
+      path.join(mdPath, slug + '.md'),
+      'utf-8'
+    )
 
-  const { data: frontmatter, content } = matter(markdownWithMeta)
-  return {
-    props: {
-      frontmatter,
-      slug,
-      content,
-    },
+    const { data: frontmatter, content } = matter(markdownWithMeta)
+    return {
+      props: {
+        frontmatter,
+        slug,
+        content,
+      },
+    }
+  } else {
+    const markdownWithMeta = module.readFileSync(mdPath + '.md', 'utf-8')
+    const { data: frontmatter, content } = matter(markdownWithMeta)
+    return {
+      props: {
+        frontmatter,
+        content,
+      },
+    }
   }
 }
 

@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Grid, Button, Stack } from '@mui/material'
+import { Box, Container, Typography, Grid, Stack } from '@mui/material'
 // eslint-disable-next-line
 import Image from 'next/image'
 import { homeData, newsAndBlogs } from '../data/data'
@@ -25,19 +25,24 @@ import path from 'path'
 import Link from 'next/link'
 import { BlogPost, MDContent } from '../types/interfaces'
 import { sortByDate, sortByIndex } from '../utils/sort'
-import { getMarkdownAllData } from '../utils/markdown'
+import { getMarkdownAllData, getMarkDownSingleData } from '../utils/markdown'
 import {
   BLOGS_PATH,
   SERVICES_PATH,
   TESTIMONIALS_PATH,
+  ABOUT_US_PATH,
 } from '../utils/constants'
 import { FEATURES } from '../data/features'
 
-export default function Home({ blogs, services, testimonials }: MDContent) {
+export default function Home({
+  blogs,
+  services,
+  testimonials,
+  aboutUs,
+}: MDContent) {
   const { title } = homeData
   const { servicesHeading, servicesAim } = servicesData
-  const { aboutUsHeader, aboutUsHeading, aboutUsDescription, images } =
-    aboutUsCardData
+  const { images } = aboutUsCardData
   const {
     // eslint-disable-next-line
     header: newsHeader,
@@ -105,9 +110,9 @@ export default function Home({ blogs, services, testimonials }: MDContent) {
 
         <Container maxWidth="xl">
           <AboutUs
-            header={aboutUsHeader}
-            heading={aboutUsHeading}
-            description={aboutUsDescription}
+            header={aboutUs.frontmatter.title}
+            heading={aboutUs.frontmatter.header}
+            description={aboutUs.frontmatter.description}
             images={images}
           />
         </Container>
@@ -126,14 +131,10 @@ export default function Home({ blogs, services, testimonials }: MDContent) {
                     {newsHeader.slice(6, 11)}
                   </span>
                 </Typography>
-                <Button
-                  className="view-all-btn"
-                  variant="outlined"
-                  endIcon={<ArrowForwardOutlinedIcon />}
-                  onClick={() => router.push('/blogs')}
-                >
+                <Link className="view-all-btn" href="/blogs">
                   {viewButtonText}
-                </Button>
+                  <ArrowForwardOutlinedIcon className="view-link-icon" />
+                </Link>
               </Stack>
 
               <Typography my={3}>{newsHeading}</Typography>
@@ -141,27 +142,29 @@ export default function Home({ blogs, services, testimonials }: MDContent) {
               <Container maxWidth="xl" className="posts" disableGutters>
                 {blogs?.slice(0, 2).map((blog: BlogPost, index: number) => (
                   <div className="card" key={index}>
-                    <Image
-                      className="post-img"
-                      src={blog?.frontmatter?.cover_image}
-                      alt="image"
-                      width={500}
-                      height={500}
-                      layout="responsive"
-                    />
+                    <Link href={`/blog/${blog.slug}`}>
+                      <Image
+                        className="post-img"
+                        src={blog?.frontmatter?.cover_image}
+                        alt="image"
+                        width={500}
+                        height={500}
+                        layout="responsive"
+                      />
+                    </Link>
 
                     <div className="post-date">
                       Posted on {blog.frontmatter.date}
                     </div>
 
-                    <h3>{blog.frontmatter.title}</h3>
+                    <Link href={`/blog/${blog.slug}`}>
+                      <h3 className="blog-title">{blog.frontmatter.title}</h3>
+                    </Link>
 
                     <p>{blog.frontmatter.excerpt}</p>
 
-                    <Link href={`/blog/${blog.slug}`}>
-                      <Button variant="contained" className="read-button">
-                        Read More
-                      </Button>
+                    <Link href={`/blog/${blog.slug}`} className="read-button">
+                      Read More
                     </Link>
                   </div>
                 ))}
@@ -194,12 +197,14 @@ export async function getStaticProps() {
     TESTIMONIALS_PATH,
     fs
   )
+  const aboutUs = getMarkDownSingleData(fs, ABOUT_US_PATH)
 
   return {
     props: {
       blogs: blogs.sort(sortByDate),
       services: services.sort(sortByIndex),
       testimonials: testimonials.sort(sortByDate),
+      aboutUs: aboutUs.props,
     },
   }
 }

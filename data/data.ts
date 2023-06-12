@@ -16,6 +16,7 @@ import aboutUsp5 from '../public/images/aboutUs-p5.png'
 import likes from '../public/images/handsClapping.png'
 import comments from '../public/images/chatTeardropDots.png'
 import scrollToTop from '../public/images/scrollToTop.png'
+import InstagramIcon from '../public/images/instagram-icon.png'
 import { FEATURES } from '../data/features'
 
 /*********          Header Menu Data            ********** */
@@ -203,7 +204,7 @@ export const joinUsLinkIcons = [
 
 /**************             Footer Data         ************ */
 export const footerData = {
-  copyright: 'Prixite © 2022. All Rights Reserved',
+  copyright: `Prixite © ${new Date().getFullYear()}. All Rights Reserved`,
   details: [
     {
       icon: LocationIcon,
@@ -229,6 +230,14 @@ export const footerData = {
         text: 'Contact us',
         path: '/contact-us',
       },
+      {
+        text: 'Services',
+        path: '/services',
+      },
+      {
+        text: 'News & Blogs',
+        path: '/blogs',
+      },
     ],
   },
   joinUs: {
@@ -245,6 +254,12 @@ export const footerData = {
         width: 24,
         height: 25,
         path: 'https://www.linkedin.com/company/prixite/mycompany/',
+      },
+      {
+        icon: InstagramIcon,
+        width: 24,
+        height: 25,
+        path: 'https://www.instagram.com/prixitegram/',
       },
     ],
   },
