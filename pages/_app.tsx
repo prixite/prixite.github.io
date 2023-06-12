@@ -21,6 +21,7 @@ import '../styles/pagesStyles/blog.scss'
 import '../styles/pagesStyles/aboutUs.scss'
 import '../styles/pagesStyles/services.scss'
 import '../styles/pagesStyles/page.scss'
+import '../styles/pagesStyles/team.scss'
 import '../components/Presentational/AboutUs/AboutUs.scss'
 import '../components/Presentational/Title/Title.scss'
 import '../components/Smart/Testimonials/Testimonials.scss'
@@ -32,6 +33,7 @@ import '../components/Presentational/Service/Service.scss'
 import '../components/Smart/ContactForm/ContactForm.scss'
 import '../components/Presentational/HomeContainer/HomeContainer.scss'
 import '../components/Smart/HeaderMenu/HeaderMenu.scss'
+import '../components/Smart/Category/Category.scss'
 
 let theme = createTheme({
   breakpoints: {

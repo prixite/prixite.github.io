@@ -1,0 +1,152 @@
+.team-page {
+    margin-top: 30px;
+    position: relative;
+  
+    .heading {
+      font-size: 30px;
+    }
+  
+    .color-primary {
+      color: #63ac45;
+    }
+  
+    .desc {
+      padding-top: 20px;
+    }
+  
+    .category {
+      display: flex;
+      align-items: center;
+      padding-top: 30px;
+      gap: 25px;
+      cursor: pointer;
+    }
+  
+    .images-main-container {
+      padding-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+  
+    .image-container {
+      padding: 2px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      cursor: pointer;
+    }
+  
+    .image {
+      border-radius: 0.3rem;
+    }
+  }
+  
+  .profile {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+  }
+  
+  .color-primary {
+    color: #63ac45;
+  }
+  
+  .moreInfo {
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #63ac45;
+  }
+  
+  .stack-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .stack {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #63ac45;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+  }
+  
+  .flex {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .single-image {
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .profile-header {
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+  }
+  
+  .icons-container {
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+  }
+  
+  .hr {
+    border: 1px solid #d3d3d3;
+    height: 10px;
+    margin-top: 5px;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .team-page {
+      .category {
+        flex-direction: column;
+        padding: 20px;
+      }
+  
+      .images-main-container {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .flex {
+      flex-direction: column;
+    }
+    .profile-header {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 550px) {
+    .team-page {
+      .category {
+        flex-direction: column;
+        padding: 20px;
+        padding-bottom: 450px;
+      }
+    }
+  }
+  

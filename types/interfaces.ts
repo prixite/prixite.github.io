@@ -19,6 +19,21 @@ export interface ServicePost {
   slug: string
 }
 
+export interface EmployeePost {
+  frontmatter: {
+    id: number
+    name: string
+    title: string
+    category: string
+    image: string
+    description: string
+    moreInfoOne: string
+    moreInfoTwo: string
+    developmentStack: Array<{ name: string; icon: string }>
+  }
+  slug: string
+}
+
 export interface Testimonial {
   frontmatter: {
     index: number
@@ -48,6 +63,7 @@ export interface AboutUs {
 export interface MDContent {
   blogs?: Array<BlogPost>
   services?: Array<ServicePost>
+  employees?: Array<EmployeePost>
   testimonials?: Array<Testimonial>
   aboutUs: AboutUs
 }
@@ -60,6 +76,10 @@ export interface ServiceWithContent extends ServicePost {
   content: string
 }
 
+export interface EmployeeWithContent extends EmployeePost {
+  content: string
+}
+
 export interface Blog {
   params: {
     slug: string
@@ -67,6 +87,12 @@ export interface Blog {
 }
 
 export interface Service {
+  params: {
+    slug: string
+  }
+}
+
+export interface Employee {
   params: {
     slug: string
   }

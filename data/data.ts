@@ -33,6 +33,10 @@ export const pages = [
     path: '/contact-us',
     text: 'Contact Us',
   },
+  {
+    path: '/team',
+    text: 'Meet the team',
+  },
 ]
 
 if (FEATURES.blogs) {
@@ -201,6 +205,33 @@ export const joinUsLinkIcons = [
     path: 'https://www.linkedin.com/company/prixite/mycompany/',
   },
 ]
+
+/*********          Meet the Team Page Data            ************* */
+export const categories: Array<string> = [
+  'All',
+  'Leadership',
+  'Success',
+  'Sales',
+  'Product',
+  'Operations',
+  'Marketing',
+  'Engineering',
+  'Design',
+]
+
+export interface Employee {
+  id: number
+  name: string
+  title: string
+  image: string
+  description: string
+  moreInfo: string
+  DevelopmentStack: Array<string>
+  facebookLink?: string
+  twitterLink?: string
+  linkedInLink?: string
+  category: string
+}
 
 /**************             Footer Data         ************ */
 export const footerData = {
