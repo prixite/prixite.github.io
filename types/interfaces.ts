@@ -26,6 +26,7 @@ export interface EmployeePost {
     title: string
     category: string
     image: string
+    imageB: string
     description: string
     moreInfoOne: string
     moreInfoTwo: string

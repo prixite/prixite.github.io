@@ -3,6 +3,7 @@ id: 1
 title: 'Software Engineer'
 name: 'Bilal Irfan'
 image: '/images/employees/Bilal Irfan.jpg'
+imageB: '/images/employees/Bilal-Irfan-GreenB.svg'
 category: 'Leadership'
 description: 'The Smile that makes you forget work stress! An adept Python developer with extensive knowledge of Django framework & NLP algorithms, while having a strong appetite for outdoor games!'
 moreInfoOne: "Bilal's latest work includes working on a product that ranks entities from the Internet. Using Python Django, NLP, Postgresql, Docker, and GitHub, Bilal was able to Integrate and develop REST APIs, implemented ranking algorithms, wrote CronJobs, and integrated Hugging Face Transformer models for NLP."

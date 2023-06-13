@@ -9,14 +9,14 @@ import {
 } from '../../utils/markdown'
 import { EMPLOYEES_PATH } from '../../utils/constants'
 import Image from 'next/image'
-import { LuTwitter, LuFacebook, LuInstagram, LuLinkedin } from 'react-icons/lu'
-import { AiOutlineLink } from 'react-icons/ai'
+// import { LuTwitter, LuFacebook, LuInstagram, LuLinkedin } from 'react-icons/lu'
+// import { AiOutlineLink } from 'react-icons/ai'
 
 const EmployeeDetail = ({
   frontmatter: {
     title,
     name,
-    image,
+    imageB,
     description,
     moreInfoOne,
     moreInfoTwo,
@@ -37,7 +37,7 @@ const EmployeeDetail = ({
         <div className="profile">
           <div className="single-image">
             <Image
-              src={image}
+              src={imageB}
               height={250}
               width={250}
               alt="profile-picture"
@@ -45,9 +45,9 @@ const EmployeeDetail = ({
             />
           </div>
           <div className="profile-info">
-            <div className="profile-header">
-              <Typography fontWeight={600}>{name}</Typography>
-              <div className="icons-container">
+            {/* <div className="profile-header"> */}
+              <Typography fontWeight={600} fontSize={18}>{name}</Typography>
+              {/* <div className="icons-container">
                 <LuFacebook size={20} color="#d3d3d3" />
                 <hr className="hr" />
                 <LuTwitter size={20} color="#d3d3d3" />
@@ -65,12 +65,12 @@ const EmployeeDetail = ({
                 />
                 <hr className="hr" />
                 <AiOutlineLink size={20} color="#d3d3d3" />
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
             <Typography fontWeight={500} className="color-primary">
               {title}
             </Typography>
-            <Typography style={{ marginTop: '20px' }}>{description}</Typography>
+            <Typography style={{ marginTop: '20px', width: '60%', textAlign: 'justify' }}>{description}</Typography>
           </div>
         </div>
 
@@ -82,8 +82,8 @@ const EmployeeDetail = ({
           >
             More About {trimName(name)}
           </Typography>
-          <Typography>{moreInfoOne}</Typography>
-          {moreInfoTwo && <Typography>{moreInfoTwo}</Typography>}
+          <Typography style={{ textAlign: 'justify' }}>{moreInfoOne}</Typography>
+          {moreInfoTwo && <div><br /><Typography style={{ textAlign: 'justify' }}>{moreInfoTwo}</Typography></div>}
         </div>
 
         <div className="stack-container">
