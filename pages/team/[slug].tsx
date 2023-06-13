@@ -46,8 +46,10 @@ const EmployeeDetail = ({
           </div>
           <div className="profile-info">
             {/* <div className="profile-header"> */}
-              <Typography fontWeight={600} fontSize={18}>{name}</Typography>
-              {/* <div className="icons-container">
+            <Typography fontWeight={600} fontSize={18}>
+              {name}
+            </Typography>
+            {/* <div className="icons-container">
                 <LuFacebook size={20} color="#d3d3d3" />
                 <hr className="hr" />
                 <LuTwitter size={20} color="#d3d3d3" />
@@ -70,7 +72,11 @@ const EmployeeDetail = ({
             <Typography fontWeight={500} className="color-primary">
               {title}
             </Typography>
-            <Typography style={{ marginTop: '20px', width: '60%', textAlign: 'justify' }}>{description}</Typography>
+            <Typography
+              style={{ marginTop: '20px', width: '60%', textAlign: 'justify' }}
+            >
+              {description}
+            </Typography>
           </div>
         </div>
 
@@ -82,8 +88,17 @@ const EmployeeDetail = ({
           >
             More About {trimName(name)}
           </Typography>
-          <Typography style={{ textAlign: 'justify' }}>{moreInfoOne}</Typography>
-          {moreInfoTwo && <div><br /><Typography style={{ textAlign: 'justify' }}>{moreInfoTwo}</Typography></div>}
+          <Typography style={{ textAlign: 'justify' }}>
+            {moreInfoOne}
+          </Typography>
+          {moreInfoTwo && (
+            <div>
+              <br />
+              <Typography style={{ textAlign: 'justify' }}>
+                {moreInfoTwo}
+              </Typography>
+            </div>
+          )}
         </div>
 
         <div className="stack-container">
