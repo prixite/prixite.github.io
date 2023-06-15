@@ -42,8 +42,8 @@ const MeetTeam = ({ employees }: MDContent) => {
           Meet the <span className="color-primary">team</span>
         </Typography>
         <Typography fontWeight={450} className="desc">
-          We are here to help engineering teams evolve their relationship with
-          software in production. These are the people who make it happen.
+          Meet our highly enthusiastic team, who looks for out of box solutions,
+          and aspires to become our customer’s first choice.
         </Typography>
 
         <div className="category">

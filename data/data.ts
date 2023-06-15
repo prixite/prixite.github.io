@@ -209,14 +209,10 @@ export const joinUsLinkIcons = [
 /*********          Meet the Team Page Data            ************* */
 export const categories: Array<string> = [
   'All',
-  'Leadership',
-  'Success',
-  'Sales',
-  'Product',
-  'Operations',
-  'Marketing',
-  'Engineering',
-  'Design',
+  'Machine Learning',
+  'Web App Development',
+  'Mobile App Development',
+  'Scraping',
 ]
 
 export interface Employee {
