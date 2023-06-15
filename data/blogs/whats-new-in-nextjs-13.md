@@ -106,7 +106,7 @@ Next.js 13+ provides a second params to fetch function to decide whether we want
     //Default, Similar to 'getStaticProps' of previous versions.
     fetch(API_URL, { cache: 'force-cache' })
 
-    // Similar to 'getStaticPaths' with the 'revalidate' option of previous versions.
+    // It re-renders already built files after every 10 seconds.
     fetch(API_URL, { next: { revalidate: 10 } });
 
     // Similar to 'getServerSideProps' of previous versions.
