@@ -3,6 +3,7 @@ title: 'ScoopRank Intro Blog'
 date: 'March 30, 2023'
 excerpt: 'ScoopRank is a deep tech product that ranks entities and tracks trends of entities in real time across internet.'
 cover_image: '/images/posts/scooprank/main.png'
+author: 'Umair Khan'
 ---
 
 I have always had conversations and debates where one tries to convince the other about the popularity of ‘his’ leader and vice versa! And the result? Always a zero multiplied by zero! No one has any stats and evidence to gauge “popularity” or look at how something is trending against the other. And this is where [ScoopRank](https://www.scooprank.com) silently kicks in!
