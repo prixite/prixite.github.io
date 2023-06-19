@@ -58,7 +58,7 @@ The directory structure has introduces few changes due to the new routing mechan
 
 We can also add <b>layout.tsx</b>, <b>error.tsx</b> and <b>loading.tsx</b> files inside each folder within /app directory.
 
-![App directory in next.js 13+](/images/posts/whatsnewinnextjs/app-directory.png#image-120)
+<img src="/images/posts/whatsnewinnextjs/app-directory.png" alt="image-120"/>
 
 Here, we can create 3 more files (layout.tsx, error.tsx and loading.tsx) parallel to each page.tsx file.
 
@@ -78,7 +78,9 @@ By default, all components created are server components. Use <b>use Client</b> 
     export default function Home() {
     return (
         <div>
-            <p>Without 'use client' at top, This would be the Server component by default.</p>
+            <p>
+            Without 'use client' at top, This would be the Server component by default.
+            </p>
         </div>
         )
     }
@@ -147,8 +149,11 @@ Read More: [Turbopack in Next.js 13+](https://nextjs.org/docs/architecture/turbo
     // images will load faster, even on slow connections.
     <Image src="/profile.png" width={500} height={500} alt="" />
 
-    @next/font We don’t need to download the google fonts locally and no need for CDN links.
-    Also it does not send extra external network requests to google fonts and it does not face a layout shift error in next.js which is more important for SEO.
+    @next/font We don’t need to download the google fonts locally and
+    no need for CDN links.
+    Also it does not send extra external network requests to google fonts
+    and it does not face a layout shift error in next.js which
+    is more important for SEO.
 
 Read More: [next/image, next/link, next/font Next.js 13+](https://nextjs.org/docs/architecture/turbopack)
 
