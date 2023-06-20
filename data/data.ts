@@ -37,6 +37,10 @@ export const pages = [
     path: '/product',
     text: 'Products',
   },
+  {
+    path: '/team',
+    text: 'Meet the team',
+  },
 ]
 if (FEATURES.blogs) {
   pages.push({

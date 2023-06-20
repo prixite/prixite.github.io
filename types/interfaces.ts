@@ -30,6 +30,22 @@ export interface Product {
   slug: string
 }
 
+export interface EmployeePost {
+  frontmatter: {
+    id: number
+    name: string
+    title: string
+    category: string
+    image: string
+    imageB: string
+    description: string
+    moreInfoOne: string
+    moreInfoTwo: string
+    developmentStack: Array<{ name: string; icon: string }>
+  }
+  slug: string
+}
+
 export interface Testimonial {
   frontmatter: {
     index: number
@@ -73,6 +89,10 @@ export interface ServiceWithContent extends ServicePost {
 }
 
 export interface ProductDetailWithContent extends Product {
+  content: string
+}
+
+export interface EmployeeWithContent extends EmployeePost {
   content: string
 }
 
