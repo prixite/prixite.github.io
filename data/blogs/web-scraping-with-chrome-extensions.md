@@ -1,7 +1,7 @@
 ---
-title: "Web Scraping with Chrome Extensions"
+title: 'Web Scraping with Chrome Extensions'
 date: 'June 20, 2023'
-excerpt: 'Web scraping is the automated extraction of data from websites. With chrome extensions, no technical knowledge is required.'
+excerpt: 'Web scraping is the automated extraction of data from websites. No technical knowledge is required when scraping with chrome extensions.'
 cover_image: '/images/posts/scrapingchromeextensions/thumbnail.png'
 author: 'Umair Jameel'
 ---
@@ -10,7 +10,7 @@ author: 'Umair Jameel'
 
 Web scraping is the automated extraction of data from websites. It involves writing software or using tools to gather information from web pages and store it in a structured format for further analysis or use.
 
-Typically, web scraping involves sending HTTP requests to a website and then parsing the HTML or XML content of the web page to extract the desired data. This can be done using programming languages like Python, Node, chrome extensions etc. 
+Typically, web scraping involves sending HTTP requests to a website and then parsing the HTML or XML content of the web page to extract the desired data. This can be done using programming languages like Python, Node, chrome extensions etc.
 
 <br>
 #### Chrome extensions for web scraping.
@@ -18,7 +18,7 @@ There are a lot of extensions in chrome store for scraping data, but we will be 
 
 1. [Scraper](https://chrome.google.com/webstore/detail/scraper/mbigbapnjcgaffohmbkdlecaccepngjd) <br>
 2. [Web Scraper](https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn)
-    
+
 ![scraper](/images/posts/scrapingchromeextensions/scraper.png#image-70)
 ![web-scraper](/images/posts/scrapingchromeextensions/web-scraper.png#image-70)
 
@@ -28,15 +28,19 @@ Scraper is a very simple data scraping extension for facilitating online researc
 
 Once you install this extension in chrome. Open any web page which You want to scrape. Let's try it with [imdb](https://www.imdb.com/search/title/?title_type=feature&year=2023-01-01,2023-12-31) for getting the title of movies in 2023.
 
-So, currenlty there are 50 movies show on first page. We need to select the title of first movie card (make sure you don't select the empty white spaces from start or end of title text). Once it is selected, right click on it and click <b>scrape similar</b> link. It will open up a window with all the results. 
+So, currenlty there are 50 movies show on first page. We need to select the title of first movie card (make sure you don't select the empty white spaces from start or end of title text). Once it is selected, right click on it and click <b>scrape similar</b> link. It will open up a window with all the results.
 <br>
+
 ##### Movies:
+
 ![Movies](/images/posts/scrapingchromeextensions/movies.png#image-70)
 <br>
+
 ##### Results:
+
 ![Results](/images/posts/scrapingchromeextensions/results.png#image-70)
 
-In the text box, you can see that it selected the inner text of all elements create using <b>//h3/a</b> tags. If you have any idea about HTML, you can modify it as per your requirements. 
+In the text box, you can see that it selected the inner text of all elements create using <b>//h3/a</b> tags. If you have any idea about HTML, you can modify it as per your requirements.
 
 You can select any element from any web page. It will find out all other similar elements within that page and make it a part of results, even if there are 1000s of similar data exists on that page.
 From the results window, you can copy the results or export the results to Google Drive.
@@ -63,39 +67,39 @@ Now come back to Web Scraper tab in the inspect window. Click on <b>create new s
 
 ![sitemap](/images/posts/scrapingchromeextensions/createsitemap.png#image-70)
 
-Once a new sitemap is created, it will show a table with rows of all sitemaps are created. It will show only 1 row as we are just starting using it. If we click on its row, it will take us to another page, showing <b>_root</b> link (representing root url of web page). 
- 
+Once a new sitemap is created, it will show a table with rows of all sitemaps are created. It will show only 1 row as we are just starting using it. If we click on its row, it will take us to another page, showing <b>\_root</b> link (representing root url of web page).
+
 It will also show a button <b>Add new selector</b> which we need to click on and create a new selector.
 
 ![selectors](/images/posts/scrapingchromeextensions/selector.png#image-70)
 
-In the form of creating a new selector, add an id (which I have given the name <b>brands</b>), select Link from dropdown (since we need to navigate to each brands page), click on <b>Multiple</b> checkbox and then click on <b>select</b> button.
+In the form for creating a new selector, add an id (which I have given the name <b>brands</b>), select Link from dropdown (since we need to navigate to each brands page), click on <b>Multiple</b> checkbox and then click on <b>select</b> button.
 
-Once you do this, it will show a toolbar over the web page. You will then need to click at least 2 (similar) elements (I have clicked on top 2 brand names). It will then analyse the whole page and automatically select all other similar elements by itself. 
+Once you do this, it will show a toolbar over the web page. You will then need to click at least 2 (similar) elements (I have clicked on top 2 brand names). It will then analyse the whole page and automatically select all other similar elements by itself.
 
 Finally, click on green button <b>Done selecting</b>.
 
-Once you do perform these steps, it will show the selector for brands as shown below. 
+Once you do perform these steps, it will show the selector for brands as shown below.
 
 ![css](/images/posts/scrapingchromeextensions/css.png#image-70)
 
 Finally, click on <b>Save Selector</b> button. It will show a table with all the selector we have created so far (currently only one).
 
-Before moving forward and add more selectors for the products title and price. Let's try to scrape the brands links which we already setup. 
-So now, click on the <b>Sitemap Whatmobile</b> dropdown and click on <b>Scrape</b> link. 
+Before moving forward and add more selectors for the products title and price. Let's try to scrape the brands links which we already setup.
+So now, click on the <b>Sitemap Whatmobile</b> dropdown and click on <b>Scrape</b> link.
 
 ![scrapebutton](/images/posts/scrapingchromeextensions/scrapebutton.png#image-70)
 
-It will take you to next screen, where you can keep the values 2000 in both the textboxes. Click on <b>Start Scraping</b> button. It will open up chrome windows and start scraping the data. You will see the following page containing a table of all brand titles, urls and links toward each page are visible. 
+It will take you to next screen, where you can keep the values 2000 in both the textboxes. Click on <b>Start Scraping</b> button. It will open up chrome windows and start scraping the data. You will see the following page containing a table of all brand titles, urls and links toward each page are visible.
 
 ![brandresults](/images/posts/scrapingchromeextensions/brandresults.png#image-70)
 
-    Note: if you see any error asking you to use their cloud space. Just click on "Refresh Data" button. 
+    Note: if you see any error asking you to use their cloud space. Just click on "Refresh Data" button.
     If you want to export this sitemap or the data, click on Sitemap Whatmobile dropdown and it will show you the options.
 
-Note, let's scrape the titles and prices of each mobile phone in each brands url that you have already scraped. 
+Note, let's scrape the titles and prices of each mobile phone in each brands url that you have already scraped.
 
-Click on <b>Sitemap</b> tab from top, it will show you a table with columns ID and Domain. Click on its table first row (currently only 1) and it will take you to next table where you will see the already created brands selector. Click on this row and it will take you to next page, where we need to create the selectors for each brand. 
+Click on <b>Sitemap</b> tab from top, it will show you a table with columns ID and Domain. Click on its table first row (currently only 1) and it will take you to next table where you will see the already created brands selector. Click on this row and it will take you to next page, where we need to create the selectors for each brand.
 
 This is what you will see inside brands page.
 
@@ -103,14 +107,14 @@ This is what you will see inside brands page.
 
 The reason, we will be creating selectors in this window for each mobile product's title is because each mobile product belongs to separate brand and brands selector will be the parent of each product selector.
 
-Now first click on any of the brand (e.g. Samsung mobile) from the web page, so we should be able to select the titles of mobile phone while creating the selector in Web Scraper window. 
+Now first click on any of the brand (e.g. Samsung mobile) from the web page, so we should be able to select the titles of mobile phone while creating the selector in Web Scraper window.
 
 Now follow the same steps that we have discussed above (when we created selector for brands) in order to select the titles of each mobile phone as shown in image below. Finally click on "Save selector" button.
 <br>
 
 ![producttitle](/images/posts/scrapingchromeextensions/producttitle.png#image-70)
 
-In the above image, you can see that I have set the type to Text, because we don't want to navigate inside each product, but only want to fetch the title text. You can also see that we have set the parent of this selector to <b>brands</b> but not _root as before.
+In the above image, you can see that I have set the type to Text, because we don't want to navigate inside each product, but only want to fetch the title text. You can also see that we have set the parent of this selector to <b>brands</b> but not \_root as before.
 
 Now when we will run the scraper, it will take around 3-4 minutes to scrape the titles of all the products inside each brands page. Click on <b>Refresh Data</b> button to see the updated results.
 
@@ -132,12 +136,8 @@ If we click on "Selector Graph" from the dropdown "Sitemap Whatmobile". We can a
 
 ![graph](/images/posts/scrapingchromeextensions/graph.png#image-70)
 
+This is how we can use these awesome chrome extensions to scrape the data from any website we want and navigate to any page with respect to its parent selectors. Same way, we can add selectors for pagination numbers inside any page and set the parent of it.
 
-This is how we can use these awesome chrome extensions to scrape the data from any website we want and navigate to any page with respect to its parent selectors. Same way, we can add selectors for pagination numbers inside any page and set the parent of it. 
-
-There can be few schnerios on some web pages or some times webpages UI is quite complex that these chrome extension can't fullfil our requirements. This is when we have to manually write scripts (in node or python) to scrape the data from web pages. But mostly, I think these extensions fulfill the purpose. 
+There can be few schnerios on some web pages or some times webpages UI is quite complex that these chrome extension can't fullfil our requirements. This is when we have to manually write scripts (in node or python) to scrape the data from web pages. But mostly, I think these extensions fulfill the purpose.
 
 Happy learning 🎉
-
-
-
