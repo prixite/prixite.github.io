@@ -24,17 +24,18 @@ const ProductList = ({ product }: MDContent) => {
       <Container maxWidth="xl" className="page-header">
         <Box className="header">
           <Box className="heading">
-            <Typography className="heading-text">{header.slice(0, 4)}
+            <Typography className="heading-text">
+              {header.slice(0, 4)}
               <span style={{ color: 'var(--primary-green)' }}>
                 {header.slice(4, 12)}
-              </span></Typography>
+              </span>
+            </Typography>
           </Box>
-        <Link href={'/'}>
+          <Link href={'/'}>
             <Typography color={'primary'}> {'< '}Back </Typography>
           </Link>
-          </Box>
+        </Box>
       </Container>
-
 
       <Container maxWidth="xl" className="posts">
         {product?.map((product: Product, index: number) => (
@@ -55,7 +56,7 @@ const ProductList = ({ product }: MDContent) => {
   )
 }
 
-export default ProductList;
+export default ProductList
 
 export async function getStaticProps() {
   const productFiles = fs.readdirSync(path.join(PRODUCT_PATH))
