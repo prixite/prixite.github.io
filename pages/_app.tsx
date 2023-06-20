@@ -34,6 +34,7 @@ import '../components/Smart/ContactForm/ContactForm.scss'
 import '../components/Presentational/HomeContainer/HomeContainer.scss'
 import '../components/Smart/HeaderMenu/HeaderMenu.scss'
 import '../components/Smart/Category/Category.scss'
+import '../components/Shared/layout/layout.scss'
 
 let theme = createTheme({
   breakpoints: {

@@ -15,3 +15,48 @@
     margin-bottom: 3rem;
   }
 }
+
+.integrating_scrapy {
+  .blog-heading {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    width: 50%;
+    margin: 0 auto;
+    line-height: 2.2rem;
+    padding-bottom: 10px;
+    opacity: 0.8;
+  }
+
+  .first-paragraph {
+    text-align: center;
+  }
+
+  .image {
+    height: 450px;
+    width: 400px;
+    margin-bottom: 12px;
+  }
+
+  .code-block {
+    background-color: #d3d3d3;
+    padding-left: 10px;
+    padding-top: 18px;
+    padding-right: 10px;
+    padding-bottom: 1px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+
+    .p {
+      color: #8f1111;
+      font-weight: 400;
+      font-family: 'Courier New', Courier, monospace;
+      line-height: 7px;
+    }
+  }
+
+  h6 {
+    font-weight: bold;
+    opacity: 0.8;
+  }
+}
