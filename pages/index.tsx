@@ -3,7 +3,7 @@ import { Box, Container, Typography, Grid, Stack, Button } from '@mui/material'
 import Image from 'next/image'
 import { homeData, newsAndBlogs, productsList } from '../data/data'
 // eslint-disable-next-line
-import Chip from '@mui/material/Chip'
+//import Chip from '@mui/material/Chip'
 import { aboutUsCardData, servicesData } from '../data/data'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
