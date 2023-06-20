@@ -209,6 +209,29 @@ export const joinUsLinkIcons = [
   },
 ]
 
+/*********          Meet the Team Page Data            ************* */
+export const categories: Array<string> = [
+  'All',
+  'Machine Learning',
+  'Web App Development',
+  'Mobile App Development',
+  'Scraping',
+]
+
+export interface Employee {
+  id: number
+  name: string
+  title: string
+  image: string
+  description: string
+  moreInfo: string
+  DevelopmentStack: Array<string>
+  facebookLink?: string
+  twitterLink?: string
+  linkedInLink?: string
+  category: string
+}
+
 /**************             Footer Data         ************ */
 export const footerData = {
   copyright: `Prixite © ${new Date().getFullYear()}. All Rights Reserved`,

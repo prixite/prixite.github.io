@@ -4,6 +4,7 @@ export interface BlogPost {
     date: string
     excerpt: string
     title: string
+    author: string
   }
   slug: string
 }
@@ -75,6 +76,7 @@ export interface AboutUs {
 export interface MDContent {
   blogs?: Array<BlogPost>
   services?: Array<ServicePost>
+  employees?: Array<EmployeePost>
   testimonials?: Array<Testimonial>
   aboutUs: AboutUs
   product?: Array<Product>
@@ -109,6 +111,12 @@ export interface ProductDetail {
 }
 
 export interface Service {
+  params: {
+    slug: string
+  }
+}
+
+export interface Employee {
   params: {
     slug: string
   }
