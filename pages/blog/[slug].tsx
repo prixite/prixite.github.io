@@ -57,7 +57,9 @@ export default function BlogDetailPage({
               className="icons"
             >
               <FacebookShareButton
-                url={`${process.env.NEXT_PUBLIC_BASEPATH}/${router.asPath}`}
+                url={`${process.env.NEXT_PUBLIC_BASEPATH || 'prixite.com'}/${
+                  router.asPath
+                }`}
               >
                 <Image
                   src={joinUsLinkIcons[0].icon.src}
@@ -68,7 +70,9 @@ export default function BlogDetailPage({
                 />
               </FacebookShareButton>
               <LinkedinShareButton
-                url={`${process.env.NEXT_PUBLIC_BASEPATH}/${router.asPath}`}
+                url={`${process.env.NEXT_PUBLIC_BASEPATH || 'prixite.com'}/${
+                  router.asPath
+                }`}
               >
                 <Image
                   src={joinUsLinkIcons[1].icon.src}
