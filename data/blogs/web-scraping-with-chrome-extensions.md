@@ -12,29 +12,27 @@ Web scraping is the automated extraction of data from websites. It involves writ
 
 Typically, web scraping involves sending HTTP requests to a website and then parsing the HTML or XML content of the web page to extract the desired data. This can be done using programming languages like Python, Node, chrome extensions etc.
 
-<br>
 #### Chrome extensions for web scraping.
+
 There are a lot of extensions in chrome store for scraping data, but we will be using 2 very useful and highest rated extensions as shared below:
 
-1. [Scraper](https://chrome.google.com/webstore/detail/scraper/mbigbapnjcgaffohmbkdlecaccepngjd) <br>
+1. [Scraper](https://chrome.google.com/webstore/detail/scraper/mbigbapnjcgaffohmbkdlecaccepngjd)
 2. [Web Scraper](https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn)
 
 ![scraper](/images/posts/scrapingchromeextensions/scraper.png#image-70)
 ![web-scraper](/images/posts/scrapingchromeextensions/web-scraper.png#image-70)
 
-#### Let's work with <b>Scraper</b>
+#### Let's work with Scraper
 
 Scraper is a very simple data scraping extension for facilitating online research when you need to get data into spreadsheet with very few clicks and steps. It saves a lot of time when you need to quickly fetch similar kinds of data from a page.
 
 Once you install this extension in chrome. Open any web page which You want to scrape. Let's try it with [imdb](https://www.imdb.com/search/title/?title_type=feature&year=2023-01-01,2023-12-31) for getting the title of movies in 2023.
 
 So, currenlty there are 50 movies show on first page. We need to select the title of first movie card (make sure you don't select the empty white spaces from start or end of title text). Once it is selected, right click on it and click <b>scrape similar</b> link. It will open up a window with all the results.
-<br>
 
 ##### Movies:
 
 ![Movies](/images/posts/scrapingchromeextensions/movies.png#image-70)
-<br>
 
 ##### Results:
 
@@ -47,8 +45,7 @@ From the results window, you can copy the results or export the results to Googl
 
 Now let's talk about some advance scraping using 2nd extension <b>Web Scraper</b>
 
-<br>
-#### Let's work with <b>Web Scraper</b> now
+#### Let's work with Web Scraper now
 
 Download and install Web Scraper from the link. [Web Scraper](https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn)
 
@@ -110,7 +107,6 @@ The reason, we will be creating selectors in this window for each mobile product
 Now first click on any of the brand (e.g. Samsung mobile) from the web page, so we should be able to select the titles of mobile phone while creating the selector in Web Scraper window.
 
 Now follow the same steps that we have discussed above (when we created selector for brands) in order to select the titles of each mobile phone as shown in image below. Finally click on "Save selector" button.
-<br>
 
 ![producttitle](/images/posts/scrapingchromeextensions/producttitle.png#image-70)
 
