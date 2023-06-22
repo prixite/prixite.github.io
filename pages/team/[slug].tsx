@@ -101,25 +101,24 @@ const EmployeeDetail = ({
           )}
         </div>
 
+        <Typography
+          fontSize={16}
+          fontWeight={600}
+          style={{ marginTop: '20px' }}
+        >
+          Development Stack
+        </Typography>
         <div className="stack-container">
-          <Typography fontSize={16} fontWeight={600}>
-            Development Stack
-          </Typography>
-          <div className="flex">
-            {developmentStack?.map((tech, index) => {
-              return (
-                <div key={index} className="stack">
-                  <Image
-                    alt="tech.name"
-                    src={tech.icon}
-                    height={80}
-                    width={80}
-                  />
-                  <Typography fontWeight={500}>{tech.name}</Typography>
-                </div>
-              )
-            })}
-          </div>
+          {developmentStack?.map((tech, index) => {
+            return (
+              <div key={index} className="stack">
+                <Image alt="tech.name" src={tech.icon} height={80} width={80} />
+                <Typography fontWeight={500} style={{ textAlign: 'center' }}>
+                  {tech.name}
+                </Typography>
+              </div>
+            )
+          })}
         </div>
       </Container>
     </>
