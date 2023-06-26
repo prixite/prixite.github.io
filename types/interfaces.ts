@@ -20,6 +20,17 @@ export interface ServicePost {
   slug: string
 }
 
+export interface Product {
+  frontmatter: {
+    index: number
+    title: string
+    header: string
+    description: string
+    date: number
+  }
+  slug: string
+}
+
 export interface EmployeePost {
   frontmatter: {
     id: number
@@ -68,6 +79,7 @@ export interface MDContent {
   employees?: Array<EmployeePost>
   testimonials?: Array<Testimonial>
   aboutUs: AboutUs
+  product?: Array<Product>
 }
 
 export interface BlogPostWithContent extends BlogPost {
@@ -78,11 +90,21 @@ export interface ServiceWithContent extends ServicePost {
   content: string
 }
 
+export interface ProductDetailWithContent extends Product {
+  content: string
+}
+
 export interface EmployeeWithContent extends EmployeePost {
   content: string
 }
 
 export interface Blog {
+  params: {
+    slug: string
+  }
+}
+
+export interface ProductDetail {
   params: {
     slug: string
   }
