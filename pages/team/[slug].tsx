@@ -24,7 +24,7 @@ const EmployeeDetail = ({
   },
 }: EmployeeWithContent) => {
   const trimName = (name: string) => {
-    return name.split(' ')[0].toString()
+    return name?.split(' ')[0].toString()
   }
   return (
     <>
