@@ -7,7 +7,7 @@ const PageNotFound = () => {
         <h2
           style={{
             width: '100%',
-            height: '41vh',
+            height: '45.5vh',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
