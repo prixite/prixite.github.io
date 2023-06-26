@@ -2,7 +2,7 @@
 title: "TypeScript: From Beginner to Advanced - A Developer's Guide"
 date: 'June 23, 2023'
 excerpt: 'TypeScript is a powerful programming language that enhances JavaScript with static typing, object-oriented features, and advanced tooling capabilities.'
-cover_image: '/images/typescript.jpg'
+cover_image: '/images/1.png'
 author: 'Shaheryar Qaiser'
 ---
 
