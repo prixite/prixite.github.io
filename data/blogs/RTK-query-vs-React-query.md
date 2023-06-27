@@ -26,6 +26,7 @@ RTK Query is a powerful data fetching and caching tool. It is designed to simpli
 - <b>_Performance Trade-offs:_</b> RTK Query's automatic caching and background refetching can provide significant performance benefits. However, in certain scenarios with large data sets or complex data relationships, the caching behavior may not be optimal. It's important to carefully configure and test the caching settings to ensure optimal performance for your specific use case.
 
 <b>This is how we create API Service using createAPI hook</b>
+    <p>
         import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
         export const exampleApi = createApi({
         reducerPath: 'exampleApi',
@@ -36,7 +37,7 @@ RTK Query is a powerful data fetching and caching tool. It is designed to simpli
                 }),
             }),
         })
-
+</p>
 #### What is react query?
 
 React Query is a ReactJS preconfigured data management library which gives you power and control over server-side state management, fetching, and caching of data, and error handling in a simple and declarative way without affecting the global state of your application. React Query handles caching, background updates and stale data out of the box with zero-configuration. There's no global state to manage, reducers, normalization systems or heavy configurations to understand. It comes wired up with dedicated devtools, infinite-loading APIs, and first class mutation tools that make updating your data a breeze.
