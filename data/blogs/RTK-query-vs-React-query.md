@@ -31,11 +31,12 @@ RTK Query is a powerful data fetching and caching tool. It is designed to simpli
     reducerPath: 'exampleApi',
     baseQuery: fetchBaseQuery({ baseUrl: 'https://example.com/api/' }),
     endpoints: (builder) => ({
-        getUserByName: builder.query<User, string>({
-        query: (name) => `user/all`,
-        }),
+    getUserByName: builder.query<User, string>({
+    query: (name) => `user/all`,
+    }),
     }),
     })
+
 #### What is react query?
 
 React Query is a ReactJS preconfigured data management library which gives you power and control over server-side state management, fetching, and caching of data, and error handling in a simple and declarative way without affecting the global state of your application. React Query handles caching, background updates and stale data out of the box with zero-configuration. There's no global state to manage, reducers, normalization systems or heavy configurations to understand. It comes wired up with dedicated devtools, infinite-loading APIs, and first class mutation tools that make updating your data a breeze.
