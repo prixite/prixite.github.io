@@ -91,8 +91,8 @@ It will take you to next screen, where you can keep the values 2000 in both the 
 
 ![brandresults](/images/posts/scrapingchromeextensions/brandresults.png#image-70)
 
-    Note: if you see any error asking you to use their cloud space. Just click on "Refresh Data" button.
-    If you want to export this sitemap or the data, click on Sitemap Whatmobile dropdown and it will show you the options.
+Note that if you see any error asking you to use their cloud space. Just click on "Refresh Data" button.
+If you want to export this sitemap or the data, click on Sitemap Whatmobile dropdown and it will show you the options.
 
 Note, let's scrape the titles and prices of each mobile phone in each brands url that you have already scraped.
 
