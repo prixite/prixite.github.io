@@ -34,10 +34,6 @@ export const pages = [
     text: 'Contact Us',
   },
   {
-    path: '/product',
-    text: 'Products',
-  },
-  {
     path: '/team',
     text: 'Meet the team',
   },
@@ -46,6 +42,13 @@ if (FEATURES.blogs) {
   pages.push({
     path: '/blogs',
     text: 'News & Blogs',
+  })
+}
+
+if (FEATURES.products) {
+  pages.push({
+    path: '/product',
+    text: 'Products',
   })
 }
 
@@ -263,10 +266,6 @@ export const footerData = {
       {
         text: 'Services',
         path: '/services',
-      },
-      {
-        text: 'products',
-        path: '/product',
       },
       {
         text: 'News & Blogs',
