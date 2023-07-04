@@ -25,7 +25,7 @@ const MeetTeam = ({ employees }: MDContent) => {
     // filter employees array
     setEmployeesState(
       employees?.filter((employee) => {
-        return employee.frontmatter.category === label
+        return employee.frontmatter.category.includes(label)
       })
     )
   }
