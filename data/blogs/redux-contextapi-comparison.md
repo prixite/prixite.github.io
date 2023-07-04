@@ -54,6 +54,7 @@ const counterSlice = createSlice({
 export const { increment, decrement } = counterSlice.actions
 export default counterSlice.reducer
 ```
+
 In the above example, we define a counter slice using createSlice from Redux Toolkit. The name property represents the name of the slice, and the initialState property sets the initial value of the counter. The reducers object defines the actions and their corresponding state update logic.
 
 Redux Toolkit simplifies the process of creating actions and reducers by automatically generating action creators based on the defined reducers. In this example, increment and decrement are the generated action creators.
@@ -66,44 +67,45 @@ One of the problems that the Context API solves is the need to share global stat
 
 Let's set up the same counter app using the Context API:
 
-
 #### Context Setup
+
 ```javascript
 // CounterContext.js
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState } from 'react'
 
-export const CounterContext = createContext();
+export const CounterContext = createContext()
 
 export const CounterProvider = ({ children }) => {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(0)
 
   const increment = () => {
-    setCounter((prevCounter) => prevCounter + 1);
-  };
+    setCounter((prevCounter) => prevCounter + 1)
+  }
 
   const decrement = () => {
-    setCounter((prevCounter) => prevCounter - 1);
-  };
+    setCounter((prevCounter) => prevCounter - 1)
+  }
 
   return (
     <CounterContext.Provider value={{ counter, increment, decrement }}>
       {children}
     </CounterContext.Provider>
-  );
-};
-
+  )
+}
 ```
+
 In the above example, we create a CounterContext using createContext from React. We also create a CounterProvider component that holds the state and provides the counter, increment, and decrement values to the context.
 
 #### Consuming the Context
+
 To consume the context values in a component, we use the useContext hook:
 
 ```javascript
-import React, { useContext } from 'react';
-import { CounterContext } from './CounterContext';
+import React, { useContext } from 'react'
+import { CounterContext } from './CounterContext'
 
 const Counter = () => {
-  const { counter, increment, decrement } = useContext(CounterContext);
+  const { counter, increment, decrement } = useContext(CounterContext)
 
   return (
     <div>
@@ -111,10 +113,10 @@ const Counter = () => {
       <button onClick={increment}>Increment</button>
       <button onClick={decrement}>Decrement</button>
     </div>
-  );
-};
+  )
+}
 
-export default Counter;
+export default Counter
 ```
 
 However, the Context API has its limitations. One common challenge is performance degradation when deeply nested components consume context values. Each time a context value changes, all components consuming that context are re-rendered. This can lead to unnecessary re-renders in components that don't depend on the context value. To mitigate this, you can use memoization techniques or opt for more specialized state management solutions like Redux Toolkit.
