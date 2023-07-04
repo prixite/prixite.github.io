@@ -45,7 +45,7 @@ if (FEATURES.blogs) {
   })
 }
 
-if (FEATURES.products) {
+if (FEATURES.product) {
   pages.push({
     path: '/product',
     text: 'Products',
