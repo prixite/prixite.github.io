@@ -33,6 +33,10 @@ export const pages = [
     path: '/contact-us',
     text: 'Contact Us',
   },
+  {
+    path: '/product',
+    text: 'Products',
+  },
 ]
 
 if (FEATURES.blogs) {
@@ -235,6 +239,10 @@ export const footerData = {
         path: '/services',
       },
       {
+        text: 'products',
+        path: '/product',
+      },
+      {
         text: 'News & Blogs',
         path: '/blogs',
       },
@@ -268,4 +276,11 @@ export const footerData = {
 export const contactForm = {
   success: 'Submitted',
   error: 'Not submitted. Please try again!',
+}
+
+export const productsList = {
+  title: `${siteName} - Product`,
+  header: 'Our Products',
+  heading:
+    'Our aim is to build secure and reliable products and fulfill our clients requirements.',
 }
