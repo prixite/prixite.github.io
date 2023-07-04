@@ -37,8 +37,11 @@ export const pages = [
     path: '/product',
     text: 'Products',
   },
+  {
+    path: '/team',
+    text: 'Meet the team',
+  },
 ]
-
 if (FEATURES.blogs) {
   pages.push({
     path: '/blogs',
@@ -205,6 +208,29 @@ export const joinUsLinkIcons = [
     path: 'https://www.linkedin.com/company/prixite/mycompany/',
   },
 ]
+
+/*********          Meet the Team Page Data            ************* */
+export const categories: Array<string> = [
+  'All',
+  'Machine Learning',
+  'Web App Development',
+  'Mobile App Development',
+  'Scraping',
+]
+
+export interface Employee {
+  id: number
+  name: string
+  title: string
+  image: string
+  description: string
+  moreInfo: string
+  DevelopmentStack: Array<string>
+  facebookLink?: string
+  twitterLink?: string
+  linkedInLink?: string
+  category: string
+}
 
 /**************             Footer Data         ************ */
 export const footerData = {

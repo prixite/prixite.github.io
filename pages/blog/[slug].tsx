@@ -26,7 +26,7 @@ import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace'
 import 'prismjs/components/prism-markup-templating'
 
 export default function BlogDetailPage({
-  frontmatter: { title, date, cover_image },
+  frontmatter: { title, date, cover_image, author },
   content,
 }: BlogPostWithContent) {
   const router = useRouter()
@@ -57,7 +57,9 @@ export default function BlogDetailPage({
               className="icons"
             >
               <FacebookShareButton
-                url={`${process.env.NEXT_PUBLIC_BASEPATH}/${router.asPath}`}
+                url={`${process.env.NEXT_PUBLIC_BASEPATH || 'prixite.com'}/${
+                  router.asPath
+                }`}
               >
                 <Image
                   src={joinUsLinkIcons[0].icon.src}
@@ -68,7 +70,9 @@ export default function BlogDetailPage({
                 />
               </FacebookShareButton>
               <LinkedinShareButton
-                url={`${process.env.NEXT_PUBLIC_BASEPATH}/${router.asPath}`}
+                url={`${process.env.NEXT_PUBLIC_BASEPATH || 'prixite.com'}/${
+                  router.asPath
+                }`}
               >
                 <Image
                   src={joinUsLinkIcons[1].icon.src}
@@ -91,7 +95,7 @@ export default function BlogDetailPage({
         <Container className="likes" maxWidth="xl">
           <Stack direction={'row'} gap={10}>
             <Stack direction={'row'} gap={1} alignItems="center">
-              <Typography fontSize={13}>Written by Waleed Raza</Typography>
+              <Typography fontSize={13}>Written by {author}</Typography>
             </Stack>
           </Stack>
           <Stack

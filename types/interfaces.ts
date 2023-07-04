@@ -4,6 +4,7 @@ export interface BlogPost {
     date: string
     excerpt: string
     title: string
+    author: string
   }
   slug: string
 }
@@ -26,6 +27,33 @@ export interface ServicePost {
     header: string
     description: string
     logo_image: string
+  }
+  slug: string
+}
+
+export interface Product {
+  frontmatter: {
+    index: number
+    title: string
+    header: string
+    description: string
+    date: number
+  }
+  slug: string
+}
+
+export interface EmployeePost {
+  frontmatter: {
+    id: number
+    name: string
+    title: string
+    category: string
+    image: string
+    imageB: string
+    description: string
+    moreInfoOne: string
+    moreInfoTwo: string
+    developmentStack: Array<{ name: string; icon: string }>
   }
   slug: string
 }
@@ -59,6 +87,7 @@ export interface AboutUs {
 export interface MDContent {
   blogs?: Array<BlogPost>
   services?: Array<ServicePost>
+  employees?: Array<EmployeePost>
   testimonials?: Array<Testimonial>
   aboutUs: AboutUs
   product?: Array<Product>
@@ -76,7 +105,17 @@ export interface ProductDetailWithContent extends Product {
   content: string
 }
 
+export interface EmployeeWithContent extends EmployeePost {
+  content: string
+}
+
 export interface Blog {
+  params: {
+    slug: string
+  }
+}
+
+export interface ProductDetail {
   params: {
     slug: string
   }
@@ -89,6 +128,11 @@ export interface Service {
 }
 
 export interface ProductDetail {
+  params: {
+    slug: string
+  }
+}
+export interface Employee {
   params: {
     slug: string
   }
