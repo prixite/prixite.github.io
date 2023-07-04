@@ -9,6 +9,17 @@ export interface BlogPost {
   slug: string
 }
 
+export interface Product {
+  frontmatter: {
+    index: number
+    title: string
+    header: string
+    description: string
+    date: number
+  }
+  slug: string
+}
+
 export interface ServicePost {
   frontmatter: {
     index: number
@@ -116,6 +127,11 @@ export interface Service {
   }
 }
 
+export interface ProductDetail {
+  params: {
+    slug: string
+  }
+}
 export interface Employee {
   params: {
     slug: string
