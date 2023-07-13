@@ -27,16 +27,19 @@ RTK Query is a powerful data fetching and caching tool. It is designed to simpli
 
 <b>This is how we create API Service using createAPI hook</b>
 
-    import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-    export const exampleApi = createApi({
-    reducerPath: 'exampleApi',
-    baseQuery: fetchBaseQuery({ baseUrl: 'https://example.com/api/' }),
-    endpoints: (builder) => ({
-    getUserByName: builder.query<User, string>({
-    query: (name) => `user/all`,
+```javascript
+
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+export const exampleApi = createApi({
+  reducerPath: 'exampleApi',
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://example.com/api/' }),
+  endpoints: (builder) => ({
+    getUserByName: builder.query < User, string> ({
+      query: (name) => `user/all`,
     }),
-    }),
-    })
+  }),
+})
+```
 
 #### What is react query?
 
@@ -60,29 +63,32 @@ React Query is a ReactJS preconfigured data management library which gives you p
 
 Here is an example of react query:
 
-        import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
-        const queryClient = new QueryClient()
-        export default function App() {
-        return (
-            <QueryClientProvider client={queryClient}>
-            <Example />
-            </QueryClientProvider>
-        )
-        }
-        function Example() {
-        const { isLoading, error, data } = useQuery('repoData', () =>
-            fetch('https://api.github.com/repos/tannerlinsley/react-query').then(res =>
-            res.json()
-            )
-        )
-        if (isLoading) return 'Loading...'
-        if (error) return 'An error has occurred: ' + error.message
-        return (
-            <div>
-            <h1>{data.name}</h1>
-            <p>{data.description}</p>
-            </div>
-        )}
+```javascript
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
+const queryClient = new QueryClient()
+export default function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Example />
+    </QueryClientProvider>
+  )
+}
+function Example() {
+  const { isLoading, error, data } = useQuery('repoData', () =>
+    fetch('https://api.github.com/repos/tannerlinsley/react-query').then(
+      (res) => res.json()
+    )
+  )
+  if (isLoading) return 'Loading...'
+  if (error) return 'An error has occurred: ' + error.message
+  return (
+    <div>
+      <h1>{data.name}</h1>
+      <p>{data.description}</p>
+    </div>
+  )
+}
+```
 
 #### Conclusion:
 

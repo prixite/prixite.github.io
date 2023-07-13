@@ -38,12 +38,17 @@ Comments resource: Its represent a comment on a specific post,each comments reso
 Pages resource: Its represent a static page, each pages resource is a child of a blogs resource.
 
 Users resource: Its represent a user. This is used to identify the Author of a page, post, or comment.
-![Photo 1](/images/posts/bloggerapi/datamodal.png)
 
+<div style="padding: 10px; margin: 10px; border: 2px solid #e7e7e7; border-radius: 8px;">
+  <img src="/images/posts/bloggerapi/datamodal.png" alt="Photo 1" style="width: 50%;">
+</div>
 ####Blogger API operations
 
 You can invoke different methods in the Blogger API, as described in the following table.
-![Photo 2](/images/posts/bloggerapi/operation.png)
+
+<div style="padding: 10px; margin: 10px; border: 2px solid #e7e7e7; border-radius: 8px;">
+  <img src="/images/posts/bloggerapi/operation.png" alt="Photo 1" style="width: 50%;">
+</div>
 
 ####Prerequisites
 
@@ -70,12 +75,17 @@ To access the Blogger API, you need to obtain API Credential. Follow these steps
 To interact with the Blogger API, you need API credentials. Follow these steps to create credentials:
 
 1. Click on "Credential Page"
-   ![Photo 3](/images/posts/bloggerapi/SS.png)
+<div style="padding: 10px; margin: 10px; border: 2px solid #e7e7e7; border-radius: 8px;">
+  <img src="/images/posts/bloggerapi/SS.png" alt="Photo 1" style="width: 50%;">
+</div>
 2. After selecting Project, Click "Next" to generate your API-KEY.
-   ![Photo 4](/images/posts/bloggerapi/SS1.png)
+<div style="padding: 10px; margin: 10px; border: 2px solid #e7e7e7; border-radius: 8px;">
+  <img src="/images/posts/bloggerapi/SS1.png" alt="Photo 1" style="width: 50%;">
+</div>
 3. When click on show key its shows the generated API key. Copy the generated API Key. You will use it later in your project.
-
-![photo 5](/images/posts/bloggerapi/key.png)
+<div style="padding: 10px; margin: 10px; border: 2px solid #e7e7e7; border-radius: 8px;">
+  <img src="/images/posts/bloggerapi/key.png" alt="Photo 1" style="width: 50%;">
+</div>
 
 #####Step 3: Creating your Development Environment
 
@@ -92,19 +102,31 @@ Now that you have your API credentials, it's time to set up your development env
 
 ######Adding Blog Post
 You can add a post for a blog by sending POST request to the post collection URI.The URI for a blog has the following format:
-![Alt text](/images/posts/bloggerapi/add.png)
+
+```javascript
+POST https://www.googleapis.com/blogger/v3/blogs/2399952233233/posts
+```
 
 ######Updating Blog Post
 You can update a post for a blog by sending a PUT request to the post resource URI. The URI for a blog has the following format:
-![Alt text](/images/posts/bloggerapi/update.png)
+
+```javascript
+PUT https://www.googleapis.com/blogger/v3/blogs/2399952233233/posts
+```
 
 ######Deleting Blog Post
 You can delete a post for a blog by sending a DELETE request to the post resource URI. The URI for a blog has the following format:
-![Alt text](/images/posts/bloggerapi/delete.png)
+
+```javascript
+DELETE https://www.googleapis.com/blogger/v3/blogs/2399952233233/posts
+```
 
 ######Retrieving Blog Post
 You can retrieve information for a particular blog by sending an HTTP GET request to the blog's URI. The URI for a blog has the following format:
-![Alt text](/images/posts/bloggerapi/retrieve.png)
+
+```javascript
+GET https://www.googleapis.com/blogger/v3/blogs/2399952233233/posts
+```
 
 2.  Refer to the documentation for the specific client library to learn about the available methods and endpoints.
 
