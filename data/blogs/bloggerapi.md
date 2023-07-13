@@ -1,6 +1,6 @@
 ---
 title: ' Blogger API Blog '
-date: 'June 27, 2023'
+date: 'July 14, 2023'
 excerpt: 'The Blogger API is a powerful tool that allows developers to interact with the Blogger platform, enabling them to create, manage, and access blog content.'
 cover_image: '/images/posts/bloggerapi/blogger.jpg'
 author: 'Aleesha Azhar'
@@ -39,14 +39,14 @@ Pages resource: Its represent a static page, each pages resource is a child of a
 
 Users resource: Its represent a user. This is used to identify the Author of a page, post, or comment.
 
-<div style="padding: 10px; margin: 10px; border: 2px solid #e7e7e7; border-radius: 8px;">
+<div style="padding: 10px; margin: 30px; border: 2px solid #e7e7e7; border-radius: 8px;">
   <img src="/images/posts/bloggerapi/datamodal.png" alt="Photo 1" style="width: 50%;">
 </div>
 ####Blogger API operations
 
 You can invoke different methods in the Blogger API, as described in the following table.
 
-<div style="padding: 10px; margin: 10px; border: 2px solid #e7e7e7; border-radius: 8px;">
+<div style="padding: 10px; margin: 30px; border: 2px solid #e7e7e7; border-radius: 8px;">
   <img src="/images/posts/bloggerapi/operation.png" alt="Photo 1" style="width: 50%;">
 </div>
 
@@ -75,15 +75,15 @@ To access the Blogger API, you need to obtain API Credential. Follow these steps
 To interact with the Blogger API, you need API credentials. Follow these steps to create credentials:
 
 1. Click on "Credential Page"
-<div style="padding: 10px; margin: 10px; border: 2px solid #e7e7e7; border-radius: 8px;">
+<div style="padding: 10px; margin: 30px; border: 2px solid #e7e7e7; border-radius: 8px;">
   <img src="/images/posts/bloggerapi/SS.png" alt="Photo 1" style="width: 50%;">
 </div>
 2. After selecting Project, Click "Next" to generate your API-KEY.
-<div style="padding: 10px; margin: 10px; border: 2px solid #e7e7e7; border-radius: 8px;">
+<div style="padding: 10px; margin: 30px; border: 2px solid #e7e7e7; border-radius: 8px;">
   <img src="/images/posts/bloggerapi/SS1.png" alt="Photo 1" style="width: 50%;">
 </div>
 3. When click on show key its shows the generated API key. Copy the generated API Key. You will use it later in your project.
-<div style="padding: 10px; margin: 10px; border: 2px solid #e7e7e7; border-radius: 8px;">
+<div style="padding: 10px; margin: 30px; border: 2px solid #e7e7e7; border-radius: 8px;">
   <img src="/images/posts/bloggerapi/key.png" alt="Photo 1" style="width: 50%;">
 </div>
 

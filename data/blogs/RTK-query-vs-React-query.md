@@ -1,6 +1,6 @@
 ---
 title: 'RTK Query vs React Query'
-date: 'June 26, 2023'
+date: 'July 13, 2023'
 excerpt: 'RTK Query and React Query: Powerhouse Solutions for State Management in the React Ecosystem'
 cover_image: '/images/posts/rtk_query_vs_react_query/RTK-query-header.png'
 author: 'Shameen Jamil'
@@ -89,6 +89,8 @@ function Example() {
   )
 }
 ```
+
+<br>
 
 #### Conclusion:
 
