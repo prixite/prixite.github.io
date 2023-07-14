@@ -1,6 +1,6 @@
 ---
 title: "TypeScript: From Beginner to Advanced - A Developer's Guide"
-date: 'June 23, 2023'
+date: 'July 13, 2023'
 excerpt: 'TypeScript is a powerful programming language that enhances JavaScript with static typing, object-oriented features, and advanced tooling capabilities.'
 cover_image: '/images/1.png'
 author: 'Shaheryar Qaiser'
@@ -9,27 +9,6 @@ author: 'Shaheryar Qaiser'
 #### Introduction
 
 TypeScript is a powerful programming language that enhances JavaScript with static typing, object-oriented features, and advanced tooling capabilities. Whether you're just starting out or looking to level up your TypeScript skills, this blog post will guide you from the basics to advanced concepts. Let's dive in!
-
-#### Table of Contents
-
-1. TypeScript Basics
-   - Installing TypeScript
-   - Basic Types
-   - Type Inference
-   - Functions and Parameters
-   - Interfaces
-   - Classes and Inheritance
-2. Advanced TypeScript
-   - Generics
-   - Enums
-   - Decorators
-   - Modules and Namespaces
-   - Type Declarations for External Libraries
-   - Advanced Type Techniques
-3. Best Practices and Tips
-4. Conclusion
-
-### TypeScript Basics
 
 ##### Installing TypeScript
 
