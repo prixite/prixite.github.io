@@ -39,7 +39,7 @@ const options = {
         }
         return (
           <span className="center-align">
-            <img {...props} className={className} />
+            <img {...props} className={className} alt="image" />
           </span>
         )
       },
