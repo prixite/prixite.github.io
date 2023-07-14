@@ -80,11 +80,11 @@ To interact with the Blogger API, you need API credentials. Follow these steps t
 </div>
 2. After selecting Project, Click "Next" to generate your API-KEY.
 <div style="padding: 10px; margin: 30px; border: 2px solid #e7e7e7; border-radius: 8px;">
-  <img src="/images/posts/bloggerapi/SS1.png" alt="Photo 1" style="width: 50%;">
+  <img src="/images/posts/bloggerapi/SS1.png" alt="Photo 1" style="width: 40%;">
 </div>
 3. When click on show key its shows the generated API key. Copy the generated API Key. You will use it later in your project.
 <div style="padding: 10px; margin: 30px; border: 2px solid #e7e7e7; border-radius: 8px;">
-  <img src="/images/posts/bloggerapi/key.png" alt="Photo 1" style="width: 50%;">
+  <img src="/images/posts/bloggerapi/key.png" alt="Photo 1" style="width: 40%;">
 </div>
 
 #####Step 3: Creating your Development Environment
