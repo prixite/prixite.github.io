@@ -2,7 +2,7 @@
 title: 'The Power of Storybook in React: A Comprehensive Guide'
 date: 'July 24, 2023'
 excerpt: 'React has quickly become one of the most popular JavaScript libraries for building user interfaces, and with good reason. It offers a fast, efficient, and flexible way to create web applications.'
-cover_image: '/images/posts/bloggerapi/blogger.jpg'
+cover_image: '/images/5.png'
 author: 'Shaheryar Qaiser'
 ---
 
@@ -115,5 +115,3 @@ This will start a local development server and open the Storybook interface in y
 #### Conclusion
 
 Storybook is a fantastic tool for developing, testing, and showcasing UI components in isolation. By providing an interactive sandbox environment, it promotes faster development, easier collaboration, and better component documentation. Whether you are working on a small project or a large-scale application, integrating Storybook into your React development workflow can significantly improve your team's productivity and code quality.
-
-So, why wait? Start using Storybook with your React projects and experience the power of component-driven development today! Happy coding!
