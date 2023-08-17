@@ -39,7 +39,7 @@ export const pages = [
   },
   {
     path: '/jobs',
-    text: 'Jobs Information'
+    text: 'Jobs Information',
   },
 ]
 if (FEATURES.blogs) {

@@ -1,4 +1,4 @@
-import { SubresourceIntegrityAlgorithm } from "next/dist/build/webpack/plugins/subresource-integrity-plugin"
+import { SubresourceIntegrityAlgorithm } from 'next/dist/build/webpack/plugins/subresource-integrity-plugin'
 
 export interface BlogPost {
   frontmatter: {
@@ -68,7 +68,7 @@ export interface JobPost {
     description: string
     logo_image: string
     currency: string
-    salary_range:number
+    salary_range: number
     designation: string
     vacancy: string
     status: string

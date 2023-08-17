@@ -219,7 +219,7 @@ ol {
   margin-left: 15px;
 }
 
-.content-text{
+.content-text {
   font-size: 20px;
   font-family: lato;
   font-weight: 700;
@@ -227,7 +227,7 @@ ol {
   margin-bottom: 5px;
 }
 
-.job-text{
+.job-text {
   font-size: 16px;
   font-family: lato;
   font-weight: 400;
@@ -279,13 +279,12 @@ ol {
   .job-description {
     margin: 15px 0;
     font-size: 13px;
-
   }
 }
 
 .description {
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* Number of lines */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;

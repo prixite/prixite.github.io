@@ -68,11 +68,12 @@ const JobDetail = ({ result }) => {
                   </Typography>
                 </Box>
               </Container>
-                <div className="heading-text"
-                  dangerouslySetInnerHTML={{
-                    __html: result?.data[0].description,
-                  }}
-                />
+              <div
+                className="heading-text"
+                dangerouslySetInnerHTML={{
+                  __html: result?.data[0].description,
+                }}
+              />
 
               <Box className="job-container">
                 <Box className="job-role-container">
