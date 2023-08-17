@@ -1,3 +1,5 @@
+import { SubresourceIntegrityAlgorithm } from "next/dist/build/webpack/plugins/subresource-integrity-plugin"
+
 export interface BlogPost {
   frontmatter: {
     cover_image: string
@@ -58,6 +60,22 @@ export interface EmployeePost {
   slug: string
 }
 
+export interface JobPost {
+  frontmatter: {
+    index: number
+    title: string
+    header: string
+    description: string
+    logo_image: string
+    currency: string
+    salary_range:number
+    designation: string
+    vacancy: string
+    status: string
+  }
+  slug: string
+}
+
 export interface Testimonial {
   frontmatter: {
     index: number
@@ -91,6 +109,24 @@ export interface MDContent {
   testimonials?: Array<Testimonial>
   aboutUs: AboutUs
   product?: Array<Product>
+  jobs?: Array<JobPost>
+}
+
+export interface Props {
+  job_title: string
+  description: string
+  name: string
+  currency: string
+  status: string
+  company: string
+  vacancies: number
+  lower_range: number
+  upper_range: number
+}
+
+export interface JobProps {
+  data: Props[]
+  params: DataProps
 }
 
 export interface BlogPostWithContent extends BlogPost {
@@ -106,6 +142,10 @@ export interface ProductDetailWithContent extends Product {
 }
 
 export interface EmployeeWithContent extends EmployeePost {
+  content: string
+}
+
+export interface JobWithContent extends JobPost {
   content: string
 }
 
@@ -133,6 +173,18 @@ export interface ProductDetail {
   }
 }
 export interface Employee {
+  params: {
+    slug: string
+  }
+}
+
+export interface Job {
+  params: {
+    slug: string
+  }
+}
+
+export interface DataProps {
   params: {
     slug: string
   }
