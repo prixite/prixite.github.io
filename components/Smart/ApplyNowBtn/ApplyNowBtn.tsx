@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 interface ApplyNowBtnInterface {
   text?: string
-  url?: any
+  url?: string
 }
 
 const ApplyNowBtn: React.FC<ApplyNowBtnInterface> = ({ text, url }) => {
