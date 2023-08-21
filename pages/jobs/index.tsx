@@ -1,5 +1,6 @@
 import { Container, Box, Typography, Grid } from '@mui/material'
 import Link from 'next/link'
+import Image from 'next/image'
 import Head from 'next/head'
 import React from 'react'
 import { JobProps } from '../../types/interfaces'
@@ -8,12 +9,10 @@ import { JobProps } from '../../types/interfaces'
 import { jobsData } from '../../data/data'
 
 export const getServerSideProps = async () => {
-  const url =
-    'https://stg-erp.prixite.com/api/resource/Job%20Opening?fields=[%22*%22]'
-
+  const url = `${process.env.NEXT_PUBLIC_ERP_BASEPATH}/api/resource/Job%20Opening?fields=[%22*%22]`
   const response = await fetch(url)
-
   const data = await response.json()
+
   return {
     props: {
       data: data,
@@ -22,7 +21,7 @@ export const getServerSideProps = async () => {
 }
 
 const Jobs = ({ data }: JobProps) => {
-  const { jobsPageTitle, jobsPageHeader } = jobsData
+  const { jobDataNotFound, jobsPageTitle, jobsPageHeader } = jobsData
   return (
     <>
       <Head>
@@ -42,35 +41,51 @@ const Jobs = ({ data }: JobProps) => {
             </Typography>
           </Box>
         </Box>
-        <Grid container spacing={{ xs: 2, md: 7 }} columnSpacing={3}>
-          {data.data.map((curElem) => {
-            return (
-              <div key={curElem.name}>
-                <Grid item sm={12} md={3} className="job">
-                  <Box marginBottom="10px">
-                    <Box className="job-image-container">
-                      <Link href={`/jobs/${curElem.name}`}>
-                        <Typography
-                          sx={{ fontSize: 15, fontWeight: 600, width: 250 }}
-                          mt="40px"
-                        >
-                          {curElem.name}
-                        </Typography>
+        {data?.data ? (
+          <>
+            <Grid container spacing={{ xs: 2, md: 7 }} columnSpacing={3}>
+              {data.data.map((curElem) => {
+                return (
+                  <div key={curElem?.name}>
+                    <Grid item sm={12} md={3} className="job">
+                      <Box marginBottom="10px">
+                        <Link href={`/jobs/${curElem?.name}`}>
+                          <Box className="job-image-container">
+                            <Image
+                              width={48}
+                              height={48}
+                              src={'/images/jobs/icon.png'}
+                              alt="job-image"
+                            />
+                          </Box>
+                          <Typography
+                            className="title-description"
+                            sx={{ fontSize: 15, fontWeight: 600, width: 250 }}
+                            mt="16px"
+                            ml="50px"
+                          >
+                            {curElem?.job_title}
+                          </Typography>
 
-                        <div
-                          className="job-description description"
-                          dangerouslySetInnerHTML={{
-                            __html: curElem.description,
-                          }}
-                        />
-                      </Link>
-                    </Box>
-                  </Box>
-                </Grid>
-              </div>
-            )
-          })}
-        </Grid>
+                          <div
+                            className="job-description description"
+                            dangerouslySetInnerHTML={{
+                              __html: curElem?.description,
+                            }}
+                          />
+                        </Link>
+                      </Box>
+                    </Grid>
+                  </div>
+                )
+              })}
+            </Grid>
+          </>
+        ) : (
+          <>
+            <h1 className="job-data-not-found">{jobDataNotFound}</h1>
+          </>
+        )}
       </Container>
     </>
   )

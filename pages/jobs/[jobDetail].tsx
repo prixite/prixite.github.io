@@ -6,9 +6,13 @@ import { jobsData } from '../../data/data'
 import { JobProps } from '../../types/interfaces'
 import Image from 'next/image'
 
+export interface Props {
+  result: object
+}
+
 export const getServerSideProps = async (context: JobProps) => {
   const name = context.params?.jobDetail
-  const url = `https://stg-erp.prixite.com/api/resource/Job%20Opening?fields=["*"]&filters=[["Job%20Opening","name","=","${name}"]]`
+  const url = `${process.env.NEXT_PUBLIC_ERP_BASEPATH}/api/resource/Job%20Opening?fields=["*"]&filters=[["Job%20Opening","name","=","${name}"]]`
   const res = await fetch(url)
   const result = await res.json()
 
@@ -19,12 +23,13 @@ export const getServerSideProps = async (context: JobProps) => {
   }
 }
 
-const JobDetail = ({ result }) => {
-  const { jobResponsibility, jobPageHeader, aboutRole } = jobsData
+const JobDetail = ({ result }: Props) => {
+  const job_url = `${process.env.NEXT_PUBLIC_ERP_BASEPATH}/job_application/new?job_title=${result?.data[0]?.name}`
+  const { description, jobPageHeader, aboutRole } = jobsData
   return (
     <>
       <Head>
-        <title>{'title'}</title>
+        <title>{result?.data[0]?.job_title}</title>
         <meta name="prixite" content="Prixte" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -32,7 +37,7 @@ const JobDetail = ({ result }) => {
         <Box className="header">
           <Box className="heading">
             <Typography className="heading-text">
-              {result?.data[0].job_title} 🚀
+              {result?.data[0]?.job_title} 🚀
             </Typography>
             <Typography className="heading-text">
               {jobPageHeader.slice(0, 11)}
@@ -43,7 +48,7 @@ const JobDetail = ({ result }) => {
             </Typography>
           </Box>
           <Box>
-            <ApplyNowBtn text="Apply Now" />
+            <ApplyNowBtn text="Apply Now" url={job_url} />
           </Box>
         </Box>
         <Box className="page-content">
@@ -68,12 +73,6 @@ const JobDetail = ({ result }) => {
                   </Typography>
                 </Box>
               </Container>
-              <div
-                className="heading-text"
-                dangerouslySetInnerHTML={{
-                  __html: result?.data[0].description,
-                }}
-              />
 
               <Box className="job-container">
                 <Box className="job-role-container">
@@ -88,7 +87,7 @@ const JobDetail = ({ result }) => {
                   <Box className="job-info">
                     <Typography className="content-text">Currency</Typography>
                     <Typography className="job-text">
-                      {result?.data[0].currency}
+                      {result?.data[0]?.currency}
                     </Typography>
                   </Box>
                 </Box>
@@ -105,7 +104,7 @@ const JobDetail = ({ result }) => {
                   <Box className="job-info">
                     <Typography className="content-text">Status</Typography>
                     <Typography className="job-text">
-                      {result?.data[0].status}
+                      {result?.data[0]?.status}
                     </Typography>
                   </Box>
                 </Box>
@@ -122,7 +121,7 @@ const JobDetail = ({ result }) => {
                   <Box className="job-info">
                     <Typography className="content-text">Company</Typography>
                     <Typography className="job-text">
-                      {result?.data[0].company}
+                      {result?.data[0]?.company}
                     </Typography>
                   </Box>
                 </Box>
@@ -143,7 +142,7 @@ const JobDetail = ({ result }) => {
                       Designation
                     </Typography>
                     <Typography className="job-text">
-                      {result?.data[0].designation}
+                      {result?.data[0]?.designation}
                     </Typography>
                   </Box>
                 </Box>
@@ -160,7 +159,7 @@ const JobDetail = ({ result }) => {
                   <Box className="job-info">
                     <Typography className="content-text">Vacancy</Typography>
                     <Typography className="job-text">
-                      {result?.data[0].vacancies}
+                      {result?.data[0]?.vacancies}
                     </Typography>
                   </Box>
                 </Box>
@@ -179,8 +178,8 @@ const JobDetail = ({ result }) => {
                       Salary Range
                     </Typography>
                     <Typography className="job-text">
-                      Range {result?.data[0].lower_range}-
-                      {result?.data[0].upper_range}
+                      Range {result?.data[0]?.lower_range}-
+                      {result?.data[0]?.upper_range}
                     </Typography>
                   </Box>
                 </Box>
@@ -189,14 +188,11 @@ const JobDetail = ({ result }) => {
               <Box className="job-role-info">
                 <Typography className="job-title">
                   {jobPageHeader.slice(0, 0)}
-                  <span style={{ color: 'var(--primary-green)' }}>
-                    {jobResponsibility.slice(0, 4)}
-                  </span>
-                  {jobResponsibility.slice(4, 20)}
+                  {description}
                 </Typography>
                 <div
                   dangerouslySetInnerHTML={{
-                    __html: result?.data[0].description,
+                    __html: result?.data[0]?.description,
                   }}
                 />
               </Box>

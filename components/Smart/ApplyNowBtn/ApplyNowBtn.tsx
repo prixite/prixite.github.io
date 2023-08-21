@@ -5,22 +5,19 @@ import Link from 'next/link'
 
 interface ApplyNowBtnInterface {
   text?: string
-  width?: boolean
+  url?: any
 }
 
-const ApplyNowBtn: React.FC<ApplyNowBtnInterface> = ({ text, width }) => {
+const ApplyNowBtn: React.FC<ApplyNowBtnInterface> = ({ text, url }) => {
   return (
     <Box>
       <Button
-        fullWidth={width}
+        fullWidth
         variant="contained"
         endIcon={<SendOutlinedIcon />}
         className="apply-btn"
       >
-        <Link
-          className="btn-text-color"
-          href="https://stg-erp.prixite.com/job_application/new?job_title=test-job"
-        >
+        <Link className="btn-text-color" href={url} target="_blank">
           {text}
         </Link>
       </Button>

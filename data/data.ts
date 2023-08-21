@@ -39,7 +39,7 @@ export const pages = [
   },
   {
     path: '/jobs',
-    text: 'Jobs Information',
+    text: 'Jobs',
   },
 ]
 if (FEATURES.blogs) {
@@ -321,5 +321,6 @@ export const jobsData = {
   jobPageHeader: 'Full time - Remote',
   jobsHeading: 'Our Jobs',
   aboutRole: 'About the Role',
-  jobResponsibility: 'Job Responsibilities',
+  description: 'Description',
+  jobDataNotFound: 'No Jobs available currently',
 }
