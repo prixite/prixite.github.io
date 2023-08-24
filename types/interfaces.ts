@@ -188,6 +188,7 @@ export interface DataProps {
   params: {
     slug: string
   }
+  jobDetail: object
 }
 
 export interface SortByDateParam {
