@@ -4,8 +4,8 @@ import SendOutlinedIcon from '@mui/icons-material/SendOutlined'
 import Link from 'next/link'
 
 interface ApplyNowBtnInterface {
-  text?: string;
-  url: string;
+  text?: string
+  url: string
 }
 
 const ApplyNowBtn: React.FC<ApplyNowBtnInterface> = ({ text, url }) => {
