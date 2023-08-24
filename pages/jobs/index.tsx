@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
 import React from 'react'
-import { JobProps } from '../../types/interfaces'
+import { JobProps, Props } from '../../types/interfaces'
 
 // eslint-disable-next-line
 import { jobsData } from '../../data/data'
@@ -20,7 +20,7 @@ export const getServerSideProps = async () => {
   }
 }
 
-const Jobs = ({ data }: JobProps) => {
+const Jobs = ({ data }: Props) => {
   const { jobDataNotFound, jobsPageTitle, jobsPageHeader } = jobsData
   return (
     <>

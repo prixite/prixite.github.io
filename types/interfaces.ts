@@ -112,23 +112,6 @@ export interface MDContent {
   jobs?: Array<JobPost>
 }
 
-export interface Props {
-  job_title: string
-  description: string
-  name: string
-  currency: string
-  status: string
-  company: string
-  vacancies: number
-  lower_range: number
-  upper_range: number
-}
-
-export interface JobProps {
-  data: Props[]
-  params: DataProps
-}
-
 export interface BlogPostWithContent extends BlogPost {
   content: string
 }
@@ -200,6 +183,17 @@ export interface SortByDateParam {
 export interface SortbyIndexParam {
   slug: string
   frontmatter: { [key: string]: string | number }
+}
+
+export interface Props {
+  data: {
+    data: Array<Jobs>
+  }
+}
+
+export interface JobProps {
+  data: Props
+  params: DataProps
 }
 
 export interface Jobs {
