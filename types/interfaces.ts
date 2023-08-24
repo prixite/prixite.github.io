@@ -201,3 +201,40 @@ export interface SortbyIndexParam {
   slug: string
   frontmatter: { [key: string]: string | number }
 }
+
+export interface Jobs {
+  name: string
+  company: string
+  creation: string
+  currency: string
+  department: string
+  description: string
+  designation: string
+  docstatus: number
+  idx: number
+  job_application_route: string
+  job_requisition: string
+  job_title: string
+  lower_range: number
+  modified: string
+  modified_by: string
+  owner: string
+  planned_vacancies: number
+  publish: number
+  publish_salary_range: number
+  route: string
+  staffing_plan: string
+  status: string
+  upper_range: number
+  vacancies: number
+  _user_tags: string[] | null
+  _comments: string[] | null
+  _assign: string[] | null
+  _liked_by: string[] | null
+}
+
+export interface ResultProps {
+  result: {
+    data: Array<Jobs>
+  }
+}

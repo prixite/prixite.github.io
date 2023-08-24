@@ -3,12 +3,8 @@ import { Container, Box, Typography } from '@mui/material'
 import Head from 'next/head'
 import ApplyNowBtn from '../../components/Smart/ApplyNowBtn/ApplyNowBtn'
 import { jobsData } from '../../data/data'
-import { JobProps } from '../../types/interfaces'
+import { JobProps, ResultProps } from '../../types/interfaces'
 import Image from 'next/image'
-
-export interface Props {
-  result: object
-}
 
 export const getServerSideProps = async (context: JobProps) => {
   const name = context.params?.jobDetail
@@ -23,7 +19,7 @@ export const getServerSideProps = async (context: JobProps) => {
   }
 }
 
-const JobDetail = ({ result }: Props) => {
+const JobDetail = ({ result }: ResultProps) => {
   const job_url = `${process.env.NEXT_PUBLIC_ERP_BASEPATH}/job_application/new?job_title=${result?.data[0]?.name}`
   const { description, jobPageHeader, aboutRole } = jobsData
   return (
