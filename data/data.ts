@@ -37,6 +37,10 @@ export const pages = [
     path: '/team',
     text: 'Meet the team',
   },
+  {
+    path: '/jobs',
+    text: 'Jobs',
+  },
 ]
 if (FEATURES.blogs) {
   pages.push({
@@ -308,4 +312,15 @@ export const productsList = {
   header: 'Our Products',
   heading:
     'Our aim is to build secure and reliable products and fulfill our clients requirements.',
+}
+
+/**********            Home Page Jobs Data          ********* */
+export const jobsData = {
+  jobsPageTitle: 'Jobs',
+  jobsPageHeader: 'Careers at Prixite 🚀',
+  jobPageHeader: 'Full time - Remote',
+  jobsHeading: 'Our Jobs',
+  aboutRole: 'About the Role',
+  description: 'Description',
+  jobDataNotFound: 'No Jobs available currently',
 }

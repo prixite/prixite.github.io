@@ -1,0 +1,12 @@
+.apply-btn {
+  font-family: 'lato';
+  color: white !important;
+  font-size: 14px;
+  height: 48px;
+}
+
+@media only screen and (max-width: 550px) {
+  .apply-btn {
+    height: 40px;
+  }
+}
