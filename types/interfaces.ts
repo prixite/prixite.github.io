@@ -232,3 +232,7 @@ export interface ResultProps {
     data: Array<Jobs>
   }
 }
+
+export interface ResProps {
+  data: Array<Jobs>
+}

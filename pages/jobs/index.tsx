@@ -8,7 +8,7 @@ import { Props } from '../../types/interfaces'
 // eslint-disable-next-line
 import { jobsData } from '../../data/data'
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const url = `${process.env.NEXT_PUBLIC_ERP_BASEPATH}/api/resource/Job%20Opening?fields=[%22*%22]`
   const response = await fetch(url)
   const data = await response.json()
