@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
 import React from 'react'
-import { JobProps, Props } from '../../types/interfaces'
+import { Props } from '../../types/interfaces'
 
 // eslint-disable-next-line
 import { jobsData } from '../../data/data'
