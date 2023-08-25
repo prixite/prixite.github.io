@@ -3,14 +3,28 @@ import { Container, Box, Typography } from '@mui/material'
 import Head from 'next/head'
 import ApplyNowBtn from '../../components/Smart/ApplyNowBtn/ApplyNowBtn'
 import { jobsData } from '../../data/data'
-import { JobProps } from '../../types/interfaces'
+import { JobProps, ResultProps, ResProps, Jobs } from '../../types/interfaces'
 import Image from 'next/image'
 
-export interface Props {
-  result: object
+export const getStaticPaths = async () => {
+  const url = `${process.env.NEXT_PUBLIC_ERP_BASEPATH}/api/resource/Job%20Opening?fields=[%22*%22]`
+  const res = await fetch(url)
+  const result: ResProps = await res.json()
+
+  const paths = result.data.map((job: Jobs) => {
+    return {
+      params: {
+        jobDetail: job.name,
+      },
+    }
+  })
+  return {
+    paths,
+    fallback: true,
+  }
 }
 
-export const getServerSideProps = async (context: JobProps) => {
+export const getStaticProps = async (context: JobProps) => {
   const name = context.params?.jobDetail
   const url = `${process.env.NEXT_PUBLIC_ERP_BASEPATH}/api/resource/Job%20Opening?fields=["*"]&filters=[["Job%20Opening","name","=","${name}"]]`
   const res = await fetch(url)
@@ -23,7 +37,7 @@ export const getServerSideProps = async (context: JobProps) => {
   }
 }
 
-const JobDetail = ({ result }: Props) => {
+const JobDetail = ({ result }: ResultProps) => {
   const job_url = `${process.env.NEXT_PUBLIC_ERP_BASEPATH}/job_application/new?job_title=${result?.data[0]?.name}`
   const { description, jobPageHeader, aboutRole } = jobsData
   return (
