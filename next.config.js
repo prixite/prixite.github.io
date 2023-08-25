@@ -10,4 +10,9 @@ const nextConfig = {
   assetPrefix: '',
 }
 
-module.exports = nextConfig
+module.exports = {
+  env: {
+    NEXT_PUBLIC_ERP_BASEPATH: 'https://stg-erp.prixite.com',
+  },
+  nextConfig,
+}
