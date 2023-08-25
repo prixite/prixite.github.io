@@ -95,7 +95,7 @@ const JobDetail = ({ result }: ResultProps) => {
                     <Image
                       width={48}
                       height={48}
-                      src={'../images/jobs/currency.png'}
+                      src={'.../images/jobs/currency.png'}
                       alt="service-image"
                     />
                   </Box>
@@ -112,7 +112,7 @@ const JobDetail = ({ result }: ResultProps) => {
                     <Image
                       width={48}
                       height={48}
-                      src={'../images/jobs/status.png'}
+                      src={'.../images/jobs/status.png'}
                       alt="service-image"
                     />
                   </Box>
@@ -148,7 +148,7 @@ const JobDetail = ({ result }: ResultProps) => {
                     <Image
                       width={48}
                       height={48}
-                      src={'../images/jobs/designation.png'}
+                      src={'.../images/jobs/designation.png'}
                       alt="service-image"
                     />
                   </Box>
