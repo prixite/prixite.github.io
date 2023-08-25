@@ -74,7 +74,7 @@ const JobDetail = ({ result }: ResultProps) => {
                   <Image
                     width={80}
                     height={80}
-                    src={'./images/jobs/circle.png'}
+                    src={'../images/jobs/circle.png'}
                     alt="service-image"
                   />
                 </Box>
