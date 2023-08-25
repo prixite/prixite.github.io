@@ -81,8 +81,8 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           path: ./out
-        env:
-          NEXT_PUBLIC_ERP_BASEPATH: ${{ secrets.NEXT_PUBLIC_ERP_BASEPATH }}
+    env:
+      NEXT_PUBLIC_ERP_BASEPATH: ${{ secrets.NEXT_PUBLIC_ERP_BASEPATH }}
 
   # Deployment job
   deploy:
