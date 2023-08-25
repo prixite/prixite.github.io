@@ -1,0 +1,41 @@
+.circle-container {
+  position: relative;
+  display: flex;
+  .circle-image {
+    position: relative;
+    right: 2%;
+    bottom: 10px;
+  }
+  .circle-card {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    position: absolute;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.content-text {
+  font-size: 20px;
+  font-family: lato;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 5px;
+}
+
+.job-text {
+  font-size: 16px;
+  font-family: lato;
+  font-weight: 400;
+  line-height: 24px;
+  opacity: 60%;
+}
+.job-title {
+  font-size: 40px;
+  font-family: lato;
+  font-weight: 700;
+}
+
+.job-info {
+  margin-left: 15px;
+}
