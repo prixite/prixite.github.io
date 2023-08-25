@@ -75,7 +75,7 @@ const JobDetail = ({ result }: ResultProps) => {
                     width={80}
                     height={80}
                     src={'../images/jobs/circle.png'}
-                    alt="service-image"
+                    alt="circle-image"
                   />
                 </Box>
                 <Box className="circle-card">
@@ -95,8 +95,8 @@ const JobDetail = ({ result }: ResultProps) => {
                     <Image
                       width={48}
                       height={48}
-                      src={'.../images/jobs/currency.png'}
-                      alt="service-image"
+                      src={'../images/jobs/currency.png'}
+                      alt="currency-image"
                     />
                   </Box>
                   <Box className="job-info">
@@ -112,8 +112,8 @@ const JobDetail = ({ result }: ResultProps) => {
                     <Image
                       width={48}
                       height={48}
-                      src={'.../images/jobs/status.png'}
-                      alt="service-image"
+                      src={'../images/jobs/status.png'}
+                      alt="status-image"
                     />
                   </Box>
                   <Box className="job-info">
@@ -130,7 +130,7 @@ const JobDetail = ({ result }: ResultProps) => {
                       width={48}
                       height={48}
                       src={'../images/jobs/company.png'}
-                      alt="service-image"
+                      alt="company-image"
                     />
                   </Box>
                   <Box className="job-info">
@@ -148,8 +148,8 @@ const JobDetail = ({ result }: ResultProps) => {
                     <Image
                       width={48}
                       height={48}
-                      src={'.../images/jobs/designation.png'}
-                      alt="service-image"
+                      src={'../images/jobs/designation.png'}
+                      alt="designation-image"
                     />
                   </Box>
                   <Box className="job-info">
@@ -168,7 +168,7 @@ const JobDetail = ({ result }: ResultProps) => {
                       width={48}
                       height={48}
                       src={'../images/jobs/vacancy.png'}
-                      alt="service-image"
+                      alt="vacancy-image"
                     />
                   </Box>
                   <Box className="job-info">
@@ -185,7 +185,7 @@ const JobDetail = ({ result }: ResultProps) => {
                       width={48}
                       height={48}
                       src={'../images/jobs/salary range.png'}
-                      alt="service-image"
+                      alt="salary-image"
                     />
                   </Box>
                   <Box className="job-info">
