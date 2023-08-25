@@ -24,21 +24,23 @@ import 'prismjs/components/prism-jsx'
 import 'prismjs/components/prism-typescript'
 import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace'
 import 'prismjs/components/prism-markup-templating'
+import { data } from '../../data/blogdata'
 
-export default function BlogDetailPage({
-  frontmatter: { title, date, cover_image, author },
-  content,
-}: BlogPostWithContent) {
+export default function BlogDetailPage({}: // frontmatter: { title, date, cover_image, author },
+// content,
+BlogPostWithContent) {
   const router = useRouter()
   useEffect(() => {
     Prism.highlightAll()
   }, [])
+  const { title, published_on, blogger, content_md, content } = data[3]
+  const blogContent = content_md ? content_md : content
 
   return (
     <>
       <Head>
         <title>{title}</title>
-        <meta property="og:image" content={cover_image} />
+        {/* <meta property="og:image" content={cover_image} /> */}
       </Head>
       <Container maxWidth="xl" className="page-header">
         <Box className="header">
@@ -48,7 +50,7 @@ export default function BlogDetailPage({
             </Typography>
           </Box>
           <Stack direction={'row'} gap={3} alignItems="center">
-            <Typography fontSize={12}>{date}</Typography>
+            <Typography fontSize={12}>{published_on}</Typography>
             <Typography fontSize={12}>5 min read</Typography>
             <Stack
               direction={{ xs: 'column', md: 'column', lg: 'row' }}
@@ -88,14 +90,14 @@ export default function BlogDetailPage({
 
         <Container disableGutters maxWidth="xl">
           <div className="post-body">
-            <MarkdownText>{content}</MarkdownText>
+            <MarkdownText>{blogContent}</MarkdownText>
           </div>
         </Container>
 
         <Container className="likes" maxWidth="xl">
           <Stack direction={'row'} gap={10}>
             <Stack direction={'row'} gap={1} alignItems="center">
-              <Typography fontSize={13}>Written by {author}</Typography>
+              <Typography fontSize={13}>Written by {blogger}</Typography>
             </Stack>
           </Stack>
           <Stack
