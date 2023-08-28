@@ -4,11 +4,11 @@ import { newsAndBlogs } from '../../data/data'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
-import { MDContent } from '../../types/interfaces'
+// import { MDContent } from '../../types/interfaces'
 import { data } from '../../data/blogdata'
 import axios from 'axios'
 
-const Blog = ({ blogs }: MDContent) => {
+const Blog = () => {
   const { title, header } = newsAndBlogs
 
   return (

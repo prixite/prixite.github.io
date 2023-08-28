@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { LinkedinShareButton, FacebookShareButton } from 'next-share'
 import { Box, Container, Stack, Typography } from '@mui/material'
 import { joinUsLinkIcons, newsAndBlogs } from '../../data/data'
-import { BlogPostWithContent, Blog } from '../../types/interfaces'
+// import { BlogPostWithContent } from '../../types/interfaces'
 // import { BLOGS_PATH } from '../../utils/constants'
 // import {
 //   getMarkDownSingleData,
@@ -26,48 +26,45 @@ import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace'
 import 'prismjs/components/prism-markup-templating'
 import { data } from '../../data/blogdata'
 interface BlogPost {
-  name: string;
-  creation: string;
-  modified: string;
-  modified_by: string;
-  owner: string;
-  docstatus: number;
-  idx: number;
-  title: string;
-  blog_category: string;
-  blogger: string;
-  route: string;
-  read_time: number;
-  published_on: string;
-  published: number;
-  featured: number;
-  hide_cta: number;
-  enable_email_notification: number;
-  disable_comments: number;
-  disable_likes: number;
-  blog_intro: string;
-  content_type: string;
-  content: any;
-  content_md: string;
-  content_html: any;
-  email_sent: number;
-  meta_title: string;
-  meta_description: string;
-  meta_image: string;
-  _user_tags: any;
-  _comments: any;
-  _assign: any;
-  _liked_by: any;
+  name: string
+  creation: string
+  modified: string
+  modified_by: string
+  owner: string
+  docstatus: number
+  idx: number
+  title: string
+  blog_category: string
+  blogger: string
+  route: string
+  read_time: number
+  published_on: string
+  published: number
+  featured: number
+  hide_cta: number
+  enable_email_notification: number
+  disable_comments: number
+  disable_likes: number
+  blog_intro: string
+  content_type: string
+  content: string
+  content_md: string
+  content_html: string
+  email_sent: number
+  meta_title: string
+  meta_description: string
+  meta_image: string
 }
-export default function BlogDetailPage({ slug }:
-  BlogPostWithContent) {
+export default function BlogDetailPage() {
   const router = useRouter()
   const [blogData, setBlogData] = useState<BlogPost>()
   const [content, setContent] = useState()
   useEffect(() => {
     const blogByName = router.asPath.split('/').pop()
-    const selectedBlog = data.find(e => e.name == blogByName)
-    const blogContent = selectedBlog?.content_md ? selectedBlog?.content_md : selectedBlog?.content
+    const selectedBlog = data.find((e) => e.name == blogByName)
+    const blogContent = selectedBlog?.content_md
+      ? selectedBlog?.content_md
+      : selectedBlog?.content
     setContent(blogContent)
     setBlogData(selectedBlog)
     Prism.highlightAll()
@@ -98,8 +95,9 @@ export default function BlogDetailPage({ slug }:
               className="icons"
             >
               <FacebookShareButton
-                url={`${process.env.NEXT_PUBLIC_BASEPATH || 'prixite.com'}/${router.asPath
-                  }`}
+                url={`${process.env.NEXT_PUBLIC_BASEPATH || 'prixite.com'}/${
+                  router.asPath
+                }`}
               >
                 <Image
                   src={joinUsLinkIcons[0].icon.src}
@@ -110,8 +108,9 @@ export default function BlogDetailPage({ slug }:
                 />
               </FacebookShareButton>
               <LinkedinShareButton
-                url={`${process.env.NEXT_PUBLIC_BASEPATH || 'prixite.com'}/${router.asPath
-                  }`}
+                url={`${process.env.NEXT_PUBLIC_BASEPATH || 'prixite.com'}/${
+                  router.asPath
+                }`}
               >
                 <Image
                   src={joinUsLinkIcons[1].icon.src}
@@ -134,7 +133,9 @@ export default function BlogDetailPage({ slug }:
         <Container className="likes" maxWidth="xl">
           <Stack direction={'row'} gap={10}>
             <Stack direction={'row'} gap={1} alignItems="center">
-              <Typography fontSize={13}>Written by {blogData.blogger}</Typography>
+              <Typography fontSize={13}>
+                Written by {blogData.blogger}
+              </Typography>
             </Stack>
           </Stack>
           <Stack
