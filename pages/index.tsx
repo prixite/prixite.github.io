@@ -37,7 +37,7 @@ import { FEATURES } from '../data/features'
 import { data } from '../data/blogdata'
 
 export default function Home({
-  blogs,
+  // blogs,
   services,
   testimonials,
   aboutUs,
