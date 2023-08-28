@@ -18,7 +18,6 @@ export async function getStaticPaths() {
       },
     }
   })
-  console.log(paths)
   return {
     paths,
     fallback: true,
@@ -167,7 +166,7 @@ const JobDetail = ({ result }: ResultProps) => {
                     <Image
                       width={48}
                       height={48}
-                      src={'./images/jobs/vacancy.png'}
+                      src={'/images/jobs/vacancy.png'}
                       alt="vacancy-image"
                     />
                   </Box>
@@ -200,8 +199,8 @@ const JobDetail = ({ result }: ResultProps) => {
                 </Box>
               </Box>
 
-              <Box className="job-role-info">
-                <Typography className="job-title">
+              <Box className="job-role-info1">
+                <Typography className="job-title1">
                   {jobPageHeader.slice(0, 0)}
                   {description}
                 </Typography>

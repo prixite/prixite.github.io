@@ -54,7 +54,7 @@ const Jobs = ({ data }: Props) => {
                             <Image
                               width={48}
                               height={48}
-                              src={'./images/jobs/icon.png'}
+                              src={'/images/jobs/icon.png'}
                               alt="job-image"
                             />
                           </Box>
