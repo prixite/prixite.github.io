@@ -23,7 +23,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import fs from 'fs'
 import path from 'path'
 import Link from 'next/link'
-import { BlogPost, MDContent, Product } from '../types/interfaces'
+import { MDContent, Product } from '../types/interfaces'
 import { sortByDate, sortByIndex } from '../utils/sort'
 import { getMarkdownAllData, getMarkDownSingleData } from '../utils/markdown'
 import {
@@ -34,6 +34,7 @@ import {
   PRODUCT_PATH,
 } from '../utils/constants'
 import { FEATURES } from '../data/features'
+import { data } from '../data/blogdata'
 
 export default function Home({
   blogs,
@@ -138,12 +139,12 @@ export default function Home({
               <Typography my={3}>{newsHeading}</Typography>
 
               <Container maxWidth="xl" className="posts" disableGutters>
-                {blogs?.slice(0, 2).map((blog: BlogPost, index: number) => (
+                {data?.slice(0, 2).map((blog, index: number) => (
                   <div className="card" key={index}>
-                    <Link href={`/blog/${blog.slug}`}>
+                    <Link href={`/blog/${blog.name}`}>
                       <Image
                         className="post-img"
-                        src={blog?.frontmatter?.cover_image}
+                        src={blog?.meta_image}
                         alt="image"
                         width={500}
                         height={500}
@@ -152,16 +153,16 @@ export default function Home({
                     </Link>
 
                     <div className="post-date">
-                      Posted on {blog.frontmatter.date}
+                      Posted on {blog.published_on}
                     </div>
 
-                    <Link href={`/blog/${blog.slug}`}>
-                      <h3 className="blog-title">{blog.frontmatter.title}</h3>
+                    <Link href={`/blog/${blog.name}`}>
+                      <h3 className="blog-title">{blog.title}</h3>
                     </Link>
 
-                    <p>{blog.frontmatter.excerpt}</p>
+                    <p>{blog.blog_intro}</p>
 
-                    <Link href={`/blog/${blog.slug}`} className="read-button">
+                    <Link href={`/blog/${blog.name}`} className="read-button">
                       Read More
                     </Link>
                   </div>
