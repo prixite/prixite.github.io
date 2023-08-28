@@ -1,17 +1,17 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import fs from 'fs'
+// import fs from 'fs'
 import Image from 'next/image'
 import { LinkedinShareButton, FacebookShareButton } from 'next-share'
 import { Box, Container, Stack, Typography } from '@mui/material'
 import { joinUsLinkIcons, newsAndBlogs } from '../../data/data'
 import { BlogPostWithContent, Blog } from '../../types/interfaces'
-import { BLOGS_PATH } from '../../utils/constants'
-import {
-  getMarkDownSingleData,
-  getMarkdownSinglePath,
-} from '../../utils/markdown'
+// import { BLOGS_PATH } from '../../utils/constants'
+// import {
+//   getMarkDownSingleData,
+//   getMarkdownSinglePath,
+// } from '../../utils/markdown'
 import MarkdownText from '../../components/MarkdownText'
 import Prism from 'prismjs'
 import 'prismjs/themes/prism-tomorrow.css'
@@ -25,32 +25,71 @@ import 'prismjs/components/prism-typescript'
 import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace'
 import 'prismjs/components/prism-markup-templating'
 import { data } from '../../data/blogdata'
-
-export default function BlogDetailPage({}: // frontmatter: { title, date, cover_image, author },
-// content,
-BlogPostWithContent) {
+interface BlogPost {
+  name: string;
+  creation: string;
+  modified: string;
+  modified_by: string;
+  owner: string;
+  docstatus: number;
+  idx: number;
+  title: string;
+  blog_category: string;
+  blogger: string;
+  route: string;
+  read_time: number;
+  published_on: string;
+  published: number;
+  featured: number;
+  hide_cta: number;
+  enable_email_notification: number;
+  disable_comments: number;
+  disable_likes: number;
+  blog_intro: string;
+  content_type: string;
+  content: any;
+  content_md: string;
+  content_html: any;
+  email_sent: number;
+  meta_title: string;
+  meta_description: string;
+  meta_image: string;
+  _user_tags: any;
+  _comments: any;
+  _assign: any;
+  _liked_by: any;
+}
+export default function BlogDetailPage({ slug }:
+  BlogPostWithContent) {
   const router = useRouter()
+  const [blogData, setBlogData] = useState<BlogPost>()
+  const [content, setContent] = useState()
   useEffect(() => {
+    const blogByName = router.asPath.split('/').pop()
+    const selectedBlog = data.find(e => e.name == blogByName)
+    const blogContent = selectedBlog?.content_md ? selectedBlog?.content_md : selectedBlog?.content
+    setContent(blogContent)
+    setBlogData(selectedBlog)
     Prism.highlightAll()
-  }, [])
-  const { title, published_on, blogger, content_md, content } = data[3]
-  const blogContent = content_md ? content_md : content
+  }, [router])
+
+  if (!blogData) return <p>loading</p>
 
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{blogData?.title}</title>
         {/* <meta property="og:image" content={cover_image} /> */}
       </Head>
       <Container maxWidth="xl" className="page-header">
         <Box className="header">
           <Box className="heading">
             <Typography className="heading-text" sx={{ width: '95%' }}>
-              {title}
+              {blogData.title}
             </Typography>
           </Box>
           <Stack direction={'row'} gap={3} alignItems="center">
-            <Typography fontSize={12}>{published_on}</Typography>
+            <Typography fontSize={12}>{blogData.published_on}</Typography>
             <Typography fontSize={12}>5 min read</Typography>
             <Stack
               direction={{ xs: 'column', md: 'column', lg: 'row' }}
@@ -59,9 +98,8 @@ BlogPostWithContent) {
               className="icons"
             >
               <FacebookShareButton
-                url={`${process.env.NEXT_PUBLIC_BASEPATH || 'prixite.com'}/${
-                  router.asPath
-                }`}
+                url={`${process.env.NEXT_PUBLIC_BASEPATH || 'prixite.com'}/${router.asPath
+                  }`}
               >
                 <Image
                   src={joinUsLinkIcons[0].icon.src}
@@ -72,9 +110,8 @@ BlogPostWithContent) {
                 />
               </FacebookShareButton>
               <LinkedinShareButton
-                url={`${process.env.NEXT_PUBLIC_BASEPATH || 'prixite.com'}/${
-                  router.asPath
-                }`}
+                url={`${process.env.NEXT_PUBLIC_BASEPATH || 'prixite.com'}/${router.asPath
+                  }`}
               >
                 <Image
                   src={joinUsLinkIcons[1].icon.src}
@@ -90,14 +127,14 @@ BlogPostWithContent) {
 
         <Container disableGutters maxWidth="xl">
           <div className="post-body">
-            <MarkdownText>{blogContent}</MarkdownText>
+            <MarkdownText>{content}</MarkdownText>
           </div>
         </Container>
 
         <Container className="likes" maxWidth="xl">
           <Stack direction={'row'} gap={10}>
             <Stack direction={'row'} gap={1} alignItems="center">
-              <Typography fontSize={13}>Written by {blogger}</Typography>
+              <Typography fontSize={13}>Written by {blogData.blogger}</Typography>
             </Stack>
           </Stack>
           <Stack
@@ -124,10 +161,10 @@ BlogPostWithContent) {
   )
 }
 
-export async function getStaticPaths() {
-  return getMarkdownSinglePath(fs, BLOGS_PATH)
-}
+// export async function getStaticPaths() {
+//   return getMarkdownSinglePath(fs, BLOGS_PATH)
+// }
 
-export async function getStaticProps({ params: { slug } }: Blog) {
-  return getMarkDownSingleData(fs, BLOGS_PATH, slug)
-}
+// export async function getStaticProps({ params: { slug } }: Blog) {
+//   return slug
+// }

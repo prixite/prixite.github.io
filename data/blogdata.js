@@ -30,7 +30,7 @@ export const data = [
     meta_title: 'Annual Lunch 2023',
     meta_description:
       "Smiles, get-togethers, hot lava cakes, favorite dishes, bright winter sun - here's a glimpse of Prixite's Annual Lunch 2023!",
-    meta_image: '/files/group_photo.png',
+    meta_image: 'images/posts/lunch/group_photo.png',
     _user_tags: null,
     _comments: null,
     _assign: null,
@@ -67,7 +67,7 @@ export const data = [
     meta_title: 'Blogger API Blog',
     meta_description:
       'The Blogger API is a powerful tool that allows developers to interact with the Blogger platform, enabling them to create, manage, and access',
-    meta_image: '/files/blogger.jpg',
+    meta_image: '/images/posts/bloggerapi/blogger.jpg',
     _user_tags: null,
     _comments: null,
     _assign: null,
@@ -104,7 +104,7 @@ export const data = [
     meta_title: 'Integrating Scrapy with Django',
     meta_description:
       "In today's data-driven world, web scraping plays a crucial role in gathering information from various websites.",
-    meta_image: '/files/cover.png',
+    meta_image: '/images/posts/integratingscrapy/cover.png',
     _user_tags: null,
     _comments: null,
     _assign: null,
@@ -141,7 +141,7 @@ export const data = [
     meta_title: "Mother's Day",
     meta_description:
       'Words are bound to fall short when it comes to Mothers and what they go through their entire life for their children.',
-    meta_image: '/files/mDayCover.png',
+    meta_image: '/images/posts/motherday/mDayCover.png',
     _user_tags: null,
     _comments: null,
     _assign: null,
@@ -179,7 +179,7 @@ export const data = [
     meta_title: 'Redux Toolkit vs. Context API in React',
     meta_description:
       'State management is a crucial aspect of building robust and scalable React applications. Two popular options for state management in React a',
-    meta_image: '/files/redux-contextapi.png',
+    meta_image: '/images/redux-contextapi.png',
     _user_tags: null,
     _comments: null,
     _assign: null,
@@ -216,7 +216,7 @@ export const data = [
     meta_title: 'RTK Query vs React Query',
     meta_description:
       'RTK Query and React Query: Powerhouse Solutions for State Management in the React Ecosystem.',
-    meta_image: '/files/RTK-query-header.png',
+    meta_image: '/images/posts/rtk_query_vs_react_query/RTK-query-header.png',
     _user_tags: null,
     _comments: null,
     _assign: null,
@@ -253,7 +253,7 @@ export const data = [
     meta_title: 'ScoopRank Intro Blog',
     meta_description:
       'ScoopRank is a deep tech product that ranks entities and tracks trends of entities in real time across internet.',
-    meta_image: '/files/main.png',
+    meta_image: '/images/posts/scooprank/main.png',
     _user_tags: null,
     _comments: null,
     _assign: null,
@@ -291,7 +291,7 @@ export const data = [
     meta_title: "TypeScript: From Beginner to Advanced - A Developer's Guide",
     meta_description:
       'TypeScript is a powerful programming language that enhances JavaScript with static typing, object-oriented features, and advanced tooling ca',
-    meta_image: '/files/1.png',
+    meta_image: '/images/1.png',
     _user_tags: null,
     _comments: null,
     _assign: null,
@@ -328,7 +328,7 @@ export const data = [
     meta_title: 'Web Scraping with Chrome Extensions',
     meta_description:
       'Web scraping is the automated extraction of data from websites. No technical knowledge is required when scraping with chrome extensions.',
-    meta_image: '/files/thumbnail.png',
+    meta_image: '/images/posts/scrapingchromeextensions/thumbnail.png',
     _user_tags: null,
     _comments: null,
     _assign: null,
@@ -365,7 +365,7 @@ export const data = [
     meta_title: "What's new in next.js 13 - A Developer's Guide",
     meta_description:
       'Next.js is a popular open-source framework for building modern web applications using React.',
-    meta_image: '/files/png-transparent-next-js-hd-logo.png',
+    meta_image: '/images/posts/whatsnewinnextjs/nextjs13-cover.png',
     _user_tags: null,
     _comments: null,
     _assign: null,

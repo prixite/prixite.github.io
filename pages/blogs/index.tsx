@@ -3,20 +3,13 @@ import { Box, Typography, Container, Button } from '@mui/material'
 import { newsAndBlogs } from '../../data/data'
 import Head from 'next/head'
 import Link from 'next/link'
-// import fs from 'fs'
-// import path from 'path'
 import Image from 'next/image'
-// import { BlogPost } from '../../types/interfaces'
-// import { sortByDate } from '../../utils/sort'
 import { MDContent } from '../../types/interfaces'
-// import { BLOGS_PATH } from '../../utils/constants'
-// import { getMarkdownAllData } from '../../utils/markdown'
 import { data } from '../../data/blogdata'
 import axios from 'axios'
 
 const Blog = ({ blogs }: MDContent) => {
   const { title, header } = newsAndBlogs
-  console.log(blogs)
 
   return (
     <>
@@ -42,30 +35,34 @@ const Blog = ({ blogs }: MDContent) => {
       </Container>
 
       <Container maxWidth="xl" className="posts">
-        {data?.map((post, index: number) => (
-          <div className="card" key={index}>
-            <Image
-              src={post.meta_image}
-              alt=""
-              className="post-img"
-              width={500}
-              height={500}
-              layout="responsive"
-            />
+        {data?.map((post, index: number) => {
+          return (
+            <>
+              <div className="card" key={index}>
+                <Image
+                  src={post.meta_image}
+                  alt=""
+                  className="post-img"
+                  width={500}
+                  height={500}
+                  layout="responsive"
+                />
 
-            <div className="post-date">Posted on {post.published_on}</div>
+                <div className="post-date">Posted on {post.published_on}</div>
 
-            <h3>{post.meta_title}</h3>
+                <h3>{post.meta_title}</h3>
 
-            <p>{post.meta_description}</p>
+                <p>{post.meta_description}</p>
 
-            <Link href={post.name}>
-              <Button variant="contained" className="read-button">
-                Read More
-              </Button>
-            </Link>
-          </div>
-        ))}
+                <Link href={`blog/${post.name}`}>
+                  <Button variant="contained" className="read-button">
+                    Read More
+                  </Button>
+                </Link>
+              </div>
+            </>
+          )
+        })}
       </Container>
     </>
   )
