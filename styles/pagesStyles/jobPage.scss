@@ -13,33 +13,55 @@
     position: absolute;
     width: 100%;
     justify-content: space-between;
+    .job-title {
+      font-size: 40px;
+      font-family: lato;
+      font-weight: 700;
+    }
   }
 }
-.content-text {
-  font-size: 20px;
-  font-family: lato;
-  font-weight: 700;
-  line-height: 24px;
-  margin-bottom: 5px;
-}
 
-.job-text {
-  font-size: 16px;
-  font-family: lato;
-  font-weight: 400;
-  line-height: 24px;
-  opacity: 60%;
-}
-.job-title1 {
-  font-size: 40px;
-  font-family: lato;
-  font-weight: 700;
-}
+.job-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .job-role-container {
+    display: flex;
+    margin-top: 40px;
+    width: 33.33333%;
+    .job-image-container {
+      margin-top: 0px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 50px;
+    }
+    .job-info {
+      margin-left: 15px;
+      .content-text {
+        font-size: 20px;
+        font-family: lato;
+        font-weight: 700;
+        line-height: 24px;
+        margin-bottom: 5px;
+      }
 
-.job-info {
-  margin-left: 15px;
+      .job-text {
+        font-size: 16px;
+        font-family: lato;
+        font-weight: 400;
+        line-height: 24px;
+        opacity: 60%;
+      }
+    }
+  }
 }
 
 .job-role-info1 {
   margin-top: 40px;
+  .job-title1 {
+    font-size: 40px;
+    font-family: lato;
+    font-weight: 700;
+  }
 }
