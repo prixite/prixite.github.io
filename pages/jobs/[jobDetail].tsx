@@ -200,9 +200,7 @@ const JobDetail = ({ result }: ResultProps) => {
               </Box>
 
               <Box className="job-role-info1">
-                <Typography
-                  sx={{ fontSize: '40px', fontWeight: 700, fontFamily: 'lato' }}
-                >
+                <Typography className="job-title1">
                   {jobPageHeader.slice(0, 0)}
                   {description}
                 </Typography>
