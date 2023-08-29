@@ -22,6 +22,7 @@ export const getStaticProps = async () => {
 
 const Jobs = ({ data }: Props) => {
   const { jobDataNotFound, jobsPageTitle, jobsPageHeader } = jobsData
+  const openJobs = data?.data?.filter((job) => job?.status === 'Open')
   return (
     <>
       <Head>
@@ -44,7 +45,7 @@ const Jobs = ({ data }: Props) => {
         {data?.data ? (
           <>
             <Grid container spacing={{ xs: 2, md: 7 }} columnSpacing={3}>
-              {data.data.map((curElem) => {
+              {openJobs.map((curElem) => {
                 return (
                   <div key={curElem?.name}>
                     <Grid item sm={12} md={3} className="job">
