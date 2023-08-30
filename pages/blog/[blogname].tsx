@@ -6,12 +6,6 @@ import Image from 'next/image'
 import { LinkedinShareButton, FacebookShareButton } from 'next-share'
 import { Box, Container, Stack, Typography } from '@mui/material'
 import { joinUsLinkIcons, newsAndBlogs } from '../../data/data'
-// import { BlogPostWithContent } from '../../types/interfaces'
-// import { BLOGS_PATH } from '../../utils/constants'
-// import {
-//   getMarkDownSingleData,
-//   getMarkdownSinglePath,
-// } from '../../utils/markdown'
 import MarkdownText from '../../components/MarkdownText'
 import Prism from 'prismjs'
 import 'prismjs/themes/prism-tomorrow.css'
@@ -24,7 +18,7 @@ import 'prismjs/components/prism-jsx'
 import 'prismjs/components/prism-typescript'
 import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace'
 import 'prismjs/components/prism-markup-templating'
-import { data } from '../../data/blogdata'
+import axios from 'axios'
 interface BlogPost {
   name: string
   creation: string
@@ -55,18 +49,11 @@ interface BlogPost {
   meta_description: string
   meta_image: string
 }
-export default function BlogDetailPage() {
+export default function BlogDetailPage({ blog }) {
   const router = useRouter()
-  const [blogData, setBlogData] = useState<BlogPost>()
-  const [content, setContent] = useState()
+  const [blogData, setBlogData] = useState<BlogPost>(blog)
   useEffect(() => {
-    const blogByName = router.asPath.split('/').pop()
-    const selectedBlog = data.find((e) => e.name == blogByName)
-    const blogContent = selectedBlog?.content_md
-      ? selectedBlog?.content_md
-      : selectedBlog?.content
-    setContent(blogContent)
-    setBlogData(selectedBlog)
+    setBlogData(blogData)
     Prism.highlightAll()
   }, [router])
 
@@ -126,7 +113,9 @@ export default function BlogDetailPage() {
 
         <Container disableGutters maxWidth="xl">
           <div className="post-body">
-            <MarkdownText>{content}</MarkdownText>
+            <MarkdownText>
+              {blogData.content_md ? blogData.content_md : blogData.content}
+            </MarkdownText>
           </div>
         </Container>
 
@@ -162,10 +151,32 @@ export default function BlogDetailPage() {
   )
 }
 
-// export async function getStaticPaths() {
-//   return getMarkdownSinglePath(fs, BLOGS_PATH)
-// }
+export async function getServerSideProps({ params: { blogname } }) {
+  console.info(blogname, 'paramskjdklfjsdlkjfsdkljfsdlkjl')
+  try {
+    const headers = {
+      Authorization: 'token f3bc998c23bcef5:389ab2ffb39441e',
+    }
+    const response = await axios.get(
+      `https://stg-erp.prixite.com/api/resource/Blog%20Post/${blogname}?filters=["*"]`,
+      {
+        headers,
+      }
+    )
 
-// export async function getStaticProps({ params: { slug } }: Blog) {
-//   return slug
-// }
+    const blog = response.data.data
+
+    return {
+      props: {
+        blog: blog,
+      },
+    }
+  } catch (error) {
+    console.error('Error fetching blog data:', error.message)
+    return {
+      props: {
+        blog: null,
+      },
+    }
+  }
+}

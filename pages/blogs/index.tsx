@@ -4,11 +4,9 @@ import { newsAndBlogs } from '../../data/data'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
-// import { MDContent } from '../../types/interfaces'
-import { data } from '../../data/blogdata'
 import axios from 'axios'
 
-const Blog = () => {
+const Blog = ({ blogs }) => {
   const { title, header } = newsAndBlogs
 
   return (
@@ -35,12 +33,12 @@ const Blog = () => {
       </Container>
 
       <Container maxWidth="xl" className="posts">
-        {data?.map((post, index: number) => {
+        {blogs?.map((post, index: number) => {
           return (
             <>
               <div className="card" key={index}>
                 <Image
-                  src={post.meta_image}
+                  src={`https://stg-erp.prixite.com/${post.meta_image}`}
                   alt=""
                   className="post-img"
                   width={500}
@@ -72,12 +70,16 @@ export default Blog
 
 export async function getStaticProps() {
   try {
+    const headers = {
+      Authorization: 'token f3bc998c23bcef5:389ab2ffb39441e',
+    }
     const response = await axios.get(
-      'https://stg-erp.prixite.com/api/resource/Blog%20Post'
+      'https://stg-erp.prixite.com/api/resource/Blog%20Post?fields=[%22*%22]',
+      {
+        headers,
+      }
     )
-    const blogs = response.data
-    console.log(blogs)
-
+    const blogs = response.data.data
     return {
       props: {
         blogs: blogs,
