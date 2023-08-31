@@ -318,6 +318,10 @@ ol {
   font-size: 22px;
 }
 
+.text {
+  color: red;
+}
+
 @media (max-width: 500px) {
   .posts {
     grid-template-columns: 1fr !important;

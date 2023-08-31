@@ -75,16 +75,7 @@ const JobDetail = ({ result }: ResultProps) => {
                 </Link>
               </Button>
             ) : (
-              <Button
-                fullWidth
-                variant="contained"
-                className="apply-btn"
-                disabled
-              >
-                <Link className="btn-text-color" href={job_url} target="_blank">
-                  {'Closed'}
-                </Link>
-              </Button>
+              <></>
             )}
           </Box>
         </Box>
@@ -117,8 +108,8 @@ const JobDetail = ({ result }: ResultProps) => {
                     <Image
                       width={48}
                       height={48}
-                      src={'/images/jobs/currency.png'}
-                      alt="currency-image"
+                      src={'/images/jobs/company.png'}
+                      alt="company-image"
                     />
                   </Box>
                   <Box className="job-info">
@@ -140,9 +131,15 @@ const JobDetail = ({ result }: ResultProps) => {
                   </Box>
                   <Box className="job-info">
                     <Typography className="content-text">Status</Typography>
-                    <Typography className="job-text">
-                      {result?.data[0]?.status}
-                    </Typography>
+                    {result?.data[0]?.status === 'Open' ? (
+                      <Typography className="job-text">
+                        {result?.data[0]?.status}
+                      </Typography>
+                    ) : (
+                      <Typography className="job-text text">
+                        {result?.data[0]?.status}
+                      </Typography>
+                    )}
                   </Box>
                 </Box>
 
@@ -151,8 +148,8 @@ const JobDetail = ({ result }: ResultProps) => {
                     <Image
                       width={48}
                       height={48}
-                      src={'/images/jobs/company.png'}
-                      alt="company-image"
+                      src={'/images/jobs/currency.png'}
+                      alt="currency-image"
                     />
                   </Box>
                   <Box className="job-info">
