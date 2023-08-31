@@ -22,7 +22,8 @@ export const getStaticProps = async () => {
 
 const Jobs = ({ data }: Props) => {
   const { jobDataNotFound, jobsPageTitle, jobsPageHeader } = jobsData
-  const openJobs = data?.data?.filter((job) => job?.status === 'Open')
+  const jobsPublish = data?.data?.filter((job) => job?.publish === 1)
+
   return (
     <>
       <Head>
@@ -42,50 +43,48 @@ const Jobs = ({ data }: Props) => {
             </Typography>
           </Box>
         </Box>
-        {data?.data ? (
-          <>
-            <Grid container spacing={{ xs: 2, md: 7 }} columnSpacing={3}>
-              {openJobs.map((curElem) => {
-                return (
-                  <div key={curElem?.name}>
-                    <Grid item sm={12} md={3} className="job">
-                      <Box marginBottom="10px">
-                        <Link href={`/jobs/${curElem?.name}`}>
-                          <Box className="job-image-container">
-                            <Image
-                              width={48}
-                              height={48}
-                              src={'/images/jobs/icon.png'}
-                              alt="job-image"
-                            />
-                          </Box>
-                          <Typography
-                            className="title-description"
-                            sx={{ fontSize: 15, fontWeight: 600, width: 250 }}
-                            mt="16px"
-                            ml="50px"
-                          >
-                            {curElem?.job_title}
-                          </Typography>
 
-                          <div
-                            className="job-description description"
-                            dangerouslySetInnerHTML={{
-                              __html: curElem?.description,
-                            }}
+        {jobsPublish.length > 0 ? (
+          <Grid container spacing={{ xs: 2, md: 7 }} columnSpacing={3}>
+            {jobsPublish?.map((curElem) => {
+              return (
+                <div key={curElem?.name}>
+                  <Grid item sm={12} md={3} className="job">
+                    <Box marginBottom="10px">
+                      <Link href={`/jobs/${curElem?.name}`}>
+                        <Box className="job-image-container">
+                          <Image
+                            width={22}
+                            height={22}
+                            src={'/images/jobs/breifcase.svg'}
+                            alt="job-image"
                           />
-                        </Link>
-                      </Box>
-                    </Grid>
-                  </div>
-                )
-              })}
-            </Grid>
-          </>
+                        </Box>
+                        <Typography
+                          className="title-description"
+                          sx={{ fontSize: 15, fontWeight: 600, width: 250 }}
+                          mt="16px"
+                          ml="50px"
+                        >
+                          {curElem?.job_title}
+                        </Typography>
+
+                        <div
+                          className="job-description description"
+                          style={{ fontSize: '13px' }}
+                          dangerouslySetInnerHTML={{
+                            __html: curElem?.description,
+                          }}
+                        />
+                      </Link>
+                    </Box>
+                  </Grid>
+                </div>
+              )
+            })}
+          </Grid>
         ) : (
-          <>
-            <h1 className="job-data-not-found">{jobDataNotFound}</h1>
-          </>
+          <h1 className="job-data-not-found">{jobDataNotFound}</h1>
         )}
       </Container>
     </>

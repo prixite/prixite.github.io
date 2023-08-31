@@ -272,6 +272,10 @@ export const footerData = {
         path: '/services',
       },
       {
+        path: '/jobs',
+        text: 'Jobs',
+      },
+      {
         text: 'News & Blogs',
         path: '/blogs',
       },

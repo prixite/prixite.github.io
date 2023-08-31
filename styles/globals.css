@@ -246,6 +246,10 @@ ol {
   flex-wrap: wrap;
 }
 
+.job-role-container1 {
+  visibility: hidden;
+}
+
 .job-role-container {
   display: flex;
   margin-top: 40px;
@@ -272,14 +276,18 @@ ol {
 
 .job {
   .job-image-container {
+    background: url('../public/images/serviceBackground.png');
+    width: 48px;
+    height: 48px;
     margin-top: 40px;
+    display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 50px;
   }
   .job-description {
     margin-left: 50px;
-    font-size: 13px;
+    font-size: 13px !important ;
     width: 250px;
   }
 }
@@ -307,7 +315,7 @@ ol {
   justify-content: center;
   align-items: center;
   color: gray;
-  font-size: 35px;
+  font-size: 22px;
 }
 
 @media (max-width: 500px) {

@@ -1,10 +1,11 @@
 import React from 'react'
-import { Container, Box, Typography } from '@mui/material'
+import { Container, Box, Typography, Button } from '@mui/material'
 import Head from 'next/head'
-import ApplyNowBtn from '../../components/Smart/ApplyNowBtn/ApplyNowBtn'
 import { jobsData } from '../../data/data'
 import { JobProps, ResultProps, ResProps, Jobs } from '../../types/interfaces'
 import Image from 'next/image'
+import SendOutlinedIcon from '@mui/icons-material/SendOutlined'
+import Link from 'next/link'
 
 export const getStaticPaths = async () => {
   const url = `${process.env.NEXT_PUBLIC_ERP_BASEPATH}/api/resource/Job%20Opening?fields=[%22*%22]`
@@ -62,7 +63,29 @@ const JobDetail = ({ result }: ResultProps) => {
             </Typography>
           </Box>
           <Box>
-            <ApplyNowBtn text="Apply Now" url={job_url} />
+            {result?.data[0]?.status === 'Open' ? (
+              <Button
+                fullWidth
+                variant="contained"
+                endIcon={<SendOutlinedIcon />}
+                className="apply-btn"
+              >
+                <Link className="btn-text-color" href={job_url} target="_blank">
+                  {'Apply Now'}
+                </Link>
+              </Button>
+            ) : (
+              <Button
+                fullWidth
+                variant="contained"
+                className="apply-btn"
+                disabled
+              >
+                <Link className="btn-text-color" href={job_url} target="_blank">
+                  {'Closed'}
+                </Link>
+              </Button>
+            )}
           </Box>
         </Box>
         <Box className="page-content">
@@ -99,9 +122,9 @@ const JobDetail = ({ result }: ResultProps) => {
                     />
                   </Box>
                   <Box className="job-info">
-                    <Typography className="content-text">Currency</Typography>
+                    <Typography className="content-text">Company</Typography>
                     <Typography className="job-text">
-                      {result?.data[0]?.currency}
+                      {result?.data[0]?.company}
                     </Typography>
                   </Box>
                 </Box>
@@ -133,9 +156,9 @@ const JobDetail = ({ result }: ResultProps) => {
                     />
                   </Box>
                   <Box className="job-info">
-                    <Typography className="content-text">Company</Typography>
+                    <Typography className="content-text">Currency</Typography>
                     <Typography className="job-text">
-                      {result?.data[0]?.company}
+                      {result?.data[0]?.currency}
                     </Typography>
                   </Box>
                 </Box>
@@ -177,26 +200,35 @@ const JobDetail = ({ result }: ResultProps) => {
                     </Typography>
                   </Box>
                 </Box>
-
-                <Box className="job-role-container">
-                  <Box className="job-image-container">
-                    <Image
-                      width={48}
-                      height={48}
-                      src={'/images/jobs/salary range.png'}
-                      alt="salary-image"
-                    />
+                {result?.data[0]?.publish_salary_range === 1 ? (
+                  <Box className="job-role-container">
+                    <Box className="job-image-container">
+                      <Image
+                        width={48}
+                        height={48}
+                        src={'/images/jobs/salary range.png'}
+                        alt="salary-image"
+                      />
+                    </Box>
+                    <Box className="job-info">
+                      <Typography className="content-text">
+                        Salary Range
+                      </Typography>
+                      <Typography className="job-text">
+                        Range {result?.data[0]?.lower_range}-
+                        {result?.data[0]?.upper_range}
+                      </Typography>
+                    </Box>
                   </Box>
-                  <Box className="job-info">
-                    <Typography className="content-text">
-                      Salary Range
-                    </Typography>
-                    <Typography className="job-text">
-                      Range {result?.data[0]?.lower_range}-
-                      {result?.data[0]?.upper_range}
-                    </Typography>
+                ) : (
+                  <Box className="job-role-container">
+                    <Box className="job-image-container"></Box>
+                    <Box className="job-info">
+                      <Typography className="content-text"></Typography>
+                      <Typography className="job-text"></Typography>
+                    </Box>
                   </Box>
-                </Box>
+                )}
               </Box>
 
               <Box className="job-role-info">
