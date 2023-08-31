@@ -7,6 +7,7 @@ import { LinkedinShareButton, FacebookShareButton } from 'next-share'
 import { Box, Container, Stack, Typography } from '@mui/material'
 import { joinUsLinkIcons, newsAndBlogs } from '../../data/data'
 import MarkdownText from '../../components/MarkdownText'
+import { BlogPost } from '../../types/interfaces'
 import Prism from 'prismjs'
 import 'prismjs/themes/prism-tomorrow.css'
 import 'prismjs/components/prism-python'
@@ -19,51 +20,22 @@ import 'prismjs/components/prism-typescript'
 import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace'
 import 'prismjs/components/prism-markup-templating'
 import axios from 'axios'
-interface BlogPost {
-  name: string
-  creation: string
-  modified: string
-  modified_by: string
-  owner: string
-  docstatus: number
-  idx: number
-  title: string
-  blog_category: string
-  blogger: string
-  route: string
-  read_time: number
-  published_on: string
-  published: number
-  featured: number
-  hide_cta: number
-  enable_email_notification: number
-  disable_comments: number
-  disable_likes: number
-  blog_intro: string
-  content_type: string
-  content: string
-  content_md: string
-  content_html: string
-  email_sent: number
-  meta_title: string
-  meta_description: string
-  meta_image: string
-}
-export default function BlogDetailPage({ blog }) {
+
+export default function BlogDetailPage({ blog }: { blog: BlogPost }) {
   const router = useRouter()
+
   const [blogData, setBlogData] = useState<BlogPost>(blog)
   useEffect(() => {
-    setBlogData(blogData)
+    setBlogData(blog)
     Prism.highlightAll()
-  }, [router])
+  }, [])
 
-  if (!blogData) return <p>loading</p>
+  if (!blogData) return <p>Loading...</p>
 
   return (
     <>
       <Head>
         <title>{blogData?.title}</title>
-        {/* <meta property="og:image" content={cover_image} /> */}
       </Head>
       <Container maxWidth="xl" className="page-header">
         <Box className="header">
@@ -151,30 +123,32 @@ export default function BlogDetailPage({ blog }) {
   )
 }
 
-export async function getServerSideProps({ params: { blogname } }) {
+export async function getServerSideProps({
+  params: { blogname },
+}: {
+  params: { blogname: string }
+}) {
   try {
     const headers = {
-      Authorization: `token  ${process.env.NEXT_PUBLIC_ERP_AUTH_TOKEN}`,
+      Authorization: `token ${process.env.NEXT_PUBLIC_ERP_AUTH_TOKEN}`,
     }
     const response = await axios.get(
-      `${process.env.NEXT_PUBLIC_ERP_BASEPATH}/Blog%20Post/${blogname}?filters=["*"]`,
+      `${process.env.NEXT_PUBLIC_ERP_BASEPATH}/api/resource/Blog%20Post?fields=[%22*%22]&filters=[[%22Blog%20Post%22,%22name%22,%22=%22,%22${blogname}%22]]`,
       {
         headers,
       }
     )
-
     const blog = response.data.data
-
     return {
       props: {
-        blog: blog,
+        blog: blog[0] as BlogPost,
       },
     }
   } catch (error) {
-    console.error('Error fetching blog data:', error.message)
+    console.error('Error fetching blog data:', error?.message)
     return {
       props: {
-        blog: null,
+        blog: {},
       },
     }
   }

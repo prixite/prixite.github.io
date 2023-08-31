@@ -234,12 +234,10 @@ export async function getStaticProps() {
   let blogs = []
   try {
     const headers = {
-      Authorization: `token  ${process.env.NEXT_PUBLIC_ERP_AUTH_TOKEN}`,
+      Authorization: `token ${process.env.NEXT_PUBLIC_ERP_AUTH_TOKEN}`,
     }
-    console.log(process.env.NEXT_PUBLIC_ERP_AUTH_TOKEN)
-
     const response = await axios.get(
-      `${process.env.NEXT_PUBLIC_ERP_BASEPATH}/Blog%20Post/?fields=[%22*%22]`,
+      `${process.env.NEXT_PUBLIC_ERP_BASEPATH}/api/resource/Blog%20Post?fields=[%22*%22]`,
       {
         headers,
       }
