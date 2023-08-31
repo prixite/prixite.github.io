@@ -27,17 +27,18 @@ import { MDContent, Product } from '../types/interfaces'
 import { sortByDate, sortByIndex } from '../utils/sort'
 import { getMarkdownAllData, getMarkDownSingleData } from '../utils/markdown'
 import {
-  BLOGS_PATH,
+  // BLOGS_PATH,
   SERVICES_PATH,
   TESTIMONIALS_PATH,
   ABOUT_US_PATH,
   PRODUCT_PATH,
 } from '../utils/constants'
 import { FEATURES } from '../data/features'
-import { data } from '../data/blogdata'
+// import { data } from '../data/blogdata'
+import axios from 'axios'
 
 export default function Home({
-  // blogs,
+  blogs,
   services,
   testimonials,
   aboutUs,
@@ -139,12 +140,12 @@ export default function Home({
               <Typography my={3}>{newsHeading}</Typography>
 
               <Container maxWidth="xl" className="posts" disableGutters>
-                {data?.slice(0, 2).map((blog, index: number) => (
+                {blogs?.map((blog, index: number) => (
                   <div className="card" key={index}>
                     <Link href={`/blog/${blog.name}`}>
                       <Image
                         className="post-img"
-                        src={blog?.meta_image}
+                        src={`https://stg-erp.prixite.com/${blog.meta_image}`}
                         alt="image"
                         width={500}
                         height={500}
@@ -230,12 +231,26 @@ export default function Home({
 }
 
 export async function getStaticProps() {
-  const blogFiles = fs.readdirSync(path.join(BLOGS_PATH))
+  let blogs = []
+  try {
+    const headers = {
+      Authorization: `token  ${process.env.NEXT_PUBLIC_ERP_AUTH_TOKEN}`,
+    }
+    console.log(process.env.NEXT_PUBLIC_ERP_AUTH_TOKEN)
+
+    const response = await axios.get(
+      `${process.env.NEXT_PUBLIC_ERP_BASEPATH}/Blog%20Post/?fields=[%22*%22]`,
+      {
+        headers,
+      }
+    )
+    blogs = response.data.data
+  } catch (error) {
+    console.error('Error fetching blog data:', error.message)
+  }
   const serviceFiles = fs.readdirSync(path.join(SERVICES_PATH))
   const testimonialFiles = fs.readdirSync(path.join(TESTIMONIALS_PATH))
   const productFiles = fs.readdirSync(path.join(PRODUCT_PATH))
-
-  const blogs = getMarkdownAllData(blogFiles, BLOGS_PATH, fs)
   const services = getMarkdownAllData(serviceFiles, SERVICES_PATH, fs)
   const testimonials = getMarkdownAllData(
     testimonialFiles,
@@ -247,7 +262,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      blogs: blogs.sort(sortByDate),
+      blogs: blogs.slice(0, 2),
       services: services.sort(sortByIndex),
       testimonials: testimonials.sort(sortByDate),
       aboutUs: aboutUs.props,

@@ -152,13 +152,12 @@ export default function BlogDetailPage({ blog }) {
 }
 
 export async function getServerSideProps({ params: { blogname } }) {
-  console.info(blogname, 'paramskjdklfjsdlkjfsdkljfsdlkjl')
   try {
     const headers = {
-      Authorization: 'token f3bc998c23bcef5:389ab2ffb39441e',
+      Authorization: `token  ${process.env.NEXT_PUBLIC_ERP_AUTH_TOKEN}`,
     }
     const response = await axios.get(
-      `https://stg-erp.prixite.com/api/resource/Blog%20Post/${blogname}?filters=["*"]`,
+      `${process.env.NEXT_PUBLIC_ERP_BASEPATH}/Blog%20Post/${blogname}?filters=["*"]`,
       {
         headers,
       }
