@@ -25,10 +25,11 @@ export default function BlogDetailPage({ blog }: { blog: BlogPost }) {
   const router = useRouter()
 
   const [blogData, setBlogData] = useState<BlogPost>(blog)
+
   useEffect(() => {
-    setBlogData(blog)
     Prism.highlightAll()
-  }, [])
+    setBlogData(blog)
+  }, [blog])
 
   if (!blogData) return <p>Loading...</p>
 
@@ -138,17 +139,20 @@ export async function getServerSideProps({
         headers,
       }
     )
-    const blog = response.data.data
+    const blogDataArray = response.data.data
+    const blog =
+      blogDataArray && blogDataArray.length > 0 ? blogDataArray[0] : null
+
     return {
       props: {
-        blog: blog[0] as BlogPost,
+        blog: blog,
       },
     }
   } catch (error) {
     console.error('Error fetching blog data:', error?.message)
     return {
       props: {
-        blog: {},
+        blog: null,
       },
     }
   }
