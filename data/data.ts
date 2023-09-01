@@ -327,4 +327,6 @@ export const jobsData = {
   aboutRole: 'About the Role',
   description: 'Description',
   jobDataNotFound: 'No Jobs available currently',
+  positionClose: 'This position is closed.',
+  pageNotFound: '404 | This Page could not be found',
 }
