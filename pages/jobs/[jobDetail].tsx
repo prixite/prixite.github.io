@@ -192,7 +192,7 @@ const JobDetail = ({ result }: ResultProps) => {
                       </Box>
                     </Box>
 
-                    <Box className="job-role-container">
+                    {/*  <Box className="job-role-container">
                       <Box className="job-image-container">
                         <Image
                           width={48}
@@ -201,7 +201,7 @@ const JobDetail = ({ result }: ResultProps) => {
                           alt="vacancy-image"
                         />
                       </Box>
-                      <Box className="job-info">
+                     <Box className="job-info">
                         <Typography className="content-text">
                           Vacancy
                         </Typography>
@@ -209,7 +209,7 @@ const JobDetail = ({ result }: ResultProps) => {
                           {result?.data[0]?.vacancies}
                         </Typography>
                       </Box>
-                    </Box>
+                    </Box>*/}
                     {result?.data[0]?.publish_salary_range === 1 ? (
                       <Box className="job-role-container">
                         <Box className="job-image-container">
@@ -231,13 +231,7 @@ const JobDetail = ({ result }: ResultProps) => {
                         </Box>
                       </Box>
                     ) : (
-                      <Box className="job-role-container">
-                        <Box className="job-image-container"></Box>
-                        <Box className="job-info">
-                          <Typography className="content-text"></Typography>
-                          <Typography className="job-text"></Typography>
-                        </Box>
-                      </Box>
+                      <></>
                     )}
                   </Box>
 
