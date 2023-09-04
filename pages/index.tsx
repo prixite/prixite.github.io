@@ -23,7 +23,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import fs from 'fs'
 import path from 'path'
 import Link from 'next/link'
-import { MDContent, Product } from '../types/interfaces'
+import { BlogPost, MDContent, Product } from '../types/interfaces'
 import { sortByDate, sortByIndex } from '../utils/sort'
 import { getMarkdownAllData, getMarkDownSingleData } from '../utils/markdown'
 import {
@@ -242,9 +242,11 @@ export async function getStaticProps() {
         headers,
       }
     )
-    blogs = response.data.data
+    blogs = response.data.data?.filter(
+      (blog: BlogPost) => blog?.published === 1
+    )
   } catch (error) {
-    console.error('Error fetching blog data:', error.message)
+    console.error('Error fetching blog data:', error)
   }
   const serviceFiles = fs.readdirSync(path.join(SERVICES_PATH))
   const testimonialFiles = fs.readdirSync(path.join(TESTIMONIALS_PATH))

@@ -76,14 +76,16 @@ export async function getStaticProps() {
         headers,
       }
     )
-    const blogs = response.data.data
+    const blogs = response.data.data?.filter(
+      (blog: BlogPost) => blog?.published === 1
+    )
     return {
       props: {
         blogs: blogs,
       },
     }
   } catch (error) {
-    console.error('Error fetching blog data:', error.message)
+    console.error('Error fetching blog data:', error)
     return {
       props: {
         blogs: [],

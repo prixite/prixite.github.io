@@ -28,6 +28,9 @@ export default function BlogDetailPage({ blog }: { blog: BlogPost }) {
 
   useEffect(() => {
     Prism.highlightAll()
+  }, [])
+
+  useEffect(() => {
     setBlogData(blog)
   }, [blog])
 
@@ -149,7 +152,7 @@ export async function getServerSideProps({
       },
     }
   } catch (error) {
-    console.error('Error fetching blog data:', error?.message)
+    console.error('Error fetching blog data:', error)
     return {
       props: {
         blog: null,
