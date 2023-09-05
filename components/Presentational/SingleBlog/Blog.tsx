@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { LinkedinShareButton, FacebookShareButton } from 'next-share'
@@ -6,30 +6,37 @@ import { Box, Container, Stack, Typography } from '@mui/material'
 import { joinUsLinkIcons, newsAndBlogs } from '../../../data/data'
 import MarkdownText from '../../MarkdownText'
 import { BlogPost } from '../../../types/interfaces'
+import Prism from 'prismjs'
+import 'prismjs/themes/prism-tomorrow.css'
+import 'prismjs/components/prism-python'
+import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard'
+import 'prismjs/plugins/toolbar/prism-toolbar.min.css'
+import 'prismjs/plugins/toolbar/prism-toolbar.min'
+import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min'
+import 'prismjs/components/prism-jsx'
+import 'prismjs/components/prism-typescript'
+import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace'
+import 'prismjs/components/prism-markup-templating'
 
 export default function Blog({ blog }: { blog: BlogPost }) {
   const router = useRouter()
-
-  const [blogData, setBlogData] = useState<BlogPost>(blog)
-
   useEffect(() => {
-    setBlogData(blog)
-  }, [blog])
+    Prism.highlightAll()
+  }, [])
 
-  if (!blogData) return <p>Loading...</p>
+  if (!blog) return <p>Loading...</p>
 
   return (
     <>
-
       <Container maxWidth="xl" className="page-header">
         <Box className="header">
           <Box className="heading">
             <Typography className="heading-text" sx={{ width: '95%' }}>
-              {blogData.title}
+              {blog.title}
             </Typography>
           </Box>
           <Stack direction={'row'} gap={3} alignItems="center">
-            <Typography fontSize={12}>{blogData.published_on}</Typography>
+            <Typography fontSize={12}>{blog.published_on}</Typography>
             <Typography fontSize={12}>5 min read</Typography>
             <Stack
               direction={{ xs: 'column', md: 'column', lg: 'row' }}
@@ -68,7 +75,7 @@ export default function Blog({ blog }: { blog: BlogPost }) {
         <Container disableGutters maxWidth="xl">
           <div className="post-body">
             <MarkdownText>
-              {blogData.content_md ? blogData.content_md : blogData.content}
+              {blog.content_md ? blog.content_md : blog.content}
             </MarkdownText>
           </div>
         </Container>
@@ -77,7 +84,7 @@ export default function Blog({ blog }: { blog: BlogPost }) {
           <Stack direction={'row'} gap={10}>
             <Stack direction={'row'} gap={1} alignItems="center">
               <Typography fontSize={13}>
-                Written by {blogData.blogger}
+                Written by {blog.blogger}
               </Typography>
             </Stack>
           </Stack>
@@ -104,5 +111,3 @@ export default function Blog({ blog }: { blog: BlogPost }) {
     </>
   )
 }
-
-

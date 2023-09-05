@@ -1,28 +1,13 @@
-import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import { BlogPost } from '../../types/interfaces'
-import Prism from 'prismjs'
-import 'prismjs/themes/prism-tomorrow.css'
-import 'prismjs/components/prism-python'
-import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard'
-import 'prismjs/plugins/toolbar/prism-toolbar.min.css'
-import 'prismjs/plugins/toolbar/prism-toolbar.min'
-import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min'
-import 'prismjs/components/prism-jsx'
-import 'prismjs/components/prism-typescript'
-import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace'
-import 'prismjs/components/prism-markup-templating'
 import axios from 'axios'
 import dynamic from 'next/dynamic'
 
 export default function BlogDetailPage({ blog }: { blog: BlogPost }) {
-
-  const Blog = dynamic(() => import('../../components/Presentational/SingleBlog/Blog'), { ssr: false })
-
-  useEffect(() => {
-    Prism.highlightAll()
-  }, [])
-
+  const Blog = dynamic(
+    () => import('../../components/Presentational/SingleBlog/Blog'),
+    { ssr: false }
+  )
 
   return (
     <>
@@ -30,7 +15,6 @@ export default function BlogDetailPage({ blog }: { blog: BlogPost }) {
         <title>{blog?.title}</title>
       </Head>
       <Blog blog={blog} />
-
     </>
   )
 }
