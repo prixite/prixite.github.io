@@ -1,13 +1,13 @@
-export interface BlogPost {
-  frontmatter: {
-    cover_image: string
-    date: string
-    excerpt: string
-    title: string
-    author: string
-  }
-  slug: string
-}
+// export interface BlogPost {
+//   frontmatter: {
+//     cover_image: string
+//     date: string
+//     excerpt: string
+//     title: string
+//     author: string
+//   }
+//   slug: string
+// }
 
 export interface Product {
   frontmatter: {
@@ -147,4 +147,35 @@ export interface SortByDateParam {
 export interface SortbyIndexParam {
   slug: string
   frontmatter: { [key: string]: string | number }
+}
+
+export interface BlogPost {
+  name: string
+  creation: string
+  modified: string
+  modified_by: string
+  owner: string
+  docstatus: number
+  idx: number
+  title: string
+  blog_category: string
+  blogger: string
+  route: string
+  read_time: number
+  published_on: string
+  published: number
+  featured: number
+  hide_cta: number
+  enable_email_notification: number
+  disable_comments: number
+  disable_likes: number
+  blog_intro: string
+  content_type: string
+  content: string
+  content_md: string
+  content_html: string
+  email_sent: number
+  meta_title: string
+  meta_description: string
+  meta_image: string
 }

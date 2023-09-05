@@ -1,18 +1,13 @@
 import React from 'react'
 import { Box, Typography, Container, Button } from '@mui/material'
 import { newsAndBlogs } from '../../data/data'
+import { BlogPost } from '../../types/interfaces'
 import Head from 'next/head'
 import Link from 'next/link'
-import fs from 'fs'
-import path from 'path'
 import Image from 'next/image'
-import { BlogPost } from '../../types/interfaces'
-import { sortByDate } from '../../utils/sort'
-import { MDContent } from '../../types/interfaces'
-import { BLOGS_PATH } from '../../utils/constants'
-import { getMarkdownAllData } from '../../utils/markdown'
+import axios from 'axios'
 
-const Blog = ({ blogs }: MDContent) => {
+const Blog = ({ blogs }: { blogs: BlogPost[] }) => {
   const { title, header } = newsAndBlogs
 
   return (
@@ -42,7 +37,7 @@ const Blog = ({ blogs }: MDContent) => {
         {blogs?.map((post: BlogPost, index: number) => (
           <div className="card" key={index}>
             <Image
-              src={post.frontmatter.cover_image}
+              src={`https://stg-erp.prixite.com/${post.meta_image}`}
               alt=""
               className="post-img"
               width={500}
@@ -50,13 +45,13 @@ const Blog = ({ blogs }: MDContent) => {
               layout="responsive"
             />
 
-            <div className="post-date">Posted on {post.frontmatter.date}</div>
+            <div className="post-date">Posted on {post.published_on}</div>
 
-            <h3>{post.frontmatter.title}</h3>
+            <h3>{post.meta_title}</h3>
 
-            <p>{post.frontmatter.excerpt}</p>
+            <p>{post.meta_description}</p>
 
-            <Link href={`/blog/${post.slug}`}>
+            <Link href={`blog/${post.name}`}>
               <Button variant="contained" className="read-button">
                 Read More
               </Button>
@@ -71,12 +66,30 @@ const Blog = ({ blogs }: MDContent) => {
 export default Blog
 
 export async function getStaticProps() {
-  const blogFiles = fs.readdirSync(path.join(BLOGS_PATH))
-  const blogs = getMarkdownAllData(blogFiles, BLOGS_PATH, fs)
-
-  return {
-    props: {
-      blogs: blogs.sort(sortByDate),
-    },
+  try {
+    const headers = {
+      Authorization: `token ${process.env.NEXT_PUBLIC_ERP_AUTH_TOKEN}`,
+    }
+    const response = await axios.get(
+      `${process.env.NEXT_PUBLIC_ERP_BASEPATH}/api/resource/Blog%20Post?fields=[%22*%22]`,
+      {
+        headers,
+      }
+    )
+    const blogs = response.data.data?.filter(
+      (blog: BlogPost) => blog?.published === 1
+    )
+    return {
+      props: {
+        blogs: blogs,
+      },
+    }
+  } catch (error) {
+    console.error('Error fetching blog data:', error)
+    return {
+      props: {
+        blogs: [],
+      },
+    }
   }
 }

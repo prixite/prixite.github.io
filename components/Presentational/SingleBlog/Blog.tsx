@@ -1,18 +1,11 @@
 import { useEffect } from 'react'
-import Head from 'next/head'
 import { useRouter } from 'next/router'
-import fs from 'fs'
 import Image from 'next/image'
 import { LinkedinShareButton, FacebookShareButton } from 'next-share'
 import { Box, Container, Stack, Typography } from '@mui/material'
-import { joinUsLinkIcons, newsAndBlogs } from '../../data/data'
-import { BlogPostWithContent, Blog } from '../../types/interfaces'
-import { BLOGS_PATH } from '../../utils/constants'
-import {
-  getMarkDownSingleData,
-  getMarkdownSinglePath,
-} from '../../utils/markdown'
-import MarkdownText from '../../components/MarkdownText'
+import { joinUsLinkIcons, newsAndBlogs } from '../../../data/data'
+import MarkdownText from '../../MarkdownText'
+import { BlogPost } from '../../../types/interfaces'
 import Prism from 'prismjs'
 import 'prismjs/themes/prism-tomorrow.css'
 import 'prismjs/components/prism-python'
@@ -25,30 +18,25 @@ import 'prismjs/components/prism-typescript'
 import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace'
 import 'prismjs/components/prism-markup-templating'
 
-export default function BlogDetailPage({
-  frontmatter: { title, date, cover_image, author },
-  content,
-}: BlogPostWithContent) {
+export default function Blog({ blog }: { blog: BlogPost }) {
   const router = useRouter()
   useEffect(() => {
     Prism.highlightAll()
   }, [])
 
+  if (!blog) return <p>Loading...</p>
+
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta property="og:image" content={cover_image} />
-      </Head>
       <Container maxWidth="xl" className="page-header">
         <Box className="header">
           <Box className="heading">
             <Typography className="heading-text" sx={{ width: '95%' }}>
-              {title}
+              {blog.title}
             </Typography>
           </Box>
           <Stack direction={'row'} gap={3} alignItems="center">
-            <Typography fontSize={12}>{date}</Typography>
+            <Typography fontSize={12}>{blog.published_on}</Typography>
             <Typography fontSize={12}>5 min read</Typography>
             <Stack
               direction={{ xs: 'column', md: 'column', lg: 'row' }}
@@ -57,9 +45,8 @@ export default function BlogDetailPage({
               className="icons"
             >
               <FacebookShareButton
-                url={`${process.env.NEXT_PUBLIC_BASEPATH || 'prixite.com'}/${
-                  router.asPath
-                }`}
+                url={`${process.env.NEXT_PUBLIC_BASEPATH || 'prixite.com'}/${router.asPath
+                  }`}
               >
                 <Image
                   src={joinUsLinkIcons[0].icon.src}
@@ -70,9 +57,8 @@ export default function BlogDetailPage({
                 />
               </FacebookShareButton>
               <LinkedinShareButton
-                url={`${process.env.NEXT_PUBLIC_BASEPATH || 'prixite.com'}/${
-                  router.asPath
-                }`}
+                url={`${process.env.NEXT_PUBLIC_BASEPATH || 'prixite.com'}/${router.asPath
+                  }`}
               >
                 <Image
                   src={joinUsLinkIcons[1].icon.src}
@@ -88,14 +74,18 @@ export default function BlogDetailPage({
 
         <Container disableGutters maxWidth="xl">
           <div className="post-body">
-            <MarkdownText>{content}</MarkdownText>
+            <MarkdownText>
+              {blog.content_md ? blog.content_md : blog.content}
+            </MarkdownText>
           </div>
         </Container>
 
         <Container className="likes" maxWidth="xl">
           <Stack direction={'row'} gap={10}>
             <Stack direction={'row'} gap={1} alignItems="center">
-              <Typography fontSize={13}>Written by {author}</Typography>
+              <Typography fontSize={13}>
+                Written by {blog.blogger}
+              </Typography>
             </Stack>
           </Stack>
           <Stack
@@ -120,12 +110,4 @@ export default function BlogDetailPage({
       </Container>
     </>
   )
-}
-
-export async function getStaticPaths() {
-  return getMarkdownSinglePath(fs, BLOGS_PATH)
-}
-
-export async function getStaticProps({ params: { slug } }: Blog) {
-  return getMarkDownSingleData(fs, BLOGS_PATH, slug)
 }

@@ -8,7 +8,7 @@ const Layout = ({ children }: Props) => {
   return (
     <div className="responsiveness">
       <Header />
-      {children}
+      <div className="main-content">{children}</div>
       <Footer />
     </div>
   )
