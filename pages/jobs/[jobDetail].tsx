@@ -192,24 +192,28 @@ const JobDetail = ({ result }: ResultProps) => {
                       </Box>
                     </Box>
 
-                    {/*  <Box className="job-role-container">
-                      <Box className="job-image-container">
-                        <Image
-                          width={48}
-                          height={48}
-                          src={'/images/jobs/vacancy.png'}
-                          alt="vacancy-image"
-                        />
+                    {result?.data[0]?.vacancies === 0 ? (
+                      <></>
+                    ) : (
+                      <Box className="job-role-container">
+                        <Box className="job-image-container">
+                          <Image
+                            width={48}
+                            height={48}
+                            src={'/images/jobs/vacancy.png'}
+                            alt="vacancy-image"
+                          />
+                        </Box>
+                        <Box className="job-info">
+                          <Typography className="content-text">
+                            Vacancy
+                          </Typography>
+                          <Typography className="job-text">
+                            {result?.data[0]?.vacancies}
+                          </Typography>
+                        </Box>
                       </Box>
-                     <Box className="job-info">
-                        <Typography className="content-text">
-                          Vacancy
-                        </Typography>
-                        <Typography className="job-text">
-                          {result?.data[0]?.vacancies}
-                        </Typography>
-                      </Box>
-                    </Box>*/}
+                    )}
                     {result?.data[0]?.publish_salary_range === 1 ? (
                       <Box className="job-role-container">
                         <Box className="job-image-container">
