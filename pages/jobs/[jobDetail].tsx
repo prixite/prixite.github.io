@@ -172,7 +172,7 @@ const JobDetail = ({ result }: ResultProps) => {
                     </Box>
                   </Box>
 
-                  <Box className="job-container">
+                  <Box className="job-container1">
                     <Box className="job-role-container">
                       <Box className="job-image-container">
                         <Image

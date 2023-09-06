@@ -246,6 +246,12 @@ ol {
   flex-wrap: wrap;
 }
 
+.job-container1 {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
 .job-role-container1 {
   visibility: hidden;
 }
