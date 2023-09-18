@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@types/markdown-it": "^12.2.3",
-    "@types/node": "^20.4.1",
+    "@types/node": "^20.6.2",
     "@types/prismjs": "^1.26.0",
     "@types/react": "^18.2.12",
     "@types/react-slick": "^0.23.10",
