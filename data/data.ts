@@ -13,6 +13,13 @@ import aboutUsp2 from '../public/images/aboutUs-p2.png'
 import aboutUsp3 from '../public/images/aboutUs-p3.png'
 import aboutUsp4 from '../public/images/aboutUs-p4.png'
 import aboutUsp5 from '../public/images/aboutUs-p5.png'
+import banner from '../public/images/banner.png'
+import bannerP1 from '../public/images/banner-p1.png'
+import bannerP2 from '../public/images/banner-p2.png'
+import bannerP3 from '../public/images/banner-p3.png'
+import bannerP4 from '../public/images/banner-p4.png'
+import bannerP5 from '../public/images/banner-p5.png'
+import bannerP6 from '../public/images/banner-p6.png';
 import likes from '../public/images/handsClapping.png'
 import comments from '../public/images/chatTeardropDots.png'
 import scrollToTop from '../public/images/scrollToTop.png'
@@ -183,6 +190,58 @@ export const aboutUsCardData = {
     },
   ],
 }
+
+
+
+/**********             Banner Card Data               *********** */
+export const bannerCardData = {
+  aboutUsHeader: 'Official US odoo Partners',
+  aboutUsDescription:
+    "PRIXITE. is the Official US Partner of odoo and we strive to provide cutting-edge solutions tailored to elevate your business operations",
+  images: [
+    {
+      img: bannerP1,
+      className: 'img-p1',
+    },
+    {
+      img: banner,
+      className: 'img-p2',
+    },
+    {
+      img: bannerP2,
+      className: 'img-p3',
+    },
+    {
+      img: bannerP3,
+      className: 'img-p4',
+    },
+    {
+      img: bannerP4,
+      className: 'img-p5',
+    },
+    {
+      img: bannerP5,
+      className: 'img-p6',
+    },
+  ],
+  partnersCard: [
+    {
+      title: 'Odoo ERP Implementation',
+      description: 'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
+      img: bannerP6,
+    },
+    {
+      title: 'Custom Development for Odoo',
+      description: 'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
+      img: bannerP6,
+    },
+  ]
+}
+
+
+
+
+
 
 /*********          Contact Us Page Data            ************* */
 export const contactUs = {

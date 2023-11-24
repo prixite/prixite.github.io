@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { homeData, newsAndBlogs, productsList } from '../data/data'
 // eslint-disable-next-line
 //import Chip from '@mui/material/Chip'
-import { aboutUsCardData, servicesData } from '../data/data'
+import { aboutUsCardData, servicesData, bannerCardData } from '../data/data'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Service from '../components/Presentational/Service/Service'
@@ -34,6 +34,7 @@ import {
   PRODUCT_PATH,
 } from '../utils/constants'
 import { FEATURES } from '../data/features'
+import Banner from '../components/Presentational/Banner/Banner';
 
 export default function Home({
   blogs,
@@ -69,6 +70,7 @@ export default function Home({
         </Container>
 
         <Container maxWidth="xl">
+        <Banner header={bannerCardData.aboutUsHeader} heading={bannerCardData.aboutUsDescription} images={bannerCardData.images} partnersCard={bannerCardData.partnersCard}/>
           <Box pb="5rem" pt={{ xs: '0rem', md: '5rem' }}>
             <SectionHeader heading={servicesHeading} />
             <Typography mt={2} mb={6}>
@@ -223,7 +225,10 @@ export default function Home({
             <Subscribe />
           </Container>
         )}
+
       </div>
+
+
     </>
   )
 }
