@@ -19,7 +19,7 @@ import bannerP2 from '../public/images/banner-p2.png'
 import bannerP3 from '../public/images/banner-p3.png'
 import bannerP4 from '../public/images/banner-p4.png'
 import bannerP5 from '../public/images/banner-p5.png'
-import bannerP6 from '../public/images/banner-p6.png';
+import bannerP6 from '../public/images/banner-p6.png'
 import likes from '../public/images/handsClapping.png'
 import comments from '../public/images/chatTeardropDots.png'
 import scrollToTop from '../public/images/scrollToTop.png'
@@ -191,13 +191,11 @@ export const aboutUsCardData = {
   ],
 }
 
-
-
 /**********             Banner Card Data               *********** */
 export const bannerCardData = {
   aboutUsHeader: 'Official US odoo Partners',
   aboutUsDescription:
-    "PRIXITE. is the Official US Partner of odoo and we strive to provide cutting-edge solutions tailored to elevate your business operations",
+    'PRIXITE. is the Official US Partner of odoo and we strive to provide cutting-edge solutions tailored to elevate your business operations',
   images: [
     {
       img: bannerP1,
@@ -227,21 +225,18 @@ export const bannerCardData = {
   partnersCard: [
     {
       title: 'Odoo ERP Implementation',
-      description: 'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
+      description:
+        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
       img: bannerP6,
     },
     {
       title: 'Custom Development for Odoo',
-      description: 'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
+      description:
+        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
       img: bannerP6,
     },
-  ]
+  ],
 }
-
-
-
-
-
 
 /*********          Contact Us Page Data            ************* */
 export const contactUs = {
