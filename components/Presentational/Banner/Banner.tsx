@@ -2,7 +2,6 @@ import React from 'react'
 import { Typography, Box, Grid, Paper } from '@mui/material'
 import Image, { StaticImageData } from 'next/image'
 import circle from '../../../public/images/circles.png'
-import bannerP7 from '../../../public/images/banner-p7.png'
 
 interface Banner {
   header: string
@@ -78,11 +77,6 @@ const Banner: React.FC<Banner> = ({
               </Grid>
             ))}
           </Grid>
-        </Box>
-      </div>
-      <div>
-        <Box className="subscribe-image">
-          <Image src={bannerP7} alt="prixite" />
         </Box>
       </div>
     </>
