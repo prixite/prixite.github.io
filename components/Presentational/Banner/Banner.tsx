@@ -11,13 +11,11 @@ interface Banner {
     img: StaticImageData
     className: string
   }[]
-  partnersCard: [
-    {
-      title: string
-      description: string
-      img: StaticImageData
-    }
-  ]
+  partnersCard: {
+    title: string
+    description: string
+    img: StaticImageData
+  }[]
 }
 
 const Banner: React.FC<Banner> = ({
