@@ -1,6 +1,6 @@
 export const FEATURES = {
   blogs: true,
   testimonials: true,
-  subscribe: true,
+  subscribe: false,
   product: false,
 }
