@@ -224,15 +224,15 @@ export const bannerCardData = {
   ],
   partnersCard: [
     {
-      title: 'Odoo ERP Implementation',
+      title: 'Odoo Implementation',
       description:
-        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
+        'Prixite transforms your business needs into seamless Odoo implementations, optimizing processes for sustained growth.',
       img: bannerP6,
     },
     {
-      title: 'Custom Development for Odoo',
+      title: 'Odoo Custom Development',
       description:
-        'Lorem ipsum is a placeholder text commonly used to demonstrate the visual.',
+        'Prixite crafts tailored Odoo solutions, seamlessly integrating custom features for a unified and efficient platform',
       img: bannerP6,
     },
   ],
