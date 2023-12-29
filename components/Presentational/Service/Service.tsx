@@ -16,8 +16,14 @@ const Service: React.FC<ServiceProps> = ({ img, title, description, path }) => {
         <Box marginBottom="10px">
           <Box className="service-image-container">
             <Image
-              width={22}
-              height={img === '/images/services/devops.png' ? 14 : 20}
+              width={img === '/images/services/odoo.png' ? 32 : 22}
+              height={
+                img === '/images/services/devops.png'
+                  ? 14
+                  : img === '/images/services/odoo.png'
+                  ? 32
+                  : 20
+              }
               src={img}
               alt="service-image"
             />
