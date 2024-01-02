@@ -19,7 +19,10 @@ developmentStack:
     { name: 'API Testing', icon: '/icons/TechStack/api testing.png' },
     { name: 'Database Testing', icon: '/icons/TechStack/database testing.png' },
     { name: 'Manual Testing', icon: '/icons/TechStack/manual testing.png' },
-    { name: 'Automation Testing', icon: '/icons/TechStack/automation testing.jpeg' },
+    {
+      name: 'Automation Testing',
+      icon: '/icons/TechStack/automation testing.jpeg',
+    },
     { name: 'ETL Testing', icon: '/icons/TechStack/ETL.png' },
   ]
 ---
