@@ -3,7 +3,7 @@ id: 9
 title: 'Software Engineer'
 name: 'Shahzaib Naseer'
 image: '/images/employees/Shahzaib Naseer.jpg'
-imageB: '/images/employees/Shahzaib-Naseer-GreenB.svg'
+imageB: '/images/employees/Shazaib.svg'
 category: ['Mobile App Development', 'Web App Development']
 description: "Shahzaib, an avid ping pong enthusiast, is celebrated for successfully navigating a complex work project, displaying exceptional collaboration, problem-solving, and leadership skills. His commitment to ongoing learning aligns with aspirations of enhancing expertise and taking on greater responsibilities for organizational growth. Shahzaib strives to make a significant impact on his industry, fostering positive changes in every project."
 moreInfoOne: "In Shahzaib's recent engagement, he played a pivotal role in the development and integration of a product designed to assist writers, including students, teachers, bloggers, and journalists. The primary objective was to facilitate code writing in a style that remains undetected by AI Detection apps like GPTZero. Shahzaib's responsibilities included the integration and development of REST APIs, ensuring seamless communication between different components of the system. He played a key role in integrating AI functionalities for smooth code rewriting, enhancing the overall user experience."

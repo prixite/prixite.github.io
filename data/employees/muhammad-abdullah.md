@@ -17,7 +17,7 @@ developmentStack:
     { name: 'Redis', icon: '/icons/TechStack/redis-logo-full-color-rgb.svg' },
     { name: 'Postgres', icon: '/icons/TechStack/postgres-logo.png' },
     { name: 'Selenium', icon: '/icons/TechStack/selenium-logo.svg' },
-    { name: 'langchain', icon: '/icons/TechStack/langchain.logo.svg' },
+    { name: 'langchain', icon: '/icons/TechStack/langchain-logo.svg' },
     { name: 'FastApi', icon: '/icons/TechStack/fastapi-logo.svg' },
   ]
 ---
