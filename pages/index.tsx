@@ -225,11 +225,11 @@ export default function Home({
 
         {FEATURES.testimonials && <Testimonials testimonials={testimonials} />}
 
-        {FEATURES.subscribe && (
+    {/*    {FEATURES.subscribe && (
           <Container maxWidth="xl" sx={{ marginTop: 10 }}>
             <Subscribe />
           </Container>
-        )}
+        )} */}
       </div>
     </>
   )

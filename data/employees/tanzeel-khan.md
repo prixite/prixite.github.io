@@ -1,6 +1,6 @@
 ---
 id: 2
-title: 'Software Engineer'
+title: 'Software Engineer | Team Lead'
 name: 'Tanzeel Ali Khan'
 image: '/images/employees/Tanzeel-Khan.jpg'
 imageB: '/images/employees/Tanzeel-Khan-GreenB.svg'
