@@ -273,6 +273,7 @@ export const categories: Array<string> = [
   'Web App Development',
   'Mobile App Development',
   'Scraping',
+  'Quality Assurance',
 ]
 
 export interface Employee {
