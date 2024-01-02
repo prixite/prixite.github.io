@@ -1,6 +1,6 @@
 ---
 id: 1
-title: 'Software Engineer'
+title: 'Senior Software Engineer'
 name: 'Bilal Irfan'
 image: '/images/employees/Bilal Irfan.jpg'
 imageB: '/images/employees/Bilal-Irfan-GreenB.svg'
