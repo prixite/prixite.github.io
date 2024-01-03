@@ -10,8 +10,15 @@ moreInfoOne: "Nabeel played a vital role as a Full Stack Developer in the creati
 moreInfoTwo: "Further, Nabeel conducted in-depth research and successfully published a research paper on the Comparative Study of Deep Learning Algorithms for Disease and Pest Detection in Rice Crops. Moreover, Nabeel developed a Pakistani Sign Language recognition system, a significant achievement that demonstrates Nabeel's commitment to accessibility and inclusivity in technology."
 developmentStack:
   [
-    { name: 'React', icon: '/icons/TechStack/react.svg' },
+    { name: 'React JS', icon: '/icons/TechStack/react.svg' },
     { name: 'Django', icon: '/icons/TechStack/django-logo.png' },
     { name: 'Node JS', icon: '/icons/TechStack/node.png' },
+    { name: 'JavaScript', icon: '/icons/TechStack/javascript.svg' },
+    { name: 'Docker', icon: '/icons/TechStack/docker-logo.png' },
+    { name: 'Git', icon: '/icons/TechStack/git.png' },
+    { name: 'OpenAI', icon: '/icons/TechStack/open-ai-logo.png' },
+    { name: 'Linux', icon: '/icons/TechStack/linux.png' },
+    { name: 'Postgres', icon: '/icons/TechStack/postgres-logo.png' },
+    { name: 'Web Scraping', icon: '/icons/TechStack/webscraping.png' },
   ]
 ---

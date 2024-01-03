@@ -1,6 +1,6 @@
 ---
 id: 16
-title: 'Junior Software Engineer'
+title: 'Software Engineer'
 name: 'Fahad Akbar'
 image: '/images/employees/Fahad Akbar.jpg'
 imageB: '/images/employees/fahad.svg'
