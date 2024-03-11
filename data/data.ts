@@ -296,11 +296,11 @@ export const footerData = {
   details: [
     {
       icon: LocationIcon,
-      desc: 'Sheridan, WY, USA | Lahore, Pakistan',
+      desc: 'Shams, Sharjah | Sheridan, WY, USA | Lahore, Pakistan',
     },
     {
       icon: PhoneIcon,
-      desc: '+1 (628) 277-3693',
+      desc: '+1 (628) 277-3693, +1 (931) 622-9971',
     },
     {
       icon: MailIcon,
