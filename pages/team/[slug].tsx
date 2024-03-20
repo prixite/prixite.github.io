@@ -2,11 +2,7 @@ import React from 'react'
 import { Container, Typography } from '@mui/material'
 import Head from 'next/head'
 import fs from 'fs'
-import {
-  Employee,
-  EmployeeWithContent,
-  MDContent,
-} from '../../types/interfaces'
+import { Employee, EmployeeWithContent } from '../../types/interfaces'
 import {
   getMarkDownSingleData,
   getMarkdownSinglePath,
