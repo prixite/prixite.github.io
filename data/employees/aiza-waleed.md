@@ -1,6 +1,6 @@
 ---
 id: 21
-title: '	Junior Software Developer'
+title: 'Junior Software Developer'
 name: 'Aiza Waleed'
 image: '/images/employees/Aiza.PNG'
 imageB: '/images/employees/aiza.svg'

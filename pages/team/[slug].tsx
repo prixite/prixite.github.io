@@ -2,7 +2,11 @@ import React from 'react'
 import { Container, Typography } from '@mui/material'
 import Head from 'next/head'
 import fs from 'fs'
-import { Employee, EmployeeWithContent } from '../../types/interfaces'
+import {
+  Employee,
+  EmployeeWithContent,
+  MDContent,
+} from '../../types/interfaces'
 import {
   getMarkDownSingleData,
   getMarkdownSinglePath,
@@ -80,46 +84,66 @@ const EmployeeDetail = ({
           </div>
         </div>
 
-        <div className="moreInfo">
-          <Typography
-            fontSize={16}
-            fontWeight={600}
-            style={{ marginBottom: '5px' }}
-          >
-            More About {trimName(name)}
-          </Typography>
-          <Typography style={{ textAlign: 'justify' }}>
-            {moreInfoOne}
-          </Typography>
-          {moreInfoTwo && (
-            <div>
-              <br />
-              <Typography style={{ textAlign: 'justify' }}>
-                {moreInfoTwo}
+        {moreInfoOne ? (
+          <>
+            <div className="moreInfo">
+              <Typography
+                fontSize={16}
+                fontWeight={600}
+                style={{ marginBottom: '5px' }}
+              >
+                More About {trimName(name)}
               </Typography>
+              <Typography style={{ textAlign: 'justify' }}>
+                {moreInfoOne}
+              </Typography>
+              {moreInfoTwo && (
+                <div>
+                  <br />
+                  <Typography style={{ textAlign: 'justify' }}>
+                    {moreInfoTwo}
+                  </Typography>
+                </div>
+              )}
             </div>
-          )}
-        </div>
+          </>
+        ) : (
+          <></>
+        )}
 
-        <Typography
-          fontSize={16}
-          fontWeight={600}
-          style={{ marginTop: '20px' }}
-        >
-          Development Stack
-        </Typography>
-        <div className="stack-container">
-          {developmentStack?.map((tech, index) => {
-            return (
-              <div key={index} className="stack">
-                <Image alt="tech.name" src={tech.icon} height={80} width={80} />
-                <Typography fontWeight={500} style={{ textAlign: 'center' }}>
-                  {tech.name}
-                </Typography>
-              </div>
-            )
-          })}
-        </div>
+        {developmentStack ? (
+          <>
+            <Typography
+              fontSize={16}
+              fontWeight={600}
+              style={{ marginTop: '20px' }}
+            >
+              Development Stack
+            </Typography>
+            <div className="stack-container">
+              {developmentStack?.map((tech, index) => {
+                return (
+                  <div key={index} className="stack">
+                    <Image
+                      alt="tech.name"
+                      src={tech.icon}
+                      height={80}
+                      width={80}
+                    />
+                    <Typography
+                      fontWeight={500}
+                      style={{ textAlign: 'center' }}
+                    >
+                      {tech.name}
+                    </Typography>
+                  </div>
+                )
+              })}
+            </div>
+          </>
+        ) : (
+          <></>
+        )}
       </Container>
     </>
   )

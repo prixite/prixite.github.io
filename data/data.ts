@@ -274,6 +274,7 @@ export const categories: Array<string> = [
   'Mobile App Development',
   'Scraping',
   'Quality Assurance',
+  'Management Team',
 ]
 
 export interface Employee {

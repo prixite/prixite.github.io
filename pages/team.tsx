@@ -10,6 +10,7 @@ import path from 'path'
 import { getMarkdownAllData } from '../utils/markdown'
 import { EMPLOYEES_PATH } from '../utils/constants'
 import { EmployeePost, MDContent } from '../types/interfaces'
+import { sortByTitle } from '../utils/sort'
 
 const MeetTeam = ({ employees }: MDContent) => {
   const [selectedCategory, setSelectedCategory] = useState('All')
@@ -59,7 +60,6 @@ const MeetTeam = ({ employees }: MDContent) => {
               )
             })}
         </div>
-
         <div className="images-main-container">
           {employeesState &&
             employeesState.map((employee: EmployeePost) => {
@@ -102,9 +102,25 @@ export async function getStaticProps() {
   const employeeFiles = fs.readdirSync(path.join(EMPLOYEES_PATH))
   const employees = getMarkdownAllData(employeeFiles, EMPLOYEES_PATH, fs)
 
+  const employeeTitles = employees.map((employee) => employee.frontmatter.title)
+
+  const sortedTitles = sortByTitle(employeeTitles)
+
+  const titleIndexMap = new Map(
+    sortedTitles.map((title, index) => [title, index + 1])
+  )
+
+  const sortedEmployees = employees.sort((a, b) => {
+    const orderA =
+      titleIndexMap.get(a.frontmatter.title) || Number.MAX_SAFE_INTEGER
+    const orderB =
+      titleIndexMap.get(b.frontmatter.title) || Number.MAX_SAFE_INTEGER
+    return orderA - orderB
+  })
+
   return {
     props: {
-      employees: employees,
+      employees: sortedEmployees,
     },
   }
 }
