@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  repo: prixite/prixite.github.io
+  branch: cms # Branch to update (optional; defaults to master)
+media_folder: public/images/posts
+public_folder: /images/posts
+collections:
+  - name: 'blogs'
+    label: 'Blogs'
+    folder: 'data/blogs'
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'string' }
+      - { label: 'Description', name: 'excerpt', widget: 'string' }
+      - { label: 'Cover Image', name: 'cover_image', widget: 'image' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
